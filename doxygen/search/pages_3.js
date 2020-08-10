@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['file_20parm_2fmetplus_5fdata_2econf',['File parm/metplus_data.conf',['../conf-file-metplus_data_conf.html',1,'conf-files']]],
-  ['file_20parm_2fmetplus_5fruntime_2econf',['File parm/metplus_runtime.conf',['../conf-file-metplus_runtime_conf.html',1,'conf-files']]],
-  ['file_20parm_2fmetplus_5fsystem_2econf',['File parm/metplus_system.conf',['../conf-file-metplus_system_conf.html',1,'conf-files']]]
+  ['running_20metplus',['Running METplus',['../run-hwrf.html',1,'']]],
+  ['running_20metplus_20from_20the_20command_2dline',['Running METplus From the Command-line',['../running_cli.html',1,'']]]
 ];

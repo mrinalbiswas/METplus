@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['all_20configuration_20files',['All Configuration Files',['../conf-files.html',1,'']]],
-  ['all_20configuration_20options',['All Configuration Options',['../conf-options.html',1,'']]]
+  ['installing_20metplus_20from_20the_20repository',['Installing METplus from the Repository',['../install-repo.html',1,'']]]
 ];

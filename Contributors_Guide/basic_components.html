@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Basic Components of METplus Python Wrappers &mdash; METplus 3.0 documentation</title>
+  <title>2. Basic Components of METplus Python Wrappers &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -66,6 +66,10 @@
           
             
             
+              <div class="version">
+                3.1
+              </div>
+            
           
 
           
@@ -100,9 +104,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#get-command-function">2.5. get_command function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#set-environment-variables-function">2.6. set_environment_variables function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#find-data-find-model-find-obs-functions-in-commandbuilder">2.7. find_data/find_model/find_obs functions (in CommandBuilder)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stringsub-class">2.8. StringSub class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#do-string-sub-function">2.8. do_string_sub function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#time-utilities">2.9. Time Utilities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#main-function">2.10. main function</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="create_wrapper.html">3. How to Create Your Own Wrapper</a></li>
@@ -186,14 +189,14 @@
 <div class="section" id="commandbuilder">
 <h2><span class="section-number">2.1. </span>CommandBuilder<a class="headerlink" href="#commandbuilder" title="Permalink to this headline">¶</a></h2>
 <p>CommandBuilder is the parent class of all METplus wrappers. Every wrapper is a subclass of CommandBuilder or another subclass of CommandBuilder. For example, GridStatWrapper, PointStatWrapper, EnsembleStatWrapper, and MODEWrapper are all a subclass of CompareGriddedWrapper. CompareGriddedWrapper is a subclass of CommandBuilder. CommandBuilder contains instance variables that are common to every wrapper, such as config (METplusConfig object), errors (a counter of the number of errors that have occurred in the wrapper), and c_dict (a dictionary containing common information). CommandBuilder also contains use class functions that can be called within each wrapper, such as create_c_dict, clear, and find_data. More information regarding these variables and functions can be found in the Doxygen documentation (link?).</p>
-<p>Each wrapper contains an initialization function (__init__) that sets up the wrapper. Every wrapper’s initialization function should at very least call the parent’s initialization function (using super() function). Many wrapper also set the app_name and app_path instance variables in the initialization function. app_name is the name of the MET executable that pertains to the wrapper and app_path is the full path of the MET executable (relative to MET_INSTALL_DIR/bin) that is called when the MET tool is run:</p>
+<p>Each wrapper contains an initialization function (__init__) that sets up the wrapper. Every wrapper’s initialization function should at very least call the parent’s initialization function (using super() function). Many wrapper also set the app_name and app_path instance variables in the initialization function. app_name is the name of the MET executable that pertains to the wrapper and app_path is the full path of the MET executable (relative to MET_BIN_DIR) that is called when the MET tool is run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleWrapper</span><span class="p">(</span><span class="n">CommandBuilder</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;!Wrapper can be used as a base to develop a new wrapper&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span> <span class="o">=</span> <span class="s1">&#39;example&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">app_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">getdir</span><span class="p">(</span><span class="s1">&#39;MET_INSTALL_DIR&#39;</span><span class="p">),</span>
-                                                        <span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">getdir</span><span class="p">(</span><span class="s1">&#39;MET_BIN_DIR&#39;</span><span class="p">),</span>
+                                                        <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The above code block is an excerpt from the ExampleWrapper, found in ush/example_wrapper.py. The class name should always be the item that is passed into the METplus configuration variable list PROCESS_LIST with ‘Wrapper’ at the end. The text ‘CommandBuilder’ in parenthesis makes ExampleWrapper a subclass of CommandBuilder. In the __init__ function, the line starting with ‘super()’ calls the parent class __init__ function.</p>
@@ -292,19 +295,18 @@ uses c_dict dictionary items [FCST/OBS]_FILE_WINDOW_[BEGIN/END], [FCST/OBS]_INPU
 If [FCST/OBS]_FILE_WINDOW_[BEGIN/END] are non-zero, these functions will list all files under [FCST/OBS]_INPUT_DIR and use [FCST/OBS]_INPUT_TEMPLATE to extract out time information from each file to determine which files within the file window range should be used. Some tools allow multiple files to be selected. If a tool does not allow multiple files, the file closest to the valid time is returned. If multiple files are the same distance from the valid time, the first file that was found is used.
 If a wrapper can read in multiple files, the c_dict item ‘ALLOW_MULTIPLE_FILES’ should be set to True.</p>
 </div>
-<div class="section" id="stringsub-class">
-<h2><span class="section-number">2.8. </span>StringSub class<a class="headerlink" href="#stringsub-class" title="Permalink to this headline">¶</a></h2>
-<p>StringSub is found in ush/string_template_substitution.py and is the critical function for substituting the placeholder
+<div class="section" id="do-string-sub-function">
+<h2><span class="section-number">2.8. </span>do_string_sub function<a class="headerlink" href="#do-string-sub-function" title="Permalink to this headline">¶</a></h2>
+<p>do_string_sub is found in ush/string_template_substitution.py and is the critical function for substituting the placeholder
 values in templates with the actual values needed for running a particular wrapper</p>
 <p>tc_pairs_wrapper has a good example</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get search expression for bdeck files to pass to glob</span>
-    <span class="n">string_sub</span> <span class="o">=</span> <span class="n">StringSub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">,</span>
-                           <span class="bp">self</span><span class="o">.</span><span class="n">c_dict</span><span class="p">[</span><span class="s1">&#39;BDECK_TEMPLATE&#39;</span><span class="p">],</span>
-                           <span class="n">basin</span><span class="o">=</span><span class="n">basin</span><span class="p">,</span>
-                           <span class="n">cyclone</span><span class="o">=</span><span class="n">cyclone</span><span class="p">,</span>
-                           <span class="o">**</span><span class="n">time_info</span><span class="p">)</span>
+    <span class="n">bdeck_file</span> <span class="o">=</span> <span class="n">do_string_sub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_dict</span><span class="p">[</span><span class="s1">&#39;BDECK_TEMPLATE&#39;</span><span class="p">],</span>
+                               <span class="n">basin</span><span class="o">=</span><span class="n">basin</span><span class="p">,</span>
+                               <span class="n">cyclone</span><span class="o">=</span><span class="n">cyclone</span><span class="p">,</span>
+                               <span class="o">**</span><span class="n">time_info</span><span class="p">)</span>
     <span class="n">bdeck_glob</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_dict</span><span class="p">[</span><span class="s1">&#39;BDECK_DIR&#39;</span><span class="p">],</span>
-                              <span class="n">string_sub</span><span class="o">.</span><span class="n">do_string_sub</span><span class="p">())</span>
+                              <span class="n">bdeck_file</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>time_info is a dictionary of current run time information that can be substituted into the template. See the ‘Time Utilities’ section for more information.</p>
@@ -333,16 +335,6 @@ METplus creates a dictionary containing the current time and either init or vali
 <p>Items that will be parsed from the input dictionary are: now, init, valid, lead, lead_seconds, lead_minutes, lead_hours, offset, offset_hours, da_init</p>
 <p>pcp_combine uses a variety of time_util functions like ti_calculate and ti_get_lead_string</p>
 </div>
-<div class="section" id="main-function">
-<h2><span class="section-number">2.10. </span>main function<a class="headerlink" href="#main-function" title="Permalink to this headline">¶</a></h2>
-<p>Each wrapper should call met_util’s run_stand_alone so that the wrapper will run if called directly instead of calling master_metplus.py:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">met_util</span> <span class="k">as</span> <span class="nn">util</span>
-<span class="o">...</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">util</span><span class="o">.</span><span class="n">run_stand_alone</span><span class="p">(</span><span class="vm">__file__</span><span class="p">,</span> <span class="s2">&quot;Example&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </div>
 
 
@@ -365,7 +357,7 @@ METplus creates a dictionary containing the current time and either init or vali
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2020, NCAR
 
     </p>
   </div>

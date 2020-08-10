@@ -184,6 +184,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>fcst_lead_list</b> = 
 <tr class="memitem:aac9de92080daaaf69ebd930cbac3cbc2"><td class="memItemLeft" align="right" valign="top"><a id="aac9de92080daaaf69ebd930cbac3cbc2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>model_reference_name_list</b> = os.environ['MODEL_REFERENCE_NAME'].split(', ')</td></tr>
 <tr class="separator:aac9de92080daaaf69ebd930cbac3cbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6484529dc46cab92aeee2b95acb9f2c2"><td class="memItemLeft" align="right" valign="top"><a id="a6484529dc46cab92aeee2b95acb9f2c2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dump_row_filename_template</b> = os.environ['DUMP_ROW_FILENAME']</td></tr>
+<tr class="separator:a6484529dc46cab92aeee2b95acb9f2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedbcbd30b4c6d2149d77ba33ab2ffb05"><td class="memItemLeft" align="right" valign="top"><a id="aedbcbd30b4c6d2149d77ba33ab2ffb05"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>average_method</b> = os.environ['AVERAGE_METHOD']</td></tr>
 <tr class="separator:aedbcbd30b4c6d2149d77ba33ab2ffb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,8 +390,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>date_tick_intvl</b> = 
 <tr class="separator:a75455edce44f7104773032747272c75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accde12ee2bd262c2c025ebcb3f9534b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>model_lead_now_data_index</b></td></tr>
 <tr class="separator:accde12ee2bd262c2c025ebcb3f9534b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d1e5b10af2f25dafd798c930d444f0"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><b>model_stat_filename</b></td></tr>
-<tr class="separator:a27d1e5b10af2f25dafd798c930d444f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fb5cd131dee977d515d2df510ac040"><td class="memItemLeft" align="right" valign="top"><a id="ad6fb5cd131dee977d515d2df510ac040"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>model_stat_template</b> = dump_row_filename_template</td></tr>
+<tr class="separator:ad6fb5cd131dee977d515d2df510ac040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389887d568aae91bca8ea64064720a65"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>string_sub_dict</b></td></tr>
+<tr class="separator:a389887d568aae91bca8ea64064720a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeba269a62894326fca1a4f2eaad6cf01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>model_stat_file</b></td></tr>
 <tr class="separator:aeba269a62894326fca1a4f2eaad6cf01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c997d72f4ad0427a0f837b763b165b9"><td class="memItemLeft" align="right" valign="top"><a id="a9c997d72f4ad0427a0f837b763b165b9"></a>
@@ -550,7 +556,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                   levels=CF2.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                   colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                   linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00614">614</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00640">640</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -566,7 +572,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, obs_stat_values_array,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            levels=CF1.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                            colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                            linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00544">544</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00570">570</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -582,7 +588,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                    levels=CF2.levels, colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                    linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00599">599</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00625">625</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -598,7 +604,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  fig.colorbar(CF2, cax=cax, orientation=<span class="stringliteral">&#39;horizontal&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                ticks=CF2.levels)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00725">725</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00751">751</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -614,7 +620,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                     levels=CF2.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                     cmap=cmap_diff,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                     locator= matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                         symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                     ),</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                     extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00607">607</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00633">633</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -630,7 +636,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, obs_stat_values_array,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                              cmap=cmap,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                              locator=matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                  symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                              ), extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00539">539</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00565">565</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -646,7 +652,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                      levels=clevels_diff,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                      cmap=cmap_diff,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                      locator= matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                          symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                      ),</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                      extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00592">592</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00618">618</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -661,9 +667,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  <a class="code" href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a>(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_stat_values_array</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                     )</div><div class="ttc" id="plot__util_8py_html_a2c45577542b09b5988f457ad10cbc9ef"><div class="ttname"><a href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a></div><div class="ttdeci">def get_clevels(data)</div><div class="ttdoc">Get contour levels for plotting. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00340">plot_util.py:340</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  <a class="code" href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a>(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_stat_values_array</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                     )</div><div class="ttc" id="plot__util_8py_html_a2c45577542b09b5988f457ad10cbc9ef"><div class="ttname"><a href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a></div><div class="ttdeci">def get_clevels(data)</div><div class="ttdoc">Get contour levels for plotting. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00342">plot_util.py:342</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00628">628</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00654">654</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -679,7 +685,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    date_type.title()+<span class="stringliteral">&#39;: &#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    +str(datetime.datetime.strptime(date_beg, <span class="stringliteral">&#39;%Y%m%d&#39;</span>).strftime(<span class="stringliteral">&#39;%d%b%Y&#39;</span>))</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    +<span class="stringliteral">&#39;-&#39;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    +str(datetime.datetime.strptime(date_end, <span class="stringliteral">&#39;%Y%m%d&#39;</span>).strftime(<span class="stringliteral">&#39;%d%b%Y&#39;</span>))</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00116">116</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00128">128</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -695,7 +701,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  datetime.timedelta(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            hours=int(fcst_lead[:-4]),</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;            minutes=int(fcst_lead[-4:-2]),</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;            seconds=int(fcst_lead[-2:])</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        ).total_seconds()</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00215">215</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00227">227</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -711,7 +717,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            <span class="stringliteral">&#39;[&#39;</span>+<span class="stringliteral">&#39;, &#39;</span>.join(list(set(fcst_var_units_list)))+<span class="stringliteral">&#39;]&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00470">470</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00496">496</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -727,7 +733,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  logging.Formatter(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;%(asctime)s.%(msecs)03d (%(filename)s:%(lineno)d) %(levelname)s: &#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    +<span class="stringliteral">&#39;%(message)s&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;%m/%d %H:%M:%S&#39;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00092">92</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00101">101</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -743,7 +749,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                model_lead_now_stat_file_data_fcstvaliddates \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                .tolist().index(expected_date)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                            )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00431">431</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00457">457</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -758,8 +764,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    zip(model_list, model_reference_name_list, model_obtype_list)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00103">103</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    zip(model_list,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        model_reference_name_list,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        model_obtype_list,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00112">112</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -775,7 +781,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  pd.DataFrame(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        np.nan, index=model_lead_now_index,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        columns=[ <span class="stringliteral">&#39;TOTAL&#39;</span> ]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00371">371</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00397">397</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -791,7 +797,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  pd.MultiIndex.from_product(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                [[model_plot_name], [fcst_lead], expected_stat_file_dates],</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                names=[<span class="stringliteral">&#39;model_plot_name&#39;</span>, <span class="stringliteral">&#39;leads&#39;</span>, <span class="stringliteral">&#39;dates&#39;</span>]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;            )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00354">354</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00366">366</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -807,7 +813,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  pd.read_csv(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_stat_file, sep=<span class="stringliteral">&quot; &quot;</span>, skiprows=1,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        skipinitialspace=<span class="keyword">True</span>, header=<span class="keywordtype">None</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00379">379</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00405">405</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -823,7 +829,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_lead_now_stat_file_data.loc[:] \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        [<span class="stringliteral">&#39;FCST_VALID_BEG&#39;</span>].values</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00403">403</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00429">429</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -839,7 +845,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                model_lead_now_stat_file_data \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                .loc[matching_date_idx][:]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                            )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00435">435</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00461">461</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -855,7 +861,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_stat_values_array - model1_stat_values_array</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00685">685</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00711">711</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -871,7 +877,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  pd.concat(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    [model_now_data, model_lead_now_data]</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00457">457</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00483">483</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -887,7 +893,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            model_lead_now_stat_file_data \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                            .loc[0][<span class="stringliteral">&#39;FCST_UNITS&#39;</span>]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00416">416</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00442">442</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -903,7 +909,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            model_lead_now_stat_file_data \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                            .loc[0][<span class="stringliteral">&#39;OBS_UNITS&#39;</span>]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00420">420</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00446">446</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -919,7 +925,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    model_stat_values_array</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    - stat_values_array[1,model_idx,:,:]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00586">586</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00612">612</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -934,24 +940,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  os.path.join(input_base_dir,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                           model_stat_filename)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00363">363</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
-
-</div>
-</div>
-<a id="a27d1e5b10af2f25dafd798c930d444f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27d1e5b10af2f25dafd798c930d444f0">&#9670;&nbsp;</a></span>model_stat_filename</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tuple plot_lead_by_date.model_stat_filename</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                model_plot_name+<span class="stringliteral">&#39;_&#39;</span>+model_obtype+<span class="stringliteral">&#39;_&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                +base_name.replace(<span class="stringliteral">&#39;FCSTLEADHOLDER&#39;</span>, fcst_lead)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                +<span class="stringliteral">&#39;_dump_row.stat&#39;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;            )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00358">358</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  do_string_sub(model_stat_template,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                            **string_sub_dict)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00389">389</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -967,7 +957,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  obs_var_level_list[</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_level_list.index(fcst_var_level)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    ]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00236">236</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00248">248</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -983,7 +973,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  obs_var_thresh_list[</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_thresh_list.index(fcst_var_thresh)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    ]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00240">240</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00252">252</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -999,7 +989,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            <span class="stringliteral">&#39;[&#39;</span>+<span class="stringliteral">&#39;, &#39;</span>.join(list(set(obs_var_units_list)))+<span class="stringliteral">&#39;]&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00476">476</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00502">502</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1005,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    itertools.product(*[fcst_lead_list, </div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        fcst_var_level_list, </div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        fcst_var_thresh_list])</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00108">108</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00120">120</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1021,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  os.path.join(output_base_dir, <span class="stringliteral">&#39;images&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                     savefig_imagename)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00746">746</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00772">772</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1037,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            stat+<span class="stringliteral">&#39;_&#39;</span>+base_name.replace(<span class="stringliteral">&#39;FCSTLEADHOLDER&#39;</span>, <span class="stringliteral">&#39;all&#39;</span>)+<span class="stringliteral">&#39;.png&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00743">743</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00769">769</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1062,9 +1052,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        <a class="code" href="plot__util_8py.html#a3a10916da033daba06a354ab60b9df9f">plot_util.get_stat_file_line_type_columns</a>(logger,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                  met_version,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                                                  line_type)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                    )</div><div class="ttc" id="plot__util_8py_html_a3a10916da033daba06a354ab60b9df9f"><div class="ttname"><a href="plot__util_8py.html#a3a10916da033daba06a354ab60b9df9f">plot_util.get_stat_file_line_type_columns</a></div><div class="ttdeci">def get_stat_file_line_type_columns(logger, met_version, line_type)</div><div class="ttdoc">Get the MET .stat file columns for line type based on version number. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00271">plot_util.py:271</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        <a class="code" href="plot__util_8py.html#a3a10916da033daba06a354ab60b9df9f">plot_util.get_stat_file_line_type_columns</a>(logger,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                  met_version,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                                                  line_type)</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                    )</div><div class="ttc" id="plot__util_8py_html_a3a10916da033daba06a354ab60b9df9f"><div class="ttname"><a href="plot__util_8py.html#a3a10916da033daba06a354ab60b9df9f">plot_util.get_stat_file_line_type_columns</a></div><div class="ttdeci">def get_stat_file_line_type_columns(logger, met_version, line_type)</div><div class="ttdoc">Get the MET .stat file columns for line type based on version number. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00273">plot_util.py:273</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00391">391</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00417">417</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+
+</div>
+</div>
+<a id="a389887d568aae91bca8ea64064720a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389887d568aae91bca8ea64064720a65">&#9670;&nbsp;</a></span>string_sub_dict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary plot_lead_by_date.string_sub_dict</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                <span class="stringliteral">&#39;model&#39;</span>: model_name,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                <span class="stringliteral">&#39;model_reference&#39;</span>: model_plot_name,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                <span class="stringliteral">&#39;obtype&#39;</span>: model_obtype,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                <span class="stringliteral">&#39;fcst_lead&#39;</span>: fcst_lead,</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                <span class="stringliteral">&#39;obs_lead&#39;</span>: obs_lead,</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                <span class="stringliteral">&#39;fcst_level&#39;</span>: fcst_var_level,</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                <span class="stringliteral">&#39;obs_level&#39;</span>: obs_var_level,</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                <span class="stringliteral">&#39;fcst_thresh&#39;</span>: fcst_var_thresh,</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                <span class="stringliteral">&#39;obs_thresh&#39;</span>: obs_var_thresh,</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00378">378</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1080,7 +1086,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;fcst_valid_hour_beg&#39;</span>: fcst_valid_hour_list[0],</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;fcst_valid_hour_end&#39;</span>: fcst_valid_hour_list[-1],</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;fcst_init_hour_beg&#39;</span>: fcst_init_hour_list[0],</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;fcst_init_hour_end&#39;</span>: fcst_init_hour_list[-1],</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;obs_valid_hour_beg&#39;</span>: obs_valid_hour_list[0],</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;obs_valid_hour_end&#39;</span>: obs_valid_hour_list[-1],</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;obs_init_hour_beg&#39;</span>: obs_init_hour_list[0],</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;obs_init_hour_end&#39;</span>: obs_init_hour_list[-1],</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;valid_hour_beg&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;valid_hour_end&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;init_hour_beg&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&#39;init_hour_end&#39;</span>: <span class="stringliteral">&#39;&#39;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00122">122</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00134">134</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1102,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [ </div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;valid_hour_beg&#39;</span>, <span class="stringliteral">&#39;valid_hour_end&#39;</span>, <span class="stringliteral">&#39;init_hour_beg&#39;</span>, <span class="stringliteral">&#39;init_hour_end&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00136">136</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__lead__by__date_8py_source.html#l00148">148</a> of file <a class="el" href="plot__lead__by__date_8py_source.html">plot_lead_by_date.py</a>.</p>
 
 </div>
 </div>

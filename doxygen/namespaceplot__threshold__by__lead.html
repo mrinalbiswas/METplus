@@ -183,6 +183,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>obs_var_thresh_list</
 <tr class="memitem:a94357cfa8ea66c0e20ea28a8d1a74b2c"><td class="memItemLeft" align="right" valign="top"><a id="a94357cfa8ea66c0e20ea28a8d1a74b2c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>model_reference_name_list</b> = os.environ['MODEL_REFERENCE_NAME'].split(', ')</td></tr>
 <tr class="separator:a94357cfa8ea66c0e20ea28a8d1a74b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa240825c3480bcb4f33fd2d8aa87c8b8"><td class="memItemLeft" align="right" valign="top"><a id="aa240825c3480bcb4f33fd2d8aa87c8b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dump_row_filename_template</b> = os.environ['DUMP_ROW_FILENAME']</td></tr>
+<tr class="separator:aa240825c3480bcb4f33fd2d8aa87c8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7d8b48fa87e45c4a8f53b8f93e280b"><td class="memItemLeft" align="right" valign="top"><a id="a5e7d8b48fa87e45c4a8f53b8f93e280b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>average_method</b> = os.environ['AVERAGE_METHOD']</td></tr>
 <tr class="separator:a5e7d8b48fa87e45c4a8f53b8f93e280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,8 +403,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>model_num</b> = model_
 <tr class="memitem:a8fcfc971a8806db92d055d5a011ed1dd"><td class="memItemLeft" align="right" valign="top"><a id="a8fcfc971a8806db92d055d5a011ed1dd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>obs_var_thresh_format</b> = obs_var_threshs_format[vt]</td></tr>
 <tr class="separator:a8fcfc971a8806db92d055d5a011ed1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8740d4aa226cad748a543bd42f40894b"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><b>lead_avg_filename</b></td></tr>
-<tr class="separator:a8740d4aa226cad748a543bd42f40894b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85730eba7de5a40acdf09e5b385ef902"><td class="memItemLeft" align="right" valign="top"><a id="a85730eba7de5a40acdf09e5b385ef902"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>model_stat_template</b> = dump_row_filename_template</td></tr>
+<tr class="separator:a85730eba7de5a40acdf09e5b385ef902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7a78a35e4ef6634ff21930aa000cbd"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>string_sub_dict</b></td></tr>
+<tr class="separator:a5a7a78a35e4ef6634ff21930aa000cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2169da0cbcfabb6954fd1f3bb7324f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>model_stat_file</b></td></tr>
+<tr class="separator:a0f2169da0cbcfabb6954fd1f3bb7324f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80c28d421392f44ac181700761dfafab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>lead_avg_file</b></td></tr>
 <tr class="separator:a80c28d421392f44ac181700761dfafab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cceaf025685dca443cf32af1a14ed3"><td class="memItemLeft" align="right" valign="top"><a id="a40cceaf025685dca443cf32af1a14ed3"></a>
@@ -525,7 +533,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [<span class="stringliteral">&#39;LEADS&#39;</span>, <span class="stringliteral">&#39;FCST_UNITS&#39;</span>, <span class="stringliteral">&#39;OBS_UNITS&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                              <span class="stringliteral">&#39;VALS&#39;</span>, <span class="stringliteral">&#39;OBS_VALS&#39;</span>]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00333">333</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00346">346</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -541,7 +549,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                   levels=CF2.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                   colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                   linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00532">532</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00563">563</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -557,7 +565,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, obs_avg_data,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                    levels=CF1.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                    colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                    linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00472">472</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00503">503</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -573,7 +581,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contour(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                    levels=CF2.levels, colors=<span class="stringliteral">&#39;k&#39;</span>,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                    linewidths=1.0)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00517">517</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00548">548</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -589,7 +597,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  fig.colorbar(CF2, cax=cax, orientation=<span class="stringliteral">&#39;horizontal&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                ticks=CF2.levels)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00643">643</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00674">674</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -605,7 +613,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                     levels=CF2.levels,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                     cmap=cmap_diff,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                     locator= matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                         symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                     ),</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                     extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00525">525</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00556">556</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -621,7 +629,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, obs_avg_data,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                      cmap=cmap,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                      locator=matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                           symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                      ), extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00467">467</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00498">498</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -637,7 +645,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  ax.contourf(xmesh, ymesh, model_obs_diff,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                      levels=clevels_diff,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                      cmap=cmap_diff,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                      locator= matplotlib.ticker.MaxNLocator(</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                          symmetric=<span class="keyword">True</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                      ),</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                      extend=<span class="stringliteral">&#39;both&#39;</span>)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00510">510</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00541">541</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -652,9 +660,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  <a class="code" href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a>(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_avg_data[0,:,:]</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                     )</div><div class="ttc" id="plot__util_8py_html_a2c45577542b09b5988f457ad10cbc9ef"><div class="ttname"><a href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a></div><div class="ttdeci">def get_clevels(data)</div><div class="ttdoc">Get contour levels for plotting. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00340">plot_util.py:340</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  <a class="code" href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a>(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_avg_data[0,:,:]</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                     )</div><div class="ttc" id="plot__util_8py_html_a2c45577542b09b5988f457ad10cbc9ef"><div class="ttname"><a href="plot__util_8py.html#a2c45577542b09b5988f457ad10cbc9ef">plot_util.get_clevels</a></div><div class="ttdeci">def get_clevels(data)</div><div class="ttdoc">Get contour levels for plotting. </div><div class="ttdef"><b>Definition:</b> <a href="plot__util_8py_source.html#l00342">plot_util.py:342</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00546">546</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00577">577</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -670,7 +678,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    date_type.title()+<span class="stringliteral">&#39;: &#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    +str(datetime.datetime.strptime(date_beg, <span class="stringliteral">&#39;%Y%m%d&#39;</span>).strftime(<span class="stringliteral">&#39;%d%b%Y&#39;</span>))</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    +<span class="stringliteral">&#39;-&#39;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    +str(datetime.datetime.strptime(date_end, <span class="stringliteral">&#39;%Y%m%d&#39;</span>).strftime(<span class="stringliteral">&#39;%d%b%Y&#39;</span>))</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00115">115</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00128">128</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -686,7 +694,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  datetime.timedelta(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            hours=int(fcst_lead[:-4]),</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;            minutes=int(fcst_lead[-4:-2]),</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;            seconds=int(fcst_lead[-2:])</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        ).total_seconds()</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00211">211</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00224">224</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -702,7 +710,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  np.full_like(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_threshs, np.nan, dtype=float</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00242">242</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00255">255</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -718,7 +726,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  np.full_like(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_threshs, np.nan, dtype=object</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00239">239</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00252">252</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -734,7 +742,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  logging.Formatter(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;%(asctime)s.%(msecs)03d (%(filename)s:%(lineno)d) %(levelname)s: &#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    +<span class="stringliteral">&#39;%(message)s&#39;</span>,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;%m/%d %H:%M:%S&#39;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00091">91</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00101">101</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -749,24 +757,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  os.path.join(output_base_dir, <span class="stringliteral">&#39;data&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                             lead_avg_filename)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00366">366</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
-
-</div>
-</div>
-<a id="a8740d4aa226cad748a543bd42f40894b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8740d4aa226cad748a543bd42f40894b">&#9670;&nbsp;</a></span>lead_avg_filename</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tuple plot_threshold_by_lead.lead_avg_filename</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    stat+<span class="stringliteral">&#39;_&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    +model_plot_name+<span class="stringliteral">&#39;_&#39;</span>+model_obtype+<span class="stringliteral">&#39;_&#39;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    +base_name.replace(<span class="stringliteral">&#39;FCSTTHRESHHOLDER&#39;</span>, </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                       str(fcst_var_thresh_format)) \</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                    .replace(<span class="stringliteral">&#39;OBSTHRESHHOLDER&#39;</span>, </div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                             str(obs_var_thresh_format)) \</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    +<span class="stringliteral">&#39;.txt&#39;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00354">354</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  get_lead_avg_file(stat,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                                  model_stat_file,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                  fcst_lead,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                                  output_base_dir)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00394">394</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -782,7 +774,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  np.empty(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                [len(avg_cols_to_array), len(fcst_leads),</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                 len(fcst_var_threshs_format)]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;            )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00346">346</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00359">359</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -798,7 +790,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  pd.read_csv(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            lead_avg_file, sep=<span class="stringliteral">&#39; &#39;</span>, header=<span class="keywordtype">None</span>,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                            names=avg_file_cols, dtype=str</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00380">380</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00411">411</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -814,7 +806,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                    model_avg_file_data.loc[:][col].tolist()</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00409">409</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00440">440</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -830,7 +822,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            model_avg_file_data.loc[:][<span class="stringliteral">&#39;LEADS&#39;</span>].tolist()</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00384">384</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00415">415</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -846,7 +838,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                    model_avg_file_data_leads.index(</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                        fcst_lead</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                    )</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00402">402</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00433">433</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -861,8 +853,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    zip(model_list, model_reference_name_list, model_obtype_list)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00102">102</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    zip(model_list,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        model_reference_name_list,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        model_obtype_list,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00112">112</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -878,7 +870,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                        model_avg_data[0,:,:] - model1_avg_data</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00603">603</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00634">634</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -894,7 +886,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    model_avg_data[0,:,:]</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    - model_avg_data[1,:,:]</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                 )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00504">504</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00535">535</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+
+</div>
+</div>
+<a id="a0f2169da0cbcfabb6954fd1f3bb7324f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2169da0cbcfabb6954fd1f3bb7324f">&#9670;&nbsp;</a></span>model_stat_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">plot_threshold_by_lead.model_stat_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  do_string_sub(model_stat_template,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                                **string_sub_dict)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00392">392</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -910,7 +918,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  obs_var_level_list[</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_level_list.index(fcst_var_level)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    ]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00232">232</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00245">245</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -926,7 +934,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  obs_var_thresh_list[</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        fcst_var_thresh_list.index(fcst_var_threshs)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    ]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00236">236</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00249">249</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -942,7 +950,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  np.full_like(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        obs_var_threshs, np.nan, dtype=object</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00255">255</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00268">268</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -958,7 +966,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  list(</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    itertools.product(*[fcst_lead_list, </div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                        fcst_var_level_list, </div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        fcst_var_thresh_list])</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00107">107</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00120">120</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -974,7 +982,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  os.path.join(output_base_dir, <span class="stringliteral">&#39;images&#39;</span>,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                                     savefig_imagename)</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00665">665</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00696">696</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -990,7 +998,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  (</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;            stat+<span class="stringliteral">&#39;_&#39;</span>+base_name.replace(<span class="stringliteral">&#39;FCSTTHRESHHOLDER&#39;</span>, <span class="stringliteral">&#39;all&#39;</span>) \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;            .replace(<span class="stringliteral">&#39;OBSTHRESHHOLDER&#39;</span>,<span class="stringliteral">&#39;all&#39;</span>)+<span class="stringliteral">&#39;.png&#39;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        )</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00661">661</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00692">692</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+
+</div>
+</div>
+<a id="a5a7a78a35e4ef6634ff21930aa000cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7a78a35e4ef6634ff21930aa000cbd">&#9670;&nbsp;</a></span>string_sub_dict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary plot_threshold_by_lead.string_sub_dict</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                    <span class="stringliteral">&#39;model&#39;</span>: model_name,</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                    <span class="stringliteral">&#39;model_reference&#39;</span>: model_plot_name,</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                    <span class="stringliteral">&#39;obtype&#39;</span>: model_obtype,</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                    <span class="stringliteral">&#39;fcst_lead&#39;</span>: fcst_lead,</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                    <span class="stringliteral">&#39;fcst_level&#39;</span>: fcst_var_level,</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                    <span class="stringliteral">&#39;obs_level&#39;</span>: obs_var_level,</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    <span class="stringliteral">&#39;fcst_thresh&#39;</span>: fcst_var_thresh,</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                    <span class="stringliteral">&#39;obs_thresh&#39;</span>: obs_var_thresh,</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00382">382</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1030,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;fcst_valid_hour_beg&#39;</span>: fcst_valid_hour_list[0],</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;fcst_valid_hour_end&#39;</span>: fcst_valid_hour_list[-1],</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;fcst_init_hour_beg&#39;</span>: fcst_init_hour_list[0],</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;fcst_init_hour_end&#39;</span>: fcst_init_hour_list[-1],</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;obs_valid_hour_beg&#39;</span>: obs_valid_hour_list[0],</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&#39;obs_valid_hour_end&#39;</span>: obs_valid_hour_list[-1],</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&#39;obs_init_hour_beg&#39;</span>: obs_init_hour_list[0],</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&#39;obs_init_hour_end&#39;</span>: obs_init_hour_list[-1],</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;valid_hour_beg&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&#39;valid_hour_end&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&#39;init_hour_beg&#39;</span>: <span class="stringliteral">&#39;&#39;</span>,</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&#39;init_hour_end&#39;</span>: <span class="stringliteral">&#39;&#39;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00121">121</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00134">134</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1046,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsubplots</b> = nmodel
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  [ </div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;valid_hour_beg&#39;</span>, <span class="stringliteral">&#39;valid_hour_end&#39;</span>, <span class="stringliteral">&#39;init_hour_beg&#39;</span>, <span class="stringliteral">&#39;init_hour_end&#39;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;]</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00135">135</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plot__threshold__by__lead_8py_source.html#l00148">148</a> of file <a class="el" href="plot__threshold__by__lead_8py_source.html">plot_threshold_by_lead.py</a>.</p>
 
 </div>
 </div>
