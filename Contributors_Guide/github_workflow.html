@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,22 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -29,14 +38,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7. Testing" href="testing.html" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> METplus
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
@@ -84,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -112,6 +114,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -150,7 +153,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
         
@@ -231,7 +234,7 @@
 <div class="line">1. Create a GitHub Issue that reflects what needs to be done</div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">* Go to <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a>  and click on the <strong>Issues</strong> link, to the right of the <strong>Code</strong> tab</div>
+<div class="line">* Go to <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a>  and click on the <strong>Issues</strong> link, to the right of the <strong>Code</strong> tab</div>
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">* Click on the green <strong>New issue</strong> button</div>
@@ -245,7 +248,7 @@
 <div class="line">2.  Fork the NCAR/METplus repository</div>
 <div class="line-block">
 <div class="line">Retrieve a copy of the source code by forking the NCAR/METplus repository into your own GitHub repository. Click</div>
-<div class="line">on the ‘Fork’ button in the upper right hand side of the web page at <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a>.</div>
+<div class="line">on the ‘Fork’ button in the upper right hand side of the web page at <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a>.</div>
 <div class="line">Click on the appropriate GitHub account when presented with the pop-up window with the question</div>
 <div class="line-block">
 <div class="line">‘Where should we fork METplus?’</div>
@@ -273,7 +276,7 @@
 <div class="line-block">
 <div class="line">repository you forked in step 1:</div>
 <div class="line-block">
-<div class="line"><em>git remote add upstream https://github.com/NCAR/METplus</em></div>
+<div class="line"><em>git remote add upstream https://github.com/dtcenter/METplus</em></div>
 <div class="line"><br /></div>
 </div>
 <div class="line">To verify that the upstream and origin are correct, at the command line enter:</div>
@@ -286,8 +289,8 @@
 <div class="line-block">
 <div class="line">origin        <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus (fetch)</div>
 <div class="line">origin        <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus (push)</div>
-<div class="line">upstream      <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> (fetch)</div>
-<div class="line">upstream      <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> (push)</div>
+<div class="line">upstream      <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a> (fetch)</div>
+<div class="line">upstream      <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a> (push)</div>
 <div class="line"><br /></div>
 <div class="line">where &lt;github-username&gt; is your GitHub user account name</div>
 <div class="line"><br /></div>
@@ -370,7 +373,7 @@
 <div class="line"><em>git push origin develop</em></div>
 <div class="line"><br /></div>
 <div class="line">The first command pulls changes from the original repository.</div>
-<div class="line">i.e. the <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a></div>
+<div class="line">i.e. the <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a></div>
 <div class="line">repository that you see when you perform <em>git remote -v</em> and that you set to upstream in</div>
 <div class="line">step #4 above.  The second command pushes those changes to your forked repository.</div>
 <div class="line"><br /></div>
@@ -421,7 +424,7 @@
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">To request to have your changes be incorporated into the remote repository</div>
-<div class="line">(i.e. <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> repository).</div>
+<div class="line">(i.e. <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a> repository).</div>
 <div class="line"><br /></div>
 <div class="line">The METplus maintainers will need to approve the request and then merge your files into the main</div>
 <div class="line">repository’s develop branch.  The develop branch will then be used to create a release candidate.</div>
@@ -474,7 +477,7 @@
 <div class="line"><br /></div>
 <div class="line-block">
 <div class="line">After the METplus maintainers have accepted your changes and have merged them into the main repository, update</div>
-<div class="line">your local clone by pulling changes from the original repository’s (i.e. the <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> repository)</div>
+<div class="line">your local clone by pulling changes from the original repository’s (i.e. the <a class="reference external" href="https://github.com/dtcenter/METplus">https://github.com/dtcenter/METplus</a> repository)</div>
 <div class="line">develop branch:</div>
 <div class="line"><br /></div>
 <div class="line">Checkout your develop branch:</div>
@@ -541,11 +544,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -556,7 +567,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

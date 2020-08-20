@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,22 @@
   
 
   
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -29,18 +38,10 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" />
-    <link rel="prev" title="5.2.2.4. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" /> 
+    <link rel="prev" title="5.2.2.4. MODE: Hail Verification" href="MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> METplus
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
@@ -84,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -125,6 +127,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -163,7 +166,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -190,7 +193,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-convection-allowing-models-point2grid-obslsr-obsonly-practicallyperfect-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
 <div class="sphx-glr-example-title section" id="point2grid-calculate-practically-perfect-probabilities">
 <span id="sphx-glr-generated-model-applications-convection-allowing-models-point2grid-obslsr-obsonly-practicallyperfect-py"></span><h1><span class="section-number">5.2.2.5. </span>Point2Grid: Calculate Practically Perfect Probabilities<a class="headerlink" href="#point2grid-calculate-practically-perfect-probabilities" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/
@@ -504,30 +510,30 @@ and will contain the following files:</p>
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ASCII2NCToolUseCase&amp;check_keywords=yes&amp;area=default">ASCII2NC</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=Point2GridUseCase&amp;check_keywords=yes&amp;area=default">Point2Grid</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlane</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PyEmbedIngestToolUseCase&amp;check_keywords=yes&amp;area=default">Python Embedding Ingest</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegriddingInToolUseCase&amp;check_keywords=yes&amp;area=default">Regridding in Tool</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDF</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&amp;check_keywords=yes&amp;area=default">Python Embedding</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NCAROrgUseCase&amp;check_keywords=yes&amp;area=default">NCAROrgUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ProbabilityGenerationUseCase&amp;check_keywords=yes&amp;area=default">ProbabilityGenerationUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&amp;check_keywords=yes&amp;area=default">MaskingFeatureUseCase</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=HMTOrgUseCase&amp;check_keywords=yes&amp;area=default">HMTOrgUseCase</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=HWTOrgUseCase&amp;check_keywords=yes&amp;area=default">HWTOrgUseCase</a></p>
+<p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=ASCII2NCToolUseCase&amp;check_keywords=yes&amp;area=default">ASCII2NC</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=Point2GridUseCase&amp;check_keywords=yes&amp;area=default">Point2Grid</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlane</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=PyEmbedIngestToolUseCase&amp;check_keywords=yes&amp;area=default">Python Embedding Ingest</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RegriddingInToolUseCase&amp;check_keywords=yes&amp;area=default">Regridding in Tool</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDF</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&amp;check_keywords=yes&amp;area=default">Python Embedding</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NCAROrgUseCase&amp;check_keywords=yes&amp;area=default">NCAROrgUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=ProbabilityGenerationUseCase&amp;check_keywords=yes&amp;area=default">ProbabilityGenerationUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MaskingFeatureUseCase&amp;check_keywords=yes&amp;area=default">MaskingFeatureUseCase</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=HMTOrgUseCase&amp;check_keywords=yes&amp;area=default">HMTOrgUseCase</a>
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=HWTOrgUseCase&amp;check_keywords=yes&amp;area=default">HWTOrgUseCase</a></p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-convection-allowing-models-point2grid-obslsr-obsonly-practicallyperfect-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/91a8f26d8feb4733ccb117d418ad564d/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/ccc3a6129e815bf3f8951afd9e375de9/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -545,7 +551,7 @@ and will contain the following files:</p>
         <a href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" class="btn btn-neutral float-right" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" class="btn btn-neutral float-left" title="5.2.2.4. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" class="btn btn-neutral float-left" title="5.2.2.4. MODE: Hail Verification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -554,11 +560,19 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -569,7 +583,6 @@ and will contain the following files:</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

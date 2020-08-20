@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,22 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -29,14 +38,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Software Installation/Getting Started" href="installation.html" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> METplus
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
@@ -84,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -120,6 +122,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -158,7 +161,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
@@ -261,53 +264,53 @@ METplus functionality.</p>
 <h2><span class="section-number">1.5. </span>METplus Release Notes<a class="headerlink" href="#metplus-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>When applicable, release notes are followed by the GitHub issue number which
 describes the bugfix, enhancement, or new feature:
-<a class="reference external" href="https://github.com/NCAR/METplus/issues">https://github.com/NCAR/METplus/issues</a></p>
+<a class="reference external" href="https://github.com/dtcenter/METplus/issues">https://github.com/dtcenter/METplus/issues</a></p>
 <p><strong>New in v3.1</strong></p>
 <p>Bugfixes:</p>
 <ul class="simple">
-<li><p>Running EnsembleStat then GridStat fails when PCPCombine is also run (<a class="reference external" href="https://github.com/NCAR/METplus/issues/509">#509</a>)</p></li>
-<li><p>All changes included in <a class="reference external" href="https://github.com/NCAR/METplus/milestone/11?closed=1">3.0.1</a> and <a class="reference external" href="https://github.com/NCAR/METplus/milestone/13?closed=1">3.0.2</a> bugfix releases</p></li>
+<li><p>Running EnsembleStat then GridStat fails when PCPCombine is also run (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/509">#509</a>)</p></li>
+<li><p>All changes included in <a class="reference external" href="https://github.com/dtcenter/METplus/milestone/11?closed=1">3.0.1</a> and <a class="reference external" href="https://github.com/dtcenter/METplus/milestone/13?closed=1">3.0.2</a> bugfix releases</p></li>
 </ul>
 <p>New Wrappers:</p>
 <ul class="simple">
-<li><p>TCRMW (<a class="reference external" href="https://github.com/NCAR/METplus/issues/437">#437</a>)</p></li>
-<li><p>Point2Grid (<a class="reference external" href="https://github.com/NCAR/METplus/issues/405">#405</a>)</p></li>
-<li><p>GenVxMask (<a class="reference external" href="https://github.com/NCAR/METplus/issues/387">#387</a>)</p></li>
-<li><p>Grid-Diag (<a class="reference external" href="https://github.com/NCAR/METplus/issues/490">#490</a>)</p></li>
+<li><p>TCRMW (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/437">#437</a>)</p></li>
+<li><p>Point2Grid (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/405">#405</a>)</p></li>
+<li><p>GenVxMask (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/387">#387</a>)</p></li>
+<li><p>Grid-Diag (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/490">#490</a>)</p></li>
 </ul>
 <p>New Use Cases:</p>
 <ul class="simple">
-<li><p>StatAnalysis use case to demonstrate using Python Embedding (<a class="reference external" href="https://github.com/NCAR/METplus/issues/492">#492</a>)</p></li>
-<li><p>Develop new SWPC use case using_gen_vx_mask (<a class="reference external" href="https://github.com/NCAR/METplus/issues/427">#427</a>)</p></li>
-<li><p>Create a Feature Relative Use Case with User Diagnostics (<a class="reference external" href="https://github.com/NCAR/METplus/issues/522">#522</a>)</p></li>
-<li><p>Develop Surrogate Severe Calculation use-case (<a class="reference external" href="https://github.com/NCAR/METplus/issues/413">#413</a>)</p></li>
+<li><p>StatAnalysis use case to demonstrate using Python Embedding (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/492">#492</a>)</p></li>
+<li><p>Develop new SWPC use case using_gen_vx_mask (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/427">#427</a>)</p></li>
+<li><p>Create a Feature Relative Use Case with User Diagnostics (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/522">#522</a>)</p></li>
+<li><p>Develop Surrogate Severe Calculation use-case (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/413">#413</a>)</p></li>
 </ul>
 <p>Enhancements:</p>
 <ul class="simple">
-<li><p>GenVxMask wrapper doesn’t handle commas within command line arguments properly (<a class="reference external" href="https://github.com/NCAR/METplus/issues/454">#454</a>)</p></li>
-<li><p>Enhance PointStat to process one field at a time (<a class="reference external" href="https://github.com/NCAR/METplus/issues/451">#451</a>)</p></li>
-<li><p>GridStat and other wrappers set input dir to OUTPUT_BASE if not set (<a class="reference external" href="https://github.com/NCAR/METplus/issues/446">#446</a>)</p></li>
-<li><p>Add curl possibility to build_components build MET script (<a class="reference external" href="https://github.com/NCAR/METplus/issues/513">#513</a>)</p></li>
-<li><p>Change the shebang lines from “#!/usr/bin/env python” to “#!/usr/bin/env python3” (<a class="reference external" href="https://github.com/NCAR/METplus/issues/503">#503</a>)</p></li>
-<li><p>Add variable MET_BIN_DIR to replace {MET_INSTALL_DIR}/bin in the code (<a class="reference external" href="https://github.com/NCAR/METplus/issues/502">#502</a>)</p></li>
-<li><p>File window functionality gives useful message if not enough information provided in filename template (<a class="reference external" href="https://github.com/NCAR/METplus/issues/517">#517</a>)</p></li>
-<li><p>Enable METplus to only process certain months of a year (<a class="reference external" href="https://github.com/NCAR/METplus/issues/512">#512</a>))</p></li>
-<li><p>Enhance StatAnalysis/MakePlots to support use defined templates in plotting scripts (<a class="reference external" href="https://github.com/NCAR/METplus/issues/500">#500</a>)</p></li>
-<li><p>Create Docker image for METplus release (<a class="reference external" href="https://github.com/NCAR/METplus/issues/498">#498</a>)</p></li>
-<li><p>StatAnalysis wrapper no longer silently fails when no field information is provided (<a class="reference external" href="https://github.com/NCAR/METplus/issues/422">#422</a>)</p></li>
-<li><p>Allow regrid_data_plane wrapper to input multiple fields (<a class="reference external" href="https://github.com/NCAR/METplus/issues/421">#421</a>)</p></li>
-<li><p>Expand support for begin_end_incr syntax (<a class="reference external" href="https://github.com/NCAR/METplus/issues/404">#404</a>)</p></li>
-<li><p>Clean up StringSub/StringExtract calls (<a class="reference external" href="https://github.com/NCAR/METplus/issues/343">#343</a>)</p></li>
-<li><p>Rearrange ush with subdirs (<a class="reference external" href="https://github.com/NCAR/METplus/issues/311">#311</a>)</p></li>
+<li><p>GenVxMask wrapper doesn’t handle commas within command line arguments properly (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/454">#454</a>)</p></li>
+<li><p>Enhance PointStat to process one field at a time (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/451">#451</a>)</p></li>
+<li><p>GridStat and other wrappers set input dir to OUTPUT_BASE if not set (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/446">#446</a>)</p></li>
+<li><p>Add curl possibility to build_components build MET script (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/513">#513</a>)</p></li>
+<li><p>Change the shebang lines from “#!/usr/bin/env python” to “#!/usr/bin/env python3” (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/503">#503</a>)</p></li>
+<li><p>Add variable MET_BIN_DIR to replace {MET_INSTALL_DIR}/bin in the code (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/502">#502</a>)</p></li>
+<li><p>File window functionality gives useful message if not enough information provided in filename template (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/517">#517</a>)</p></li>
+<li><p>Enable METplus to only process certain months of a year (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/512">#512</a>)</p></li>
+<li><p>Enhance StatAnalysis/MakePlots to support use defined templates in plotting scripts (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/500">#500</a>)</p></li>
+<li><p>Create Docker image for METplus release (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/498">#498</a>)</p></li>
+<li><p>StatAnalysis wrapper no longer silently fails when no field information is provided (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/422">#422</a>)</p></li>
+<li><p>Allow regrid_data_plane wrapper to input multiple fields (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/421">#421</a>)</p></li>
+<li><p>Expand support for begin_end_incr syntax (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/404">#404</a>)</p></li>
+<li><p>Clean up StringSub/StringExtract calls (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/343">#343</a>)</p></li>
+<li><p>Rearrange ush with subdirs (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/311">#311</a>)</p></li>
 </ul>
 <p>Internal:</p>
 <ul class="simple">
-<li><p>Change mouse over text for use cases to include config file name (<a class="reference external" href="https://github.com/NCAR/METplus/issues/400">#400</a>)</p></li>
-<li><p>Setup Initial Integration Test Framework - Travis CI (<a class="reference external" href="https://github.com/NCAR/METplus/issues/185">#185</a>)</p></li>
-<li><p>Setup new location to house INPUT DATA for testing (<a class="reference external" href="https://github.com/NCAR/METplus/issues/461">#461</a>)</p></li>
-<li><p>Split up use case tests so it can be run on Travis (<a class="reference external" href="https://github.com/NCAR/METplus/issues/460">#460</a>)</p></li>
-<li><p>Update Tutorial Chapter 4 for MET 9.0, METplus 3.0 (<a class="reference external" href="https://github.com/NCAR/METplus/issues/428">#428</a>)</p></li>
-<li><p>Reorganize sphinx documentation files (<a class="reference external" href="https://github.com/NCAR/METplus/issues/418">#418</a>)</p></li>
+<li><p>Change mouse over text for use cases to include config file name (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/400">#400</a>)</p></li>
+<li><p>Setup Initial Integration Test Framework - Travis CI (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/185">#185</a>)</p></li>
+<li><p>Setup new location to house INPUT DATA for testing (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/461">#461</a>)</p></li>
+<li><p>Split up use case tests so it can be run on Travis (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/460">#460</a>)</p></li>
+<li><p>Update Tutorial Chapter 4 for MET 9.0, METplus 3.0 (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/428">#428</a>)</p></li>
+<li><p>Reorganize sphinx documentation files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/418">#418</a>)</p></li>
 </ul>
 <p><strong>New in v3.0</strong></p>
 <ul class="simple">
@@ -383,11 +386,19 @@ on contributing code to METplus Wrappers, please contact
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -398,7 +409,6 @@ on contributing code to METplus Wrappers, please contact
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

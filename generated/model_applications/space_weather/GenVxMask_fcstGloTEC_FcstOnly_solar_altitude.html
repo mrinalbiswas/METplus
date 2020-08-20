@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,22 @@
   
 
   
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -29,14 +38,6 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2.7.2. Grid-Stat: Analysis validation" href="GridStat_fcstGloTEC_obsGloTEC_vx7.html" />
@@ -54,7 +55,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> METplus
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
@@ -84,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -125,6 +127,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -163,7 +166,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -190,7 +193,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-space-weather-genvxmask-fcstglotec-fcstonly-solar-altitude-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
 <div class="sphx-glr-example-title section" id="genvxmask-solar-altitude">
 <span id="sphx-glr-generated-model-applications-space-weather-genvxmask-fcstglotec-fcstonly-solar-altitude-py"></span><h1><span class="section-number">5.2.7.1. </span>GenVxMask: Solar Altitude<a class="headerlink" href="#genvxmask-solar-altitude" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/space_weather/GenVxMask_fcstGloTEC_solar
@@ -236,7 +242,7 @@ input grid, creating a separate masked output file for each time level of the in
 </div>
 <div class="line-block">
 <div class="line"><strong>Location:</strong> All of the input data required for this use case can be found in the sample data tarball.</div>
-<div class="line">Click here to download: <a class="reference external" href="https://github.com/NCAR/METplus/releases/download/v3.0/sample_data-space_weather-3.0.tgz">https://github.com/NCAR/METplus/releases/download/v3.0/sample_data-space_weather-3.0.tgz</a></div>
+<div class="line">Click here to download: <a class="reference external" href="https://github.com/dtcenter/METplus/releases/download/v3.0/sample_data-space_weather-3.0.tgz">https://github.com/dtcenter/METplus/releases/download/v3.0/sample_data-space_weather-3.0.tgz</a></div>
 <div class="line">This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See ‘Running METplus’ section for more information.</div>
 </div>
 <div class="line-block">
@@ -447,19 +453,19 @@ and will contain the following files:</p>
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GenVxMaskToolUseCase&amp;check_keywords=yes&amp;area=default">GenVxMaskToolUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SpaceWeatherAppUseCase&amp;check_keywords=yes&amp;area=default">SpaceWeatherAppUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAASWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAASWPCOrgUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&amp;check_keywords=yes&amp;area=default">MaskingFeatureUseCase</a>,</p>
+<p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GenVxMaskToolUseCase&amp;check_keywords=yes&amp;area=default">GenVxMaskToolUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SpaceWeatherAppUseCase&amp;check_keywords=yes&amp;area=default">SpaceWeatherAppUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NOAASWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAASWPCOrgUseCase</a>,
+<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MaskingFeatureUseCase&amp;check_keywords=yes&amp;area=default">MaskingFeatureUseCase</a>,</p>
 </div>
-
-
+<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-GenVxMask.png’</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-space-weather-genvxmask-fcstglotec-fcstonly-solar-altitude-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/cee0699ff5196d79845fe98c2bc1d060/GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/cd54e48714abedb4218c1b2a4460eb02/GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -486,11 +492,19 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -501,7 +515,6 @@ and will contain the following files:</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
