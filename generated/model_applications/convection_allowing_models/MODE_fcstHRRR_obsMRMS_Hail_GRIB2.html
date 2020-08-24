@@ -1,22 +1,15 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.2.4. MODE: Hail Verification &mdash; METplus 3.1 documentation</title>
+  <title>5.2.2.3. MODE: Hail Verification &mdash; METplus 3.1 documentation</title>
   
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -24,9 +17,7 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -38,10 +29,18 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.2.5. Point2Grid: Calculate Practically Perfect Probabilities" href="Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.html" />
-    <link rel="prev" title="5.2.2.3. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" /> 
+    <link rel="next" title="5.2.2.4. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" />
+    <link rel="prev" title="5.2.2.2. Grid-Stat: Surrogate Severe and Practically Perfect Evaluation" href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../../../index.html" class="icon icon-home"> METplus
           
 
           
@@ -85,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -127,7 +125,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -166,7 +163,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -174,7 +171,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.2.4. </span>MODE: Hail Verification</li>
+      <li><span class="section-number">5.2.2.3. </span>MODE: Hail Verification</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,12 +190,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-convection-allowing-models-mode-fcsthrrr-obsmrms-hail-grib2-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
+  
 <div class="sphx-glr-example-title section" id="mode-hail-verification">
-<span id="sphx-glr-generated-model-applications-convection-allowing-models-mode-fcsthrrr-obsmrms-hail-grib2-py"></span><h1><span class="section-number">5.2.2.4. </span>MODE: Hail Verification<a class="headerlink" href="#mode-hail-verification" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-convection-allowing-models-mode-fcsthrrr-obsmrms-hail-grib2-py"></span><h1><span class="section-number">5.2.2.3. </span>MODE: Hail Verification<a class="headerlink" href="#mode-hail-verification" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/
 convection_allowing_model/
 MODE_fcstHRRR_obsMRMS_Hail_GRIB2.conf</p>
@@ -636,7 +630,7 @@ mode_270000L_20190529_030000V_010000A.ps</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/convection_allowing_models-MODE_fcstHRRRE_obsMRMS_Hail_GRIB2.png’</p>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MODEToolUseCase&amp;check_keywords=yes&amp;area=default">MODEToolUseCase</a>,
@@ -647,13 +641,13 @@ mode_270000L_20190529_030000V_010000A.ps</p>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NCAROrgUseCase&amp;check_keywords=yes&amp;area=default">NCAROrgUseCase</a>,
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-convection-allowing-models-mode-fcsthrrr-obsmrms-hail-grib2-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/fd6b5e008aa2869f9506b6ecdd2091b0/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/3b0cfb83f9d7c699b1ed1ead0d771506/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">MODE_fcstHRRR_obsMRMS_Hail_GRIB2.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -668,10 +662,10 @@ mode_270000L_20190529_030000V_010000A.ps</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.html" class="btn btn-neutral float-right" title="5.2.2.5. Point2Grid: Calculate Practically Perfect Probabilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" class="btn btn-neutral float-right" title="5.2.2.4. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" class="btn btn-neutral float-left" title="5.2.2.3. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.html" class="btn btn-neutral float-left" title="5.2.2.2. Grid-Stat: Surrogate Severe and Practically Perfect Evaluation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -680,19 +674,11 @@ mode_270000L_20190529_030000V_010000A.ps</p>
 
   <div role="contentinfo">
     <p>
-        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -703,6 +689,7 @@ mode_270000L_20190529_030000V_010000A.ps</p>
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

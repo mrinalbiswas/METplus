@@ -1,22 +1,15 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.12.6. PCPCombine: Bucket Interval Use Case &mdash; METplus 3.1 documentation</title>
+  <title>5.1.12.5. PCPCombine: Bucket Interval Use Case &mdash; METplus 3.1 documentation</title>
   
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -24,9 +17,7 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -38,10 +29,18 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.12.7. PCPCombine: ADD Use Case" href="PCPCombine_add.html" />
-    <link rel="prev" title="5.1.12.5. PCPCombine: Python Embedding Use Case" href="PCPCombine_python_embedding.html" /> 
+    <link rel="next" title="5.1.12.6. PCPCombine: ADD Use Case" href="PCPCombine_add.html" />
+    <link rel="prev" title="5.1.12.4. PCPCombine: DERIVE Use Case" href="PCPCombine_derive.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../../../index.html" class="icon icon-home"> METplus
           
 
           
@@ -85,7 +84,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -142,7 +140,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -181,7 +178,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -189,7 +186,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li><span class="section-number">5.1.12.6. </span>PCPCombine: Bucket Interval Use Case</li>
+      <li><span class="section-number">5.1.12.5. </span>PCPCombine: Bucket Interval Use Case</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,12 +205,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-met-tool-wrapper-pcpcombine-pcpcombine-bucket-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
+  
 <div class="sphx-glr-example-title section" id="pcpcombine-bucket-interval-use-case">
-<span id="sphx-glr-generated-met-tool-wrapper-pcpcombine-pcpcombine-bucket-py"></span><h1><span class="section-number">5.1.12.6. </span>PCPCombine: Bucket Interval Use Case<a class="headerlink" href="#pcpcombine-bucket-interval-use-case" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-met-tool-wrapper-pcpcombine-pcpcombine-bucket-py"></span><h1><span class="section-number">5.1.12.5. </span>PCPCombine: Bucket Interval Use Case<a class="headerlink" href="#pcpcombine-bucket-interval-use-case" title="Permalink to this headline">¶</a></h1>
 <p>met_tool_wrapper/PCPCombine/PCPCombine_bucket.conf</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
@@ -381,14 +375,14 @@ and will contain the following files:</p>
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-PCPCombine.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-met-tool-wrapper-pcpcombine-pcpcombine-bucket-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/3b75804ae618448f414f0b46bca76f42/PCPCombine_bucket.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">PCPCombine_bucket.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/ffcf8e62ecd89ab35a218167cc1b8b32/PCPCombine_bucket.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">PCPCombine_bucket.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -403,10 +397,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PCPCombine_add.html" class="btn btn-neutral float-right" title="5.1.12.7. PCPCombine: ADD Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="PCPCombine_add.html" class="btn btn-neutral float-right" title="5.1.12.6. PCPCombine: ADD Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="PCPCombine_python_embedding.html" class="btn btn-neutral float-left" title="5.1.12.5. PCPCombine: Python Embedding Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="PCPCombine_derive.html" class="btn btn-neutral float-left" title="5.1.12.4. PCPCombine: DERIVE Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -415,19 +409,11 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
-        
         &copy; Copyright 2020, UCAR/NCAR, NOAA, and CSU/CIRA
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -438,6 +424,7 @@ and will contain the following files:</p>
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

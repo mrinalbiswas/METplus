@@ -15,6 +15,7 @@ Grid-Stat: Standard Verification of Surface Fields
 model_applications/medium_range/GridStat_fcstGFS_obsGFS
 _Sfc_MultiField.conf
 
+
 Scientific Objective
 --------------------
 To provide useful statistical information on the relationship between observation
