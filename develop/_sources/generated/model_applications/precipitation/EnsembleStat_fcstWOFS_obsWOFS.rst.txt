@@ -154,13 +154,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: EnsembleStat_fcstWOFS_obsWOFS.py <EnsembleStat_fcstWOFS_obsWOFS.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: EnsembleStat_fcstWOFS_obsWOFS.ipynb <EnsembleStat_fcstWOFS_obsWOFS.ipynb>`
 

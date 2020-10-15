@@ -130,13 +130,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-GridDiag.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridDiag.py <GridDiag.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridDiag.ipynb <GridDiag.ipynb>`
 

@@ -134,13 +134,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GenVxMask_with_arguments.py <GenVxMask_with_arguments.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GenVxMask_with_arguments.ipynb <GenVxMask_with_arguments.ipynb>`
 

@@ -291,13 +291,13 @@ sphinx_gallery_thumbnail_path = '_static/s2s-GridStat_SeriesAnalysis_fcstNMME_ob
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py <GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.ipynb <GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.ipynb>`
 

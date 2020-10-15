@@ -174,13 +174,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: StatAnalysis_python_embedding.py <StatAnalysis_python_embedding.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: StatAnalysis_python_embedding.ipynb <StatAnalysis_python_embedding.ipynb>`
 

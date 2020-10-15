@@ -125,13 +125,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: PyEmbedIngest.py <PyEmbedIngest.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: PyEmbedIngest.ipynb <PyEmbedIngest.ipynb>`
 

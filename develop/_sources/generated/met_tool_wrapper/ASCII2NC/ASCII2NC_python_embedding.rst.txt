@@ -125,13 +125,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-ASCII2NC.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: ASCII2NC_python_embedding.py <ASCII2NC_python_embedding.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: ASCII2NC_python_embedding.ipynb <ASCII2NC_python_embedding.ipynb>`
 

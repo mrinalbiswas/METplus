@@ -172,13 +172,13 @@ sphinx_gallery_thumbnail_path = '_static/medium_range-PointStat_fcstGFS_obsNAM_S
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py <PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.ipynb <PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.ipynb>`
 

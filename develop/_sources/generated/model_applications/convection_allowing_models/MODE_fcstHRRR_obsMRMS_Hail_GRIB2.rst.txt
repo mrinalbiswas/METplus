@@ -154,13 +154,13 @@ sphinx_gallery_thumbnail_path = '_static/convection_allowing_models-MODE_fcstHRR
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py <MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: MODE_fcstHRRR_obsMRMS_Hail_GRIB2.ipynb <MODE_fcstHRRR_obsMRMS_Hail_GRIB2.ipynb>`
 

@@ -176,13 +176,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-GenVxMask.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.py <GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.ipynb <GenVxMask_fcstGloTEC_FcstOnly_solar_altitude.ipynb>`
 

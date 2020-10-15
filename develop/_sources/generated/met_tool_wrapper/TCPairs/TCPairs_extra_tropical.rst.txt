@@ -149,13 +149,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-TCPairs.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: TCPairs_extra_tropical.py <TCPairs_extra_tropical.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: TCPairs_extra_tropical.ipynb <TCPairs_extra_tropical.ipynb>`
 

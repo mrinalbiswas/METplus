@@ -134,13 +134,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GenVxMask_multiple.py <GenVxMask_multiple.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GenVxMask_multiple.ipynb <GenVxMask_multiple.ipynb>`
 

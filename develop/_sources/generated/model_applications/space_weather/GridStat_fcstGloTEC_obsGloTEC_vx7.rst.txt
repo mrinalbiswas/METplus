@@ -195,13 +195,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridStat_fcstGloTEC_obsGloTEC_vx7.py <GridStat_fcstGloTEC_obsGloTEC_vx7.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridStat_fcstGloTEC_obsGloTEC_vx7.ipynb <GridStat_fcstGloTEC_obsGloTEC_vx7.ipynb>`
 

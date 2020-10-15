@@ -152,13 +152,13 @@ sphinx_gallery_thumbnail_path = '_static/medium_range-GridStat_fcstGFS_obsGFS_Sf
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridStat_fcstGFS_obsGFS_Sfc_MultiField.py <GridStat_fcstGFS_obsGFS_Sfc_MultiField.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridStat_fcstGFS_obsGFS_Sfc_MultiField.ipynb <GridStat_fcstGFS_obsGFS_Sfc_MultiField.ipynb>`
 

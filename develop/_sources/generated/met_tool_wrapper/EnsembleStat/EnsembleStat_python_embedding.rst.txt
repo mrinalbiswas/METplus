@@ -151,13 +151,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-EnsembleStat.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: EnsembleStat_python_embedding.py <EnsembleStat_python_embedding.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: EnsembleStat_python_embedding.ipynb <EnsembleStat_python_embedding.ipynb>`
 

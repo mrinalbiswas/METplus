@@ -244,13 +244,13 @@ sphinx_gallery_thumbnail_path = '_static/medium_range-TCStat_SeriesAnalysis_fcst
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py <TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb <TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb>`
 

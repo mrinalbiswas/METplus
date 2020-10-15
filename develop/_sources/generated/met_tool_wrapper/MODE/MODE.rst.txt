@@ -159,13 +159,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MODE.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: MODE.py <MODE.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: MODE.ipynb <MODE.ipynb>`
 

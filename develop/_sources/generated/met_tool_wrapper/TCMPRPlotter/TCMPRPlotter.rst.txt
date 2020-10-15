@@ -127,13 +127,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: TCMPRPlotter.py <TCMPRPlotter.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: TCMPRPlotter.ipynb <TCMPRPlotter.ipynb>`
 

@@ -135,13 +135,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: TCRMW_fcstGFS_fcstOnly_gonzalo.py <TCRMW_fcstGFS_fcstOnly_gonzalo.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: TCRMW_fcstGFS_fcstOnly_gonzalo.ipynb <TCRMW_fcstGFS_fcstOnly_gonzalo.ipynb>`
 

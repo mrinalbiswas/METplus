@@ -128,13 +128,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: PyEmbedIngest_multi_field_one_file.py <PyEmbedIngest_multi_field_one_file.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: PyEmbedIngest_multi_field_one_file.ipynb <PyEmbedIngest_multi_field_one_file.ipynb>`
 

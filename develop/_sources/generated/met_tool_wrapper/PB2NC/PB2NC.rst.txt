@@ -143,13 +143,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-PB2NC.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: PB2NC.py <PB2NC.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: PB2NC.ipynb <PB2NC.ipynb>`
 

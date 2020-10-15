@@ -197,13 +197,13 @@ sphinx_gallery_thumbnail_path = '_static/cryosphere_GridStat_MODE_fcstIMS_obsNCE
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py <GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridStat_MODE_fcstIMS_obsNCEP_sea_ice.ipynb <GridStat_MODE_fcstIMS_obsNCEP_sea_ice.ipynb>`
 

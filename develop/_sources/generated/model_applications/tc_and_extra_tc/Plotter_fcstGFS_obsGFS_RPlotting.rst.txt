@@ -176,13 +176,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: Plotter_fcstGFS_obsGFS_RPlotting.py <Plotter_fcstGFS_obsGFS_RPlotting.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: Plotter_fcstGFS_obsGFS_RPlotting.ipynb <Plotter_fcstGFS_obsGFS_RPlotting.ipynb>`
 

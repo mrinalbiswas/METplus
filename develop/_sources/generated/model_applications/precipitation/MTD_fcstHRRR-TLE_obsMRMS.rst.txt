@@ -156,13 +156,13 @@ sphinx_gallery_thumbnail_path = '_static/precipitation-MTD_fcstHRRR-TLE_obsMRMS.
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: MTD_fcstHRRR-TLE_obsMRMS.py <MTD_fcstHRRR-TLE_obsMRMS.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: MTD_fcstHRRR-TLE_obsMRMS.ipynb <MTD_fcstHRRR-TLE_obsMRMS.ipynb>`
 

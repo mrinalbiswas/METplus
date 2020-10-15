@@ -155,13 +155,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MTD.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: MTD.py <MTD.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: MTD.ipynb <MTD.ipynb>`
 

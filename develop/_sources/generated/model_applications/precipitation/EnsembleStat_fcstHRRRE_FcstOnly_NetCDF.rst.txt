@@ -182,13 +182,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py <EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.ipynb <EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.ipynb>`
 

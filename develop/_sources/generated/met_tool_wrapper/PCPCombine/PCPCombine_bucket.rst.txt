@@ -129,13 +129,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-PCPCombine.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: PCPCombine_bucket.py <PCPCombine_bucket.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: PCPCombine_bucket.ipynb <PCPCombine_bucket.ipynb>`
 

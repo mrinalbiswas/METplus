@@ -132,13 +132,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-RegridDataPlane.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: RegridDataPlane_multi_field_multi_file.py <RegridDataPlane_multi_field_multi_file.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: RegridDataPlane_multi_field_multi_file.ipynb <RegridDataPlane_multi_field_multi_file.ipynb>`
 

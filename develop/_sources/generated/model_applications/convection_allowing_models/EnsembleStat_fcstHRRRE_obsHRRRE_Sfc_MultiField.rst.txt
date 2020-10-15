@@ -188,13 +188,13 @@ sphinx_gallery_thumbnail_path = '_static/convection_allowing_models-EnsembleStat
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py <EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.ipynb <EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.ipynb>`
 

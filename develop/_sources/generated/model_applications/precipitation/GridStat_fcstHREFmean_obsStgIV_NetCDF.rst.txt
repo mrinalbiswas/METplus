@@ -157,13 +157,13 @@ sphinx_gallery_thumbnail_path = '_static/precipitation-GridStat_fcstHREFmean_obs
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: GridStat_fcstHREFmean_obsStgIV_NetCDF.py <GridStat_fcstHREFmean_obsStgIV_NetCDF.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: GridStat_fcstHREFmean_obsStgIV_NetCDF.ipynb <GridStat_fcstHREFmean_obsStgIV_NetCDF.ipynb>`
 

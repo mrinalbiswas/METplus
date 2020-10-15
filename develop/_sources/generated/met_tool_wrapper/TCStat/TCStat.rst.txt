@@ -132,13 +132,13 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-TCStat.png'
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: TCStat.py <TCStat.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: TCStat.ipynb <TCStat.ipynb>`
 

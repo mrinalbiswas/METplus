@@ -164,13 +164,13 @@ Keywords
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.py <Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.ipynb <Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.ipynb>`
 

@@ -173,13 +173,13 @@ sphinx_gallery_thumbnail_path = '_static/climate-MODE_fcstCESM_obsGPCP_AsianMons
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-python
 
      :download:`Download Python source code: MODE_fcstCESM_obsGPCP_AsianMonsoonPrecip.py <MODE_fcstCESM_obsGPCP_AsianMonsoonPrecip.py>`
 
 
 
-  .. container:: sphx-glr-download
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
 
      :download:`Download Jupyter notebook: MODE_fcstCESM_obsGPCP_AsianMonsoonPrecip.ipynb <MODE_fcstCESM_obsGPCP_AsianMonsoonPrecip.ipynb>`
 
