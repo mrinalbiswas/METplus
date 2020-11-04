@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.5.1. Grid-Stat: Compute Anomaly Correlation using Climatology &mdash; METplus 4.0-beta2-dev documentation</title>
+  <title>5.2.4.1. Grid-Stat: Compute Anomaly Correlation using Climatology &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -45,10 +45,10 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html"/>
-        <link rel="prev" title="5.2.4.1. StatAnalysis: JEDI" href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html"/> 
+        <link rel="next" title="5.2.4.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html"/>
+        <link rel="prev" title="5.2.3.1. Grid-Stat and MODE: Sea Ice Validation" href="../cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,12 +83,14 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
+                      <option value=''>3.1</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
+                        
+                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -130,12 +132,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.4. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.5. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.6. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.7. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.8. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -197,7 +198,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.5.1. </span>Grid-Stat: Compute Anomaly Correlation using Climatology</li>
+      <li><span class="section-number">5.2.4.1. </span>Grid-Stat: Compute Anomaly Correlation using Climatology</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,9 +217,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-medium-range-gridstat-fcstgfs-obsgfs-climoncep-multifield-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
 <div class="sphx-glr-example-title section" id="grid-stat-compute-anomaly-correlation-using-climatology">
-<span id="sphx-glr-generated-model-applications-medium-range-gridstat-fcstgfs-obsgfs-climoncep-multifield-py"></span><h1><span class="section-number">5.2.5.1. </span>Grid-Stat: Compute Anomaly Correlation using Climatology<a class="headerlink" href="#grid-stat-compute-anomaly-correlation-using-climatology" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-medium-range-gridstat-fcstgfs-obsgfs-climoncep-multifield-py"></span><h1><span class="section-number">5.2.4.1. </span>Grid-Stat: Compute Anomaly Correlation using Climatology<a class="headerlink" href="#grid-stat-compute-anomaly-correlation-using-climatology" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/medium_range/GridStat_fcstGFS_obsGFS
 _climoNCEP_MultiField.conf</p>
 <div class="section" id="scientific-objective">
@@ -767,7 +771,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">rank_corr_flag</span> <span class="o">=</span> FALSE<span class="p">;</span>
 <span class="nv">vif_flag</span>       <span class="o">=</span> FALSE<span class="p">;</span>
 <span class="nv">tmp_dir</span>        <span class="o">=</span> <span class="s2">&quot;/tmp&quot;</span><span class="p">;</span>
-//version        <span class="o">=</span> <span class="s2">&quot;V10.0&quot;</span><span class="p">;</span>
+<span class="nv">version</span>        <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Note the following variables are referenced in the MET configuration file.</p>
@@ -830,18 +834,18 @@ and will contain the following files:</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-
+<p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=StatAnalysisToolUseCase&amp;check_keywords=yes&amp;area=default">StatAnalysisToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAEMCOrgUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RegriddingInToolUseCase&amp;check_keywords=yes&amp;area=default">RegriddinginTool</a></p>
 </div>
-
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-medium-range-gridstat-fcstgfs-obsgfs-climoncep-multifield-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/51a0a4918fdbab1ad1f18ad2b7e0548f/GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/bbd2e922d897e328e5725ac21a0c637d/GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -858,10 +862,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html" class="btn btn-neutral float-right" title="5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html" class="btn btn-neutral float-right" title="5.2.4.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html" class="btn btn-neutral" title="5.2.4.1. StatAnalysis: JEDI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice.html" class="btn btn-neutral" title="5.2.3.1. Grid-Stat and MODE: Sea Ice Validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -875,7 +879,7 @@ and will contain the following files:</p>
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-     
+ 
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 

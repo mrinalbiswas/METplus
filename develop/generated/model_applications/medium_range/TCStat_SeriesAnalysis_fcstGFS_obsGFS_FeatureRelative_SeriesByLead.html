@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings) &mdash; METplus 4.0-beta2-dev documentation</title>
+  <title>5.2.4.2. Multi_Tool: Feature Relative by Lead (with lead groupings) &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -45,10 +45,10 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.3. Multi_Tool: Feature Relative by Lead using User-Defined Fields" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.html"/>
-        <link rel="prev" title="5.2.5.1. Grid-Stat: Compute Anomaly Correlation using Climatology" href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html"/> 
+        <link rel="next" title="5.2.4.3. Point-Stat: Standard Verification of Global Upper Air" href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html"/>
+        <link rel="prev" title="5.2.4.1. Grid-Stat: Compute Anomaly Correlation using Climatology" href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,12 +83,14 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
+                      <option value=''>3.1</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
+                        
+                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -130,12 +132,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.4. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.5. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.6. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.7. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.8. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -197,7 +198,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.5.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)</li>
+      <li><span class="section-number">5.2.4.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,9 +217,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
 <div class="sphx-glr-example-title section" id="multi-tool-feature-relative-by-lead-with-lead-groupings">
-<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"></span><h1><span class="section-number">5.2.5.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)<a class="headerlink" href="#multi-tool-feature-relative-by-lead-with-lead-groupings" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"></span><h1><span class="section-number">5.2.4.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)<a class="headerlink" href="#multi-tool-feature-relative-by-lead-with-lead-groupings" title="Permalink to this headline">¶</a></h1>
 <p>model_applicaitons/medium_range/
 TCStat_SeriesAnalysis_fcstGFS
 _obsGFS_FeatureRelative
@@ -596,10 +600,10 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="o">[</span>dir<span class="o">]</span>
 <span class="c1"># Location of your model data of interest</span>
 <span class="c1"># Using further reduced data set than what was previously used</span>
-<span class="nv">EXTRACT_TILES_GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
+<span class="nv">EXTRACT_TILES_GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/new/reduced_model_data
 
 <span class="c1"># track data, set to your data source</span>
-<span class="nv">TC_PAIRS_ADECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/track_data
+<span class="nv">TC_PAIRS_ADECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/new/track_data
 <span class="nv">TC_PAIRS_BDECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_ADECK_INPUT_DIR<span class="o">}</span>
 <span class="nv">TC_PAIRS_REFORMAT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/track_data_atcf
 <span class="nv">TC_PAIRS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_pairs
@@ -1273,14 +1277,14 @@ Output for this use case will be found in series_analysis_lead, relative to the 
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SBUOrgUseCase&amp;check_keywords=yes&amp;area=default">SBUOrgUseCase</a>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
 </div>
-
-
+<p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.png’</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/2d4ab85c6f8ec836600a71b12b73ad1b/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/d119706259979d65479a68e61d2c6895/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1297,10 +1301,10 @@ Output for this use case will be found in series_analysis_lead, relative to the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.html" class="btn btn-neutral float-right" title="5.2.5.3. Multi_Tool: Feature Relative by Lead using User-Defined Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html" class="btn btn-neutral float-right" title="5.2.4.3. Point-Stat: Standard Verification of Global Upper Air" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" class="btn btn-neutral" title="5.2.5.1. Grid-Stat: Compute Anomaly Correlation using Climatology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" class="btn btn-neutral" title="5.2.4.1. Grid-Stat: Compute Anomaly Correlation using Climatology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1314,7 +1318,7 @@ Output for this use case will be found in series_analysis_lead, relative to the 
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-     
+ 
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. METplus Configuration Glossary &mdash; METplus 4.0-beta2-dev documentation</title>
+  <title>8. METplus Configuration Glossary &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../index.html"/>
+    <link rel="top" title="METplus 3.1 documentation" href="../index.html"/>
         <link rel="up" title="User’s Guide" href="index.html"/>
         <link rel="next" title="Contributor’s Guide" href="../Contributors_Guide/index.html"/>
         <link rel="prev" title="7. METplus Quick Search for Use Cases" href="quicksearch.html"/> 
@@ -83,12 +83,14 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
+                      <option value=''>3.1</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
+                        
+                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -938,13 +940,6 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em>  1.0</div>
 </div>
 </dd>
-<dt id="term-ensemble-stat-ens-vld-thresh">ENSEMBLE_STAT_ENS_VLD_THRESH</dt><dd><p>Threshold for the ratio of the number of valid data values to the total number of expected ensemble members. This value is passed into the ensemble_stat config file to make sure the percentage of files that are valid meets the expectation.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  EnsembleStat</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  NONE</div>
-</div>
-</dd>
 <dt id="term-ensemble-stat-grid-vx">ENSEMBLE_STAT_GRID_VX</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-ensemble-stat-regrid-to-grid"><span class="xref std std-term">ENSEMBLE_STAT_REGRID_TO_GRID</span></a>.</p>
@@ -1439,6 +1434,11 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <dt id="term-fcst-max-forecast">FCST_MAX_FORECAST</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-lead-seq-max"><span class="xref std std-term">LEAD_SEQ_MAX</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-0">FCST_MAX_FORECAST</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-fcst-pcp-combine-max-forecast"><span class="xref std std-term">FCST_PCP_COMBINE_MAX_FORECAST</span></a>.</p>
 </div>
 </dd>
 <dt id="term-fcst-min-forecast">FCST_MIN_FORECAST</dt><dd><div class="admonition warning">
@@ -2556,13 +2556,6 @@ specify the full path to the input files using <a class="reference internal" hre
 <div class="line"><em>Default:</em> None</div>
 </div>
 </div></blockquote>
-</dd>
-<dt id="term-grid-stat-neighborhood-cov-thresh">GRID_STAT_NEIGHBORHOOD_COV_THRESH</dt><dd><p>Sets the neighborhood cov_thresh list used by GridStat. See <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  GridStat</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em> None</div>
-</div>
 </dd>
 <dt id="term-grid-stat-neighborhood-shape">GRID_STAT_NEIGHBORHOOD_SHAPE</dt><dd><p>Sets the neighborhood shape used by GridStat. See <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
@@ -6795,6 +6788,11 @@ Any quotation marks that are found inside another set of quotation marks must be
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-pb2nc-time-summary-types"><span class="xref std std-term">PB2NC_TIME_SUMMARY_TYPES</span></a> instead.</p>
 </div>
 </dd>
+<dt id="term-1">TIME_SUMMARY_TYPES</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-pb2nc-time-summary-types"><span class="xref std std-term">PB2NC_TIME_SUMMARY_TYPES</span></a> instead.</p>
+</div>
+</dd>
 <dt id="term-time-summary-var-names">TIME_SUMMARY_VAR_NAMES</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-pb2nc-time-summary-var-names"><span class="xref std std-term">PB2NC_TIME_SUMMARY_VAR_NAMES</span></a> instead.</p>
@@ -6998,7 +6996,7 @@ Any quotation marks that are found inside another set of quotation marks must be
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-     
+ 
 <script>var version_json_loc = "../../versions.json";</script>
 
 

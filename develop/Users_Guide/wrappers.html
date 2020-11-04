@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Python Wrappers &mdash; METplus 4.0-beta2-dev documentation</title>
+  <title>4. Python Wrappers &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../index.html"/>
+    <link rel="top" title="METplus 3.1 documentation" href="../index.html"/>
         <link rel="up" title="User’s Guide" href="index.html"/>
         <link rel="next" title="5. METplus Use Cases" href="usecases.html"/>
         <link rel="prev" title="3. System Configuration" href="systemconfiguration.html"/> 
@@ -83,12 +83,14 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
+                      <option value=''>3.1</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
+                        
+                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -474,7 +476,6 @@ the output from the MET tc-pairs tool can be plotted.</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-file-window-begin"><span class="xref std std-term">OBS_ENSEMBLE_STAT_FILE_WINDOW_BEGIN</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-file-window-end"><span class="xref std std-term">OBS_ENSEMBLE_STAT_FILE_WINDOW_END</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-ens-thresh"><span class="xref std std-term">ENSEMBLE_STAT_ENS_THRESH</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-ens-vld-thresh"><span class="xref std std-term">ENSEMBLE_STAT_ENS_VLD_THRESH</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-custom-loop-list"><span class="xref std std-term">ENSEMBLE_STAT_CUSTOM_LOOP_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ens-var-n-name"><span class="xref std std-term">ENS_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ens-var-n-levels"><span class="xref std std-term">ENS_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
@@ -725,7 +726,7 @@ mask = {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-//version = &quot;V10.0&quot;;
+version = &quot;V9.1&quot;;
 
 ////////////////////////////////////////////////////////////////////////////////
 </pre></div>
@@ -848,7 +849,6 @@ mask = {
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-prob-thresh"><span class="xref std std-term">OBS_GRID_STAT_PROB_THRESH</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-neighborhood-width"><span class="xref std std-term">GRID_STAT_NEIGHBORHOOD_WIDTH</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-neighborhood-shape"><span class="xref std std-term">GRID_STAT_NEIGHBORHOOD_SHAPE</span></a> (optional)</div>
-<div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-neighborhood-cov-thresh"><span class="xref std std-term">GRID_STAT_NEIGHBORHOOD_COV_THRESH</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-window-begin"><span class="xref std std-term">FCST_GRID_STAT_WINDOW_BEGIN</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-window-end"><span class="xref std std-term">FCST_GRID_STAT_WINDOW_END</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-window-begin"><span class="xref std std-term">OBS_GRID_STAT_WINDOW_BEGIN</span></a> (optional)</div>
@@ -1146,7 +1146,7 @@ the MET pb2nc tool to convert prepBUFR files into netCDF.</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-time-summary-beg"><span class="xref std std-term">TIME_SUMMARY_BEG</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-time-summary-end"><span class="xref std std-term">TIME_SUMMARY_END</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-time-summary-var-names"><span class="xref std std-term">TIME_SUMMARY_VAR_NAMES</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-time-summary-types"><span class="xref std std-term">TIME_SUMMARY_TYPES</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-1"><span class="xref std std-term">TIME_SUMMARY_TYPES</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-overwrite-nc-output"><span class="xref std std-term">OVERWRITE_NC_OUTPUT</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-vertical-location"><span class="xref std std-term">VERTICAL_LOCATION</span></a></div>
 </div>
@@ -1229,7 +1229,7 @@ from files to build desired accumulations.</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-pcp-combine-method"><span class="xref std std-term">PCP_COMBINE_METHOD</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-min-forecast"><span class="xref std std-term">FCST_MIN_FORECAST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-max-forecast"><span class="xref std std-term">FCST_MAX_FORECAST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-0"><span class="xref std std-term">FCST_MAX_FORECAST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-min-forecast"><span class="xref std std-term">OBS_MIN_FORECAST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-max-forecast"><span class="xref std std-term">OBS_MAX_FORECAST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-data-interval"><span class="xref std std-term">FCST_DATA_INTERVAL</span></a></div>
@@ -2108,7 +2108,7 @@ ${RMW_SCALE}
 
 ////////////////////////////////////////////////////////////////////////////////
 
-//version = &quot;V10.0&quot;;
+version = &quot;V9.1&quot;;
 
 ////////////////////////////////////////////////////////////////////////////////
 </pre></div>
@@ -2421,7 +2421,7 @@ wrapper (via the MET tc-stat command line commands).</p>
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-     
+ 
 <script>var version_json_loc = "../../versions.json";</script>
 
 
