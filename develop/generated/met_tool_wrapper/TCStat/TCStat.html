@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.23.1. TCStat: Basic Use Case &mdash; METplus 3.1 documentation</title>
+  <title>5.1.23.1. TCStat: Basic Use Case &mdash; METplus 4.0-beta2-dev documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.1. MET tools" href="../index.html"/>
         <link rel="next" title="5.2. Model Applications" href="../../model_applications/index.html"/>
         <link rel="prev" title="5.1.22.1. TCRMW: Basic Use Case" href="../TCRMW/TCRMW.html"/> 
@@ -83,14 +83,12 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>3.1</option>
+                      <option value=''>develop</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
-                        
-                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -288,10 +286,8 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/TCStat/TCStat.conf</
 
 
 <span class="c1"># Run tc_stat using a config file or as command line</span>
-<span class="c1"># if running via MET tc_stat config file, set to CONFIG.  Leave blank or</span>
-<span class="c1"># anything other than CONFIG if running via command line.</span>
-<span class="c1">#TC_STAT_RUN_VIA =</span>
-<span class="nv">TC_STAT_RUN_VIA</span> <span class="o">=</span> CONFIG
+<span class="c1"># if running via MET tc_stat config file, set to TC_STAT_CONFIG_FILE.</span>
+<span class="c1"># Leave blank or remove if running via command line.</span>
 <span class="nv">TC_STAT_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/met_config/TCStatConfig_wrapped
 
 
@@ -306,20 +302,14 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/TCStat/TCStat.conf</
 <span class="c1"># eg. -lookin {OUTPUT_BASE}/tc_pairs -job filter -dump_row {OUTPUT_BASE}/tc_stat_filter.out -basin ML -init_hr 00</span>
 <span class="c1"># or -lookin {OUTPUT_BASE}/tc_pairs -job summary -by AMODEL,LEAD -column AMSLP -column AMAX_WIND -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -out {OUTPUT_BASE}/tc_stat/tc_stat_summary.tcst</span>
 
-<span class="c1"># Only if TC_STAT_RUN_VIA = CLI</span>
-<span class="c1"># TC_STAT_CMD_LINE_JOB = -job filter -dump_row {OUTPUT_BASE}/tc_stat/tc_stat_filter.out -basin ML -init_hour 00</span>
-
-<span class="c1">#TC_STAT_RUN_VIA=  indicates run via command line, so you MUST define TC_STAT_JOBS_LIST, below</span>
-
-<span class="c1"># Define the job filter via TC_STAT_JOBS_LIST.</span>
+<span class="c1"># Define the job filter via TC_STAT_JOB_ARGS.</span>
 <span class="c1"># Separate each option and value with whitespace, and each job with a whitespace.</span>
 <span class="c1"># No whitespace within arithmetic expressions or lists of items</span>
 <span class="c1"># (e.g. -by AMSLP,AMODEL,LEAD -column &#39;(AMAX_WIND-BMAX_WIND)&#39;)</span>
 <span class="c1"># Enclose your arithmetic expressions with &#39;&#39; and separate each job</span>
 <span class="c1"># by whitespace:</span>
 <span class="c1">#  -job filter -dump_row /path/to,  -job summary -line_type TCMPR  -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -out {OUTPUT_BASE}/tc_stat/file.tcst</span>
-<span class="c1">#TC_STAT_JOBS_LIST = -job summary -line_type TCMPR -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -dump_row {OUTPUT_BASE}/tc_stat/tc_stat_summary.tcst</span>
-<span class="nv">TC_STAT_JOBS_LIST</span> <span class="o">=</span> -job summary -line_type TCMPR -column <span class="s1">&#39;ASPEED&#39;</span> -dump_row <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat/tc_stat_summary.tcst
+<span class="nv">TC_STAT_JOB_ARGS</span> <span class="o">=</span> -job summary -line_type TCMPR -column <span class="s1">&#39;ASPEED&#39;</span> -dump_row <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat/tc_stat_summary.tcst
 
 
 <span class="c1">#</span>
@@ -456,36 +446,36 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Stratify by the AMODEL or BMODEL columns.
 //
-<span class="nv">amodel</span> <span class="o">=</span> <span class="si">${</span><span class="nv">AMODEL</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">bmodel</span> <span class="o">=</span> <span class="si">${</span><span class="nv">BMODEL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">AMODEL</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">BMODEL</span><span class="si">}</span>
 
 //
 // Stratify by the DESC column.
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">DESC</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">DESC</span><span class="si">}</span>
 
 //
 // Stratify by the STORM_ID column.
 //
-<span class="nv">storm_id</span> <span class="o">=</span> <span class="si">${</span><span class="nv">STORM_ID</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">STORM_ID</span><span class="si">}</span>
 
 //
 // Stratify by the BASIN column.
 // May add using the <span class="s2">&quot;-basin&quot;</span> job <span class="nb">command</span> option.
 //
-<span class="nv">basin</span> <span class="o">=</span> <span class="si">${</span><span class="nv">BASIN</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">BASIN</span><span class="si">}</span>
 
 //
 // Stratify by the CYCLONE column.
 // May add using the <span class="s2">&quot;-cyclone&quot;</span> job <span class="nb">command</span> option.
 //
-<span class="nv">cyclone</span> <span class="o">=</span> <span class="si">${</span><span class="nv">CYCLONE</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">CYCLONE</span><span class="si">}</span>
 
 //
 // Stratify by the STORM_NAME column.
 // May add using the <span class="s2">&quot;-storm_name&quot;</span> job <span class="nb">command</span> option.
 //
-<span class="nv">storm_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">STORM_NAME</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">STORM_NAME</span><span class="si">}</span>
 
 //
 // Stratify by the INIT times.
@@ -493,144 +483,83 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // May modify using the <span class="s2">&quot;-init_beg&quot;</span>, <span class="s2">&quot;-init_end&quot;</span>, <span class="s2">&quot;-init_inc&quot;</span>,
 // and <span class="s2">&quot;-init_exc&quot;</span> job <span class="nb">command</span> options.
 //
-<span class="nv">init_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">INIT_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">init_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">INIT_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">init_inc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_INCLUDE</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_exc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_EXCLUDE</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">INIT_BEG</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">INIT_END</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">INIT_INCLUDE</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">INIT_EXCLUDE</span><span class="si">}</span>
 
 //
 // Stratify by the VALID times.
 //
-<span class="nv">valid_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">VALID_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">valid_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">VALID_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">valid_inc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_INCLUDE</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_exc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_EXCLUDE</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">VALID_BEG</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">VALID_END</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">VALID_INCLUDE</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">VALID_EXCLUDE</span><span class="si">}</span>
 
 //
 // Stratify by the initialization and valid hours and lead time.
 //
-<span class="nv">init_hour</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_HOUR</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_hour</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_HOUR</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">lead</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LEAD</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">INIT_HOUR</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">VALID_HOUR</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">LEAD</span><span class="si">}</span>
 
 //
 // Select tracks which contain all required lead times.
 //
-<span class="nv">lead_req</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LEAD_REQ</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">LEAD_REQ</span><span class="si">}</span>
 
 //
 // Stratify by the INIT_MASK and VALID_MASK columns.
 //
-<span class="nv">init_mask</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_MASK</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_mask</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_MASK</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the LINE_TYPE column.
-//
-<span class="nv">line_type</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">INIT_MASK</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">VALID_MASK</span><span class="si">}</span>
 
 //
 // Stratify by checking the watch/warning status <span class="k">for</span> each track point
 // common to both the ADECK and BDECK tracks.  If the watch/warning status
 // of any of the track points appears in the list, retain the entire track.
 //
-<span class="nv">track_watch_warn</span> <span class="o">=</span> <span class="si">${</span><span class="nv">TRACK_WATCH_WARN</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">TRACK_WATCH_WARN</span><span class="si">}</span>
 
 //
 // Stratify by applying thresholds to numeric data columns.
 //
-<span class="nv">column_thresh_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_THRESH_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">column_thresh_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_THRESH_VAL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">COLUMN_THRESH_NAME</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">COLUMN_THRESH_VAL</span><span class="si">}</span>
 
 //
 // Stratify by performing string matching on non-numeric data columns.
 //
-<span class="nv">column_str_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_STR_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">column_str_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_STR_VAL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">COLUMN_STR_NAME</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">COLUMN_STR_VAL</span><span class="si">}</span>
 
 //
 // Similar to the column_thresh options above
 //
-<span class="nv">init_thresh_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_THRESH_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_thresh_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_THRESH_VAL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">INIT_THRESH_NAME</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">INIT_THRESH_VAL</span><span class="si">}</span>
 
 //
 // Similar to the column_str options above
 //
-<span class="nv">init_str_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_STR_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_str_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_STR_VAL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">INIT_STR_NAME</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">INIT_STR_VAL</span><span class="si">}</span>
 
 //
 // Stratify by the ADECK and BDECK distances to land.
 //
-<span class="nv">water_only</span> <span class="o">=</span> <span class="si">${</span><span class="nv">WATER_ONLY</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Specify whether only those track points <span class="k">for</span> which rapid intensification
-// or weakening of the maximum wind speed occurred in the previous <span class="nb">time</span>
-// step should be retained.
-//
-<span class="nv">rirw</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">track</span>  <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">adeck</span> <span class="o">=</span> <span class="o">{</span>
-      <span class="nb">time</span>   <span class="o">=</span> <span class="s2">&quot;24&quot;</span><span class="p">;</span>
-      <span class="nv">exact</span>  <span class="o">=</span> TRUE<span class="p">;</span>
-      <span class="nv">thresh</span> <span class="o">=</span> &gt;<span class="o">=</span><span class="m">30</span>.0<span class="p">;</span>
-   <span class="o">}</span>
-   <span class="nv">bdeck</span> <span class="o">=</span> adeck<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">WATER_ONLY</span><span class="si">}</span>
 
 //
 // Specify whether only those track points occurring near landfall should be
 // retained, and define the landfall retention window in HH<span class="o">[</span>MMSS<span class="o">]</span> format
 // around the landfall time.
 //
-<span class="nv">landfall</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LANDFALL</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">landfall_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LANDFALL_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">landfall_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LANDFALL_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">LANDFALL</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">LANDFALL_BEG</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">LANDFALL_END</span><span class="si">}</span>
 
-
-//
-// Specify whether only those track points common to both the ADECK and BDECK
-// tracks should be retained.  May modify using the <span class="s2">&quot;-match_points&quot;</span> job <span class="nb">command</span>
-// option.
-//
-<span class="nv">match_points</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MATCH_POINTS</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Specify whether only those cases common to all models in the dataset should
-// be retained.
-//
-<span class="nv">event_equal</span> <span class="o">=</span> FALSE<span class="p">;</span>
-
-//
-// Specify lead <span class="nb">times</span> that must be present <span class="k">for</span> a track to be included in the
-// event equalization logic.
-//
-<span class="nv">event_equal_lead</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-
-//
-// Apply polyline masking logic to the location of the ADECK track at the
-// initialization time.
-//
-<span class="nv">out_init_mask</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-
-//
-// Apply polyline masking logic to the location of the ADECK track at the
-// valid time.
-//
-<span class="nv">out_valid_mask</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-
-//
-// Array of TCStat analysis <span class="nb">jobs</span> to be performed on the filtered data
-//
-<span class="nb">jobs</span> <span class="o">=</span> <span class="si">${</span><span class="nv">JOBS</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Indicate a version number <span class="k">for</span> the contents of this configuration file.
-// The value should generally not be modified.
-//
-//version <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">JOBS</span><span class="si">}</span>
 </pre></div>
 </div>
 </div>
@@ -724,7 +653,7 @@ and will contain the following files:</p>
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
- 
+     
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 

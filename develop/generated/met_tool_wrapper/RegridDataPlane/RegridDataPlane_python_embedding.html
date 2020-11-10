@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.16.1. RegridDataPlane: Using Python Embedding &mdash; METplus 3.1 documentation</title>
+  <title>5.1.16.1. RegridDataPlane: Using Python Embedding &mdash; METplus 4.0-beta2-dev documentation</title>
   
 
   
@@ -45,10 +45,10 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.1. MET tools" href="../index.html"/>
         <link rel="next" title="5.1.16.2. RegridDataPlane: Basic Use Case" href="RegridDataPlane.html"/>
-        <link rel="prev" title="5.1.15.1. PyEmbedIngest: Basic Use Case" href="../PyEmbedIngest/PyEmbedIngest.html"/> 
+        <link rel="prev" title="5.1.15.2. PyEmbedIngest: Multiple Fields in One File" href="../PyEmbedIngest/PyEmbedIngest_multi_field_one_file.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,14 +83,12 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>3.1</option>
+                      <option value=''>develop</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
-                        
-                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -304,9 +302,13 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/RegridDataPlane/Regr
 <span class="nv">OBS_REGRID_DATA_PLANE_RUN</span> <span class="o">=</span> True
 
 <span class="c1"># List of variables to compare</span>
-<span class="nv">OBS_VAR1_NAME</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/scripts/python/read_ascii_numpy.py <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/data/python/fcst.txt FCST
+<span class="nv">OBS_VAR1_NAME</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/scripts/python/read_ascii_numpy.py <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/data/python/obs.txt OBS
 
-<span class="nv">OBS_REGRID_DATA_PLANE_VAR1_OUTPUT_FIELD_NAME</span> <span class="o">=</span> FCST
+<span class="nv">OBS_REGRID_DATA_PLANE_VAR1_OUTPUT_FIELD_NAME</span> <span class="o">=</span> OBS
+
+<span class="c1"># If true, process each field individually and write a file for each</span>
+<span class="c1"># If false, run once per run time passing in all fields specified</span>
+<span class="nv">REGRID_DATA_PLANE_ONCE_PER_FIELD</span> <span class="o">=</span> True
 
 <span class="c1"># Name to identify model data in output</span>
 <span class="nv">MODEL</span> <span class="o">=</span> FCST
@@ -324,9 +326,6 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/RegridDataPlane/Regr
 <span class="nv">REGRID_DATA_PLANE_WIDTH</span> <span class="o">=</span> <span class="m">2</span>
 
 <span class="o">[</span>dir<span class="o">]</span>
-<span class="c1"># location of configuration files used by MET applications</span>
-<span class="nv">CONFIG_DIR</span><span class="o">={</span>PARM_BASE<span class="o">}</span>/use_cases/qpf/met_config
-
 <span class="nv">OBS_REGRID_DATA_PLANE_INPUT_DIR</span> <span class="o">=</span> 
 <span class="nv">OBS_REGRID_DATA_PLANE_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/met_tool_wrapper/RegridDataPlane/regrid_py
 
@@ -417,7 +416,7 @@ and will contain the following file:</p>
         <a href="RegridDataPlane.html" class="btn btn-neutral float-right" title="5.1.16.2. RegridDataPlane: Basic Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../PyEmbedIngest/PyEmbedIngest.html" class="btn btn-neutral" title="5.1.15.1. PyEmbedIngest: Basic Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../PyEmbedIngest/PyEmbedIngest_multi_field_one_file.html" class="btn btn-neutral" title="5.1.15.2. PyEmbedIngest: Multiple Fields in One File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -431,7 +430,7 @@ and will contain the following file:</p>
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
- 
+     
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 

@@ -21,6 +21,7 @@ Model Applications
 Climate
 -------
 
+Average long range earth system predictions
 
 
 .. raw:: html
@@ -235,6 +236,40 @@ The frozen part of the earth system modeling framework (also referred to as sea-
 
 
 
+.. _sphx_glr_generated_model_applications_data_assimilation:
+
+Data Assimilation
+-----------------
+
+Observational data used as part of the initial conditions for numerical weather prediction
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="model_applications/data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.conf">
+
+.. only:: html
+
+ .. figure:: /generated/model_applications/data_assimilation/images/thumb/sphx_glr_StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface_thumb.png
+
+     :ref:`sphx_glr_generated_model_applications_data_assimilation_StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/model_applications/data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_generated_model_applications_medium_range:
 
 Medium Range
@@ -282,6 +317,26 @@ Lower resolution model configuration (>4km) usually producing forecasts out to 7
    :hidden:
 
    /generated/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="model_applications/medium_range/ TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesB...">
+
+.. only:: html
+
+ .. figure:: /generated/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT_thumb.png
+
+     :ref:`sphx_glr_generated_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT
 
 .. raw:: html
 
@@ -365,13 +420,13 @@ Lower resolution model configuration (>4km) usually producing forecasts out to 7
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example script with invalid Python syntax ">
+    <div class="sphx-glr-thumbcontainer" tooltip="model_applications/medium_range/ TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesB...">
 
 .. only:: html
 
- .. figure:: /generated/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT_thumb.png
+ .. figure:: /generated/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics_thumb.png
 
-     :ref:`sphx_glr_generated_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.py`
+     :ref:`sphx_glr_generated_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.py`
 
 .. raw:: html
 
@@ -381,7 +436,7 @@ Lower resolution model configuration (>4km) usually producing forecasts out to 7
 .. toctree::
    :hidden:
 
-   /generated/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT
+   /generated/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -495,6 +550,26 @@ Any fields that can be defined as precipitation, including rain, snow, and other
    :hidden:
 
    /generated/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_NetCDF
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="model_application/precipitation/EnsembleStat_fcstWOFS_obsWOFS.conf">
+
+.. only:: html
+
+ .. figure:: /generated/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstWOFS_obsWOFS_thumb.png
+
+     :ref:`sphx_glr_generated_model_applications_precipitation_EnsembleStat_fcstWOFS_obsWOFS.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/model_applications/precipitation/EnsembleStat_fcstWOFS_obsWOFS
 
 .. raw:: html
 

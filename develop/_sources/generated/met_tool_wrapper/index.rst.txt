@@ -349,6 +349,26 @@ GridStat
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="met_tool_wrapper/GridStat/GridStat_python_embedding.conf">
+
+.. only:: html
+
+ .. figure:: /generated/met_tool_wrapper/GridStat/images/thumb/sphx_glr_GridStat_python_embedding_thumb.png
+
+     :ref:`sphx_glr_generated_met_tool_wrapper_GridStat_GridStat_python_embedding.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/met_tool_wrapper/GridStat/GridStat_python_embedding
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="met_tool_wrapper/GridStat/GridStat_multiple_config _files.conf">
 
 .. only:: html
@@ -790,6 +810,26 @@ PyEmbedIngest
    :hidden:
 
    /generated/met_tool_wrapper/PyEmbedIngest/PyEmbedIngest
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="met_tool_wrapper/PyEmbedIngest/PyEmbedIngest_multi_field_one_file.conf">
+
+.. only:: html
+
+ .. figure:: /generated/met_tool_wrapper/PyEmbedIngest/images/thumb/sphx_glr_PyEmbedIngest_multi_field_one_file_thumb.png
+
+     :ref:`sphx_glr_generated_met_tool_wrapper_PyEmbedIngest_PyEmbedIngest_multi_field_one_file.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/met_tool_wrapper/PyEmbedIngest/PyEmbedIngest_multi_field_one_file
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

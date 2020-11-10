@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.16.2. RegridDataPlane: Basic Use Case &mdash; METplus 3.1 documentation</title>
+  <title>5.1.16.2. RegridDataPlane: Basic Use Case &mdash; METplus 4.0-beta2-dev documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.1. MET tools" href="../index.html"/>
         <link rel="next" title="5.1.16.3. RegridDataPlane: Process all fields" href="RegridDataPlane_multi_field_one_file.html"/>
         <link rel="prev" title="5.1.16.1. RegridDataPlane: Using Python Embedding" href="RegridDataPlane_python_embedding.html"/> 
@@ -83,14 +83,12 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>3.1</option>
+                      <option value=''>develop</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
-                        
-                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -338,6 +336,10 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/RegridDataPlane/Regr
 <span class="c1">#OBS_VAR1_NAME = APCP</span>
 <span class="c1">#OBS_VAR1_LEVELS = A01</span>
 
+<span class="c1"># If true, process each field individually and write a file for each</span>
+<span class="c1"># If false, run once per run time passing in all fields specified</span>
+<span class="nv">REGRID_DATA_PLANE_ONCE_PER_FIELD</span> <span class="o">=</span> True
+
 <span class="c1"># Name to identify model data in output</span>
 <span class="nv">MODEL</span> <span class="o">=</span> QPF
 
@@ -471,7 +473,7 @@ and will contain the following file:</p>
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
- 
+     
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 

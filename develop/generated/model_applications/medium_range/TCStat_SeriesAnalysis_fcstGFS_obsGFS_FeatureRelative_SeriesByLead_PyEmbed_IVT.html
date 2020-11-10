@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.4.7. SyntaxError &mdash; METplus 3.1 documentation</title>
+  <title>5.2.5.3. Multi_Tool: Feature Relative by Lead using User-Defined Fields &mdash; METplus 4.0-beta2-dev documentation</title>
   
 
   
@@ -45,10 +45,10 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.1. Grid-Stat: 24-hour QPF Use Case" href="../precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html"/>
-        <link rel="prev" title="5.2.4.6. Multi_Tool: Feature Relative by Init" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html"/> 
+        <link rel="next" title="5.2.5.4. Point-Stat: Standard Verification of Global Upper Air" href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html"/>
+        <link rel="prev" title="5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,14 +83,12 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>3.1</option>
+                      <option value=''>develop</option>
                       
                         
                           <option value="../latest">latest</option>
                         
                       
-                        
-                          <option value="../develop">develop</option>
                         
                       
                     </select>
@@ -132,11 +130,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.4. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.5. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.6. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.7. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.8. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -198,7 +197,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.4.7. </span>SyntaxError</li>
+      <li><span class="section-number">5.2.5.3. </span>Multi_Tool: Feature Relative by Lead using User-Defined Fields</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -221,33 +220,21 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="syntaxerror">
-<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"></span><h1><span class="section-number">5.2.4.7. </span>SyntaxError<a class="headerlink" href="#syntaxerror" title="Permalink to this headline">¶</a></h1>
-<p>Example script with invalid Python syntax</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Multi_Tool: Feature Relative by Lead using User-Defined Fields</span>
-<span class="sd">========================================================================</span>
-
-<span class="sd">model_applications/medium_range/</span>
-<span class="sd">TCStat_SeriesAnalysis_fcstGFS</span>
-<span class="sd">_obsGFS_FeatureRelative</span>
-<span class="sd">_SeriesByLead_PyEmbed_IVT.conf</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="o">========================================================================</span>
-<span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="n">calls</span> <span class="n">multiple</span> <span class="n">tools</span> <span class="n">to</span> <span class="n">produce</span> <span class="n">diagnostic</span> <span class="n">plots</span> <span class="n">of</span> <span class="n">systematic</span> <span class="n">erros</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">a</span>
-<span class="n">feature</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">hurricane</span><span class="p">,</span> <span class="n">MCS</span><span class="p">,</span> <span class="n">etc</span><span class="o">...</span><span class="p">)</span><span class="o">.</span> <span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="n">calls</span> <span class="n">a</span> <span class="n">user</span> <span class="n">provided</span> <span class="n">python</span> <span class="n">script</span> <span class="n">that</span>
-<span class="n">calculates</span> <span class="n">a</span> <span class="n">diagnostic</span> <span class="n">of</span> <span class="n">interest</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">integrated</span> <span class="n">vapor</span> <span class="n">transport</span><span class="p">,</span> <span class="n">potential</span> <span class="n">vorticity</span><span class="p">,</span> <span class="n">etc</span><span class="o">...</span><span class="p">)</span><span class="o">.</span>
-<span class="n">This</span> <span class="n">user</span> <span class="n">diagnostic</span> <span class="ow">is</span> <span class="n">then</span> <span class="n">used</span> <span class="n">to</span> <span class="n">define</span> <span class="n">the</span> <span class="n">systematic</span> <span class="n">errors</span><span class="o">.</span> <span class="n">This</span> <span class="n">example</span> <span class="n">calculates</span> <span class="n">statistics</span>
-<span class="n">over</span> <span class="n">varying</span> <span class="n">forecast</span> <span class="n">leads</span> <span class="k">with</span> <span class="n">the</span> <span class="n">ability</span> <span class="n">to</span> <span class="n">define</span> <span class="n">lead</span> <span class="n">groupings</span><span class="o">.</span> <span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="ow">is</span> <span class="n">very</span> <span class="n">similar</span>
-<span class="n">to</span> <span class="n">the</span> <span class="n">Multi_Tools</span><span class="p">:</span> <span class="n">Feature</span> <span class="n">Relative</span> <span class="n">by</span> <span class="n">Lead</span> <span class="n">use</span> <span class="n">case</span><span class="o">.</span>
-<span class="p">(</span><span class="n">ADeck</span><span class="p">,</span><span class="n">GFS</span><span class="p">:</span><span class="n">BDeck</span><span class="p">,</span><span class="n">GFS</span><span class="p">:</span><span class="n">ATCF</span><span class="p">,</span><span class="n">Grib2</span><span class="p">)</span>
-<span class="s2">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
+<div class="sphx-glr-example-title section" id="multi-tool-feature-relative-by-lead-using-user-defined-fields">
+<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"></span><h1><span class="section-number">5.2.5.3. </span>Multi_Tool: Feature Relative by Lead using User-Defined Fields<a class="headerlink" href="#multi-tool-feature-relative-by-lead-using-user-defined-fields" title="Permalink to this headline">¶</a></h1>
+<p>model_applications/medium_range/
+TCStat_SeriesAnalysis_fcstGFS
+_obsGFS_FeatureRelative
+_SeriesByLead_PyEmbed_IVT.conf</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<p>This use case calls multiple tools to produce diagnostic plots of systematic erros relative to a
+feature (e.g. hurricane, MCS, etc…). This use case calls a user provided python script that
+calculates a diagnostic of interest (e.g. integrated vapor transport, potential vorticity, etc…).
+This user diagnostic is then used to define the systematic errors. This example calculates statistics
+over varying forecast leads with the ability to define lead groupings. This use case is very similar
+to the Multi_Tools: Feature Relative by Lead use case.
+(ADeck,GFS:BDeck,GFS:ATCF,Grib2)</p>
 <p>By maintaining focus of each evaluation time (or evaluation time series, in this case)
 on a user-defined area around a cyclone, the model statistical errors associated
 with cyclonic physical features (moisture flux, stability, strength of upper-level
@@ -313,7 +300,8 @@ grouping is not turned out, the final results will be written out for each reque
 <p>This use case loops by process which means that each tool is run for all times before moving to the
 next tool. The tool order is as follows:</p>
 <p>PyEmbedIngest, TCPairs, ExtractTiles, SeriesByLead</p>
-<p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf file).</p>
+<p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus
+TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf file).</p>
 <p>4 initialization times will be run over 5 lead times:</p>
 <div class="line-block">
 <div class="line"><strong>Init:</strong> 20190830_00Z</div>
@@ -503,30 +491,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">EXTRACT_TILES_FILTER_OPTS</span> <span class="o">=</span> -basin AL
 <span class="nv">SERIES_ANALYSIS_FILTER_OPTS</span> <span class="o">=</span> -init_beg <span class="o">{</span>INIT_BEG<span class="o">}</span> -init_end <span class="o">{</span>INIT_END<span class="o">}</span>
 
-<span class="c1"># Run tc_stat using a config file or as command line</span>
-<span class="c1"># if running via MET tc_stat config file, set to CONFIG.  Leave blank or</span>
-<span class="c1"># anything other than CONFIG if running via command line.  In this case,</span>
-<span class="c1"># tc_stat is called by one of the METplus wrappers, so don&#39;t assign anything to</span>
-<span class="c1"># this keyword.</span>
-<span class="nv">TC_STAT_RUN_VIA</span> <span class="o">=</span>
-
-<span class="c1"># For arithmetic expressions such as:</span>
-<span class="c1"># -column &#39;ABS(AMSLP-BMSLP)&#39;, enclose the expression in &#39;&#39;.</span>
-<span class="c1"># Notice that there are no</span>
-<span class="c1"># whitespaces within the arithmetic expression.  White spaces are to be used to</span>
-<span class="c1"># separate options from values</span>
-<span class="c1"># (e.g. -job summary -by AMODEL,LEAD,AMSLP -init_hour 00 -column &#39;AMSLP-BMSLP&#39;).</span>
-<span class="c1"># eg. -lookin {OUTPUT_BASE}/tc_pairs -job filter -dump_row</span>
-<span class="c1">#             {OUTPUT_BASE}/tc_stat_filter.out -basin ML -init_hr 00</span>
-<span class="c1"># or -lookin {OUTPUT_BASE}/tc_pairs -job summary -by AMODEL,LEAD -column AMSLP</span>
-<span class="c1">#    -column AMAX_WIND -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39;</span>
-<span class="c1">#    -out {OUTPUT_BASE}/tc_stat/tc_stat_summary.tcst</span>
-
-<span class="c1"># NOTE: Since we aren&#39;t explicitly indicating TC_STAT in our process list</span>
-<span class="c1"># (i.e. tc_stat is being called within another wrapper), leave this</span>
-<span class="c1"># blank/undefined.</span>
-<span class="nv">TC_STAT_CMD_LINE_JOB</span> <span class="o">=</span>
-
 <span class="c1"># Specify whether only those track points common to both the ADECK and BDECK</span>
 <span class="c1"># tracks should be written out.  This is only used when explicitly calling</span>
 <span class="c1"># TC_STAT in the PROCESS_LIST.  This is not used in this use case, so setting</span>
@@ -628,10 +592,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">TC_STAT_LANDFALL_BEG</span> <span class="o">=</span> -24
 <span class="nv">TC_STAT_LANDFALL_END</span> <span class="o">=</span> <span class="m">00</span>
 
-<span class="c1"># Specify whether only those track points common to both the ADECK and BDECK</span>
-<span class="c1"># tracks should be written out</span>
-<span class="nv">TC_STAT_MATCH_POINTS</span> <span class="o">=</span> <span class="nb">false</span>
-
 <span class="c1"># IMPORTANT  Refer to the README_TC for details on setting up analysis</span>
 <span class="c1"># jobs (located in {MET_INSTALL_DIR}/share/met/config</span>
 
@@ -642,7 +602,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># by whitespace:</span>
 <span class="c1">#  -job filter -dump_row /path/to,  -job summary -line_type TCMPR  -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -out {OUTPUT_BASE}/tc_stat/file.tcst</span>
 
-<span class="nv">TC_STAT_JOBS_LIST</span> <span class="o">=</span> -job summary -line_type TCMPR -column <span class="s1">&#39;ABS(AMAX_WIND-BMAX_WIND)&#39;</span> -dump_row <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat/tc_stat_summary.tcst
+<span class="nv">TC_STAT_JOB_ARGS</span> <span class="o">=</span> -job summary -line_type TCMPR -column <span class="s1">&#39;ABS(AMAX_WIND-BMAX_WIND)&#39;</span> -dump_row <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat/tc_stat_summary.tcst
 
 <span class="c1">#</span>
 <span class="c1"># !!!END of DO NOT MODIFY!!!</span>
@@ -1266,7 +1226,7 @@ section on the ‘System Configuration’ page of the METplus User’s Guide for
 <div class="section" id="running-metplus">
 <h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
-<p>1) Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf
+<p>1) Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf,
 then a user-specific system configuration file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py <span class="se">\</span>
 -c /path/to/METplus/parm/use_cases/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf <span class="se">\</span>
@@ -1389,10 +1349,10 @@ Output for this use case will be found in subdirectories of the ‘series_analys
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html" class="btn btn-neutral float-right" title="5.2.5.1. Grid-Stat: 24-hour QPF Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html" class="btn btn-neutral float-right" title="5.2.5.4. Point-Stat: Standard Verification of Global Upper Air" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" class="btn btn-neutral" title="5.2.4.6. Multi_Tool: Feature Relative by Init" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html" class="btn btn-neutral" title="5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1406,7 +1366,7 @@ Output for this use case will be found in subdirectories of the ‘series_analys
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
- 
+     
 <script>var version_json_loc = "../../../../versions.json";</script>
 
 
