@@ -44,6 +44,9 @@ def handle_requirements(requirements):
     return ''
 
 def main(categories, subset_list):
+    # temporarily skip all tests except met_tool_wrapper and cryposphere
+    if 'met_tool_wrapper' not in categories and 'cryopsphere' not in categories:
+        return
 
     categories_list = categories.split(',')
 
@@ -72,7 +75,7 @@ def main(categories, subset_list):
                 use_case_args = f"--config {','.join(use_case.config_args)}"
 
                 if 'met_tool_wrapper' in group_name or 'cryosphere' in group_name:
-                    use_case_args += " config.DO_NOT_RUN_EXE=True"
+                    use_case_args += ",config.DO_NOT_RUN_EXE=True"
 
                 all_use_case_args.append(use_case_args)
 
