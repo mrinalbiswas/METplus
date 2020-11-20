@@ -4,21 +4,8 @@
 # to move files that are created by docker
 
 VOLUMES=$2
-echo --Timing docker pull in docker_run_metplus...
-start_seconds=$SECONDS
 
-if [ ${DOCKER_USERNAME} ] && [ ${DOCKER_PASSWORD} ]; then
-    echo Pulling image ${DOCKERHUB_TAG} from DockerHub
-    docker pull ${DOCKERHUB_TAG}
-else
-    echo DockerHub credentials not set. Building images
-    ${TRAVIS_BUILD_DIR}/ci/travis_jobs/docker_setup.sh
-fi
-
-
-duration=$(( SECONDS - start_seconds ))
-echo --TIMING docker_run_metplus
-echo "--Docker pull took $(($duration / 60)) minutes and $(($duration % 60)) seconds."
+${TRAVIS_BUILD_DIR}/ci/travis_jobs/docker_setup.sh
 
 echo CURRENT_BRANCH = ${CURRENT_BRANCH}
 
