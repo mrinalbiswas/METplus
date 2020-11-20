@@ -11,7 +11,7 @@ branches:
   only:
   - develop
 #  - "/^feature_.*/"
-  - "/^feature_685_empty_test_data/"
+#  - "/^feature_685_empty_test_data/"
   - "/^main_.*/"
   - "/^bugfix_.*/"
 cache:
