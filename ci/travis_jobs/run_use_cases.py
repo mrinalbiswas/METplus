@@ -45,7 +45,7 @@ def handle_requirements(requirements):
 
 def main(categories, subset_list):
     # temporarily skip all tests except met_tool_wrapper and cryposphere
-    if 'met_tool_wrapper' not in categories and 'cryopsphere' not in categories:
+    if 'met_tool_wrapper' not in categories and 'cryosphere' not in categories:
         return
 
     categories_list = categories.split(',')
