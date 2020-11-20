@@ -63,13 +63,17 @@ def main(categories, subset_list):
     test_suite = METplusUseCaseSuite()
     test_suite.add_use_case_groups(categories, subset_list)
     for group_name, use_cases_by_requirement in test_suite.category_groups.items():
-        print(group_name)
+        print(f"Group name: {group_name}")
         for use_case_by_requirement in use_cases_by_requirement:
             # handle requirements
             requirement_args = handle_requirements(use_case_by_requirement.requirements)
             all_use_case_args = []
             for use_case in use_case_by_requirement.use_cases:
                 use_case_args = f"--config {','.join(use_case.config_args)}"
+
+                if 'met_tool_wrapper' in group_name or 'cryosphere' in group_name:
+                    use_case_args += " config.DO_NOT_RUN_EXE=True"
+
                 all_use_case_args.append(use_case_args)
 
             all_use_case_args.append('--skip_output_check')
