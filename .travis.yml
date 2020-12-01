@@ -10,8 +10,7 @@ git:
 branches:
   only:
   - develop
-#  - "/^feature_.*/"
-#  - "/^feature_685_empty_test_data/"
+  - "/^feature_.*/"
   - "/^main_.*/"
   - "/^bugfix_.*/"
 cache:
