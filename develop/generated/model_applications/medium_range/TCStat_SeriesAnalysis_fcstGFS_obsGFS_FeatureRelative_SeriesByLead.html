@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.5.2. Multi_Tool: Feature Relative by Lead (with lead groupings) &mdash; METplus 4.0-beta2-dev documentation</title>
+  <title>5.2.5.4. Multi_Tool: Feature Relative by Lead (with lead groupings) &mdash; METplus 4.0.0-beta2-dev documentation</title>
   
 
   
@@ -45,10 +45,10 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 4.0-beta2-dev documentation" href="../../../index.html"/>
+    <link rel="top" title="METplus 4.0.0-beta2-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.3. Multi_Tool: Feature Relative by Lead using User-Defined Fields" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.html"/>
-        <link rel="prev" title="5.2.5.1. Grid-Stat: Compute Anomaly Correlation using Climatology" href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html"/> 
+        <link rel="next" title="5.2.5.5. Grid-Stat: Standard Verification of Surface Fields" href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html"/>
+        <link rel="prev" title="5.2.5.3. Grid-Stat: Compute Anomaly Correlation using Climatology" href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -147,6 +147,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Release_Guide/index.html">Release Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Verification_Datasets/index.html">Verification Datasets Guide</a></li>
 </ul>
 
             
@@ -197,7 +199,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.5.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)</li>
+      <li><span class="section-number">5.2.5.4. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,12 +218,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
+  
 <div class="sphx-glr-example-title section" id="multi-tool-feature-relative-by-lead-with-lead-groupings">
-<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"></span><h1><span class="section-number">5.2.5.2. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)<a class="headerlink" href="#multi-tool-feature-relative-by-lead-with-lead-groupings" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"></span><h1><span class="section-number">5.2.5.4. </span>Multi_Tool: Feature Relative by Lead (with lead groupings)<a class="headerlink" href="#multi-tool-feature-relative-by-lead-with-lead-groupings" title="Permalink to this headline">¶</a></h1>
 <p>model_applicaitons/medium_range/
 TCStat_SeriesAnalysis_fcstGFS
 _obsGFS_FeatureRelative
@@ -294,10 +293,9 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> processes
 <span class="c1"># Configuration files</span>
 <span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/medium_range/TCPairsETCConfig
-<span class="nv">TC_STAT_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/medium_range/TCStatConfig
 
 <span class="nv">SERIES_ANALYSIS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/medium_range/SeriesAnalysisConfig
-<span class="nv">PROCESS_LIST</span> <span class="o">=</span> TCPairs, ExtractTiles, SeriesByLead
+<span class="nv">PROCESS_LIST</span> <span class="o">=</span> TCPairs, TCStat, ExtractTiles, SeriesByLead
 
 <span class="nv">SERIES_ANALYSIS_REGRID_TO_GRID</span> <span class="o">=</span> FCST
 
@@ -313,20 +311,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># This is the step-size. Increment in seconds from the begin time to the end</span>
 <span class="c1"># time</span>
 <span class="nv">INIT_INCREMENT</span> <span class="o">=</span> <span class="m">21600</span> <span class="p">;;</span> <span class="nb">set</span> to every <span class="m">6</span> <span class="nv">hours</span><span class="o">=</span><span class="m">21600</span> seconds
-
-<span class="c1"># A list of times to include, in format YYYYMMDD_hh</span>
-<span class="nv">INIT_INCLUDE</span> <span class="o">=</span>
-
-<span class="c1"># A list of times to exclude, in format YYYYMMDD_hh</span>
-<span class="nv">INIT_EXCLUDE</span> <span class="o">=</span>
-
-<span class="c1">#</span>
-<span class="c1"># Specify model valid time window in format YYYYMM[DD[_hh]].  Only tracks</span>
-<span class="c1"># that fall within the valid time window will</span>
-<span class="c1"># be used.</span>
-<span class="c1">#</span>
-<span class="nv">VALID_BEG</span> <span class="o">=</span>
-<span class="nv">VALID_END</span> <span class="o">=</span>
 
 <span class="c1"># Used by extract tiles and series analysis to define the records of</span>
 <span class="c1"># interest to be retrieved from the grib2 file</span>
@@ -351,29 +335,23 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">LEAD_SEQ_2_LABEL</span> <span class="o">=</span> Day2
 
 
-<span class="c1"># Constants used in creating the tile grid, used by extract tiles</span>
-<span class="nv">EXTRACT_TILES_NLAT</span> <span class="o">=</span> <span class="m">60</span>
-<span class="nv">EXTRACT_TILES_NLON</span> <span class="o">=</span> <span class="m">60</span>
+<span class="c1">#######</span>
+<span class="c1"># TCPairs Configurations</span>
+<span class="c1">#######</span>
 
-<span class="c1"># Resolution of data in degrees, used by extract tiles</span>
-<span class="nv">EXTRACT_TILES_DLAT</span> <span class="o">=</span> <span class="m">0</span>.5
-<span class="nv">EXTRACT_TILES_DLON</span> <span class="o">=</span> <span class="m">0</span>.5
+<span class="c1"># A list of times to include, in format YYYYMMDD_hh</span>
+<span class="nv">TC_PAIRS_INIT_INCLUDE</span> <span class="o">=</span>
 
-<span class="c1"># Degrees to subtract from the center lat and lon to</span>
-<span class="c1"># calculate the lower left lat (lat_ll) and lower</span>
-<span class="c1"># left lon (lon_ll) for a grid that is 2n X 2m,</span>
-<span class="c1"># where n = EXTRACT_TILES_LAT_ADJ degrees and m = EXTRACT_TILES_LON_ADJ degrees.</span>
-<span class="c1"># For this case, where n=15 and m=15, this results</span>
-<span class="c1"># in a 30 deg X 30 deg grid.  Used by extract tiles</span>
-<span class="nv">EXTRACT_TILES_LON_ADJ</span> <span class="o">=</span> <span class="m">15</span>
-<span class="nv">EXTRACT_TILES_LAT_ADJ</span> <span class="o">=</span> <span class="m">15</span>
+<span class="c1"># A list of times to exclude, in format YYYYMMDD_hh</span>
+<span class="nv">TC_PAIRS_INIT_EXCLUDE</span> <span class="o">=</span>
 
-
-<span class="c1">##</span>
 <span class="c1">#</span>
-<span class="c1"># MET TC-Pairs</span>
+<span class="c1"># Specify model valid time window in format YYYYMM[DD[_hh]].  Only tracks</span>
+<span class="c1"># that fall within the valid time window will</span>
+<span class="c1"># be used.</span>
 <span class="c1">#</span>
-<span class="c1">##</span>
+<span class="nv">TC_PAIRS_VALID_BEG</span> <span class="o">=</span>
+<span class="nv">TC_PAIRS_VALID_END</span> <span class="o">=</span>
 
 <span class="c1">#</span>
 <span class="c1"># Run MET tc_pairs by indicating the top-level directories for the A-deck</span>
@@ -383,7 +361,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 
 <span class="c1"># List of models to be used (white space or comma separated) eg: DSHP, LGEM, HWRF</span>
 <span class="c1"># If no models are listed, then process all models in the input file(s).</span>
-<span class="nv">MODEL</span> <span class="o">=</span>
+<span class="nv">MODEL</span> <span class="o">=</span> GFSO
 
 <span class="c1"># List of storm ids of interest (space or comma separated) e.g.: AL112012, AL122012</span>
 <span class="c1"># If no storm ids are listed, then process all storm ids in the input file(s).</span>
@@ -410,32 +388,32 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">TC_PAIRS_MISSING_VAL_TO_REPLACE</span> <span class="o">=</span> -99
 <span class="nv">TC_PAIRS_MISSING_VAL</span> <span class="o">=</span> -9999
 
-<span class="c1">##</span>
-<span class="c1">#</span>
-<span class="c1"># TC-STAT filtering options, used for extract tiles and series analysis</span>
-<span class="c1">#</span>
-<span class="c1">##</span>
-<span class="nv">EXTRACT_TILES_FILTER_OPTS</span> <span class="o">=</span> -basin ML
-<span class="nv">SERIES_ANALYSIS_FILTER_OPTS</span> <span class="o">=</span> -init_beg <span class="o">{</span>INIT_BEG<span class="o">}</span> -init_end <span class="o">{</span>INIT_END<span class="o">}</span>
+<span class="c1"># overwrite modified track data (non-ATCF to ATCF format)</span>
+<span class="nv">TC_PAIRS_SKIP_IF_REFORMAT_EXISTS</span> <span class="o">=</span> yes
+
+<span class="c1"># overwrite tc_pairs output</span>
+<span class="nv">TC_PAIRS_SKIP_IF_OUTPUT_EXISTS</span> <span class="o">=</span> yes
+
+<span class="c1">#######</span>
+<span class="c1"># TCStat Configurations</span>
+<span class="c1">#######</span>
+<span class="c1"># IMPORTANT  Refer to the README_TC for details on setting up analysis</span>
+<span class="c1"># jobs (located in {MET_INSTALL_DIR}/share/met/config</span>
+
+<span class="c1"># Separate each option and value with whitespace, and each job with a whitespace.</span>
+<span class="c1"># No whitespace within arithmetic expressions or lists of items</span>
+<span class="c1"># (e.g. -by AMSLP,AMODEL,LEAD -column &#39;(AMAX_WIND-BMAX_WIND)&#39;)</span>
+<span class="c1"># Enclose your arithmetic expressions with &#39;&#39; and separate each job</span>
+<span class="c1"># by whitespace:</span>
+<span class="c1">#  -job filter -dump_row /path/to,  -job summary -line_type TCMPR  -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -out {OUTPUT_BASE}/tc_stat/file.tcst</span>
+
+<span class="nv">TC_STAT_JOB_ARGS</span> <span class="o">=</span> -job filter -basin ML -dump_row <span class="o">{</span>TC_STAT_OUTPUT_DIR<span class="o">}</span>/<span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
 
 <span class="c1"># Specify whether only those track points common to both the ADECK and BDECK</span>
 <span class="c1"># tracks should be written out.  This is only used when explicitly calling</span>
 <span class="c1"># TC_STAT in the PROCESS_LIST.  This is not used in this use case, so setting</span>
 <span class="c1"># it to either false or true has no impact.</span>
-<span class="nv">TC_STAT_MATCH_POINTS</span> <span class="o">=</span> <span class="nb">false</span>
-
-<span class="c1">##</span>
-<span class="c1"># !!!DO NOT MODIFY THESE!!!, they are required for all config files with</span>
-<span class="c1"># processes that call tc_stat, but only need valid values when tc_stat</span>
-<span class="c1"># is explicitly listed in the PROCESS_LIST.  This use case does not</span>
-<span class="c1"># require tc_stat to be explicitly listed in the PROCESS_LIST, tc_stat</span>
-<span class="c1"># is invoked from within one or more of the other items in the PROCESS_LIST</span>
-<span class="c1"># (i.e. when filtering within extract tiles or within series analysis).</span>
-<span class="c1">#</span>
-<span class="c1">#  FILL in the following values if running multiple jobs which</span>
-<span class="c1">#  requires a MET tc_stat config file.</span>
-<span class="c1">#</span>
-<span class="c1">##</span>
+<span class="nv">TC_STAT_MATCH_POINTS</span> <span class="o">=</span> <span class="nb">true</span>
 
 <span class="c1"># These all map to the options in the default TC-Stat config file, except these</span>
 <span class="c1"># are pre-pended with TC_STAT to avoid clashing with any other similarly</span>
@@ -454,11 +432,14 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 
 <span class="c1"># Stratify by init times via a comma-separate list of init times to</span>
 <span class="c1"># include or exclude.  Time format defined as YYYYMMDD_HH or YYYYMMDD_HHmmss</span>
-<span class="nv">TC_STAT_INIT_BEG</span> <span class="o">=</span> <span class="m">20141213</span>
-<span class="nv">TC_STAT_INIT_END</span> <span class="o">=</span> <span class="m">20141220</span>
-<span class="nv">TC_STAT_INIT_INCLUDE</span> <span class="o">=</span>
+<span class="c1">#TC_STAT_INIT_BEG = 20141213</span>
+<span class="c1">#TC_STAT_INIT_END = 20141220</span>
+<span class="nv">TC_STAT_INIT_BEG</span> <span class="o">=</span>
+<span class="nv">TC_STAT_INIT_END</span> <span class="o">=</span>
+<span class="nv">TC_STAT_INIT_INCLUDE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>
 <span class="nv">TC_STAT_INIT_EXCLUDE</span> <span class="o">=</span>
-<span class="nv">TC_STAT_INIT_HOUR</span> <span class="o">=</span> <span class="m">00</span>
+<span class="c1">#TC_STAT_INIT_HOUR = 00</span>
+<span class="nv">TC_STAT_INIT_HOUR</span> <span class="o">=</span>
 <span class="c1"># Stratify by valid times via a comma-separate list of valid times to</span>
 <span class="c1"># include or exclude.  Time format defined as YYYYMMDD_HH or YYYYMMDD_HHmmss</span>
 <span class="nv">TC_STAT_VALID_BEG</span> <span class="o">=</span>
@@ -516,37 +497,39 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># Define the landfall retention window, which is defined as the hours offset</span>
 <span class="c1"># from the time of landfall. Format is in HH[MMSS]. Default TC_STAT_LANDFALL_BEG</span>
 <span class="c1"># is set to -24, and TC_STAT_LANDFALL_END is set to 00</span>
-<span class="nv">TC_STAT_LANDFALL_BEG</span> <span class="o">=</span> -24
-<span class="nv">TC_STAT_LANDFALL_END</span> <span class="o">=</span> <span class="m">00</span>
+<span class="c1">#TC_STAT_LANDFALL_BEG = -24</span>
+<span class="c1">#TC_STAT_LANDFALL_END = 00</span>
+<span class="nv">TC_STAT_LANDFALL_BEG</span> <span class="o">=</span>
+<span class="nv">TC_STAT_LANDFALL_END</span> <span class="o">=</span>
 
-<span class="c1"># IMPORTANT  Refer to the README_TC for details on setting up analysis</span>
-<span class="c1"># jobs (located in {MET_INSTALL_DIR}/share/met/config</span>
+<span class="c1">#######</span>
+<span class="c1"># ExtractTiles Configurations</span>
+<span class="c1">#######</span>
 
-<span class="c1"># Separate each option and value with whitespace, and each job with a whitespace.</span>
-<span class="c1"># No whitespace within arithmetic expressions or lists of items</span>
-<span class="c1"># (e.g. -by AMSLP,AMODEL,LEAD -column &#39;(AMAX_WIND-BMAX_WIND)&#39;)</span>
-<span class="c1"># Enclose your arithmetic expressions with &#39;&#39; and separate each job</span>
-<span class="c1"># by whitespace:</span>
-<span class="c1">#  -job filter -dump_row /path/to,  -job summary -line_type TCMPR  -column &#39;ABS(AMAX_WIND-BMAX_WIND)&#39; -out {OUTPUT_BASE}/tc_stat/file.tcst</span>
+<span class="c1"># Constants used in creating the tile grid, used by extract tiles</span>
+<span class="nv">EXTRACT_TILES_NLAT</span> <span class="o">=</span> <span class="m">60</span>
+<span class="nv">EXTRACT_TILES_NLON</span> <span class="o">=</span> <span class="m">60</span>
 
-<span class="nv">TC_STAT_JOB_ARGS</span> <span class="o">=</span> -job summary -line_type TCMPR -column <span class="s1">&#39;ABS(AMAX_WIND-BMAX_WIND)&#39;</span> -dump_row <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat/tc_stat_summary.tcst
+<span class="c1"># Resolution of data in degrees, used by extract tiles</span>
+<span class="nv">EXTRACT_TILES_DLAT</span> <span class="o">=</span> <span class="m">0</span>.5
+<span class="nv">EXTRACT_TILES_DLON</span> <span class="o">=</span> <span class="m">0</span>.5
 
-<span class="c1">#</span>
-<span class="c1"># !!!END of DO NOT MODIFY!!!</span>
-<span class="c1">#</span>
+<span class="c1"># Degrees to subtract from the center lat and lon to</span>
+<span class="c1"># calculate the lower left lat (lat_ll) and lower</span>
+<span class="c1"># left lon (lon_ll) for a grid that is 2n X 2m,</span>
+<span class="c1"># where n = EXTRACT_TILES_LAT_ADJ degrees and m = EXTRACT_TILES_LON_ADJ degrees.</span>
+<span class="c1"># For this case, where n=15 and m=15, this results</span>
+<span class="c1"># in a 30 deg X 30 deg grid.  Used by extract tiles</span>
+<span class="nv">EXTRACT_TILES_LON_ADJ</span> <span class="o">=</span> <span class="m">15</span>
+<span class="nv">EXTRACT_TILES_LAT_ADJ</span> <span class="o">=</span> <span class="m">15</span>
 
 <span class="c1"># OVERWRITE OPTIONS</span>
-<span class="c1"># Don&#39;t overwrite filter files if they already exist.</span>
-<span class="c1"># Set to no if you do NOT want to override existing files</span>
-<span class="c1"># Set to yes if you do want to override existing files</span>
-<span class="nv">EXTRACT_TILES_OVERWRITE_TRACK</span> <span class="o">=</span> no
+<span class="c1"># Skip writing filter files if they already exist.</span>
+<span class="c1"># Set to yes if you want to skip processing existing files</span>
+<span class="c1"># Set to no if you want to override existing files</span>
+<span class="nv">EXTRACT_TILES_SKIP_IF_OUTPUT_EXISTS</span> <span class="o">=</span> yes
 
-<span class="c1"># overwrite modified track data (non-ATCF to ATCF format)</span>
-<span class="nv">TC_PAIRS_SKIP_IF_REFORMAT_EXISTS</span> <span class="o">=</span> yes
-
-<span class="c1"># overwrite tc_pairs output</span>
-<span class="nv">TC_PAIRS_SKIP_IF_OUTPUT_EXISTS</span> <span class="o">=</span> yes
-
+<span class="nv">SERIES_ANALYSIS_FILTER_OPTS</span> <span class="o">=</span> -init_beg <span class="o">{</span>INIT_BEG<span class="o">}</span> -init_end <span class="o">{</span>INIT_END<span class="o">}</span>
 <span class="c1"># PLOTTING Relevant to series analysis plots.</span>
 <span class="c1"># By default, background map is turned off. Set</span>
 <span class="c1"># to no to turn of plotting of background map.</span>
@@ -558,48 +541,40 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1">#</span>
 <span class="o">[</span>filename_templates<span class="o">]</span>
 <span class="c1"># Define the format of the filenames</span>
-<span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.grb2
-<span class="nv">OBS_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.grb2
-
 <span class="nv">TC_PAIRS_ADECK_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/a<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>*.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
 <span class="nv">TC_PAIRS_BDECK_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/b<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>*.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
 <span class="nv">TC_PAIRS_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m%d%H<span class="o">}</span>.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
+
+<span class="nv">TC_STAT_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/filter_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>.tcst
+
+<span class="nv">EXTRACT_TILES_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
+<span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.grb2
+<span class="nv">OBS_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.grb2
+
+<span class="nv">FCST_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/FCST_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.nc
+<span class="nv">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/ANLY_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.nc
+
 
 <span class="c1">#</span>
 <span class="c1">#  DIRECTORIES</span>
 <span class="c1">#</span>
 <span class="o">[</span>dir<span class="o">]</span>
-
-<span class="c1"># track data, set to your data source</span>
 <span class="nv">TC_PAIRS_ADECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/track_data
 <span class="nv">TC_PAIRS_BDECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_ADECK_INPUT_DIR<span class="o">}</span>
 <span class="nv">TC_PAIRS_REFORMAT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/track_data_atcf
 <span class="nv">TC_PAIRS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_pairs
 
-<span class="c1"># Location of your model data of interest</span>
-<span class="c1"># Using further reduced data set than what was previously used</span>
+<span class="nv">TC_STAT_LOOKIN_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_OUTPUT_DIR<span class="o">}</span>
+<span class="nv">TC_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
+
+<span class="nv">EXTRACT_TILES_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_DIR<span class="o">}</span>
 <span class="nv">EXTRACT_TILES_GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
-
-<span class="nv">EXTRACT_TILES_PAIRS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_OUTPUT_DIR<span class="o">}</span>
-
-<span class="c1"># The TC_STAT_INPUT_DIR, TC_STAT_OUTPUT_DIR, and TC_STAT_CONFIG_FILE</span>
-<span class="c1"># must be present but are not needed in this use case since tc_stat is</span>
-<span class="c1"># being invoked from within another wrapper, rather than explicitly</span>
-<span class="c1"># listed in the PROCESS_LIST to run on its own.</span>
-<span class="c1"># TC-Stat input data (uses output from tc-pairs)</span>
-<span class="nv">TC_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_OUTPUT_DIR<span class="o">}</span>
-
-<span class="c1"># TC-Stat output data (creates .tcst ASCII files which can be read or used as</span>
-<span class="c1"># input to TCMPR_Plotter_wrapper (the Python wrapper to plot_tcmpr.R) to create plots.</span>
-<span class="nv">TC_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/tc_stat
-
-<span class="c1"># Use this setting to separate the filtered track files from</span>
-<span class="c1"># the series analysis directory.</span>
+<span class="nv">FCST_EXTRACT_TILES_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
+<span class="nv">OBS_EXTRACT_TILES_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
 <span class="nv">EXTRACT_TILES_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/extract_tiles
+
 <span class="nv">SERIES_ANALYSIS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
 <span class="nv">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/series_lead_filtered
-
-<span class="c1"># Define the output directories for Series analysis by lead and init</span>
 <span class="nv">SERIES_ANALYSIS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/series_analysis_lead
 
 <span class="c1">#</span>
@@ -1249,14 +1224,14 @@ Output for this use case will be found in series_analysis_lead, relative to the 
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SBUOrgUseCase&amp;check_keywords=yes&amp;area=default">SBUOrgUseCase</a>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/2d4ab85c6f8ec836600a71b12b73ad1b/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/d119706259979d65479a68e61d2c6895/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1273,10 +1248,10 @@ Output for this use case will be found in series_analysis_lead, relative to the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.html" class="btn btn-neutral float-right" title="5.2.5.3. Multi_Tool: Feature Relative by Lead using User-Defined Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" class="btn btn-neutral float-right" title="5.2.5.5. Grid-Stat: Standard Verification of Surface Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" class="btn btn-neutral" title="5.2.5.1. Grid-Stat: Compute Anomaly Correlation using Climatology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" class="btn btn-neutral" title="5.2.5.3. Grid-Stat: Compute Anomaly Correlation using Climatology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1286,7 +1261,7 @@ Output for this use case will be found in series_analysis_lead, relative to the 
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Nov 10, 2020, 12:12:55 PM.
+      Last updated on Dec 7, 2020, 4:31:44 PM.
 
     </p>
   </div>
