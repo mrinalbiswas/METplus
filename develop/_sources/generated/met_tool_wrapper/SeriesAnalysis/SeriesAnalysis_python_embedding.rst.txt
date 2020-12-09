@@ -15,7 +15,6 @@ SeriesAnalysis: Using Python Embedding
 met_tool_wrapper/SeriesAnalysis/SeriesAnalysis_python
 _embedding.conf
 
-
 Scientific Objective
 --------------------
 

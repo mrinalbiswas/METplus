@@ -1,15 +1,22 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Overview &mdash; METplus 4.0.0-beta2-dev documentation</title>
+  <title>1. Overview &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -19,60 +26,44 @@
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/pop_ver.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0.0-beta2-dev documentation" href="../index.html"/>
-        <link rel="up" title="User’s Guide" href="index.html"/>
-        <link rel="next" title="2. Software Installation/Getting Started" href="installation.html"/>
-        <link rel="prev" title="User’s Guide" href="index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Software Installation/Getting Started" href="installation.html" />
+    <link rel="prev" title="User’s Guide" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> METplus
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" />
+            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -80,20 +71,7 @@
             
             
               <div class="version">
-                
-                  <div class="version-dropdown">
-                    <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
-                      
-                        
-                          <option value="../latest">latest</option>
-                        
-                      
-                        
-                      
-                    </select>
-                  </div>
-                
+                develop
               </div>
             
           
@@ -110,6 +88,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,13 +127,14 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -162,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -185,7 +166,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
@@ -292,10 +273,15 @@ describes the bugfix, enhancement, or new feature:
 <p><strong>New in v4.0</strong></p>
 <p>Bugfixes:</p>
 <ul class="simple">
+<li><p>Add support for comparing inputs using a mix of python embedding and non-embedding (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/684">#684</a>)</p></li>
+<li><p>Fixed quick search links (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/687">#687</a>)</p></li>
 <li><p>Align the user guide with get_relativedelta() in time_util.py (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/579">#579</a>)</p></li>
 </ul>
 <p>Enhancements:</p>
 <ul class="simple">
+<li><p>Add support for skipping existing output files for all wrappers  (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/711">#711</a>)</p></li>
+<li><p>Add support for multiple instance of the same tool in the process list  (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/670">#670</a>)</p></li>
+<li><p>Add GFDL build support in build_components (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/614">#614</a>)</p></li>
 <li><p>Add support for vld_thresh in EnsembleStat (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/621">#621</a>)</p></li>
 <li><p>Decouple PCPCombine, RegridDataPlane, and GridStat wrappers behavior (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/602">#602</a>)</p></li>
 <li><p>Add support for GridStat neighborhood cov thresh (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/620">#620</a>)</p></li>
@@ -307,15 +293,28 @@ describes the bugfix, enhancement, or new feature:
 <li><p>Add more logging to tc_gen_wrapper (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/576">#576</a>)</p></li>
 </ul>
 <p>New Wrappers:</p>
+<ul class="simple">
+<li><p>Met Tool Wrapper: PlotDataPlane/PlotDataPlane_grib1</p></li>
+<li><p>Met Tool Wrapper: PlotDataPlane/PlotDataPlane_netcdf</p></li>
+<li><p>Met Tool Wrapper: PlotDataPlane/PlotDataPlane_python_embedding</p></li>
+<li><p>Met Tool Wrapper: GridStat/GridStat_python_embedding</p></li>
+<li><p>Met Tool Wrapper: PyEmbedIngest_multi_field_one_file</p></li>
+</ul>
 <p>New Use Cases:</p>
 <ul class="simple">
 <li><p>Data Assimilation: StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface</p></li>
 <li><p>Medium Range: SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics</p></li>
 <li><p>Precipitation: EnsembleStat_fcstWOFS_obsWOFS</p></li>
-<li><p>Met Tool Wrapper: PyEmbedIngest_multi_field_one_file</p></li>
 </ul>
 <p>Internal:</p>
 <ul class="simple">
+<li><p>Improved workflow formatting in Contributers Guide (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/688">#688</a>)</p></li>
+<li><p>Change INPUT_BASE to optional (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/679">#679</a>)</p></li>
+<li><p>Refactored TCStat and ExtractTiles wrappers to conform to current standards</p></li>
+<li><p>Automated release date (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/665">#665</a>)</p></li>
+<li><p>Added documentation for input verification datasets (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/662">#662</a>)</p></li>
+<li><p>Added timing tests for Travis/Docker (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/649">#649</a>)</p></li>
+<li><p>Set up encrypted credentials in Travis to push to DockerHub (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/634">#634</a>)</p></li>
 <li><p>Add to User’s Guide: using environment variables in METplus configuration files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/594">#594</a>)</p></li>
 <li><p>Cleanup version info (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/651">#651</a>)</p></li>
 <li><p>Fix Travis tests for pull requests from forks (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/659">#659</a>)</p></li>
@@ -327,7 +326,7 @@ describes the bugfix, enhancement, or new feature:
 <li><p>Update METplus data container logic to pull tarballs from dtcenter.org instead of GitHub release assets (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/613">#613</a>)</p></li>
 <li><p>Convert Travis Docker files (automated builds) to use Dockerhub data volumes instead of tarballs (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/597">#597</a>)</p></li>
 <li><p>Migrate from travis-ci.org to travis-ci.com (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/618">#618</a>)</p></li>
-<li><p>Migrate Docker run commands to the METplus ci/travis_jobs scripts/files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/607">#607</a>)</p></li>
+<li><p>Migrate Docker run commands to the METplus ci/jobs scripts/files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/607">#607</a>)</p></li>
 <li><p>Add stage to Travis to update or create data volumes when new sample data is available (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/633">#633</a>)</p></li>
 <li><p>Docker data caching (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/623">#623</a>)</p></li>
 <li><p>Tutorial testing on supported platforms (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/468">#468</a>)</p></li>
@@ -377,9 +376,7 @@ on contributing code to METplus Wrappers, please contact
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -388,7 +385,7 @@ on contributing code to METplus Wrappers, please contact
         <a href="installation.html" class="btn btn-neutral float-right" title="2. Software Installation/Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="User’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="User’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -397,12 +394,22 @@ on contributing code to METplus Wrappers, please contact
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 7, 2020, 4:31:44 PM.
+        
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
+      <span class="lastupdated">
+        Last updated on Dec 9, 2020, 9:07:10 AM.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../versions.json";</script>
 
@@ -417,33 +424,15 @@ on contributing code to METplus Wrappers, please contact
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/pop_ver.js"></script>
-    
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

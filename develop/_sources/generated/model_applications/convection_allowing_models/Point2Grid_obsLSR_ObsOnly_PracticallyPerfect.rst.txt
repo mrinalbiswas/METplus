@@ -16,7 +16,6 @@ model_applications/
 convection_allowing_models/
 Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.conf
 
-
 Scientific Objective
 --------------------
 

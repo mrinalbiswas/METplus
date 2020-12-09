@@ -14,7 +14,6 @@ TCMPRPlotter: Basic Use Case
 
 met_tool_wrapper/TCMPRPlotter/TCMPRPlotter.conf
 
-
 Scientific Objective
 --------------------
 

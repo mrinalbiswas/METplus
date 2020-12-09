@@ -17,7 +17,6 @@ convection_allowing_models/
 GridStat_fcstHRRR_obsPracPerfect
 _SurrogateSevereProb.conf
 
-
 Scientific Objective
 --------------------
 

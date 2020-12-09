@@ -14,7 +14,6 @@ PCPCombine: Bucket Interval Use Case
 
 met_tool_wrapper/PCPCombine/PCPCombine_bucket.conf
 
-
 Scientific Objective
 --------------------
 

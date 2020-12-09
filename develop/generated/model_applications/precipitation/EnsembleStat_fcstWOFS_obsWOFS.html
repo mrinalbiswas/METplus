@@ -1,15 +1,22 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.6.6. Ensemble-Stat: WoFS &mdash; METplus 4.0.0-beta2-dev documentation</title>
+  <title>5.2.6.6. Ensemble-Stat: WoFS &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
 
   
   
@@ -19,60 +26,44 @@
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/pop_ver.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../../genindex.html"/>
-        <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="METplus 4.0.0-beta2-dev documentation" href="../../../index.html"/>
-        <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.6.7. Grid-Stat: 6hr PQPF Probability Verification" href="GridStat_fcstHRRR-TLE_obsStgIV_GRIB.html"/>
-        <link rel="prev" title="5.2.6.5. Grid-Stat: 6hr QPF in GEMPAK format" href="GridStat_fcstHREFmean_obsStgIV_Gempak.html"/> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="5.2.6.7. Grid-Stat: 6hr PQPF Probability Verification" href="GridStat_fcstHRRR-TLE_obsStgIV_GRIB.html" />
+    <link rel="prev" title="5.2.6.5. Grid-Stat: 6hr QPF in NetCDF format" href="GridStat_fcstHREFmean_obsStgIV_NetCDF.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> METplus
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
           
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" />
+            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -80,20 +71,7 @@
             
             
               <div class="version">
-                
-                  <div class="version-dropdown">
-                    <select class="version-list" id="version-list">
-                      <option value=''>develop</option>
-                      
-                        
-                          <option value="../latest">latest</option>
-                        
-                      
-                        
-                      
-                    </select>
-                  </div>
-                
+                develop
               </div>
             
           
@@ -110,6 +88,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -154,13 +133,14 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -168,9 +148,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -191,7 +172,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -218,7 +199,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-precipitation-ensemblestat-fcstwofs-obswofs-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
 <div class="sphx-glr-example-title section" id="ensemble-stat-wofs">
 <span id="sphx-glr-generated-model-applications-precipitation-ensemblestat-fcstwofs-obswofs-py"></span><h1><span class="section-number">5.2.6.6. </span>Ensemble-Stat: WoFS<a class="headerlink" href="#ensemble-stat-wofs" title="Permalink to this headline">¶</a></h1>
 <p>model_application/precipitation/EnsembleStat_fcstWOFS_obsWOFS.conf</p>
@@ -1144,13 +1128,13 @@ The following folder/file combination will be created:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-precipitation-ensemblestat-fcstwofs-obswofs-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/89ebffa229c24e427525322f48ea9b6f/EnsembleStat_fcstWOFS_obsWOFS.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">EnsembleStat_fcstWOFS_obsWOFS.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-
+<p><a class="reference download internal" download="" href="../../../_downloads/6887aea0e955da7b9be05250f878702a/EnsembleStat_fcstWOFS_obsWOFS.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">EnsembleStat_fcstWOFS_obsWOFS.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1159,9 +1143,7 @@ The following folder/file combination will be created:</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1170,7 +1152,7 @@ The following folder/file combination will be created:</p>
         <a href="GridStat_fcstHRRR-TLE_obsStgIV_GRIB.html" class="btn btn-neutral float-right" title="5.2.6.7. Grid-Stat: 6hr PQPF Probability Verification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstHREFmean_obsStgIV_Gempak.html" class="btn btn-neutral" title="5.2.6.5. Grid-Stat: 6hr QPF in GEMPAK format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstHREFmean_obsStgIV_NetCDF.html" class="btn btn-neutral float-left" title="5.2.6.5. Grid-Stat: 6hr QPF in NetCDF format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1179,12 +1161,22 @@ The following folder/file combination will be created:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 7, 2020, 4:31:44 PM.
+        
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
+      <span class="lastupdated">
+        Last updated on Dec 8, 2020, 9:52:26 AM.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../../../versions.json";</script>
 
@@ -1199,33 +1191,15 @@ The following folder/file combination will be created:</p>
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-        <script src="../../../_static/pop_ver.js"></script>
-    
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

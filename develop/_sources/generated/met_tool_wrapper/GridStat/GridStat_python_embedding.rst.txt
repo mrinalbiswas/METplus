@@ -14,7 +14,6 @@ GridStat: Using Python Embedding
 
 met_tool_wrapper/GridStat/GridStat_python_embedding.conf
 
-
 Scientific Objective
 --------------------
 

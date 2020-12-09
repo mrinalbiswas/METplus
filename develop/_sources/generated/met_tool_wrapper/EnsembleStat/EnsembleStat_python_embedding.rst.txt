@@ -15,7 +15,6 @@ EnsembleStat: Using Python Embedding
 met_tool_wrapper/EnsembleStat/EnsembleStat_python
 _embedding.conf
 
-
 Scientific Objective
 --------------------
 

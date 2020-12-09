@@ -15,7 +15,6 @@ Grid-Stat: 24-hour QPF Use Case
 model_applications/precipitation/GridStat_fcstGFS
 _obsCCPA_Grib.conf
 
-
 Scientific Objective
 --------------------
 

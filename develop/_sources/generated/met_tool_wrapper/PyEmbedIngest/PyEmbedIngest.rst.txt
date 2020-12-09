@@ -14,7 +14,6 @@ PyEmbedIngest: Basic Use Case
 
 met_tool_wrapper/PyEmbedIngest/PyEmbedIngest.conf
 
-
 Scientific Objective
 --------------------
 

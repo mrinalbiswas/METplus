@@ -15,7 +15,6 @@ ASCII2NC: Using Python Embedding
 met_tool_wrapper/ASCII2NC/ASCII2NC_python
 _embedding.conf
 
-
 Scientific Objective
 --------------------
 

@@ -17,7 +17,6 @@ TCStat_SeriesAnalysis_fcstGFS
 _obsGFS_FeatureRelative
 _SeriesByLead_PyEmbed_Multiple_Diagnostics.conf
 
-
 Scientific Objective
 --------------------
 This use case calls multiple tools to produce diagnostic plots of systematic erros relative to a

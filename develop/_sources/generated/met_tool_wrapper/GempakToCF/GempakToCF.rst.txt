@@ -14,7 +14,6 @@ GempakToCF: Basic Use Case
 
 met_tool_wrapper/GempakToCF/GempakToCF.conf
 
-
 Scientific Objective
 --------------------
 

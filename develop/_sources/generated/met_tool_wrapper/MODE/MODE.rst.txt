@@ -14,7 +14,6 @@ MODE: Basic Use Case
 
 met_tool_wrapper/MODE/MODE.conf
 
-
 Scientific Objective
 --------------------
 

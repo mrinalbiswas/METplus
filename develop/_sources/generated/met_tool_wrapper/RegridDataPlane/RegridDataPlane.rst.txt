@@ -14,7 +14,6 @@ RegridDataPlane: Basic Use Case
 
 met_tool_wrapper/RegridDataPlane/RegridDataPlane.conf
 
-
 Scientific Objective
 --------------------
 

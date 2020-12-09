@@ -14,7 +14,6 @@ SeriesAnalysis: Basic Use Case
 
 met_tool_wrapper/SeriesAnalysis/SeriesAnalysis.conf
 
-
 Scientific Objective
 --------------------
 

@@ -14,7 +14,6 @@ GenVxMask: Basic Use Case
 
 met_tool_wrapper/GenVxMask/GenVxMask.conf
 
-
 Scientific Objective
 --------------------
 

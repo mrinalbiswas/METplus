@@ -1,0 +1,9 @@
+.. _by-level:
+  
+Verification Datasets by Level 
+==============================
+
+| `Surface Data <https://dtcenter.github.io/METplus/develop/search.html?q=DataLevelSurface&check_keywords=yes&area=default>`_
+| `Upper-Air Data <https://dtcenter.github.io/METplus/develop/search.html?q=DataLevelUpperAir&check_keywords=yes&area=default>`_
+| `Satellite Data <https://dtcenter.github.io/METplus/develop/search.html?q=DataLevelSatellite&check_keywords=yes&area=default>`_
+

@@ -15,7 +15,6 @@ RegridDataPlane: Using Python Embedding
 met_tool_wrapper/RegridDataPlane/RegridDataPlane_python
 _embedding.conf
 
-
 Scientific Objective
 --------------------
 

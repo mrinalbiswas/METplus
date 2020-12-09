@@ -15,7 +15,6 @@ Grid-Stat and MODE: Sea Ice Validation
 model_applications/cryosphere/GridStat_MODE_fcstIMS
 _obsNCEP_sea_ice.conf
 
-
 Scientific Objective
 --------------------
 

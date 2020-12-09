@@ -15,7 +15,6 @@ Grid-Stat: Compute Anomaly Correlation using Climatology
 model_applications/medium_range/GridStat_fcstGFS_obsGFS
 _climoNCEP_MultiField.conf
 
-
 Scientific Objective
 --------------------
 To provide useful statistical information on the relationship between observation

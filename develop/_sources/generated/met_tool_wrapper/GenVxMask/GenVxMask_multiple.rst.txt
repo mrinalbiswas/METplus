@@ -14,7 +14,6 @@ GenVxMask: Multiple Masks
 
 met_tool_wrapper/GenVxMask/GenVxMask_multiple.conf
 
-
 Scientific Objective
 --------------------
 
