@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.4.7. SyntaxError &mdash; METplus 3.1 documentation</title>
+  <title>5.2.4.1. Multi_Tool: Feature Relative by Lead using User-Defined Fields &mdash; METplus 3.1 documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 3.1 documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.1. Grid-Stat: 24-hour QPF Use Case" href="../precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html"/>
-        <link rel="prev" title="5.2.4.6. Multi_Tool: Feature Relative by Init" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html"/> 
+        <link rel="next" title="5.2.4.2. Point-Stat: Standard Verification of Global Upper Air" href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html"/>
+        <link rel="prev" title="5.2.3.1. Grid-Stat and MODE: Sea Ice Validation" href="../cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -198,7 +198,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.4.7. </span>SyntaxError</li>
+      <li><span class="section-number">5.2.4.1. </span>Multi_Tool: Feature Relative by Lead using User-Defined Fields</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -217,37 +217,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
-<div class="sphx-glr-example-title section" id="syntaxerror">
-<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"></span><h1><span class="section-number">5.2.4.7. </span>SyntaxError<a class="headerlink" href="#syntaxerror" title="Permalink to this headline">¶</a></h1>
-<p>Example script with invalid Python syntax</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Multi_Tool: Feature Relative by Lead using User-Defined Fields</span>
-<span class="sd">========================================================================</span>
-
-<span class="sd">model_applications/medium_range/</span>
-<span class="sd">TCStat_SeriesAnalysis_fcstGFS</span>
-<span class="sd">_obsGFS_FeatureRelative</span>
-<span class="sd">_SeriesByLead_PyEmbed_IVT.conf</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="o">========================================================================</span>
-<span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="n">calls</span> <span class="n">multiple</span> <span class="n">tools</span> <span class="n">to</span> <span class="n">produce</span> <span class="n">diagnostic</span> <span class="n">plots</span> <span class="n">of</span> <span class="n">systematic</span> <span class="n">erros</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">a</span>
-<span class="n">feature</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">hurricane</span><span class="p">,</span> <span class="n">MCS</span><span class="p">,</span> <span class="n">etc</span><span class="o">...</span><span class="p">)</span><span class="o">.</span> <span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="n">calls</span> <span class="n">a</span> <span class="n">user</span> <span class="n">provided</span> <span class="n">python</span> <span class="n">script</span> <span class="n">that</span>
-<span class="n">calculates</span> <span class="n">a</span> <span class="n">diagnostic</span> <span class="n">of</span> <span class="n">interest</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">integrated</span> <span class="n">vapor</span> <span class="n">transport</span><span class="p">,</span> <span class="n">potential</span> <span class="n">vorticity</span><span class="p">,</span> <span class="n">etc</span><span class="o">...</span><span class="p">)</span><span class="o">.</span>
-<span class="n">This</span> <span class="n">user</span> <span class="n">diagnostic</span> <span class="ow">is</span> <span class="n">then</span> <span class="n">used</span> <span class="n">to</span> <span class="n">define</span> <span class="n">the</span> <span class="n">systematic</span> <span class="n">errors</span><span class="o">.</span> <span class="n">This</span> <span class="n">example</span> <span class="n">calculates</span> <span class="n">statistics</span>
-<span class="n">over</span> <span class="n">varying</span> <span class="n">forecast</span> <span class="n">leads</span> <span class="k">with</span> <span class="n">the</span> <span class="n">ability</span> <span class="n">to</span> <span class="n">define</span> <span class="n">lead</span> <span class="n">groupings</span><span class="o">.</span> <span class="n">This</span> <span class="n">use</span> <span class="n">case</span> <span class="ow">is</span> <span class="n">very</span> <span class="n">similar</span>
-<span class="n">to</span> <span class="n">the</span> <span class="n">Multi_Tools</span><span class="p">:</span> <span class="n">Feature</span> <span class="n">Relative</span> <span class="n">by</span> <span class="n">Lead</span> <span class="n">use</span> <span class="n">case</span><span class="o">.</span>
-<span class="p">(</span><span class="n">ADeck</span><span class="p">,</span><span class="n">GFS</span><span class="p">:</span><span class="n">BDeck</span><span class="p">,</span><span class="n">GFS</span><span class="p">:</span><span class="n">ATCF</span><span class="p">,</span><span class="n">Grib2</span><span class="p">)</span>
-<span class="s2">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
+  
+<div class="sphx-glr-example-title section" id="multi-tool-feature-relative-by-lead-using-user-defined-fields">
+<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py"></span><h1><span class="section-number">5.2.4.1. </span>Multi_Tool: Feature Relative by Lead using User-Defined Fields<a class="headerlink" href="#multi-tool-feature-relative-by-lead-using-user-defined-fields" title="Permalink to this headline">¶</a></h1>
+<p>model_applications/medium_range/
+TCStat_SeriesAnalysis_fcstGFS
+_obsGFS_FeatureRelative
+_SeriesByLead_PyEmbed_IVT.conf</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<p>This use case calls multiple tools to produce diagnostic plots of systematic erros relative to a
+feature (e.g. hurricane, MCS, etc…). This use case calls a user provided python script that
+calculates a diagnostic of interest (e.g. integrated vapor transport, potential vorticity, etc…).
+This user diagnostic is then used to define the systematic errors. This example calculates statistics
+over varying forecast leads with the ability to define lead groupings. This use case is very similar
+to the Multi_Tools: Feature Relative by Lead use case.
+(ADeck,GFS:BDeck,GFS:ATCF,Grib2)</p>
 <p>By maintaining focus of each evaluation time (or evaluation time series, in this case)
 on a user-defined area around a cyclone, the model statistical errors associated
 with cyclonic physical features (moisture flux, stability, strength of upper-level
@@ -313,7 +298,8 @@ grouping is not turned out, the final results will be written out for each reque
 <p>This use case loops by process which means that each tool is run for all times before moving to the
 next tool. The tool order is as follows:</p>
 <p>PyEmbedIngest, TCPairs, ExtractTiles, SeriesByLead</p>
-<p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf file).</p>
+<p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus
+TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf file).</p>
 <p>4 initialization times will be run over 5 lead times:</p>
 <div class="line-block">
 <div class="line"><strong>Init:</strong> 20190830_00Z</div>
@@ -1266,7 +1252,7 @@ section on the ‘System Configuration’ page of the METplus User’s Guide for
 <div class="section" id="running-metplus">
 <h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
-<p>1) Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf
+<p>1) Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf,
 then a user-specific system configuration file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py <span class="se">\</span>
 -c /path/to/METplus/parm/use_cases/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.conf <span class="se">\</span>
@@ -1365,14 +1351,14 @@ Output for this use case will be found in subdirectories of the ‘series_analys
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SBUOrgUseCase&amp;check_keywords=yes&amp;area=default">SBUOrgUseCase</a>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_SBU_IVT.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-pyembed-ivt-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/00043ad32fca513fec454cb1e8e780ed/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/61cb9339c244194f20eb1f70d21b5b38/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_IVT.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1389,10 +1375,10 @@ Output for this use case will be found in subdirectories of the ‘series_analys
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html" class="btn btn-neutral float-right" title="5.2.5.1. Grid-Stat: 24-hour QPF Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html" class="btn btn-neutral float-right" title="5.2.4.2. Point-Stat: Standard Verification of Global Upper Air" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" class="btn btn-neutral" title="5.2.4.6. Multi_Tool: Feature Relative by Init" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice.html" class="btn btn-neutral" title="5.2.3.1. Grid-Stat and MODE: Sea Ice Validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
