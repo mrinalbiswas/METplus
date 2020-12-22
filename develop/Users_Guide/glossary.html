@@ -1,7 +1,8 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -11,14 +12,6 @@
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-
-  
   
   
   
@@ -26,44 +19,60 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+  
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/pop_ver.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-    
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributor’s Guide" href="../Contributors_Guide/index.html" />
-    <link rel="prev" title="7. METplus Quick Search for Use Cases" href="quicksearch.html" /> 
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../index.html"/>
+        <link rel="up" title="User’s Guide" href="index.html"/>
+        <link rel="next" title="Contributor’s Guide" href="../Contributors_Guide/index.html"/>
+        <link rel="prev" title="7. METplus Quick Search for Use Cases" href="quicksearch.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../index.html" class="icon icon-home"> METplus
           
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -71,7 +80,20 @@
             
             
               <div class="version">
-                develop
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
               </div>
             
           
@@ -88,7 +110,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -118,14 +139,13 @@
             
           
         </div>
-        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -133,10 +153,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -157,7 +176,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
@@ -2518,6 +2537,17 @@ specify the full path to the input files using <a class="reference internal" hre
 <div class="line"><em>Used by:</em>  GridDiag</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-GRID_DIAG_RUNTIME_FREQ">GRID_DIAG_RUNTIME_FREQ</dt><dd><p>Frequency to run Grid-Diag. Depending on which option is selected, some filename template tags will translate to *. Valid options are:</p>
+<p>RUN_ONCE: Run the command one time. * is substituted for init/valid/lead
+RUN_ONCE_PER_INIT_OR_VALID: Run the command once for each init or valid time depending on the value of LOOP_BY. If LOOP_BY = INIT, * is substituted for valid and lead. If LOOP_BY = VALID, * is substituted for init and lead.
+RUN_ONCE_PER_LEAD: Run the command once for each forecast lead time. * is substituted for valid and init
+RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and forecast lead combination). All filename templates are substituted with values.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridDiag</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
 </div>
 </dd>
 <dt id="term-GRID_DIAG_SKIP_IF_OUTPUT_EXISTS">GRID_DIAG_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
@@ -7126,6 +7156,41 @@ Any quotation marks that are found inside another set of quotation marks must be
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-TC_PAIRS_REFORMAT_DECK"><span class="xref std std-term">TC_PAIRS_REFORMAT_DECK</span></a>.</p>
 </div>
 </dd>
+<dt id="term-USER_SCRIPT_COMMAND">USER_SCRIPT_COMMAND</dt><dd><p>User-defined command to run. Filename template tags can be used to modify
+the command for each execution. See <a class="reference internal" href="#term-USER_SCRIPT_RUNTIME_FREQ"><span class="xref std std-term">USER_SCRIPT_RUNTIME_FREQ</span></a> for
+more information.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  UserScript</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
+</div>
+</dd>
+<dt id="term-USER_SCRIPT_CUSTOM_LOOP_LIST">USER_SCRIPT_CUSTOM_LOOP_LIST</dt><dd><p>List of strings to loop over for each runtime to run the command.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  UserScript</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
+</div>
+</dd>
+<dt id="term-USER_SCRIPT_RUNTIME_FREQ">USER_SCRIPT_RUNTIME_FREQ</dt><dd><p>Frequency to run the user-defined script. Depending on which option is selected, some filename template tags will translate to *. Valid options are:</p>
+<p>RUN_ONCE: Run the command one time. * is substituted for init/valid/lead
+RUN_ONCE_PER_INIT_OR_VALID: Run the command once for each init or valid time depending on the value of LOOP_BY. If LOOP_BY = INIT, * is substituted for valid and lead. If LOOP_BY = VALID, * is substituted for init and lead.
+RUN_ONCE_PER_LEAD: Run the command once for each forecast lead time. * is substituted for valid and init
+RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and forecast lead combination). All filename templates are substituted with values.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  UserScript</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
+</div>
+</dd>
+<dt id="term-USER_SCRIPT_SKIP_TIMES">USER_SCRIPT_SKIP_TIMES</dt><dd><p>Run times to skip for this wrapper only. See <a class="reference internal" href="#term-SKIP_TIMES"><span class="xref std std-term">SKIP_TIMES</span></a> for more
+information and how to format.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  UserScript</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
+</div>
+</dd>
 <dt id="term-VALID_BEG">VALID_BEG</dt><dd><p>Specify a begin time for valid times for use in the analysis. This is the starting date in the format set in the <a class="reference internal" href="#term-VALID_TIME_FMT"><span class="xref std std-term">VALID_TIME_FMT</span></a>. It is named accordingly to the value set for <a class="reference internal" href="#term-LOOP_BY"><span class="xref std std-term">LOOP_BY</span></a>. However, in StatAnalysis, it is named accordingly to the value set for <a class="reference internal" href="#term-PLOT_TIME"><span class="xref std std-term">PLOT_TIME</span></a>. See <a class="reference internal" href="systemconfiguration.html#looping-by-valid-time"><span class="std std-ref">Looping by Valid Time</span></a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  All</div>
@@ -7250,7 +7315,9 @@ Any quotation marks that are found inside another set of quotation marks must be
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -7259,7 +7326,7 @@ Any quotation marks that are found inside another set of quotation marks must be
         <a href="../Contributors_Guide/index.html" class="btn btn-neutral float-right" title="Contributor’s Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="quicksearch.html" class="btn btn-neutral float-left" title="7. METplus Quick Search for Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="quicksearch.html" class="btn btn-neutral" title="7. METplus Quick Search for Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -7268,22 +7335,12 @@ Any quotation marks that are found inside another set of quotation marks must be
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
-      <span class="lastupdated">
-        Last updated on Dec 8, 2020, 9:52:26 AM.
-      </span>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Dec 22, 2020, 7:08:35 PM.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../versions.json";</script>
 
@@ -7298,15 +7355,33 @@ Any quotation marks that are found inside another set of quotation marks must be
   </div>
   
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/pop_ver.js"></script>
+    
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

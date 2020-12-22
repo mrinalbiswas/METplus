@@ -1,7 +1,8 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -11,14 +12,6 @@
   
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-
-  
   
   
   
@@ -26,44 +19,60 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+  
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-        <script src="../../../_static/pop_ver.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-    
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.6.1. GempakToCF: Basic Use Case" href="../GempakToCF/GempakToCF.html" />
-    <link rel="prev" title="5.1.4.1. Example: Introductory Use Case" href="../Example/Example.html" /> 
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
+        <link rel="up" title="5.1. MET tools" href="../index.html"/>
+        <link rel="next" title="5.1.6.1. GempakToCF: Basic Use Case" href="../GempakToCF/GempakToCF.html"/>
+        <link rel="prev" title="5.1.4.1. Example: Introductory Use Case" href="../Example/Example.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../../../index.html" class="icon icon-home"> METplus
           
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../../../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -71,7 +80,20 @@
             
             
               <div class="version">
-                develop
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
               </div>
             
           
@@ -88,7 +110,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -130,6 +151,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.23. TCPairs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#tcrmw">5.1.24. TCRMW</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.25. TCStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#userscript">5.1.26. UserScript</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../model_applications/index.html">5.2. Model Applications</a></li>
@@ -149,14 +171,13 @@
             
           
         </div>
-        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -164,10 +185,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -188,7 +208,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -215,10 +235,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-met-tool-wrapper-extracttiles-extracttiles-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
+  
 <div class="sphx-glr-example-title section" id="extracttiles-basic-use-case">
 <span id="sphx-glr-generated-met-tool-wrapper-extracttiles-extracttiles-py"></span><h1><span class="section-number">5.1.5.1. </span>ExtractTiles: Basic Use Case<a class="headerlink" href="#extracttiles-basic-use-case" title="Permalink to this headline">¶</a></h1>
 <p>met_tool_wrapper/ExtractTiles/ExtractTiles.conf</p>
@@ -499,14 +516,14 @@ and will contain the following files:</p>
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://dtcenter.github.io/METplus/develop/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/develop/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/develop/search.html?q=FeatureRelativeUseCase&amp;check_keywords=yes&amp;area=default">FeatureRelativeUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-ExtractTiles.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-met-tool-wrapper-extracttiles-extracttiles-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/d71eb36d49ddfbd909ad07851e2681af/ExtractTiles.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">ExtractTiles.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/30ac01d3d12aee06568fc745cdc3c872/ExtractTiles.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">ExtractTiles.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -515,7 +532,9 @@ and will contain the following files:</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -524,7 +543,7 @@ and will contain the following files:</p>
         <a href="../GempakToCF/GempakToCF.html" class="btn btn-neutral float-right" title="5.1.6.1. GempakToCF: Basic Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Example/Example.html" class="btn btn-neutral float-left" title="5.1.4.1. Example: Introductory Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Example/Example.html" class="btn btn-neutral" title="5.1.4.1. Example: Introductory Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -533,22 +552,12 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
-      <span class="lastupdated">
-        Last updated on Dec 8, 2020, 9:52:26 AM.
-      </span>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Dec 22, 2020, 7:08:35 PM.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../../../versions.json";</script>
 
@@ -563,15 +572,33 @@ and will contain the following files:</p>
   </div>
   
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/pop_ver.js"></script>
+    
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

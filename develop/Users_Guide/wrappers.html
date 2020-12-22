@@ -1,7 +1,8 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -11,14 +12,6 @@
   
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-
-  
   
   
   
@@ -26,44 +19,60 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+  
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/pop_ver.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-    
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. METplus Use Cases" href="usecases.html" />
-    <link rel="prev" title="3. System Configuration" href="systemconfiguration.html" /> 
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../index.html"/>
+        <link rel="up" title="User’s Guide" href="index.html"/>
+        <link rel="next" title="5. METplus Use Cases" href="usecases.html"/>
+        <link rel="prev" title="3. System Configuration" href="systemconfiguration.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../index.html" class="icon icon-home"> METplus
           
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -71,7 +80,20 @@
             
             
               <div class="version">
-                develop
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
               </div>
             
           
@@ -88,7 +110,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -241,8 +262,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#tcstat">4.28. TCStat</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#description-23">4.28.1. Description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configuration-23">4.28.2. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">4.28.1. Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">4.28.2. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#userscript">4.29. UserScript</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id55">4.29.1. Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">4.29.2. Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -262,14 +288,13 @@
             
           
         </div>
-        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -277,10 +302,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -301,7 +325,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
@@ -673,6 +697,7 @@ the dimensions and density of the tiles comprising the subregion:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-GRID_DIAG_REGRID_TO_GRID"><span class="xref std std-term">GRID_DIAG_REGRID_TO_GRID</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-GRID_DIAG_DESCRIPTION"><span class="xref std std-term">GRID_DIAG_DESCRIPTION</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-GRID_DIAG_SKIP_IF_OUTPUT_EXISTS"><span class="xref std std-term">GRID_DIAG_SKIP_IF_OUTPUT_EXISTS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-GRID_DIAG_RUNTIME_FREQ"><span class="xref std std-term">GRID_DIAG_RUNTIME_FREQ</span></a></div>
 </div>
 </div>
 <div class="section" id="met-configuration">
@@ -2384,14 +2409,14 @@ ${RMW_SCALE}
 </div>
 <div class="section" id="tcstat">
 <h2><span class="section-number">4.28. </span>TCStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-23">
-<span id="id53"></span><h3><span class="section-number">4.28.1. </span>Description<a class="headerlink" href="#description-23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id53">
+<h3><span class="section-number">4.28.1. </span>Description<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool tc_stat. This wrapper can be run by
 listing it in the PROCESS_LIST, or can be called from the ExtractTiles
 wrapper (via the MET tc-stat command line commands).</p>
 </div>
-<div class="section" id="configuration-23">
-<span id="id54"></span><h3><span class="section-number">4.28.2. </span>Configuration<a class="headerlink" href="#configuration-23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h3><span class="section-number">4.28.2. </span>Configuration<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-TC_STAT_LOOKIN_DIR"><span class="xref std std-term">TC_STAT_LOOKIN_DIR</span></a></div>
@@ -2450,11 +2475,32 @@ wrapper (via the MET tc-stat command line commands).</p>
 </div>
 </div>
 </div>
+<div class="section" id="userscript">
+<h2><span class="section-number">4.29. </span>UserScript<a class="headerlink" href="#userscript" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id55">
+<h3><span class="section-number">4.29.1. </span>Description<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<p>Used to generate user-defined commands to run in the process list. Commands
+can be run once, run once for each runtime (init/valid/lead combination) or
+once for init, valid, or lead only.</p>
+</div>
+<div class="section" id="id56">
+<h3><span class="section-number">4.29.2. </span>Configuration<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<p>[config]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-USER_SCRIPT_RUNTIME_FREQ"><span class="xref std std-term">USER_SCRIPT_RUNTIME_FREQ</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-USER_SCRIPT_COMMAND"><span class="xref std std-term">USER_SCRIPT_COMMAND</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-USER_SCRIPT_CUSTOM_LOOP_LIST"><span class="xref std std-term">USER_SCRIPT_CUSTOM_LOOP_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-USER_SCRIPT_SKIP_TIMES"><span class="xref std std-term">USER_SCRIPT_SKIP_TIMES</span></a></div>
+</div>
+</div>
+</div>
 </div>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -2463,7 +2509,7 @@ wrapper (via the MET tc-stat command line commands).</p>
         <a href="usecases.html" class="btn btn-neutral float-right" title="5. METplus Use Cases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="systemconfiguration.html" class="btn btn-neutral float-left" title="3. System Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="systemconfiguration.html" class="btn btn-neutral" title="3. System Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2472,22 +2518,12 @@ wrapper (via the MET tc-stat command line commands).</p>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
-      <span class="lastupdated">
-        Last updated on Dec 8, 2020, 9:52:26 AM.
-      </span>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Dec 22, 2020, 7:08:35 PM.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../versions.json";</script>
 
@@ -2502,15 +2538,33 @@ wrapper (via the MET tc-stat command line commands).</p>
   </div>
   
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/pop_ver.js"></script>
+    
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

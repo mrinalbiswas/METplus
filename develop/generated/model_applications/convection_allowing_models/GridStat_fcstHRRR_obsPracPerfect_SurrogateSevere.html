@@ -1,7 +1,8 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -11,14 +12,6 @@
   
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-
-  
   
   
   
@@ -26,44 +19,60 @@
   
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+  
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-        <script src="../../../_static/pop_ver.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-    
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.2.3. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" />
-    <link rel="prev" title="5.2.2.1. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" /> 
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
+        <link rel="up" title="5.2. Model Applications" href="../index.html"/>
+        <link rel="next" title="5.2.2.3. MODE: Hail Verification" href="MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html"/>
+        <link rel="prev" title="5.2.2.1. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> METplus
+            <a href="../../../index.html" class="icon icon-home"> METplus
           
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../../../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -71,7 +80,20 @@
             
             
               <div class="version">
-                develop
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
               </div>
             
           
@@ -88,7 +110,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -133,14 +154,13 @@
             
           
         </div>
-        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -148,10 +168,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -172,7 +191,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
           <li><a href="../../../Users_Guide/index.html">User’s Guide</a> &raquo;</li>
         
@@ -199,10 +218,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-generated-model-applications-convection-allowing-models-gridstat-fcsthrrr-obspracperfect-surrogatesevere-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
-</div>
+  
 <div class="sphx-glr-example-title section" id="grid-stat-surrogate-severe-and-practically-perfect-evaluation">
 <span id="sphx-glr-generated-model-applications-convection-allowing-models-gridstat-fcsthrrr-obspracperfect-surrogatesevere-py"></span><h1><span class="section-number">5.2.2.2. </span>Grid-Stat: Surrogate Severe and Practically Perfect Evaluation<a class="headerlink" href="#grid-stat-surrogate-severe-and-practically-perfect-evaluation" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/
@@ -644,7 +660,7 @@ grid_stat_360000L_20200206_120000V.stat</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/convection_allowing_models-SS_PP_prob.png’</p>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>,
@@ -654,13 +670,13 @@ grid_stat_360000L_20200206_120000V.stat</p>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NCAROrgUseCase&amp;check_keywords=yes&amp;area=default">NCAROrgUseCase</a>
 <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>,</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-convection-allowing-models-gridstat-fcsthrrr-obspracperfect-surrogatesevere-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/feeadda6a54271cd1b2b74a90c67ea60/GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.py</span></code></a></p>
+
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/42ce7aa458a8c234e9a49db6ba205dab/GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">GridStat_fcstHRRR_obsPracPerfect_SurrogateSevere.ipynb</span></code></a></p>
+
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -669,16 +685,18 @@ grid_stat_360000L_20200206_120000V.stat</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" class="btn btn-neutral float-right" title="5.2.2.3. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" class="btn btn-neutral float-right" title="5.2.2.3. MODE: Hail Verification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" class="btn btn-neutral float-left" title="5.2.2.1. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" class="btn btn-neutral" title="5.2.2.1. Ensemble-Stat: Ensemble Statistics using Obs Uncertainty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -687,22 +705,12 @@ grid_stat_360000L_20200206_120000V.stat</p>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES
-      <span class="lastupdated">
-        Last updated on Dec 8, 2020, 9:52:26 AM.
-      </span>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Dec 22, 2020, 7:08:35 PM.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
      
 <script>var version_json_loc = "../../../../versions.json";</script>
 
@@ -717,15 +725,33 @@ grid_stat_360000L_20200206_120000V.stat</p>
   </div>
   
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/pop_ver.js"></script>
+    
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

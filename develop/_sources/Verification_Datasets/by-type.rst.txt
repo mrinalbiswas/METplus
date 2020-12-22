@@ -1,8 +1,0 @@
-.. _by-type:
-  
-Verification Datasets by Type
-=============================
-
-| `Point Data <https://dtcenter.github.io/METplus/develop/search.html?q=DataTypePoint&check_keywords=yes&area=default>`_
-| `Gridded Data <https://dtcenter.github.io/METplus/develop/search.html?q=DataTypeGridded&check_keywords=yes&area=default>`_
-

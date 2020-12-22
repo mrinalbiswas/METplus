@@ -10,6 +10,7 @@ var searchData=
   ['command_5frunner',['command_runner',['../namespacecommand__runner.html',1,'']]],
   ['commandbuilder',['CommandBuilder',['../classmetplus_1_1wrappers_1_1command__builder_1_1CommandBuilder.html',1,'metplus::wrappers::command_builder']]],
   ['commandrunner',['CommandRunner',['../classmetplus_1_1wrappers_1_1command__runner_1_1CommandRunner.html',1,'metplus::wrappers::command_runner']]],
+  ['compare_5ftime_5finfo',['compare_time_info',['../classmetplus_1_1wrappers_1_1runtime__freq__wrapper_1_1RuntimeFreqWrapper.html#a232b14531a3cf1372d51a0b41a5c4e43',1,'metplus::wrappers::runtime_freq_wrapper::RuntimeFreqWrapper']]],
   ['comparegriddedwrapper',['CompareGriddedWrapper',['../classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html',1,'metplus::wrappers::compare_gridded_wrapper']]],
   ['confdoc',['confdoc',['../namespaceconfdoc.html',1,'']]],
   ['convert_5fto_5fpng',['convert_to_png',['../classmetplus_1_1wrappers_1_1plot__data__plane__wrapper_1_1PlotDataPlaneWrapper.html#aa03304ce001ce2cba4af9e66f7441d20',1,'metplus::wrappers::plot_data_plane_wrapper::PlotDataPlaneWrapper']]],

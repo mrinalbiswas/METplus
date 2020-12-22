@@ -1,8 +1,0 @@
-.. _by-provider:
-  
-Verification Datasets by Provider 
-=================================
-
-| `NOAA <https://dtcenter.github.io/METplus/develop/search.html?q=DataProviderNOAA&check_keywords=yes&area=default>`_
-| `NASA <https://dtcenter.github.io/METplus/develop/search.html?q=DataProviderNASA&check_keywords=yes&area=default>`_
-
