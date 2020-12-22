@@ -198,9 +198,6 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a529d9f83db8f270dc30f4dded665f324"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__builder_1_1CommandBuilder.html#a529d9f83db8f270dc30f4dded665f324">get_command</a> (self)</td></tr>
 <tr class="memdesc:a529d9f83db8f270dc30f4dded665f324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the command to run the MET application  string.  <a href="#a529d9f83db8f270dc30f4dded665f324">More...</a><br /></td></tr>
 <tr class="separator:a529d9f83db8f270dc30f4dded665f324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4761f63390a97860b57b300c9ad5ca87"><td class="memItemLeft" align="right" valign="top"><a id="a4761f63390a97860b57b300c9ad5ca87"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>build_and_run_command</b> (self)</td></tr>
-<tr class="separator:a4761f63390a97860b57b300c9ad5ca87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89bc340a568208c516ecee47a7aba226"><td class="memItemLeft" align="right" valign="top"><a id="a89bc340a568208c516ecee47a7aba226"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__builder_1_1CommandBuilder.html#a89bc340a568208c516ecee47a7aba226">build</a> (self)</td></tr>
 <tr class="memdesc:a89bc340a568208c516ecee47a7aba226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build and run command. <br /></td></tr>
@@ -300,6 +297,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa1a6aac688d06c2fc155e3b1ced0b657"><td class="memItemLeft" align="right" valign="top"><a id="aa1a6aac688d06c2fc155e3b1ced0b657"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>cmdrunner</b></td></tr>
 <tr class="separator:aa1a6aac688d06c2fc155e3b1ced0b657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0aa3e3a742ce8c81210b34fe8cfbd12"><td class="memItemLeft" align="right" valign="top"><a id="aa0aa3e3a742ce8c81210b34fe8cfbd12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>log_name</b></td></tr>
+<tr class="separator:aa0aa3e3a742ce8c81210b34fe8cfbd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a72116bfe4985ccfbc2aecb9873eebdc7"></a>
@@ -343,9 +343,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00862">862</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00868">868</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00325">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="series__by__init__wrapper_8py_source.html#l00416">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.generate_plots()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00371">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_for_all_fields()</a>, and <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00330">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_per_field()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00329">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="series__by__init__wrapper_8py_source.html#l00420">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.generate_plots()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00371">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_for_all_fields()</a>, and <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00330">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_per_field()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +391,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>field name if not a python script, 'python_embedding' if it is, and None if configuration is invalid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00894">894</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00900">900</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00218">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.get_all_field_info()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, and <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>.</p>
 
@@ -439,7 +439,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string of formatted MET dictionary or empty string if no relevant variables were set </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01191">1191</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01198">1198</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tc__gen__wrapper_8py_source.html#l00169">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.set_environment_variables()</a>.</p>
 
@@ -494,9 +494,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the app should be run or False if it should not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00729">729</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00735">735</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00325">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="stat__analysis__wrapper_8py_source.html#l01703">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.create_output_directories()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00255">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.handle_jobs()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00316">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.handle_output_file()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="gempak__to__cf__wrapper_8py_source.html#l00098">metplus.wrappers.gempak_to_cf_wrapper.GempakToCFWrapper.run_at_time_once()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00173">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="ascii2nc__wrapper_8py_source.html#l00198">metplus.wrappers.ascii2nc_wrapper.ASCII2NCWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00281">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, and <a class="el" href="command__builder_8py_source.html#l00698">metplus.wrappers.command_builder.CommandBuilder.write_list_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00329">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="stat__analysis__wrapper_8py_source.html#l01703">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.create_output_directories()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00255">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.handle_jobs()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00316">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.handle_output_file()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="gempak__to__cf__wrapper_8py_source.html#l00098">metplus.wrappers.gempak_to_cf_wrapper.GempakToCFWrapper.run_at_time_once()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00173">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="ascii2nc__wrapper_8py_source.html#l00198">metplus.wrappers.ascii2nc_wrapper.ASCII2NCWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00281">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, and <a class="el" href="command__builder_8py_source.html#l00704">metplus.wrappers.command_builder.CommandBuilder.write_list_file()</a>.</p>
 
 </div>
 </div>
@@ -568,9 +568,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the path to an observation file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00448">448</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00454">454</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="grid__diag__wrapper_8py_source.html#l00254">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.find_input_file_list()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00203">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.find_input_files()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00303">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.find_input_files()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00371">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.find_input_files()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00444">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.find_input_files()</a>, <a class="el" href="command__builder_8py_source.html#l00373">metplus.wrappers.command_builder.CommandBuilder.find_model()</a>, <a class="el" href="command__builder_8py_source.html#l00389">metplus.wrappers.command_builder.CommandBuilder.find_obs()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00165">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.run_at_time_all_fields()</a>, and <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="grid__diag__wrapper_8py_source.html#l00254">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.find_input_file_list()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00203">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.find_input_files()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00303">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.find_input_files()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00371">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.find_input_files()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00444">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.find_input_files()</a>, <a class="el" href="command__builder_8py_source.html#l00379">metplus.wrappers.command_builder.CommandBuilder.find_model()</a>, <a class="el" href="command__builder_8py_source.html#l00395">metplus.wrappers.command_builder.CommandBuilder.find_obs()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00165">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.run_at_time_all_fields()</a>, and <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>.</p>
 
 </div>
 </div>
@@ -629,7 +629,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the path to an model file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00373">373</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00379">379</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00276">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_all_fields()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00172">metplus.wrappers.mode_wrapper.MODEWrapper.run_at_time_one_field()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00228">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_one_field()</a>.</p>
 
@@ -690,9 +690,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the path to an observation file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00389">389</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00395">395</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="point2grid__wrapper_8py_source.html#l00203">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.find_input_files()</a>, <a class="el" href="command__builder_8py_source.html#l00405">metplus.wrappers.command_builder.CommandBuilder.find_obs_offset()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>, <a class="el" href="ascii2nc__wrapper_8py_source.html#l00198">metplus.wrappers.ascii2nc_wrapper.ASCII2NCWrapper.run_at_time_once()</a>, and <a class="el" href="mode__wrapper_8py_source.html#l00172">metplus.wrappers.mode_wrapper.MODEWrapper.run_at_time_one_field()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="point2grid__wrapper_8py_source.html#l00203">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.find_input_files()</a>, <a class="el" href="command__builder_8py_source.html#l00411">metplus.wrappers.command_builder.CommandBuilder.find_obs_offset()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>, <a class="el" href="ascii2nc__wrapper_8py_source.html#l00198">metplus.wrappers.ascii2nc_wrapper.ASCII2NCWrapper.run_at_time_once()</a>, and <a class="el" href="mode__wrapper_8py_source.html#l00172">metplus.wrappers.mode_wrapper.MODEWrapper.run_at_time_one_field()</a>.</p>
 
 </div>
 </div>
@@ -751,7 +751,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns tuple of the path to an observation file and the time_info object used to find the data so the value of offset can be preserved </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00405">405</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00411">411</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pb2nc__wrapper_8py_source.html#l00206">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.find_input_files()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00276">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_all_fields()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00228">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_one_field()</a>.</p>
 
@@ -776,9 +776,9 @@ Public Attributes</h2></td></tr>
 <p>Builds the command to run the MET application  string. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns a MET command with arguments that you can run </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01055">1055</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01061">1061</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tcmpr__plotter__wrapper_8py_source.html#l00386">metplus.wrappers.tcmpr_plotter_wrapper.TCMPRPlotterWrapper.build()</a>, <a class="el" href="command__builder_8py_source.html#l01114">metplus.wrappers.command_builder.CommandBuilder.build()</a>, <a class="el" href="command__builder_8py_source.html#l01055">metplus.wrappers.command_builder.CommandBuilder.get_command()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00454">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.process_data()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00838">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_add_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00897">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_derive_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00642">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_subtract_method()</a>, and <a class="el" href="pcp__combine__wrapper_8py_source.html#l00756">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_sum_method()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tcmpr__plotter__wrapper_8py_source.html#l00386">metplus.wrappers.tcmpr_plotter_wrapper.TCMPRPlotterWrapper.build()</a>, <a class="el" href="command__builder_8py_source.html#l01112">metplus.wrappers.command_builder.CommandBuilder.build()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00454">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.process_data()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00838">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_add_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00897">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_derive_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00642">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_subtract_method()</a>, and <a class="el" href="pcp__combine__wrapper_8py_source.html#l00756">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_sum_method()</a>.</p>
 
 </div>
 </div>
@@ -845,7 +845,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns formatted field information </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00925">925</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00931">931</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00218">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.get_all_field_info()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00276">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_all_fields()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00228">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_one_field()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00371">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_for_all_fields()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00330">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_once_per_field()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00204">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.set_data_field()</a>, and <a class="el" href="tcrmw__wrapper_8py_source.html#l00339">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.set_data_field()</a>.</p>
 
@@ -880,9 +880,9 @@ Public Attributes</h2></td></tr>
 <p>Read {APP_NAME}_OUTPUT_PREFIX from config. </p>
 <p>If time_info is set substitute values into filename template tags. </p><pre class="fragment">@param time_info (Optional) dictionary containing time info
 @returns output prefix with values substituted if requested</pre> 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01355">1355</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01362">1362</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mode__wrapper_8py_source.html#l00031">metplus.wrappers.mode_wrapper.MODEWrapper.add_merge_config_file()</a>, <a class="el" href="command__builder_8py_source.html#l00729">metplus.wrappers.command_builder.CommandBuilder.find_and_check_output_file()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00260">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.find_model_members()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="grid__stat__wrapper_8py_source.html#l00103">metplus.wrappers.grid_stat_wrapper.GridStatWrapper.set_environment_variables()</a>, and <a class="el" href="point__stat__wrapper_8py_source.html#l00134">metplus.wrappers.point_stat_wrapper.PointStatWrapper.set_environment_variables()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mode__wrapper_8py_source.html#l00031">metplus.wrappers.mode_wrapper.MODEWrapper.add_merge_config_file()</a>, <a class="el" href="command__builder_8py_source.html#l00735">metplus.wrappers.command_builder.CommandBuilder.find_and_check_output_file()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00260">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.find_model_members()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="grid__stat__wrapper_8py_source.html#l00103">metplus.wrappers.grid_stat_wrapper.GridStatWrapper.set_environment_variables()</a>, and <a class="el" href="point__stat__wrapper_8py_source.html#l00134">metplus.wrappers.point_stat_wrapper.PointStatWrapper.set_environment_variables()</a>.</p>
 
 </div>
 </div>
@@ -939,7 +939,7 @@ Public Attributes</h2></td></tr>
 <p>Handles config variables that have fcst/obs versions or a generic variable to handle both, i.e. </p>
 <p>FCST_NAME, OBS_NAME, and NAME. If FCST_NAME and OBS_NAME both exist, they are used. If both are don't exist, NAME is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00328">328</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00334">334</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mode__wrapper_8py_source.html#l00031">metplus.wrappers.mode_wrapper.MODEWrapper.add_merge_config_file()</a>.</p>
 
@@ -999,9 +999,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00216">216</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00222">222</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l00263">metplus.wrappers.command_builder.CommandBuilder.handle_window_variables()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l00269">metplus.wrappers.command_builder.CommandBuilder.handle_window_variables()</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1057,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00263">263</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00269">269</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mode__wrapper_8py_source.html#l00031">metplus.wrappers.mode_wrapper.MODEWrapper.add_merge_config_file()</a>, <a class="el" href="point__stat__wrapper_8py_source.html#l00031">metplus.wrappers.point_stat_wrapper.PointStatWrapper.create_c_dict()</a>, and <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00036">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.create_c_dict()</a>.</p>
 
@@ -1098,9 +1098,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>list of log messages </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00197">197</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00203">203</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01123">metplus.wrappers.command_builder.CommandBuilder.run_command()</a>, and <a class="el" href="command__builder_8py_source.html#l00141">metplus.wrappers.command_builder.CommandBuilder.set_environment_variables()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01121">metplus.wrappers.command_builder.CommandBuilder.run_command()</a>, and <a class="el" href="command__builder_8py_source.html#l00147">metplus.wrappers.command_builder.CommandBuilder.set_environment_variables()</a>.</p>
 
 </div>
 </div>
@@ -1140,9 +1140,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True on success, False otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01123">1123</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01121">1121</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01114">metplus.wrappers.command_builder.CommandBuilder.build()</a>, and <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00214">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.convert_to_png()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01112">metplus.wrappers.command_builder.CommandBuilder.build()</a>, and <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00214">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.convert_to_png()</a>.</p>
 
 </div>
 </div>
@@ -1208,9 +1208,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01323">1323</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01330">1330</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tc__stat__wrapper_8py_source.html#l00094">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.set_c_dict_for_environment_variables()</a>, and <a class="el" href="command__builder_8py_source.html#l01273">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_number()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tc__stat__wrapper_8py_source.html#l00094">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.set_c_dict_for_environment_variables()</a>, and <a class="el" href="command__builder_8py_source.html#l01280">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_number()</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1275,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01223">1223</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01230">1230</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tc__stat__wrapper_8py_source.html#l00094">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.set_c_dict_for_environment_variables()</a>.</p>
 
@@ -1343,9 +1343,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01273">1273</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01280">1280</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01273">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_number()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="command__builder_8py_source.html#l01280">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_number()</a>.</p>
 
 </div>
 </div>
@@ -1404,9 +1404,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01252">1252</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l01259">1259</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tc__stat__wrapper_8py_source.html#l00094">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.set_c_dict_for_environment_variables()</a>, and <a class="el" href="command__builder_8py_source.html#l01223">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_list()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tc__stat__wrapper_8py_source.html#l00094">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.set_c_dict_for_environment_variables()</a>, and <a class="el" href="command__builder_8py_source.html#l01230">metplus.wrappers.command_builder.CommandBuilder.set_c_dict_list()</a>.</p>
 
 </div>
 </div>
@@ -1444,7 +1444,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00872">872</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00878">878</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, and <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>.</p>
 
@@ -1484,9 +1484,9 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00141">141</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00147">147</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00325">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="make__plots__wrapper_8py_source.html#l00092">metplus.wrappers.make_plots_wrapper.MakePlotsWrapper.create_c_dict()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="py__embed__ingest__wrapper_8py_source.html#l00125">metplus.wrappers.py_embed_ingest_wrapper.PyEmbedIngestWrapper.run_at_time()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00161">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.run_at_time()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00233">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_at_time_loop_string()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00173">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00281">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00412">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_at_time_once()</a>, and <a class="el" href="stat__analysis__wrapper_8py_source.html#l01674">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.run_stat_analysis_job()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00329">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="make__plots__wrapper_8py_source.html#l00092">metplus.wrappers.make_plots_wrapper.MakePlotsWrapper.create_c_dict()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="py__embed__ingest__wrapper_8py_source.html#l00125">metplus.wrappers.py_embed_ingest_wrapper.PyEmbedIngestWrapper.run_at_time()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00161">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.run_at_time()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00233">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_at_time_loop_string()</a>, <a class="el" href="user__script__wrapper_8py_source.html#l00083">metplus.wrappers.user_script_wrapper.UserScriptWrapper.run_at_time_once()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00173">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00281">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00412">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_at_time_once()</a>, and <a class="el" href="stat__analysis__wrapper_8py_source.html#l01674">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.run_stat_analysis_job()</a>.</p>
 
 </div>
 </div>
@@ -1539,9 +1539,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>path to output file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00698">698</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__builder_8py_source.html#l00704">704</a> of file <a class="el" href="command__builder_8py_source.html">command_builder.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00277">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.create_file_list()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00254">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.find_input_file_list()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00303">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.find_input_files()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00371">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.find_input_files()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00260">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.find_model_members()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, and <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00281">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.create_file_list()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00254">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.find_input_file_list()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00303">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.find_input_files()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00371">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.find_input_files()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00260">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.find_model_members()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, and <a class="el" href="mtd__wrapper_8py_source.html#l00143">metplus.wrappers.mtd_wrapper.MTDWrapper.run_at_time_loop_string()</a>.</p>
 
 </div>
 </div>

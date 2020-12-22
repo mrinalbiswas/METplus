@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>METplus Release Notes &mdash; METplus 3.1 documentation</title>
+  <title>METplus Release Notes &mdash; METplus 3.1.1 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 3.1 documentation" href="../index.html"/> 
+    <link rel="top" title="METplus 3.1.1 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -80,7 +80,7 @@
                 
                   <div class="version-dropdown">
                     <select class="version-list" id="version-list">
-                      <option value=''>3.1</option>
+                      <option value=''>3.1.1</option>
                       
                         
                           <option value="../latest">latest</option>
@@ -188,7 +188,14 @@
 <p>When applicable, release notes are followed by the GitHub issue number which
 describes the bugfix, enhancement, or new feature:
 <a class="reference external" href="https://github.com/dtcenter/METplus/issues">https://github.com/dtcenter/METplus/issues</a></p>
-<p><strong>New in v3.1</strong></p>
+<p><strong>New in v3.1.1 (20201222)</strong></p>
+<p>Bugfixes:</p>
+<ul class="simple">
+<li><p>Missing dependencies for CyclonePlotter wrapper no longer prevent others wrappers from being used (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/586">#586</a>)</p></li>
+<li><p>Fixed corrupted time information error when running using custom loop list (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/740">#740</a>)</p></li>
+<li><p>Fixed logic preventing StatAnalysis to run with MakePlots (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/743">#743</a>)</p></li>
+</ul>
+<p><strong>New in v3.1 (20200810)</strong></p>
 <p>Bugfixes:</p>
 <ul class="simple">
 <li><p>Running EnsembleStat then GridStat fails when PCPCombine is also run (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/509">#509</a>)</p></li>
@@ -235,7 +242,7 @@ describes the bugfix, enhancement, or new feature:
 <li><p>Update Tutorial Chapter 4 for MET 9.0, METplus 3.0 (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/428">#428</a>)</p></li>
 <li><p>Reorganize sphinx documentation files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/418">#418</a>)</p></li>
 </ul>
-<p><strong>New in v3.0</strong></p>
+<p><strong>New in v3.0 (20200316)</strong></p>
 <ul class="simple">
 <li><p>Moved to using Python 3.6.3</p></li>
 <li><p>User environment variables ([user_env_vars]) and [FCST/OBS]_VAR&lt;n&gt;_[NAME/LEVEL/OPTIONS] now support filename template syntax, i.e. {valid?fmt=%Y%m%d%H}</p></li>

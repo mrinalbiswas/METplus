@@ -92,9 +92,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a655cc84df372e2a1344d4473de4323d9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__runner_1_1CommandRunner.html#a655cc84df372e2a1344d4473de4323d9">__init__</a> (self, config, logger=None, verbose=2)</td></tr>
 <tr class="memdesc:a655cc84df372e2a1344d4473de4323d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for Creating and Running External Programs.  <a href="#a655cc84df372e2a1344d4473de4323d9">More...</a><br /></td></tr>
 <tr class="separator:a655cc84df372e2a1344d4473de4323d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a912d865147da26a703c4d1dd11d7c1e3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__runner_1_1CommandRunner.html#a912d865147da26a703c4d1dd11d7c1e3">run_cmd</a> (self, cmd, env=None, ismetcmd=True, app_name=None, run_inshell=False, log_theoutput=False, copyable_env=None, kwargs)</td></tr>
-<tr class="memdesc:a912d865147da26a703c4d1dd11d7c1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command cmd is a string which is converted to a produtil exe Runner object and than run.  <a href="#a912d865147da26a703c4d1dd11d7c1e3">More...</a><br /></td></tr>
-<tr class="separator:a912d865147da26a703c4d1dd11d7c1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7faca456b2a2265f71ec2eacd4016d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__runner_1_1CommandRunner.html#abf7faca456b2a2265f71ec2eacd4016d">run_cmd</a> (self, cmd, env=None, ismetcmd=True, log_name=None, run_inshell=False, log_theoutput=False, copyable_env=None, kwargs)</td></tr>
+<tr class="memdesc:abf7faca456b2a2265f71ec2eacd4016d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command cmd is a string which is converted to a produtil exe Runner object and than run.  <a href="#abf7faca456b2a2265f71ec2eacd4016d">More...</a><br /></td></tr>
+<tr class="separator:abf7faca456b2a2265f71ec2eacd4016d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69869c1cc3f847e91af63abb96a4daf"><td class="memItemLeft" align="right" valign="top"><a id="ac69869c1cc3f847e91af63abb96a4daf"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>log_header_info</b> (self, log_dest, copyable_env, cmd)</td></tr>
+<tr class="separator:ac69869c1cc3f847e91af63abb96a4daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499ba05babed3dedcda491a9b802f6a0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1command__runner_1_1CommandRunner.html#a499ba05babed3dedcda491a9b802f6a0">cmdlog_destination</a> (self, cmdlog=None)</td></tr>
 <tr class="memdesc:a499ba05babed3dedcda491a9b802f6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the location of where the command output will be sent.  <a href="#a499ba05babed3dedcda491a9b802f6a0">More...</a><br /></td></tr>
 <tr class="separator:a499ba05babed3dedcda491a9b802f6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,9 +202,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>log_dest: The destination of where to send the command output. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00221">221</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00234">234</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="command__runner_8py_source.html#l00054">metplus.wrappers.command_runner.CommandRunner.run_cmd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="command__runner_8py_source.html#l00055">metplus.wrappers.command_runner.CommandRunner.run_cmd()</a>.</p>
 
 </div>
 </div>
@@ -241,12 +244,12 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>cmd: The cmd string w/ -v &lt;level:1-5&gt; inserted after the first white space or end if no spaces. If cmd is None, None is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00276">276</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00289">289</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
 
 </div>
 </div>
-<a id="a912d865147da26a703c4d1dd11d7c1e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912d865147da26a703c4d1dd11d7c1e3">&#9670;&nbsp;</a></span>run_cmd()</h2>
+<a id="abf7faca456b2a2265f71ec2eacd4016d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7faca456b2a2265f71ec2eacd4016d">&#9670;&nbsp;</a></span>run_cmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +282,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>app_name</em> = <code>None</code>, </td>
+          <td class="paramname"><em>log_name</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -321,7 +324,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">cmd</td><td>A string, Command used in the produtil exe Runner object. </td></tr>
     <tr><td class="paramname">env</td><td>Default None, environment for run to pass in, uses os.environ if not set. </td></tr>
     <tr><td class="paramname">ismetcmd</td><td>Default True, Will direct output to METplus log, Metlog , or TTY. Set to False and use the other keywords as needed. </td></tr>
-    <tr><td class="paramname">app_name</td><td>Used only when ismetcmd=True, The name of the exectable being run. </td></tr>
+    <tr><td class="paramname">log_name</td><td>Used only when ismetcmd=True, The name of the exectable being run. </td></tr>
     <tr><td class="paramname">run_inshell</td><td>Used only when ismetcmd=False, will Create a runner object with the cmd being run through a shell, exe('sh')['-c', cmd] This is required by commands, such as ncdump that are redirecting output to a file, and other commands such as the convert command when creating animated gifs. </td></tr>
     <tr><td class="paramname">log_theoutput</td><td>Used only when ismetcmd=False, will redirect the stderr and stdout to a the METplus log file or tty. DO Not set to True if the command is redirecting output to a file. </td></tr>
     <tr><td class="paramname">kwargs</td><td>Other options sent to the produtil Run constructor </td></tr>
@@ -329,7 +332,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00054">54</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__runner_8py_source.html#l00055">55</a> of file <a class="el" href="command__runner_8py_source.html">command_runner.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="command__runner_8py_source.html#l00044">metplus.wrappers.command_runner.CommandRunner.__init__()</a>.</p>
 
