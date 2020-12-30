@@ -144,8 +144,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#create-the-new-tarfile">8.4.4. Create the new tarfile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-volume-mount-directories-file">8.4.5. Add volume_mount_directories file</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-use-case-to-the-test-suite">8.4.6. Add use case to the test suite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-pull-request">8.4.7. Create a pull request</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-the-develop-data-directory">8.4.8. Update the develop data directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-category-to-test-runs">8.4.7. Add new category to test runs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-automated-tests">8.4.8. Monitoring Automated Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-pull-request">8.4.9. Create a pull request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-the-develop-data-directory">8.4.10. Update the develop data directory</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#use-case-rules">8.5. Use Case Rules</a></li>
@@ -291,6 +293,34 @@ category, number of fields, statistical types, and file formats</p></li>
 </div>
 <div class="section" id="document-new-use-case">
 <h3><span class="section-number">8.3.2. </span>Document New Use Case<a class="headerlink" href="#document-new-use-case" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="create-a-new-model-applications-docs-directory">
+<h4><span class="section-number">8.3.2.1. </span>Create a New Model Applications Docs Directory<a class="headerlink" href="#create-a-new-model-applications-docs-directory" title="Permalink to this headline">¶</a></h4>
+<p><strong>If the use case falls under an existing Model Applications category, you can
+skip this section.</strong></p>
+<p>If the use case is the first in a new Model Applications category, create the
+directory under <strong>docs</strong>/use_cases/model_applications if it does not already
+exist. Inside this directory, create a file called README.rst. Inside this file
+add the following each on a single line:</p>
+<ul class="simple">
+<li><p>Title of category</p></li>
+<li><p>Dashes (-) that are the exact same lengh as the title</p></li>
+<li><p>A short description of the category</p></li>
+</ul>
+<p>For example,
+docs/use_cases/model_applications/<strong>air_quality_and_comp/README.rst</strong>
+would look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Air</span> <span class="n">Quality</span> <span class="ow">and</span> <span class="n">Composition</span>
+<span class="o">---------------------------</span>
+<span class="n">A</span> <span class="n">short</span> <span class="n">description</span> <span class="n">of</span> <span class="n">this</span> <span class="n">category</span> <span class="n">goes</span> <span class="n">here</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The content of this file is rendered above the icons for the use cases in this
+category in the User’s Guide &gt; METplus Use Cases &gt;
+<a class="reference external" href="https://dtcenter.github.io/METplus/latest/generated/model_applications/index.html">Model Applications</a>
+page.</p>
+</div>
+<div class="section" id="add-sphinx-documentation-file">
+<h4><span class="section-number">8.3.2.2. </span>Add Sphinx Documentation File<a class="headerlink" href="#add-sphinx-documentation-file" title="Permalink to this headline">¶</a></h4>
 <p>In the corresponding documentation category directory
 (<strong>docs</strong>/use_cases/model_applications/&lt;CATEGORY&gt;), add:</p>
 <ul>
@@ -314,6 +344,7 @@ show up in the search, i.e. <strong>ASCII2NCToolUseCase</strong> must match
 </div></blockquote>
 </li>
 </ul>
+</div>
 </div>
 <div class="section" id="build-the-documentation">
 <h3><span class="section-number">8.3.3. </span>Build the Documentation<a class="headerlink" href="#build-the-documentation" title="Permalink to this headline">¶</a></h3>
@@ -556,40 +587,177 @@ climate:model_applications/climate:</p></li>
 </div>
 <div class="section" id="add-use-case-to-the-test-suite">
 <h3><span class="section-number">8.4.6. </span>Add use case to the test suite<a class="headerlink" href="#add-use-case-to-the-test-suite" title="Permalink to this headline">¶</a></h3>
-<p>COMING SOON! New process for adding new use cases to the list of cases to run</p>
-<p>All of the use cases in the METplus repository are run via Travis-CI to ensure
+<p>There is a text file that contains the list of all use cases:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">METplus</span><span class="o">/</span><span class="n">internal_tests</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">all_use_cases</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>You will need to add your use case to this file so it will be available in
+the tests. The file is organized by use case category. Each category starts
+a line that following the format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Category</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">category</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where &lt;category&gt; is the name of the use case category. If you are adding a
+use case that will go into a new category, you will have to add a new category
+definition line to this file and add your new use case under it. Each use case
+in that category will be found on its own line after this line.
+The use cases can be defined using 3 different formats:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">config_args</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">config_args</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">config_args</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">python_packages</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="config-args">
+<h4><span class="section-number">8.4.6.1. </span>&lt;config_args&gt;<a class="headerlink" href="#config-args" title="Permalink to this headline">¶</a></h4>
+<p>This format should only be used if the use case has only 1 configuration file
+and no additional Python package dependencies besides the ones that are
+required by the METplus wrappers. &lt;config_args&gt; is the path of the conf file
+used for the use case relative to METplus/parm/use_cases. The filename of the
+config file without the .conf extension will be used as the name of the use
+case. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_applications</span><span class="o">/</span><span class="n">medium_range</span><span class="o">/</span><span class="n">PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>The above example will be named
+‘PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr’ and will run using the
+configuration file listed.</p>
+</div>
+<div class="section" id="name-config-args">
+<h4><span class="section-number">8.4.6.2. </span>&lt;name&gt;::&lt;config_args&gt;<a class="headerlink" href="#name-config-args" title="Permalink to this headline">¶</a></h4>
+<p>This format is required if the use case contains multiple configuration files.
+Instead of forcing the script to guess which conf file should be used as the
+name of the use case, you must explicitly define it. The name of the use case
+must be separated from the &lt;config_args&gt; with ‘::’ and each conf file path or
+conf variable override must be separated by a comma. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GridStat_multiple_config</span><span class="p">::</span> <span class="n">met_tool_wrapper</span><span class="o">/</span><span class="n">GridStat</span><span class="o">/</span><span class="n">GridStat</span><span class="o">.</span><span class="n">conf</span><span class="p">,</span><span class="n">met_tool_wrapper</span><span class="o">/</span><span class="n">GridStat</span><span class="o">/</span><span class="n">GridStat_forecast</span><span class="o">.</span><span class="n">conf</span><span class="p">,</span><span class="n">met_tool_wrapper</span><span class="o">/</span><span class="n">GridStat</span><span class="o">/</span><span class="n">GridStat_observation</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>The above example is named ‘GridStat_multiple_config’ and uses 3 .conf files.
+Use cases with only one configuration file can also use this format is desired.</p>
+</div>
+<div class="section" id="name-config-args-python-packages">
+<h4><span class="section-number">8.4.6.3. </span>&lt;name&gt;::&lt;config_args&gt;::&lt;python_packages&gt;<a class="headerlink" href="#name-config-args-python-packages" title="Permalink to this headline">¶</a></h4>
+<p>This format is used if there are additional Python packages required to run
+the use case. &lt;python_packages&gt; is a list of packages to install before running
+the use case separated by commas. The list of currently supported packages are
+found in internal_tests/use_cases/metplus_use_case_suite.py in the
+PYTHON_REQUIREMENTS variable in the METplusUseCasesByRequirement class.
+The current list of supported packages are:
+netCDF4, cartopy, pygrib, h5py, matplotlib, metpy</p>
+<p>Python packages that are not found in this list must be added to the dictionary
+to be used in use cases. This is done because some packages have dependencies
+that need to be installed before installing the package, such as pygrib or
+cartopy. We call shell scripts to install these packages. Other packages only
+require a simple pip command to install. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics</span><span class="p">::</span> <span class="n">model_applications</span><span class="o">/</span><span class="n">medium_range</span><span class="o">/</span><span class="n">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics</span><span class="o">.</span><span class="n">conf</span><span class="p">,</span><span class="n">user_env_vars</span><span class="o">.</span><span class="n">MET_PYTHON_EXE</span><span class="o">=</span><span class="n">python3</span><span class="p">::</span><span class="n">pygrib</span><span class="p">,</span><span class="n">metpy</span>
+</pre></div>
+</div>
+<p>The above example is named
+TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.
+It uses a configuration file and sets the variable MET_PYTHON_EXE from the
+user_env_vars config section to python3 (This is needed to run Python Embedding
+use cases that contain additional Python depedencies). It also needs pygrib
+and metpy Python packages to be installed before running.</p>
+</div>
+</div>
+<div class="section" id="add-new-category-to-test-runs">
+<h3><span class="section-number">8.4.7. </span>Add new category to test runs<a class="headerlink" href="#add-new-category-to-test-runs" title="Permalink to this headline">¶</a></h3>
+<p>If you are adding a new use case category, you will need to add a new entry
+to the .travis.yml file found in the top level of the METplus repository. For
+example, if the new category you are adding is called data_assimilation,
+then you will add the following to the .travis.yml at the end of the list of
+tests to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- name: &quot;Use Case Tests - data_assimilation&quot;
+  script:
+    - ${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation
+</pre></div>
+</div>
+<p>The run_use_cases.py script requires the first argument to be the use case
+category to run in that Travis-CI job.</p>
+<div class="section" id="multiple-categories-in-one-test">
+<h4><span class="section-number">8.4.7.1. </span>Multiple Categories in One Test<a class="headerlink" href="#multiple-categories-in-one-test" title="Permalink to this headline">¶</a></h4>
+<p>If the use cases run quickly and you want to run multiple categories in one
+job, you can add additional categories to this argument separated by commas or
+ampersands, i.e. category1,category2. Do not include any spaces around the
+commas. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py s2s,space_weather
+</pre></div>
+</div>
+</div>
+<div class="section" id="subset-category-into-multiple-tests">
+<h4><span class="section-number">8.4.7.2. </span>Subset Category into Multiple Tests<a class="headerlink" href="#subset-category-into-multiple-tests" title="Permalink to this headline">¶</a></h4>
+<p>If all of the use cases in a given category take a long time to run, you can
+separate them into multiple test jobs. A second argument to the
+run_use_cases.py defines the cases to run for the job. Use cases are numbered
+starting with 0 and are in order of how they are found in the all_use_cases.txt
+file.</p>
+<p>The argument supports a comma-separated list of numbers. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0,2,4
+...
+${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 1,3
+</pre></div>
+</div>
+<p>The above example will run a job with data_assimilation use cases 0, 2, and
+4, then another job with data_assimilation use cases 1 and 3.</p>
+<p>It also supports a range of numbers separated with a dash. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0-3
+...
+${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 4+
+</pre></div>
+</div>
+<p>The above example will run a job with data_assimilation 0, 1, 2, and 3, then
+another job with data_assimilation 4 and higher. If you split up use cases
+into a subset, we recommend that you add a plus sign (+) to the end of the last
+number specified in case additional use cases are added to the category.</p>
+<p>You can also use a combination of commas and dashes to define the list of cases
+to run. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0-2,4+
+...
+${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 3
+</pre></div>
+</div>
+<p>The above example will run data_assimilation 0, 1, 2, 4, and above in one
+job, then data_assimilation 3 in another job.</p>
+</div>
+</div>
+<div class="section" id="monitoring-automated-tests">
+<h3><span class="section-number">8.4.8. </span>Monitoring Automated Tests<a class="headerlink" href="#monitoring-automated-tests" title="Permalink to this headline">¶</a></h3>
+<p>All of the use cases in the METplus repository are run via GitHub Actions to
+ensure
 that everything runs smoothly. If the above instructions to add new data were
-followed correctly, then Travis-CI will automatically obtain the
+followed correctly, then GitHub Actions will automatically obtain the
 new data and use it for the tests when you push your changes to GitHub.
 Adding the use case to the test suite will allow you to check that the data
 was uploaded correctly and that the use case runs in the Python environment
-created in Docker. The status of the tests can be viewed on the
-<a class="reference external" href="https://travis-ci.com/github/dtcenter/METplus/branches">Travis-CI METplus Branches webpage</a>.
-Your feature branch should be found under the Activate Branches section.
-Look at the leftmost box in this row.</p>
+created in Docker. The status of the tests can be viewed on GitHub under the
+<a class="reference external" href="https://github.com/dtcenter/METplus/actions">Actions tab</a>.
+Your feature branch should be found in the list of results near the top.
+At the far left of the entry will be a small status icon:</p>
 <ul class="simple">
-<li><p>A yellow box with two circles spinning indicates that the build is currently
+<li><p>A yellow circle that is spinning indicates that the build is currently
 running.</p></li>
-<li><p>A yellow box with two circles that are not moving indicates that the build is
+<li><p>A yellow circle that is not moving indicates that the build is
 waiting to be run.</p></li>
-<li><p>A green box with a check mark indicates that all of the jobs ran
-successfully.</p></li>
-<li><p>A red box with an X inside indicates that something went wrong.</p></li>
+<li><p>A green check mark indicates that all of the jobs ran successfully.</p></li>
+<li><p>A red X indicates that something went wrong.</p></li>
+<li><p>A grey octagon with an exclamatory mark (!) inside means it was cancelled.</p></li>
 </ul>
-<p>Click on the box to see more details. You should verify that the use case was
-actually run by referring to the appropriate section under “Tests” and search
-for the use case config filename in the log output.</p>
-<p>MORE INFO ON THIS STEP COMING SOON!</p>
+<p>Click on the text next to the icon (last commit message) to see more details.
+You should verify that the use case was
+actually run by referring to the appropriate section under “Jobs” that starts
+with “Use Case Tests.” Click on the job and search for the use case config
+filename in the log output by using the search box on the top right of the
+log output.</p>
 </div>
 <div class="section" id="create-a-pull-request">
-<h3><span class="section-number">8.4.7. </span>Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.9. </span>Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permalink to this headline">¶</a></h3>
 <p>Create a pull request to merge the changes from your branch into the develop
 branch. More information on this process can be found in the
 <a class="reference internal" href="github_workflow.html#github-workflow"><span class="std std-ref">GitHub Workflow</span></a> chapter under
 “Open a pull request using your browser.”</p>
 </div>
 <div class="section" id="update-the-develop-data-directory">
-<h3><span class="section-number">8.4.8. </span>Update the develop data directory<a class="headerlink" href="#update-the-develop-data-directory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.10. </span>Update the develop data directory<a class="headerlink" href="#update-the-develop-data-directory" title="Permalink to this headline">¶</a></h3>
 <p>Once the person reviewing the pull request has verified that the new use case
 was run successfully using the new data,
 they will need to update the links on the DTC web server before the
@@ -676,7 +844,7 @@ runs smoothly outside of the development environment set up by the author.</p></
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 22, 2020, 7:08:35 PM.
+      Last updated on Dec 30, 2020, 9:24:11 PM.
 
     </p>
   </div>
