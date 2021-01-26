@@ -140,14 +140,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#input-data">8.4. Input Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#providing-new-data">8.4.1. Providing new data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-new-data-to-full-sample-data-tarfile">8.4.2. Adding new data to full sample data tarfile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#check-if-the-category-tarfile-exists-already">8.4.3. Check if the category tarfile exists already</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-the-new-tarfile">8.4.4. Create the new tarfile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-volume-mount-directories-file">8.4.5. Add volume_mount_directories file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-use-case-to-the-test-suite">8.4.6. Add use case to the test suite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-new-category-to-test-runs">8.4.7. Add new category to test runs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#monitoring-automated-tests">8.4.8. Monitoring Automated Tests</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-pull-request">8.4.9. Create a pull request</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-the-develop-data-directory">8.4.10. Update the develop data directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-category-to-test-runs">8.4.3. Add new category to test runs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-automated-tests">8.4.4. Monitoring Automated Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-pull-request">8.4.5. Create a pull request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-the-develop-data-directory">8.4.6. Update the develop data directory</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#use-case-rules">8.5. Use Case Rules</a></li>
@@ -237,7 +233,7 @@ This branch will be the source of the pull request to merge the changes into
 the develop branch.</p>
 </div>
 <div class="section" id="use-case-category-directories">
-<h2><span class="section-number">8.2. </span>Use Case Category Directories<a class="headerlink" href="#use-case-category-directories" title="Permalink to this headline">¶</a></h2>
+<span id="use-case-dirs"></span><h2><span class="section-number">8.2. </span>Use Case Category Directories<a class="headerlink" href="#use-case-category-directories" title="Permalink to this headline">¶</a></h2>
 <p>New use cases will be put in the repository under
 parm/use_cases/model_applications/&lt;CATEGORY&gt; where &lt;CATEGORY&gt; is
 one of the following:</p>
@@ -282,7 +278,7 @@ excluded if no forecast data is used)</p></li>
 excluded if no observation data is used)</p></li>
 <li><p><strong>&lt;CLIMO&gt;</strong> is the optional climotology input data source (this can be
 excluded if no climatology data is used)</p></li>
-<li><p><strong>&lt;DESCRIPTION&gt;</strong> is an optional description that can include field
+<li><p><strong>&lt;DESCRIPTOR&gt;</strong> is an optional description that can include field
 category, number of fields, statistical types, and file formats</p></li>
 </ul>
 </div></blockquote>
@@ -344,6 +340,12 @@ show up in the search, i.e. <strong>ASCII2NCToolUseCase</strong> must match
 </div></blockquote>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Text that ends with an underscore (_) may be interpreted as a reference, so
+avoid ending a line with this character to avoid generating warnings in the
+documentation.</p>
+</div>
 </div>
 </div>
 <div class="section" id="build-the-documentation">
@@ -398,200 +400,260 @@ file.grib2, run the following command:</p>
 </div>
 <div class="section" id="providing-new-data">
 <h3><span class="section-number">8.4.1. </span>Providing new data<a class="headerlink" href="#providing-new-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="log-into-the-computer-where-your-input-data-resides">
+<h4><span class="section-number">8.4.1.1. </span>Log into the computer where your input data resides<a class="headerlink" href="#log-into-the-computer-where-your-input-data-resides" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="switch-to-bash">
+<h4><span class="section-number">8.4.1.2. </span>Switch to Bash<a class="headerlink" href="#switch-to-bash" title="Permalink to this headline">¶</a></h4>
+<p>If you are not using a shell other than bash, run “bash” to activate a bash
+shell. This will make the instructions you need to run on the DTC web server
+as the met_test user easier because met_test’s default shell is bash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>If you are unsure which shell you use, run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $SHELL
+</pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>IMPORTANT:</strong> The following environment variables can be set to make
+<p><strong>IMPORTANT:</strong> The following environment variables are set to make
 running these instructions easier. Make sure they are set to the correct
 values that correspond to the use case being added before
 copy/pasting any of these commands or there may be unintended consequences.
 Copy and paste these values after you have modified them into a text file
-that you can copy and paste into the terminal. <strong>You will have to do this
-twice in these instructions.</strong></p>
+that you can copy and paste into the terminal.</p>
 </div>
-<p>If you are using <strong>bash</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># upcoming release number, i.e. 4.0</span>
-<span class="n">export</span> <span class="n">METPLUS_VERSION</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span>
-
-<span class="c1"># use case category (see list above)</span>
-<span class="n">export</span> <span class="n">USE_CASE_CATEGORY</span><span class="o">=</span><span class="n">category</span>
-
-<span class="c1"># name of tarfile containing only the new data to add to the use case</span>
-<span class="n">export</span> <span class="n">NEW_DATA_TARFILE</span><span class="o">=</span><span class="n">new_use_case_data</span><span class="o">.</span><span class="n">tgz</span>
-
-<span class="c1"># feature branch where use case config files are checked in</span>
-<span class="n">export</span> <span class="n">METPLUS_FEATURE_BRANCH</span><span class="o">=</span><span class="n">feature_XYZ_desc</span>
+</div>
+<div class="section" id="download-the-template-environment-file">
+<h4><span class="section-number">8.4.1.3. </span>Download the template environment file<a class="headerlink" href="#download-the-template-environment-file" title="Permalink to this headline">¶</a></h4>
+<p>This file is available on the DTC web server. You can use wget to download the
+file to your current working directory, or visit the URL in a browser and save
+it to your computer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dtcenter</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">dfiles</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data</span><span class="o">/</span><span class="n">add_use_case_env</span><span class="o">.</span><span class="n">bash</span>
 </pre></div>
 </div>
-<p>If you are using <strong>csh</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># upcoming release number, i.e. 4.0</span>
-<span class="n">setenv</span> <span class="n">METPLUS_VERSION</span> <span class="n">X</span><span class="o">.</span><span class="n">Y</span>
-
-<span class="c1"># use case category (see list above)</span>
-<span class="n">setenv</span> <span class="n">USE_CASE_CATEGORY</span> <span class="n">category</span>
-
-<span class="c1"># name of tarfile containing only the new data to add to the use case</span>
-<span class="n">setenv</span> <span class="n">NEW_DATA_TARFILE</span> <span class="n">new_use_case_data</span><span class="o">.</span><span class="n">tgz</span>
-
-<span class="c1"># feature branch where use case config files are checked in</span>
-<span class="n">setenv</span> <span class="n">METPLUS_FEATURE_BRANCH</span> <span class="n">feature_XYZ_desc</span>
+</div>
+<div class="section" id="rename-env-file">
+<h4><span class="section-number">8.4.1.4. </span>Rename env file<a class="headerlink" href="#rename-env-file" title="Permalink to this headline">¶</a></h4>
+<p>Rename this file to include your feature branch. For example, if your branch
+is feature_ABC_desc, then run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">add_use_case_env</span><span class="o">.</span><span class="n">bash</span> <span class="n">feature_ABC_desc_env</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-the-values-of-the-env-file">
+<h4><span class="section-number">8.4.1.5. </span>Change the values of the env file<a class="headerlink" href="#change-the-values-of-the-env-file" title="Permalink to this headline">¶</a></h4>
+<p>Open this file with your favorite editor and modify it to include the
+appropriate information for your use case.</p>
+<ul class="simple">
+<li><p>METPLUS_VERSION should only include the major and minor version. For example,
+if the next release is 4.0.0, set this value to 4.0. If the next release is
+4.0.1, set this value to 4.0.</p></li>
+<li><p>METPLUS_USE_CASE_CATEGORY should be one of the list items in the <a class="reference internal" href="#use-case-dirs"><span class="std std-ref">Use Case Category Directories</span></a>
+section unless you have received approval to create a new category.</p></li>
+<li><p>METPLUS_NEW_DATA_TARFILE will not exist yet. You will create this file in an upcoming
+step.</p></li>
+<li><p>METPLUS_FEATURE_BRANCH should match the name of the branch you are working in
+exactly.</p></li>
+</ul>
+</div>
+<div class="section" id="source-the-env-file-and-check-environment">
+<h4><span class="section-number">8.4.1.6. </span>Source the env file and check environment<a class="headerlink" href="#source-the-env-file-and-check-environment" title="Permalink to this headline">¶</a></h4>
+<p>Source your environment file and verify that the variables are set
+correctly. If the source command fails, make sure you have switched to using
+bash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>source feature_ABC_desc_env.bash
+echo $METPLUS_VERSION
+echo $METPLUS_USE_CASE_CATEGORY
+echo $METPLUS_NEW_DATA_TARFILE
+echo $METPLUS_FEATURE_BRANCH
+echo $METPLUS_DTC_WEB_SERVER
+echo $METPLUS_DATA_STAGING_DIR
+echo $METPLUS_DATA_TARFILE_DIR
+echo $METPLUS_USER_ENV_FILE
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The following variables do not need to be changed unless DTC moves to a
-new web server, but they still need to be set to run the instructions.</p>
+<p>Write down or copy the value for $METPLUS_DTC_WEB_SERVER and
+$METPLUS_DATA_STAGING_DIR. You will need this to get to the new data
+on the DTC Web Server.</p>
 </div>
-<p>If you are using <strong>bash</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># web server that hosts the input data</span>
-<span class="n">export</span> <span class="n">DTC_WEB_SERVER</span><span class="o">=</span><span class="n">mohawk</span><span class="o">.</span><span class="n">rap</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
-
-<span class="c1"># directory on DTC web server to put new data</span>
-<span class="n">export</span> <span class="n">DATA_STAGING_DIR</span><span class="o">=/</span><span class="n">d2</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data_Staging</span>
-
-<span class="c1"># directory on DTC web server that contains the data tarfiles</span>
-<span class="n">export</span> <span class="n">DATA_TARFILE_DIR</span><span class="o">=/</span><span class="n">d2</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">dfiles</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value for METPLUS_USER_ENV_FILE should be the name of the environment
+file that you just sourced.</p>
+</div>
+</div>
+<div class="section" id="create-sub-directories-for-input-data">
+<h4><span class="section-number">8.4.1.7. </span>Create sub-directories for input data<a class="headerlink" href="#create-sub-directories-for-input-data" title="Permalink to this headline">¶</a></h4>
+<p>Put new dataset into a directory that matches the use case directories, i.e.
+model_applications/${METPLUS_USE_CASE_CATEGORY}</p>
+</div>
+<div class="section" id="verify-use-case-config-file-contains-correct-directory">
+<h4><span class="section-number">8.4.1.8. </span>Verify use case config file contains correct directory<a class="headerlink" href="#verify-use-case-config-file-contains-correct-directory" title="Permalink to this headline">¶</a></h4>
+<p>Set directory paths in the use case config file relative to INPUT_BASE
+i.e {INPUT_BASE}/model_applications/&lt;category&gt; where &lt;category&gt; is the value
+you set for ${METPLUS_USE_CASE_CATEGORY}.
+You can set {INPUT_BASE} to your local directory to test that the use case
+still runs properly.</p>
+</div>
+<div class="section" id="create-new-data-tarfile">
+<h4><span class="section-number">8.4.1.9. </span>Create new data tarfile<a class="headerlink" href="#create-new-data-tarfile" title="Permalink to this headline">¶</a></h4>
+<p>Create a tarfile on your development machine with the new dataset. Make sure
+the tarfile contains directories, i.e.
+model_applications/${METPLUS_USE_CASE_CATEGORY}:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar czf ${METPLUS_NEW_DATA_TARFILE} model_applications/${METPLUS_USE_CASE_CATEGORY}
 </pre></div>
 </div>
-<p>If you are using <strong>csh</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># web server that hosts the input data</span>
-<span class="n">setenv</span> <span class="n">DTC_WEB_SERVER</span> <span class="n">mohawk</span><span class="o">.</span><span class="n">rap</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
-
-<span class="c1"># directory on DTC web server to put new data</span>
-<span class="n">setenv</span> <span class="n">DATA_STAGING_DIR</span> <span class="o">/</span><span class="n">d2</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data_Staging</span>
-
-<span class="c1"># directory on DTC web server that contains the data tarfiles</span>
-<span class="n">setenv</span> <span class="n">DATA_TARFILE_DIR</span> <span class="o">/</span><span class="n">d2</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">dfiles</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data</span>
+<p>Verify that the correct directory structure is found inside the tarfile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar tzf ${METPLUS_NEW_DATA_TARFILE}
 </pre></div>
 </div>
-<ul>
-<li><p>Run all of the environment variable commands in your shell and verify that
-they were set correctly.</p></li>
-<li><p>Put new dataset into a directory that matches the use case directories, i.e.
-model_applications/&lt;category&gt; or met_tool_wrapper (formerly
-met_test) where &lt;category&gt; is the use case category from the list above.</p></li>
-<li><p>Set directory paths in the use case config file relative to INPUT_BASE
-i.e {INPUT_BASE}/model_applications/&lt;category&gt; and set {INPUT_BASE} to your
-local directory to test.</p></li>
-<li><p>Create a tarfile on your development machine with the new dataset. Make sure
-the tarball contains directories model_applications/&lt;category&gt; or
-met_tool_wrapper (formerly met_test):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar czf ${NEW_DATA_TARFILE} model_applications/${USE_CASE_CATEGORY}
+<p>The output should show that all of the data is found under the
+model_applications/&lt;category&gt; directory. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_applications</span><span class="o">/</span><span class="n">air_quality_and_comp</span><span class="o">/</span>
+<span class="n">model_applications</span><span class="o">/</span><span class="n">air_quality_and_comp</span><span class="o">/</span><span class="n">aod</span><span class="o">/</span>
+<span class="n">model_applications</span><span class="o">/</span><span class="n">air_quality_and_comp</span><span class="o">/</span><span class="n">aod</span><span class="o">/</span><span class="n">icap_2016081500_aod</span><span class="o">.</span><span class="n">nc</span>
+<span class="n">model_applications</span><span class="o">/</span><span class="n">air_quality_and_comp</span><span class="o">/</span><span class="n">aod</span><span class="o">/</span><span class="n">AGGR_HOURLY_20160815T1200_1deg_global_archive</span><span class="o">.</span><span class="n">nc</span>
 </pre></div>
 </div>
-</li>
-<li><p>If you have access to the internal DTC web server,
-copy over the tarfile to
-/d2/projects/METplus/METplus_Data_Staging:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scp ${NEW_DATA_TARFILE} ${DTC_WEB_SERVER}:${DATA_STAGING_DIR}/
+</div>
+<div class="section" id="copy-files-to-dtc-web-server">
+<h4><span class="section-number">8.4.1.10. </span>Copy files to DTC Web Server<a class="headerlink" href="#copy-files-to-dtc-web-server" title="Permalink to this headline">¶</a></h4>
+<p>If you have access to the internal DTC web server, copy over the tarfile and
+the environment file to the staging directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scp ${METPLUS_NEW_DATA_TARFILE} ${METPLUS_DTC_WEB_SERVER}:${METPLUS_DATA_STAGING_DIR}/
+scp ${METPLUS_USER_ENV_FILE} ${METPLUS_DTC_WEB_SERVER}:${METPLUS_DATA_STAGING_DIR}/
 </pre></div>
 </div>
-</li>
-<li><p>If you do not, upload the tarfile to the RAL FTP:</p>
+<p>If you do not, upload the files to the RAL FTP:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ftp</span> <span class="o">-</span><span class="n">p</span> <span class="n">ftp</span><span class="o">.</span><span class="n">rap</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
 </div>
-</li>
-</ul>
 <p>For an example on how to upload data to the ftp site see
 “How to Send Us Data” on the
 <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/met-help-desk">MET Help Webpage</a>.</p>
 </div>
+</div>
 <div class="section" id="adding-new-data-to-full-sample-data-tarfile">
 <h3><span class="section-number">8.4.2. </span>Adding new data to full sample data tarfile<a class="headerlink" href="#adding-new-data-to-full-sample-data-tarfile" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p>Switch to the met_test user on the DTC web server:</p>
+<div class="section" id="log-into-the-dtc-web-server-with-ssh">
+<h4><span class="section-number">8.4.2.1. </span>Log into the DTC Web Server with SSH<a class="headerlink" href="#log-into-the-dtc-web-server-with-ssh" title="Permalink to this headline">¶</a></h4>
+<p>The web server is only accessible if you are on the NCAR VPN.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh ${METPLUS_DTC_WEB_SERVER}
+</pre></div>
+</div>
+</div>
+<div class="section" id="switch-to-the-met-test-user">
+<h4><span class="section-number">8.4.2.2. </span>Switch to the met_test user<a class="headerlink" href="#switch-to-the-met-test-user" title="Permalink to this headline">¶</a></h4>
+<p>The commands must be run as the met_test user to write into the data
+directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">runas</span> <span class="n">met_test</span>
 </pre></div>
 </div>
-</li>
-<li><p><strong>Run all of the environment variable commands in your shell (from the first
-step) and verify that they were set correctly</strong></p></li>
-<li><p>As the met_test user, create a new directory in the METplus_Data web
+</div>
+<div class="section" id="setup-the-environment-to-run-commands-on-web-server">
+<h4><span class="section-number">8.4.2.3. </span>Setup the environment to run commands on web server<a class="headerlink" href="#setup-the-environment-to-run-commands-on-web-server" title="Permalink to this headline">¶</a></h4>
+<p>Change directory to the data staging dir (${METPLUS_DATA_STAGING_DIR}),
+source the environment file you created, and make sure the environment
+variables are set properly.
+The staging dir variable will not be set until you source the environment file,
+so refer to the previous instructions to obtain the directory path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_STAGING_DIR}
+source feature_ABC_desc_env.bash
+echo $METPLUS_VERSION
+echo $METPLUS_USE_CASE_CATEGORY
+echo $METPLUS_NEW_DATA_TARFILE
+echo $METPLUS_FEATURE_BRANCH
+echo $METPLUS_DTC_WEB_SERVER
+echo $METPLUS_DATA_STAGING_DIR
+echo $METPLUS_DATA_TARFILE_DIR
+echo $METPLUS_USER_ENV_FILE
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-feature-branch-directory-in-the-tarfile-directory">
+<h4><span class="section-number">8.4.2.4. </span>Create a feature branch directory in the tarfile directory<a class="headerlink" href="#create-a-feature-branch-directory-in-the-tarfile-directory" title="Permalink to this headline">¶</a></h4>
+<p>As the met_test user, create a new directory in the METplus_Data web
 directory named after the branch containing the changes for the new use case.
 On the DTC web server:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${DATA_TARFILE_DIR}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_TARFILE_DIR}
 mkdir ${METPLUS_FEATURE_BRANCH}
 cd ${METPLUS_FEATURE_BRANCH}
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
-<div class="section" id="check-if-the-category-tarfile-exists-already">
-<h3><span class="section-number">8.4.3. </span>Check if the category tarfile exists already<a class="headerlink" href="#check-if-the-category-tarfile-exists-already" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Check the symbolic link in the develop directory to determine latest tarball</p></li>
-</ul>
-<p>If you are using <strong>bash</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export TARFILE_TO_ADD_DATA=`ls -l ${DATA_TARFILE_DIR}/develop/sample_data-${USE_CASE_CATEGORY}.tgz | sed &#39;s|.*-&gt;||g&#39;`
-echo ${TARFILE_TO_ADD_DATA}
+<div class="section" id="copy-the-environment-file-into-the-feature-branch-directory">
+<h4><span class="section-number">8.4.2.5. </span>Copy the environment file into the feature branch directory<a class="headerlink" href="#copy-the-environment-file-into-the-feature-branch-directory" title="Permalink to this headline">¶</a></h4>
+<p>This will make it easier for the person who will update the tarfiles for the
+next release to include the new data (right before the pull request is merged
+into the develop branch):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cp ${METPLUS_DATA_STAGING_DIR}/feature_ABC_desc_env.bash ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
 </pre></div>
 </div>
-<p>If you are using <strong>csh</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>setenv TARFILE_TO_ADD_DATA `ls -l ${DATA_TARFILE_DIR}/develop/sample_data-${USE_CASE_CATEGORY}.tgz | sed &#39;s|.*-&gt;||g&#39;`
-echo ${TARFILE_TO_ADD_DATA}
+</div>
+<div class="section" id="check-if-the-category-tarfile-exists-already">
+<h4><span class="section-number">8.4.2.6. </span>Check if the category tarfile exists already<a class="headerlink" href="#check-if-the-category-tarfile-exists-already" title="Permalink to this headline">¶</a></h4>
+<p>Check the symbolic link in the develop directory to determine latest tarball:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export METPLUS_TARFILE_TO_ADD_DATA=`ls -l ${METPLUS_DATA_TARFILE_DIR}/develop/sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz | sed &#39;s|.*-&gt;||g&#39;`
+echo ${METPLUS_TARFILE_TO_ADD_DATA}
 </pre></div>
 </div>
 <p><strong>If the echo command does not contain a full path to sample data tarfile, then
 the sample data tarball may not exist yet for this category.</strong> Double check
 that no sample data tarfiles for the category are found in any of the release
 or develop directories.</p>
-<ul class="simple">
-<li><p>Add contents of existing tarfile to feature branch directory (if applicable)</p></li>
-</ul>
+</div>
+<div class="section" id="add-contents-of-existing-tarfile-to-feature-branch-directory-if-applicable">
+<h4><span class="section-number">8.4.2.7. </span>Add contents of existing tarfile to feature branch directory (if applicable)<a class="headerlink" href="#add-contents-of-existing-tarfile-to-feature-branch-directory-if-applicable" title="Permalink to this headline">¶</a></h4>
 <p><strong>If you have determined that there is an existing tarfile for the category
 (from the previous step)</strong>, then untar the sample data tarball into
 the feature branch directory. If no tarfile exists yet, you can skip this
 step:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar zxf ${TARFILE_TO_ADD_DATA} -C ${DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar zxf ${METPLUS_TARFILE_TO_ADD_DATA} -C ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-the-new-tarfile">
-<h3><span class="section-number">8.4.4. </span>Create the new tarfile<a class="headerlink" href="#create-the-new-tarfile" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Untar the new data tarball into the feature branch directory:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar zxf ${DATA_STAGING_DIR}/${NEW_DATA_TARFILE} -C ${DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
+<h4><span class="section-number">8.4.2.8. </span>Create the new tarfile<a class="headerlink" href="#create-the-new-tarfile" title="Permalink to this headline">¶</a></h4>
+<p>Untar the new data tarball into the feature branch directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar zxf ${METPLUS_DATA_STAGING_DIR}/${METPLUS_NEW_DATA_TARFILE} -C ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Verify that all of the old and new data exists in the directory that was
-created (i.e. model_applications/&lt;category&gt;).</p></li>
-<li><p>Create the new sample data tarball. Example:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar czf sample_data-${USE_CASE_CATEGORY}.tgz model_applications/${USE_CASE_CATEGORY}
+<p>Verify that all of the old and new data exists in the directory that was
+created (i.e. model_applications/&lt;category&gt;).</p>
+<p>Create the new sample data tarball. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar czf sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz model_applications/${METPLUS_USE_CASE_CATEGORY}
 </pre></div>
 </div>
-<ul>
-<li><p>Remove the directory from feature branch directory. Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="n">model_applications</span>
-</pre></div>
-</div>
-</li>
-</ul>
 </div>
 <div class="section" id="add-volume-mount-directories-file">
-<h3><span class="section-number">8.4.5. </span>Add volume_mount_directories file<a class="headerlink" href="#add-volume-mount-directories-file" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Copy the volume_mount_directories file from the develop directory into the
+<h4><span class="section-number">8.4.2.9. </span>Add volume_mount_directories file<a class="headerlink" href="#add-volume-mount-directories-file" title="Permalink to this headline">¶</a></h4>
+<p>Copy the volume_mount_directories file from the develop directory into the
 branch directory. Update the entry for the new tarball if the mounting point
 has changed (unlikely) or add a new entry if adding a new sample data
 tarfile. The format of this file generally follows
 &lt;category&gt;:model_applications/&lt;category&gt;, i.e.
-climate:model_applications/climate:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cp ${DATA_TARFILE_DIR}/develop/volume_mount_directories ${DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
+climate:model_applications/climate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cp ${METPLUS_DATA_TARFILE_DIR}/develop/volume_mount_directories ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
 </pre></div>
 </div>
+</div>
+<div class="section" id="log-out-of-dtc-web-server">
+<h4><span class="section-number">8.4.2.10. </span>Log out of DTC Web Server<a class="headerlink" href="#log-out-of-dtc-web-server" title="Permalink to this headline">¶</a></h4>
+<p>The rest of the instructions are run on the machine where the use case was
+created and tested.</p>
 </div>
 <div class="section" id="add-use-case-to-the-test-suite">
-<h3><span class="section-number">8.4.6. </span>Add use case to the test suite<a class="headerlink" href="#add-use-case-to-the-test-suite" title="Permalink to this headline">¶</a></h3>
-<p>There is a text file that contains the list of all use cases:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">METplus</span><span class="o">/</span><span class="n">internal_tests</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">all_use_cases</span><span class="o">.</span><span class="n">txt</span>
+<h4><span class="section-number">8.4.2.11. </span>Add use case to the test suite<a class="headerlink" href="#add-use-case-to-the-test-suite" title="Permalink to this headline">¶</a></h4>
+<p>In the METplus repository, there is a text file that contains the list of
+all use cases:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">internal_tests</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">all_use_cases</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>You will need to add your use case to this file so it will be available in
+<p>Add the new use case to this file so it will be available in
 the tests. The file is organized by use case category. Each category starts
 a line that following the format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Category</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">category</span><span class="o">&gt;</span>
@@ -607,8 +669,7 @@ The use cases can be defined using 3 different formats:</p>
 <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">config_args</span><span class="o">&gt;</span><span class="p">::</span><span class="o">&lt;</span><span class="n">python_packages</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="config-args">
-<h4><span class="section-number">8.4.6.1. </span>&lt;config_args&gt;<a class="headerlink" href="#config-args" title="Permalink to this headline">¶</a></h4>
+<p><strong>&lt;config_args&gt;</strong></p>
 <p>This format should only be used if the use case has only 1 configuration file
 and no additional Python package dependencies besides the ones that are
 required by the METplus wrappers. &lt;config_args&gt; is the path of the conf file
@@ -621,9 +682,7 @@ case. Example:</p>
 <p>The above example will be named
 ‘PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr’ and will run using the
 configuration file listed.</p>
-</div>
-<div class="section" id="name-config-args">
-<h4><span class="section-number">8.4.6.2. </span>&lt;name&gt;::&lt;config_args&gt;<a class="headerlink" href="#name-config-args" title="Permalink to this headline">¶</a></h4>
+<p><strong>&lt;name&gt;::&lt;config_args&gt;</strong></p>
 <p>This format is required if the use case contains multiple configuration files.
 Instead of forcing the script to guess which conf file should be used as the
 name of the use case, you must explicitly define it. The name of the use case
@@ -634,9 +693,7 @@ conf variable override must be separated by a comma. Example:</p>
 </div>
 <p>The above example is named ‘GridStat_multiple_config’ and uses 3 .conf files.
 Use cases with only one configuration file can also use this format is desired.</p>
-</div>
-<div class="section" id="name-config-args-python-packages">
-<h4><span class="section-number">8.4.6.3. </span>&lt;name&gt;::&lt;config_args&gt;::&lt;python_packages&gt;<a class="headerlink" href="#name-config-args-python-packages" title="Permalink to this headline">¶</a></h4>
+<p><strong>&lt;name&gt;::&lt;config_args&gt;::&lt;python_packages&gt;</strong></p>
 <p>This format is used if there are additional Python packages required to run
 the use case. &lt;python_packages&gt; is a list of packages to install before running
 the use case separated by commas. The list of currently supported packages are
@@ -661,48 +718,82 @@ and metpy Python packages to be installed before running.</p>
 </div>
 </div>
 <div class="section" id="add-new-category-to-test-runs">
-<h3><span class="section-number">8.4.7. </span>Add new category to test runs<a class="headerlink" href="#add-new-category-to-test-runs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.3. </span>Add new category to test runs<a class="headerlink" href="#add-new-category-to-test-runs" title="Permalink to this headline">¶</a></h3>
 <p>If you are adding a new use case category, you will need to add a new entry
-to the .travis.yml file found in the top level of the METplus repository. For
+to the main.yml file found in the .github/workflows directory in the METplus
+repository. For
 example, if the new category you are adding is called data_assimilation,
-then you will add the following to the .travis.yml at the end of the list of
+then you will add the following to the main.yml at the end of the list of
 tests to run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- name: &quot;Use Case Tests - data_assimilation&quot;
-  script:
-    - ${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>use_cases_data_assimilation:
+    name: Use Cases Tests - data_assimilation
+    runs-on: ubuntu-latest
+    needs: [get_image, update_data_volumes]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: &#39;3.6&#39;
+      - uses: actions/download-artifact@v2
+      - run: echo &quot;BRANCH_NAME=$(cat artifact/branch_name.txt)&quot; &gt;&gt; $GITHUB_ENV
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip python-dateutil requests
+      - name: Run Use Cases
+        run: ${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation
+        env:
+          DOCKER_WORK_DIR: /metplus
+          DOCKER_DATA_DIR: /data
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      # copy output data to save as artifact
+      - name: Save output data
+        if: always()
+        run: |
+          mkdir -p artifact/${{ github.job }}
+          cp -r ${GITHUB_WORKSPACE}/../output/* artifact/${{ github.job }}/
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: ${{ github.job }}
+          path: artifact/${{ github.job }}
 </pre></div>
 </div>
-<p>The run_use_cases.py script requires the first argument to be the use case
-category to run in that Travis-CI job.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are 3 places in this new section where you need to change
+“data_assimilation” to the new category that is being created.
+The run_use_cases.py script requires the
+first argument to be the use case category to run in that job.</p>
+</div>
 <div class="section" id="multiple-categories-in-one-test">
-<h4><span class="section-number">8.4.7.1. </span>Multiple Categories in One Test<a class="headerlink" href="#multiple-categories-in-one-test" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.4.3.1. </span>Multiple Categories in One Test<a class="headerlink" href="#multiple-categories-in-one-test" title="Permalink to this headline">¶</a></h4>
 <p>If the use cases run quickly and you want to run multiple categories in one
 job, you can add additional categories to this argument separated by commas or
 ampersands, i.e. category1,category2. Do not include any spaces around the
 commas. Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py s2s,space_weather
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py s2s,space_weather
 </pre></div>
 </div>
 </div>
 <div class="section" id="subset-category-into-multiple-tests">
-<h4><span class="section-number">8.4.7.2. </span>Subset Category into Multiple Tests<a class="headerlink" href="#subset-category-into-multiple-tests" title="Permalink to this headline">¶</a></h4>
+<span id="subset-category"></span><h4><span class="section-number">8.4.3.2. </span>Subset Category into Multiple Tests<a class="headerlink" href="#subset-category-into-multiple-tests" title="Permalink to this headline">¶</a></h4>
 <p>If all of the use cases in a given category take a long time to run, you can
 separate them into multiple test jobs. A second argument to the
 run_use_cases.py defines the cases to run for the job. Use cases are numbered
 starting with 0 and are in order of how they are found in the all_use_cases.txt
 file.</p>
 <p>The argument supports a comma-separated list of numbers. Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0,2,4
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 0,2,4
 ...
-${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 1,3
+${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 1,3
 </pre></div>
 </div>
 <p>The above example will run a job with data_assimilation use cases 0, 2, and
 4, then another job with data_assimilation use cases 1 and 3.</p>
 <p>It also supports a range of numbers separated with a dash. Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0-3
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 0-3
 ...
-${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 4+
+${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 4+
 </pre></div>
 </div>
 <p>The above example will run a job with data_assimilation 0, 1, 2, and 3, then
@@ -711,9 +802,9 @@ into a subset, we recommend that you add a plus sign (+) to the end of the last
 number specified in case additional use cases are added to the category.</p>
 <p>You can also use a combination of commas and dashes to define the list of cases
 to run. Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 0-2,4+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 0-2,4+
 ...
-${TRAVIS_BUILD_DIR}/ci/travis_jobs/run_use_cases.py data_assimilation 3
+${GITHUB_WORKSPACE}/ci/jobs/run_use_cases.py data_assimilation 3
 </pre></div>
 </div>
 <p>The above example will run data_assimilation 0, 1, 2, 4, and above in one
@@ -721,7 +812,7 @@ job, then data_assimilation 3 in another job.</p>
 </div>
 </div>
 <div class="section" id="monitoring-automated-tests">
-<h3><span class="section-number">8.4.8. </span>Monitoring Automated Tests<a class="headerlink" href="#monitoring-automated-tests" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.4. </span>Monitoring Automated Tests<a class="headerlink" href="#monitoring-automated-tests" title="Permalink to this headline">¶</a></h3>
 <p>All of the use cases in the METplus repository are run via GitHub Actions to
 ensure
 that everything runs smoothly. If the above instructions to add new data were
@@ -742,49 +833,206 @@ waiting to be run.</p></li>
 <li><p>A red X indicates that something went wrong.</p></li>
 <li><p>A grey octagon with an exclamatory mark (!) inside means it was cancelled.</p></li>
 </ul>
-<p>Click on the text next to the icon (last commit message) to see more details.
-You should verify that the use case was
+<p>Click on the text next to the icon (last commit message) to see more details.</p>
+<div class="section" id="verifying-that-new-input-data-was-found">
+<h4><span class="section-number">8.4.4.1. </span>Verifying that new input data was found<a class="headerlink" href="#verifying-that-new-input-data-was-found" title="Permalink to this headline">¶</a></h4>
+<p>On the left side of the window there will be a list of jobs that are run.
+Click on the job titled “Docker Setup - Update Data Volumes”</p>
+<div class="figure align-default">
+<img alt="../_images/update_data_volumes.png" src="../_images/update_data_volumes.png" />
+</div>
+<p>On this page, click the item labeled “Update Data Volumes” to view the log
+output. If the new data was found properly, there will be output saying
+“Will pull data from…” followed by the path to the feature branch directory.
+It will also list the dataset category that will be added</p>
+<div class="figure align-default">
+<img alt="../_images/data_volume_pull.png" src="../_images/data_volume_pull.png" />
+</div>
+<p>If the data volume was already successfully created from a prior job, the
+script will check if the tarfile on the web server has been modified since
+the data volume was created. It will recreate it if it has been modified or
+do nothing for this step otherwise.</p>
+<div class="figure align-default">
+<img alt="../_images/data_volume_exists.png" src="../_images/data_volume_exists.png" />
+</div>
+<p>If the log file cannot find the directory on the web server, then something
+went wrong in the previous instructions.</p>
+<div class="figure align-default">
+<img alt="../_images/data_volume_not_found.png" src="../_images/data_volume_not_found.png" />
+</div>
+<p>If this is the case and data should be found, repeat the instructions to stage
+the input data or contact <a class="reference external" href="mailto:met_help&#37;&#52;&#48;ucar&#46;edu">met_help<span>&#64;</span>ucar<span>&#46;</span>edu</a> for assistance.</p>
+</div>
+<div class="section" id="verify-that-the-use-case-ran-successfully">
+<h4><span class="section-number">8.4.4.2. </span>Verify that the use case ran successfully<a class="headerlink" href="#verify-that-the-use-case-ran-successfully" title="Permalink to this headline">¶</a></h4>
+<p>You should verify that the use case was
 actually run by referring to the appropriate section under “Jobs” that starts
 with “Use Case Tests.” Click on the job and search for the use case config
 filename in the log output by using the search box on the top right of the
 log output.</p>
 </div>
+<div class="section" id="verify-that-the-use-case-ran-in-a-reasonable-amount-of-time">
+<h4><span class="section-number">8.4.4.3. </span>Verify that the use case ran in a reasonable amount of time<a class="headerlink" href="#verify-that-the-use-case-ran-in-a-reasonable-amount-of-time" title="Permalink to this headline">¶</a></h4>
+<p>Find the last successful run of the use case category job and compare the time
+it took to run to the run that includes the new use case. The time for the job
+is listed in the Summary view of the latest workflow run next to the name of
+the job. If the time to run has
+increased by a substantial amount, please look into modifying the configuration
+so that it runs in a reasonable time frame.</p>
+<p>If the new use case runs in a reasonable amount of time but the total time to
+run the set of use cases is now above 20 minutes or so, consider creating a
+new job for the new use case. See the <a class="reference internal" href="#subset-category"><span class="std std-ref">Subset Category into Multiple Tests</span></a> section and the
+multiple medium_range jobs for an example.</p>
+</div>
+</div>
 <div class="section" id="create-a-pull-request">
-<h3><span class="section-number">8.4.9. </span>Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.5. </span>Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permalink to this headline">¶</a></h3>
 <p>Create a pull request to merge the changes from your branch into the develop
 branch. More information on this process can be found in the
 <a class="reference internal" href="github_workflow.html#github-workflow"><span class="std std-ref">GitHub Workflow</span></a> chapter under
 “Open a pull request using your browser.”</p>
 </div>
 <div class="section" id="update-the-develop-data-directory">
-<h3><span class="section-number">8.4.10. </span>Update the develop data directory<a class="headerlink" href="#update-the-develop-data-directory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.4.6. </span>Update the develop data directory<a class="headerlink" href="#update-the-develop-data-directory" title="Permalink to this headline">¶</a></h3>
 <p>Once the person reviewing the pull request has verified that the new use case
 was run successfully using the new data,
 they will need to update the links on the DTC web server before the
 pull request is merged so that the develop branch will contain the new data.</p>
 <ul class="simple">
-<li><p>Switch to the met_test user</p></li>
 <li><p><strong>Run all of the environment variable commands in your shell (from the first
 step) and verify that they were set correctly</strong></p></li>
 <li><p>Move new tarball to the upcoming release (i.e. v4.0) directory</p></li>
 <li><p>Update symbolic link in the develop directory to point to the new data</p></li>
 <li><p>Remove the feature branch directory</p></li>
-<li><p>Remove feature branch Docker data volumes:</p></li>
+<li><p>Remove feature branch Docker data volumes</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>runas met_test
-cd ${DATA_TARFILE_DIR}
-diff ${METPLUS_FEATURE_BRANCH}/volume_mount_directories develop/volume_mount_directories
-mv ${METPLUS_FEATURE_BRANCH}/volume_mount_directories develop/volume_mount_directories
-rm v${METPLUS_VERSION}/sample_data-${USE_CASE_CATEGORY}-${METPLUS_VERSION}.tgz
-mv ${METPLUS_FEATURE_BRANCH}/sample_data-${USE_CASE_CATEGORY}.tgz v${METPLUS_VERSION}/sample_data-&lt;category&gt;-${METPLUS_VERSION}.tgz
-cd develop
-ln -s ${DATA_TARFILE_DIR}/${METPLUS_VERSION}/sample_data-${USE_CASE_CATEGORY}-${METPLUS_VERSION}.tgz sample_data-${USE_CASE_CATEGORY}.tgz
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Check if there are multiple feature branch directories that have data for
+the same model_applications category. If there are more than one, then
+you will need to be careful not to overwrite the final tarfile so that
+one or more of the new data files are lost! These instructions need
+to be updated to handle this situation.</p>
+</div>
+<div class="section" id="id1">
+<h4><span class="section-number">8.4.6.1. </span>Switch to the met_test user<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Commands must run as the met_test user:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">runas</span> <span class="n">met_test</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Merge the pull request and verify that all of the Travis-CI tests pass for
-the develop branch.</p></li>
-</ul>
+</div>
+<div class="section" id="change-directory-to-the-feature-tarfile-directory">
+<h4><span class="section-number">8.4.6.2. </span>Change directory to the feature tarfile directory<a class="headerlink" href="#change-directory-to-the-feature-tarfile-directory" title="Permalink to this headline">¶</a></h4>
+<p>The path will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">d2</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">dfiles</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">METplus_Data</span><span class="o">/</span><span class="n">feature_ABC_desc</span>
+</pre></div>
+</div>
+<p>Source the environment file for the feature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">feature_ABC_desc_env</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compare-the-volume-mount-directories-file">
+<h4><span class="section-number">8.4.6.3. </span>Compare the volume_mount_directories file<a class="headerlink" href="#compare-the-volume-mount-directories-file" title="Permalink to this headline">¶</a></h4>
+<p>Compare the feature branch file to the develop directory file. If there is a
+new entry or change in the feature version, copy the feature file into the
+develop directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>diff ${METPLUS_FEATURE_BRANCH}/volume_mount_directories develop/volume_mount_directories
+cp ${METPLUS_FEATURE_BRANCH}/volume_mount_directories develop/volume_mount_directories
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-the-data-from-the-feature-directory-into-the-next-version-directory">
+<h4><span class="section-number">8.4.6.4. </span>Copy the data from the feature directory into the next version directory<a class="headerlink" href="#copy-the-data-from-the-feature-directory-into-the-next-version-directory" title="Permalink to this headline">¶</a></h4>
+<p>Make sure the paths are correct before copying:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from_directory=${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}/model_applications/${METPLUS_USE_CASE_CATEGORY}
+echo $from_directory
+ls $from_directory
+
+to_directory=${METPLUS_DATA_TARFILE_DIR}/v${METPLUS_VERSION}/model_applications/${METPLUS_USE_CASE_CATEGORY}
+echo $to_directory
+ls $to_directory
+
+cp -r $from_directory/* $to_directory/
+</pre></div>
+</div>
+<p>Rename the existing sample data tarball for the use case category just in case
+something goes wrong:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_TARFILE_DIR}/v${METPLUS_VERSION}
+mv sample_data-${METPLUS_USE_CASE_CATEGORY}-${METPLUS_VERSION}.tgz sample_data-${METPLUS_USE_CASE_CATEGORY}-${METPLUS_VERSION}.sav.`date +%Y%m%d%H%M`.tgz
+</pre></div>
+</div>
+<p>Create the new sample data tarfile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tar czf sample_data-${METPLUS_USE_CASE_CATEGORY}-${METPLUS_VERSION}.tgz model_applications/${METPLUS_USE_CASE_CATEGORY}
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-the-link-in-the-develop-directory-if-needed">
+<h4><span class="section-number">8.4.6.5. </span>Update the link in the develop directory if needed<a class="headerlink" href="#update-the-link-in-the-develop-directory-if-needed" title="Permalink to this headline">¶</a></h4>
+<p>Check if the develop directory contains a symbolic link to an older version of
+the tarfile. Note: These commands must be run together (no other commands in
+between) to work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_TARFILE_DIR}/develop
+ls -lh sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz | grep ${METPLUS_VERSION}
+if [ $? != 0 ]; then echo Please update the link; else echo The link is already correct; fi
+</pre></div>
+</div>
+<p>If the screen output says “The link is already correct” then do not
+run the next command. If it says “Please update the link” then please listen
+to the polite instructions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rm sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz
+ln -s ${METPLUS_DATA_TARFILE_DIR}/v${METPLUS_VERSION}/sample_data-${METPLUS_USE_CASE_CATEGORY}-${METPLUS_VERSION}.tgz sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz
+</pre></div>
+</div>
+<p>Check that the link now points to the new tarfile that was just created:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ls -lh sample_data-${METPLUS_USE_CASE_CATEGORY}.tgz
+</pre></div>
+</div>
+</div>
+<div class="section" id="merge-the-pull-request-and-ensure-that-all-tests-pass">
+<h4><span class="section-number">8.4.6.6. </span>Merge the pull request and ensure that all tests pass<a class="headerlink" href="#merge-the-pull-request-and-ensure-that-all-tests-pass" title="Permalink to this headline">¶</a></h4>
+<p>Merge the pull request on GitHub. Then go to the “Actions” tab and verify that
+all of the GitHub Actions tests pass for the develop branch. A green check mark
+for the latest run that lists “develop” as the branch signifies that the run
+completed successfully.</p>
+<div class="figure align-default">
+<img alt="../_images/github_actions_develop.png" src="../_images/github_actions_develop.png" />
+</div>
+<p>If the circle on the left side is yellow, then the run has not completed yet.
+If everything ran smoothly, clean up the files on the web server.</p>
+</div>
+<div class="section" id="remove-the-saved-copy-of-the-sample-data-tarfile">
+<h4><span class="section-number">8.4.6.7. </span>Remove the saved copy of the sample data tarfile<a class="headerlink" href="#remove-the-saved-copy-of-the-sample-data-tarfile" title="Permalink to this headline">¶</a></h4>
+<p>Check if there are any “sav” files in the METplus version directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_TARFILE_DIR}/v${METPLUS_VERSION}
+ls -lh sample_data-${METPLUS_USE_CASE_CATEGORY}-${METPLUS_VERSION}.sav.*.tgz
+</pre></div>
+</div>
+<p>If there is more than one file with “sav” in the filename, make sure that the
+file removed is the file that was created for this feature.</p>
+</div>
+<div class="section" id="remove-the-feature-branch-data-directory">
+<h4><span class="section-number">8.4.6.8. </span>Remove the feature branch data directory<a class="headerlink" href="#remove-the-feature-branch-data-directory" title="Permalink to this headline">¶</a></h4>
+<p>If more development is needed for the feature branch, do not remove the
+directory. If the work is complete, then remove the directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ls ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
+rm -rf ${METPLUS_DATA_TARFILE_DIR}/${METPLUS_FEATURE_BRANCH}
+</pre></div>
+</div>
+</div>
+<div class="section" id="clean-up-the-staging-directory">
+<h4><span class="section-number">8.4.6.9. </span>Clean up the staging directory<a class="headerlink" href="#clean-up-the-staging-directory" title="Permalink to this headline">¶</a></h4>
+<p>Remove the tarfile and environment file from the staging directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${METPLUS_DATA_STAGING_DIR}
+
+ls ${METPLUS_NEW_DATA_TARFILE}
+rm ${METPLUS_NEW_DATA_TARFILE}
+
+ls ${METPLUS_USER_ENV_FILE}
+rm ${METPLUS_USER_ENV_FILE}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="use-case-rules">
@@ -844,7 +1092,7 @@ runs smoothly outside of the development environment set up by the author.</p></
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

@@ -129,7 +129,22 @@
 <li class="toctree-l2"><a class="reference internal" href="github_workflow.html">6. GitHub Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing.html">7. Testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="add_use_case.html">8. Adding Use Cases</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-metplus-documentation">9.1. Viewing METplus documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doxygen-source-code-documentation">9.2. Doxygen Source Code Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-overview">9.3. Documentation Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description-of-documentation-directories">9.4. Description of Documentation Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-new-documentation">9.5. Adding New Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#use-cases-that-have-only-one-met-tool-metplus-wrapper">9.5.1. Use cases that have only one MET tool/METplus wrapper:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-cases-that-use-more-than-one-met-tool-metplus-wrapper">9.5.2. Use cases that use more than one MET tool/METplus wrapper:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-s-guide">9.5.3. User’s Guide:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contributor-s-guide">9.5.4. Contributor’s Guide:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#building-sphinx-documentation">9.6. Building Sphinx Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relevant-documentation-for-contributors">9.7. Relevant Documentation for Contributors</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -202,292 +217,252 @@
             
   <div class="section" id="documentation">
 <h1><span class="section-number">9. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line"><strong>Viewing METplus documentation</strong></div>
-<div class="line"><br /></div>
-<div class="line">The METplus documentation (beginning with version 3.0) is available</div>
-<div class="line">online at the following URL:</div>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://dtcenter.github.io/METplus">https://dtcenter.github.io/METplus</a></div>
-<div class="line"><br /></div>
+<div class="section" id="viewing-metplus-documentation">
+<h2><span class="section-number">9.1. </span>Viewing METplus documentation<a class="headerlink" href="#viewing-metplus-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The METplus documentation (beginning with version 3.0) is available
+<a class="reference external" href="https://dtcenter.github.io/METplus">online</a>.</p>
+</div>
+<div class="section" id="doxygen-source-code-documentation">
+<h2><span class="section-number">9.2. </span>Doxygen Source Code Documentation<a class="headerlink" href="#doxygen-source-code-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The source code documentation is found
+<a class="reference external" href="https://dtcenter.github.io/METplus/doxygen">here</a>.</p>
+</div>
+<div class="section" id="documentation-overview">
+<h2><span class="section-number">9.3. </span>Documentation Overview<a class="headerlink" href="#documentation-overview" title="Permalink to this headline">¶</a></h2>
+<p>The majority of the documentation is created using the Sphinx documentation
+generator
+tool, which was originally created for Python documentation.
+The documentation is created using
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText (rst)</a>.</p>
+<p>The following Sphinx modules are required to generate the necessary
+documentation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>sphinx-2.2.0</p></li>
+<li><p>sphinx-gallery-0.7</p></li>
+<li><p>sphinx_rtd_theme-0.4.3</p></li>
+</ul>
+</div></blockquote>
+<p>Which versions are being used by the current METplus release can be viewed
+by looking at either environment.yml or requirements.txt, both of which
+are found in the METplus/ directory.  If the desire is to replicate all the
+packages employed by METplus, please refer to <a class="reference internal" href="conda_env.html#conda-env"><span class="std std-numref">Section 4</span></a> of the
+Contributor’s Guide.</p>
+</div>
+<div class="section" id="description-of-documentation-directories">
+<h2><span class="section-number">9.4. </span>Description of Documentation Directories<a class="headerlink" href="#description-of-documentation-directories" title="Permalink to this headline">¶</a></h2>
+<p>Core documentation is divided into two sections: the User’s Guide and
+Contributor’s Guide, both of which reside under the <em>METplus/docs</em>
+directory, with files ending in .rst.</p>
+<p>Documentation for the use cases is found in the following directories:</p>
+<ul class="simple">
+<li><p><em>METplus/parm/met_tools</em></p>
+<ul>
+<li><p>This directory contains documentation pertaining to use cases
+that use one MET <em>tool/METplus</em> wrapper.</p></li>
+</ul>
+</li>
+<li><p><em>METplus/parm/model_applications</em></p>
+<ul>
+<li><p>This directory contains documentation pertaining to use cases
+that are based on model data, and utilize more than one
+MET tool/METplus wrapper. The corresponding METplus
+configuration files to these use cases have the same name
+as the .py files, with a .conf file extension.</p></li>
+</ul>
+</li>
+</ul>
+<p>Documentation files end with a .py extension and these files generate the
+clickable graphics in the gallery.</p>
+</div>
+<div class="section" id="adding-new-documentation">
+<h2><span class="section-number">9.5. </span>Adding New Documentation<a class="headerlink" href="#adding-new-documentation" title="Permalink to this headline">¶</a></h2>
+<p>To determine where to add new documentation:</p>
+<ul class="simple">
+<li><p>Use cases that involve a single MET tool/METplus wrapper will reside
+in the <em>METplus/parm/use_cases/met_tool_wrapper</em> directory.</p></li>
+<li><p>Use cases that involve multiple MET tools/METplus wrappers will reside
+in the <em>METplus/parm/use_cases/model_applications</em> directory, under
+a subdirectory that corresponds to a specific category.</p></li>
+<li><p>The User’s Guide for any instructions or details that will enable a user
+to run/use the use case and/or new code.</p></li>
+<li><p>The Contributor’s Guide for any instructions for instructions on
+creating/constructing the new code.</p></li>
+</ul>
+<div class="section" id="use-cases-that-have-only-one-met-tool-metplus-wrapper">
+<h3><span class="section-number">9.5.1. </span>Use cases that have only one MET tool/METplus wrapper:<a class="headerlink" href="#use-cases-that-have-only-one-met-tool-metplus-wrapper" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Create a new subdirectory, based on the name of the MET tool:
+e.g. <em>METplus/parm/use_cases/met_tool_wrapper/ASCII2NC</em></p></li>
+<li><p>Create a new Python file with the .py extension.</p>
+<blockquote>
+<div><ul>
+<li><p>For a use case document in the <em>METplus/parm/use_cases/met_tools</em>
+directory, follow this pattern:</p>
+<p>&lt;MET tool name&gt;.py</p>
+<p>Where the MET tool name follows PascalCase, e.g. GridStat.py or
+ASCII2NC.py.  This file is a hybrid RST and Python file.</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Add a METplus configuration file for this use case, using the same
+name as the .py file above, except replace the .py extension with
+.conf.  The contents of this file will be pulled into the .py file
+that was created.</p></li>
+</ul>
+</div>
+<div class="section" id="use-cases-that-use-more-than-one-met-tool-metplus-wrapper">
+<h3><span class="section-number">9.5.2. </span>Use cases that use more than one MET tool/METplus wrapper:<a class="headerlink" href="#use-cases-that-use-more-than-one-met-tool-metplus-wrapper" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>The model_applications directory contains subdirectories that
+are based on the following categories:</p>
+<ul>
+<li><p>climate</p></li>
+<li><p>convection_allowing_models</p></li>
+<li><p>cryosphere</p></li>
+<li><p>data_assimilation</p></li>
+<li><p>medium_range</p></li>
+<li><p>precipitation</p></li>
+<li><p>s2s (sub-seasonal to seasonal)</p></li>
+<li><p>space_weather</p></li>
+<li><p>tc_and_extra_tc</p>
+<ul>
+<li><p>For documenting a use case that spans more than one MET tool/
+METplus wrapper, determine which category to place the
+documentation.</p>
+<ul>
+<li><p>If no category exists, create a new subdirectory with the
+name of the new category.</p>
+<ul>
+<li><p>Create a new Python (.py) file with a descriptive
+name, following the convention:</p>
+<p>&lt;descriptive name&gt;.py</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="user-s-guide">
+<h3><span class="section-number">9.5.3. </span>User’s Guide:<a class="headerlink" href="#user-s-guide" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>To add/modify any content that affects METplus users.</p></li>
+<li><p>Modify any of the affected sections from the
+<em>METplus/docs/Users_Guide</em> directory:</p>
+<ul>
+<li><p>glossary.rst (Glossary)</p></li>
+<li><p>references.rst (Reference)</p></li>
+<li><p>systemconfiguration.rst (System Configuration)</p></li>
+<li><p>usecases.rst (Use cases)</p></li>
+<li><p>wrappers.rst (METplus wrappers)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="contributor-s-guide">
+<h3><span class="section-number">9.5.4. </span>Contributor’s Guide:<a class="headerlink" href="#contributor-s-guide" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>To add/modify any content that affects METplus contributors.</p></li>
+<li><p>Modify any of the affected sections from the
+<em>METplus/docs/Contributors_Guide</em> directory:</p>
+<ul>
+<li><p>add_use_case.rst (How to add new use cases.)</p></li>
+<li><p>basic_components.rst (The basic components of a METplus wrapper.)</p></li>
+<li><p>coding_standards.rst (The coding standards currently in use.)</p></li>
+<li><p>conda_env.rst  (How to set up the conda environment for
+running METplus.)</p></li>
+<li><p>create_wrapper.rst (How to create a new METplus wrapper.)</p></li>
+<li><p>deprecation.rst (What to do to deprecate a variable.)</p></li>
+<li><p>documentation.rst (Describing the
+documentation process and files.)</p></li>
+<li><p>github_workflow.rst (A description of how releases are made,
+how to to obtain source code from the GitHub repository.)</p></li>
+<li><p>index.rst (The page that shows all the ‘chapters/sections’
+of the Contributor’s Guide.)</p></li>
+<li><p>testing.rst (A description of how to set up testing the
+wrapper code.)</p></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
-<div class="line-block">
-<div class="line"><strong>Doxygen Source Code Documentation</strong></div>
-<div class="line"><br /></div>
-<div class="line">The source code documentation is found here:</div>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://dtcenter.github.io/METplus/doxygen">https://dtcenter.github.io/METplus/doxygen</a></div>
+<div class="section" id="building-sphinx-documentation">
+<h2><span class="section-number">9.6. </span>Building Sphinx Documentation<a class="headerlink" href="#building-sphinx-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is assumed that the web browser application and METplus
+source code are located on the same computer/host.</p>
 </div>
+<p>All the sphinx modules (listed earlier) need to be present in order to
+generate the HTML content that comprises the documentation.
+From the command line, change to the <em>METplus/docs</em> directory and
+enter the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./build_docs.py
+</pre></div>
 </div>
-<div class="line-block">
-<div class="line"><strong>Documentation Overview</strong></div>
-<div class="line"><br /></div>
-<div class="line">The majority of the documentation is created using the Sphinx documentation generator</div>
-<div class="line">tool, which was originally created for Python documentation.</div>
-<div class="line">The documentation is created using reStructuredText (rst):</div>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html</a></div>
-<div class="line"><br /></div>
+<p>This script does the following:</p>
+<ul class="simple">
+<li><p>Builds the Sphinx documentation.</p></li>
+<li><p>Builds the doxygen documentation.</p></li>
+<li><p>Removes unwanted text from use case documentation.</p></li>
+<li><p>Copies doxygen files into _build/html for easy deployment.</p></li>
+<li><p>Creates symbolic links under Users_Guide to the directories under
+‘generated’ to preserve old URL paths.</p></li>
+</ul>
+<p>The html files that are created can be found in the <em>METplus/docs/_build/html</em>
+directory.  The web browser can point to this directory by entering
+the following in the web browser’s navigation bar:</p>
+<blockquote>
+<div><p><em>file:///&lt;path-to&gt;/METplus/docs/_build/html/index.html</em></p>
+</div></blockquote>
+<p>Where &lt;path-to&gt; is the full file path leading to the METplus
+source code. This will direct to the home page of the
+documentation.  Click on the “User’s Guide”
+link (which opens the user documentation and the use cases)
+or the “Contributor’s Guide” link (which is relevant if the user intends to
+contribute code and/or new use cases).</p>
 </div>
-<div class="line">The following Sphinx modules are required to generate the necessary</div>
-<div class="line">documentation:</div>
-<div class="line-block">
-<div class="line">* sphinx-2.2.0</div>
-<div class="line">* sphinx-gallery-0.7</div>
-<div class="line">* sphinx_rtd_theme-0.4.3</div>
-<div class="line"><br /></div>
+<div class="section" id="relevant-documentation-for-contributors">
+<h2><span class="section-number">9.7. </span>Relevant Documentation for Contributors<a class="headerlink" href="#relevant-documentation-for-contributors" title="Permalink to this headline">¶</a></h2>
+<p>The Doxygen tool is employed to create documentation from the source code.
+This documentation
+is useful in generating details about the METplus wrapper API
+(Application Programming Interface).
+This is a useful reference for contributors to peruse prior to creating
+new METplus wrappers.
+The Doxygen files located in the <em>/path/to/METplus/docs/doxygen</em> directory
+do <strong>NOT</strong> need to be modified and should not be modified.</p>
+<p>For more information about Doxygen, please refer to this
+<a class="reference external" href="http://doxygen.nl/">Doxygen web page</a>.</p>
+<p><a class="reference external" href="http://doxygen.nl/download.html">Download and install Doxygen</a>
+to create this documentation.</p>
+<p><strong>Note</strong>: Doxygen version 1.8.9.1 or higher is required to create the
+documentation for the METplus wrappers.</p>
+<p>Create the Doxygen documentation by performing the following:</p>
+<ul>
+<li><p>Ensure that the user is working with Python 3.6 (minimum).</p></li>
+<li><p>cd to the <em>/path/to/METplus/sorc</em> directory, where <em>/path/to</em> is the
+file path where the METplus source code is installed.</p></li>
+<li><p>At the command line, enter the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make clean
+make doc
+</pre></div>
 </div>
-<div class="line">You can see which versions are used by the current METplus release</div>
-<div class="line">by looking at either environment.yml or requirements.txt, both of which</div>
-<div class="line">are found in the METplus/ directory.  If you wish to replicate all the</div>
-<div class="line">packages employed by METplus, please refer to the “Instructions for the</div>
-<div class="line">Conda Environment” section of the Contributor’s Guide.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Description of Documentation Directories</strong></div>
-<div class="line"><br /></div>
-<div class="line">Core documentation is divided into two sections: the User’s Guide and</div>
-<div class="line">Contributor’s Guide, both of which reside under the METplus/docs</div>
-<div class="line">directory, with files ending in .rst.</div>
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line">Documentation for the use cases is found in the following directories:</div>
-<div class="line-block">
-<div class="line">* METplus/parm/met_tools</div>
-<div class="line-block">
-<div class="line">* This directory contains documentation pertaining to use cases that</div>
-<div class="line-block">
-<div class="line">use one MET tool/METplus wrapper</div>
-</div>
-</div>
-<div class="line">* METplus/parm/model_applications</div>
-<div class="line-block">
-<div class="line">* This directory contains documentation pertaining to use cases that</div>
-<div class="line-block">
-<div class="line">are based on model data, and utilize more than one</div>
-<div class="line">MET tool/METplus wrapper.| The corresponding METplus</div>
-<div class="line">configuration files to these use cases have the same name</div>
-<div class="line">as the .py files, with a .conf file extension</div>
-<div class="line"><br /></div>
-</div>
-</div>
-</div>
-<div class="line">Documentation files end with a .py extension and these files generate the clickable graphics in the gallery.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><strong>Adding New Documentation</strong></div>
-<div class="line">Determine where you should add documentation:</div>
-<div class="line-block">
-<div class="line">* Use cases that involve a single MET tool/METplus wrapper will reside in the</div>
-<div class="line-block">
-<div class="line">METplus/parm/use_cases/met_tool_wrapper directory</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">* Use cases that involv multiple MET tools/METplus wrappers will reside</div>
-<div class="line-block">
-<div class="line">in the METplus/parm/use_cases/model_applications directory, under</div>
-<div class="line">a subdirectory that corresponds to a specific category</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">* The User’s Guide for any instructions or details that will enable a user</div>
-<div class="line-block">
-<div class="line">to run/use your use case and/or new code.</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">* The Contributor’s Guide for any instructions for instructions on</div>
-<div class="line-block">
-<div class="line">creating/constructing your new code.</div>
-<div class="line"><br /></div>
-</div>
-</div>
-</div>
-<div class="line-block">
-<div class="line-block">
-<div class="line"><strong>Use cases that have only one MET tool/METplus wrapper</strong>:</div>
-<div class="line-block">
-<div class="line">* create a new subdirectory, based on the name of the MET tool:</div>
-<div class="line-block">
-<div class="line">e.g. METplus/parm/use_cases/met_tool_wrapper/ASCII2NC</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">* create a new Python file with the .py extension</div>
-<div class="line-block">
-<div class="line">* for a use case document in the METplus/parm/use_cases/met_tools</div>
-<div class="line-block">
-<div class="line">directory, follow this pattern:</div>
-<div class="line-block">
-<div class="line">&lt;MET tool name&gt;.py</div>
-</div>
-<div class="line">where the MET tool name follows PascalCase, e.g. GridStat.py or</div>
-<div class="line">ASCII2NC.py.  This file is a hybrid RST and Python file.</div>
-<div class="line"><br /></div>
-</div>
-</div>
-<div class="line">* add a METplus configuration file for this use case, using the same name as the .py file</div>
-<div class="line-block">
-<div class="line">above, except replace the .py extension with .conf.  The contents</div>
-<div class="line">of this file will be pulled into the .py file you created.</div>
-<div class="line"><br /></div>
-</div>
-</div>
-<div class="line"><strong>Use cases that use more than one MET tool/METplus wrapper</strong>:</div>
-<div class="line-block">
-<div class="line">* the model_applications directory contains subdirectories that</div>
-<div class="line-block">
-<div class="line">are based on the following categories:</div>
-<div class="line-block">
-<div class="line">* convection_allowing_models</div>
-<div class="line">* medium_range</div>
-<div class="line">* precipitation</div>
-<div class="line">* s2s (sub-seasonal to seasonal)</div>
-<div class="line">* tc_and_extra_tc</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">* for documenting a use case that spans more than one MET tool/</div>
-<div class="line-block">
-<div class="line-block">
-<div class="line">METplus wrapper, determine which category to place your</div>
-</div>
-<div class="line">documentation</div>
-<div class="line-block">
-<div class="line">* if no category exists, create a new subdirectory with the</div>
-<div class="line-block">
-<div class="line">name of the new category</div>
-</div>
-<div class="line">* create a new Python (.py) file with a descriptive name, following</div>
-<div class="line-block">
-<div class="line">the convention:</div>
-<div class="line">&lt;descriptive name&gt;.py</div>
-<div class="line"><br /></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="line"><strong>User’s Guide</strong>:</div>
-<div class="line-block">
-<div class="line">* to add/modify any content that affects METplus users</div>
-<div class="line">* modify any of the affected sections from the METplus/docs/Users_Guide directory:</div>
-<div class="line-block">
-<div class="line">* glossary.rst (Glossary)</div>
-<div class="line">* references.rst (Reference)</div>
-<div class="line">* systemconfiguration.rst (System Configuration)</div>
-<div class="line">* usecases.rst (Use cases)</div>
-<div class="line">* wrappers.rst (METplus wrappers)</div>
-<div class="line"><br /></div>
-</div>
-</div>
-<div class="line"><strong>Contributor’s Guide</strong>:</div>
-<div class="line-block">
-<div class="line">* to add/modify any content that affects METplus contributors</div>
-<div class="line">* modify any of the affected sections from the METplus/docs/Contributors_Guide directory:</div>
-<div class="line-block">
-<div class="line">* add_use_case.rst (How to add new use cases)</div>
-<div class="line">* basic_components.rst (The basic components of a METplus wrapper)</div>
-<div class="line">* coding_standards.rst (The coding standards currently in use)</div>
-<div class="line">* conda_env.rst  (How to set up your conda environment for running METplus)</div>
-<div class="line">* create_wrapper.rst (How to create a new METplus wrapper)</div>
-<div class="line">* deprecation.rst (What to do to deprecate a variable)</div>
-<div class="line">* documentation.rst (This document.  Describing the documentation process and files)</div>
-<div class="line">* github_workflow.rst (A description of how releases are made, how to to obtain source code from the GitHub repository)</div>
-<div class="line">* index.rst (The page that shows all the ‘chapters/sections’ of the Contributor’s Guide)</div>
-<div class="line">* testing.rst (A description of how to set up testing your wrapper code)</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-</div>
-</div>
-</div>
-<div class="line"><strong>Building Sphinx Documentation</strong></div>
-<div class="line"><br /></div>
-<div class="line">** NOTE**:  It is assumed that your web browser application and your METplus</div>
-<div class="line">source code are located on the same computer/host.</div>
-<div class="line"><br /></div>
-<div class="line">All the sphinx modules (listed earlier) need to be present in order to</div>
-<div class="line">generate the HTML content that comprises the documentation.</div>
-<div class="line">From the command line, change to the METplus/docs directory and</div>
-<div class="line">enter the following:</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line"><em>./build_docs.py</em></div>
-<div class="line"><br /></div>
-</div>
-<div class="line">This script does the following::</div>
-<div class="line-block">
-<div class="line">* Builds the Sphinx documentation</div>
-<div class="line">* Builds the doxygen documentation</div>
-<div class="line">* Removes unwanted text from use case documentation</div>
-<div class="line">* Copies doxygen files into _build/html for easy deployment</div>
-<div class="line">* Creates symbolic links under Users_Guide to the directories under ‘generated’ to preserve old URL paths</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">The html files that are created can be found in the METplus/docs/_build/html</div>
-<div class="line">directory.  You can point your web browser to this directory by entering</div>
-<div class="line">the following in your web browser’s navigation bar:</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line"><em>file:///&lt;path-to&gt;/METplus/docs/_build/html/index.html</em></div>
-<div class="line"><br /></div>
-</div>
-<div class="line">where &lt;path-to&gt; is the full file path leading to your METplus</div>
-<div class="line">source code. This will direct you to the home page of the</div>
-<div class="line">documentation, where you can click on the “User’s Guide”</div>
-<div class="line">link (which takes you to the user documentation and the use cases)</div>
-<div class="line">or the “Contributor’s Guide” link (which is relevant if you intend to</div>
-<div class="line">contribute code and/or new use cases).</div>
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Relevant Documentation for Contributors</strong></div>
-</div>
-<div class="line-block">
-<div class="line">The Doxygen tool is employed to create documentation from the source code.  This documentation</div>
-<div class="line">is useful in generating details about the METplus wrapper API (Application Programming Interface).</div>
-<div class="line">This is a useful reference for contributors to peruse prior to creating new METplus wrappers.</div>
-<div class="line">The Doxygen files located in the /path/to/METplus/docs/doxygen directory do <strong>NOT</strong> need to be</div>
-<div class="line">modified and should not be modified.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line">For more information about Doxygen, please refer to the following:</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line"><a class="reference external" href="http://doxygen.nl/">http://doxygen.nl/</a></div>
-<div class="line"><br /></div>
-</div>
-<div class="line">You will need to download and install Doxygen to create this documentation:</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line"><a class="reference external" href="http://doxygen.nl/download.html">http://doxygen.nl/download.html</a></div>
-<div class="line"><br /></div>
-<div class="line"><em>Note</em>: Doxygen version 1.8.9.1 or higher is required to create the documentation for the METplus wrappers.</div>
-<div class="line"><br /></div>
-</div>
-<div class="line">Create the Doxygen documentation by performing the following:</div>
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">* ensure that you are working with Python 3.6 (minimum)</div>
-<div class="line">* cd to the /path/to/METplus/sorc directory, where /path/to is the file path where you installed</div>
-<div class="line-block">
-<div class="line">your METplus source code</div>
-</div>
-<div class="line">* at the command line, enter the following:</div>
-<div class="line-block">
-<div class="line"><em>make clean</em></div>
-<div class="line"><em>make doc</em></div>
-</div>
-<div class="line">The first command cleans up any existing documentation, and the second generates new documentation based on the current source code.</div>
-<div class="line">The HTML files are generated in the /path/to/METplus/docs/doxygen/html directory, which can be viewed in your local browser. The file corresponding to the home page is /path/to/METplus/docs/doxygen/html/index.html</div>
-<div class="line"><br /></div>
-<div class="line">Useful information can be found under the <em>Packages</em>, <em>Classes</em>, and <em>Python Files</em> tabs located at the top of the home page.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
+</li>
+</ul>
+<p>The first command cleans up any existing documentation, and the second
+generates new documentation based on the current source code.</p>
+<p>The HTML files are generated in the <em>/path/to/METplus/docs/doxygen/html</em>
+directory, which can be viewed in the local browser. The file corresponding
+to the home page is <em>/path/to/METplus/docs/doxygen/html/index.html</em>.</p>
+<p>Useful information can be found under the <em>Packages</em>, <em>Classes</em>, and
+<em>Python Files</em> tabs located at the top of the home page.</p>
 </div>
 </div>
 
@@ -514,7 +489,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>
