@@ -41,7 +41,7 @@ def test_log_level_key(metplus_config):
 def test_logdir_exists(metplus_config):
     # Verify that the expected log dir exists.
     config = metplus_config()
-    log_dir = config.get('config', 'LOG_DIR')
+    log_dir = config.get('metplus_config', 'LOG_DIR')
     # Verify that a logfile exists in the log dir, with a filename
     # like {LOG_DIR}/master_metplus.YYYYMMDD.log
     assert os.path.exists(log_dir)
@@ -51,7 +51,7 @@ def test_logfile_exists(metplus_config):
     # Verify that a logfile with format master_metplus.log exists
     # We are assuming that there can be numerous files in the log directory.
     config = metplus_config()
-    log_dir = config.get('config', 'LOG_DIR')
+    log_dir = config.get('metplus_config', 'LOG_DIR')
     # Only check for the log file if the log directory is present
     if os.path.exists(log_dir):
         found = False

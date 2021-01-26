@@ -571,7 +571,7 @@ def check_for_deprecated_config(config):
     # value of dict is replacement tag, set to None if no replacement exists
     # deprecated tags: region (replace with basin)
     deprecated_tags = {'region' : 'basin'}
-    template_vars = config.keys('config')
+    template_vars = config.keys('metplus_config')
     template_vars = [tvar for tvar in template_vars if tvar.endswith('_TEMPLATE')]
     for temp_var in template_vars:
         template = config.getraw('filename_templates', temp_var)
@@ -642,7 +642,7 @@ def check_for_deprecated_met_config(config):
 
     # check if *_CONFIG_FILE if set in the METplus config file and check for
     # deprecated environment variables in those files
-    met_config_keys = [key for key in config.keys('config') if key.endswith('CONFIG_FILE')]
+    met_config_keys = [key for key in config.keys('metplus_config') if key.endswith('CONFIG_FILE')]
 
     for met_config_key in met_config_keys:
         met_tool = met_config_key.replace('_CONFIG_FILE', '')
@@ -1980,6 +1980,8 @@ def skip_field_info_validation(config):
 
 def find_indices_in_config_section(regex_expression, config, sec, noID=False):
     # regex expression must have 2 () items and the 2nd item must be the index
+    if sec == 'config':
+        sec = 'metplus_config'
     all_conf = config.keys(sec)
     indices = {}
     regex = re.compile(regex_expression)
