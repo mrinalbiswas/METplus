@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.9.3. Track and Intensity Plotter: Generate mean, median and box plots &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.10.3. Track and Intensity Plotter: Generate mean, median and box plots &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -48,7 +48,7 @@
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
         <link rel="next" title="6. References" href="../../../Users_Guide/references.html"/>
-        <link rel="prev" title="5.2.9.2. TCRMW: Hurricane Gonzalo" href="TCRMW_fcstGFS_fcstOnly_gonzalo.html"/> 
+        <link rel="prev" title="5.2.10.2. TCRMW: Hurricane Gonzalo" href="TCRMW_fcstGFS_fcstOnly_gonzalo.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.9.3. </span>Track and Intensity Plotter: Generate mean, median and box plots</li>
+      <li><span class="section-number">5.2.10.3. </span>Track and Intensity Plotter: Generate mean, median and box plots</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="track-and-intensity-plotter-generate-mean-median-and-box-plots">
-<span id="sphx-glr-generated-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"></span><h1><span class="section-number">5.2.9.3. </span>Track and Intensity Plotter: Generate mean, median and box plots<a class="headerlink" href="#track-and-intensity-plotter-generate-mean-median-and-box-plots" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"></span><h1><span class="section-number">5.2.10.3. </span>Track and Intensity Plotter: Generate mean, median and box plots<a class="headerlink" href="#track-and-intensity-plotter-generate-mean-median-and-box-plots" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/tc_and_extra_tc/Plotter_fcstGFS
 _obsGFS_RPlotting.conf</p>
 <div class="section" id="scientific-objective">
@@ -278,7 +279,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 <span class="c1"># interest.</span>
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> processes
 <span class="c1"># Configuration files</span>
-<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/tc_and_extra_tc/TCPairsETCConfig
+<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/TCPairsETCConfig
 
 <span class="nv">PROCESS_LIST</span> <span class="o">=</span> TCPairs, TCMPRPlotter
 
@@ -351,7 +352,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 
 <span class="c1">#  Plot_TCMPR options, if left unset, default values that are</span>
 <span class="c1">#  pre-defined in the R utility (packaged with MET) will be used.</span>
-<span class="nv">TCMPR_PLOTTER_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>METPLUS_BASE<span class="o">}</span>/parm/use_cases/model_applications/tc_and_extra_tc/TCMPRPlotterConfig_customize
+<span class="nv">TCMPR_PLOTTER_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/TCMPRPlotterConfig_customize
 <span class="nv">TCMPR_PLOTTER_PREFIX</span> <span class="o">=</span>
 <span class="nv">TCMPR_PLOTTER_TITLE</span> <span class="o">=</span>
 <span class="nv">TCMPR_PLOTTER_SUBTITLE</span> <span class="o">=</span> Your subtitle goes here
@@ -403,8 +404,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 <span class="c1">#</span>
 <span class="o">[</span>filename_templates<span class="o">]</span>
 <span class="c1"># Define the format of the filenames</span>
-<span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.grb2
-<span class="nv">OBS_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.grb2
 
 <span class="nv">TC_PAIRS_ADECK_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/a<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>*.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
 <span class="nv">TC_PAIRS_BDECK_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/b<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>*.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
@@ -414,6 +413,8 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 <span class="c1">#  DIRECTORIES</span>
 <span class="c1">#</span>
 <span class="o">[</span>dir<span class="o">]</span>
+
+<span class="nv">CONFIG_DIR</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting
 
 <span class="c1"># track data, set to your data source</span>
 <span class="nv">TC_PAIRS_ADECK_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/track_data
@@ -444,12 +445,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Models
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Description
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Storm identifiers
@@ -660,7 +661,7 @@ and will contain files with the following format:</p>
         <a href="../../../Users_Guide/references.html" class="btn btn-neutral float-right" title="6. References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TCRMW_fcstGFS_fcstOnly_gonzalo.html" class="btn btn-neutral" title="5.2.9.2. TCRMW: Hurricane Gonzalo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TCRMW_fcstGFS_fcstOnly_gonzalo.html" class="btn btn-neutral" title="5.2.10.2. TCRMW: Hurricane Gonzalo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -670,7 +671,7 @@ and will contain files with the following format:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

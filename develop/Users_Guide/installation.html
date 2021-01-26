@@ -260,13 +260,15 @@ code to METplus Wrappers, please contact
 <ul class="simple">
 <li><p>Python 3.6.3 or higher</p></li>
 <li><p>dateutil Python package</p></li>
-<li><p>MET version 9.0 or above</p></li>
+<li><p>MET version 10.0 or above</p></li>
 </ul>
 <p>If running plot wrappers, cartopy and pandas packages are required</p>
 <p>Some of the wrappers have additional dependencies to run.</p>
 <ul class="simple">
 <li><p>TCMPRPlotter wrapper requires R version 3.2.5</p></li>
-<li><p>SeriesByLead wrapper requires the nco (netCDF operators)</p></li>
+<li><p>SeriesAnalysis wrapper requires the netCDF4 Python package and optionally
+if generating plots and/or animated images from the output, the ImageMagick
+convert utility is also required</p></li>
 <li><p>MakePlots wrapper requires cartopy and pandas Python packages</p></li>
 <li><p>CyclonePlotter wrapper requires cartopy and matplotlib Python packages</p></li>
 </ul>
@@ -338,33 +340,39 @@ data are available for the following use case categories:</p>
 directories to the METplus Wrappers directory. You should have the
 following directory structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">METplus</span><span class="o">/</span>
-  <span class="n">docs</span><span class="o">/</span>
   <span class="n">build_components</span><span class="o">/</span>
+  <span class="n">ci</span><span class="o">/</span>
+  <span class="n">docs</span><span class="o">/</span>
+  <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
   <span class="n">internal_tests</span><span class="o">/</span>
   <span class="n">manage_exernals</span><span class="o">/</span>
+  <span class="n">metplus</span><span class="o">/</span>
   <span class="n">parm</span><span class="o">/</span>
-  <span class="n">sorc</span><span class="o">/</span>
-  <span class="n">ush</span><span class="o">/</span>
+  <span class="n">produtil</span><span class="o">/</span>
   <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+  <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+  <span class="n">ush</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>The top-level METplus Wrappers directory consists of a README.md file
 and several subdirectories.</p>
+<p>The build_components/ directory contains scripts that use manage_externals
+and files available on dtcenter.org to download MET and start the build process</p>
+<p>The ci/ directory contains scripts that are used for creating Docker images and
+script that are used internally for automation</p>
 <p>The docs/ directory contains documentation for users and contributors (HTML) and Doxygen
 files that are used to create the METplus wrapper API documentaton. The Doxygen
 documentation can be created and viewed via web browser if the developer
 has Doxygen installed on the host.  The Doxygen documentation is useful to contributors and is not
 necessary for METplus end-users.</p>
-<p>The build_components/ directory contains scripts that use manage_externals
-and files available on dtcenter.org to download MET and start the build process</p>
-<p>The internal_tests/ directory contains unit test scripts that are only
-relevant to METplus Wrappers developers and contributors.</p>
+<p>The internal_tests/ directory contains test scripts that are only
+relevant to METplus developers and contributors.</p>
 <p>The manage_externals/ directory contains scripts used to facilitate the downloading and management
 of components that METplus interacts with such as MET and METviewer</p>
+<p>The metplus/ directory contains the wrapper scripts and utilities</p>
 <p>The parm/ directory contains all the configuration files for MET and
 METplus Wrappers.</p>
-<p>The sorc/ directory contains Doxygen executables to generate
-documentation for developers.</p>
+<p>The produtil/ directory contains part of the external utility produtil</p>
 <p>The ush/ directory contains the Python wrappers to the MET tools.</p>
 </div>
 <div class="section" id="build-components-and-using-manage-externals">
@@ -413,16 +421,11 @@ shell):</p>
 <ul class="simple">
 <li><p>Open your .cshrc file and do the following:</p></li>
 <li><p>To your PATH, add: <em>&lt;full-path-to</em>-<em>METplus</em>&gt;/ush</p></li>
-<li><p>Optional: add JLOGFILE variable and set to
-<em>&lt;full-path-to-save-jlog-files&gt;</em></p></li>
 <li><p>Close your .cshrc file and run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.cshrc</span></code></p></li>
 <li><p>For example:</p></li>
 </ul>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="c"># Add METplus to $PATH</span>
 <span class="nb">set </span><span class="nv">path</span> <span class="o">=</span> <span class="o">(</span>other_path_entries ~/METplus/ush<span class="o">)</span>
-
-<span class="c"># Optional JLOGFILE</span>
-<span class="nb">setenv </span>JLOGFILE ~/jlog_out
 </pre></div>
 </div>
 </div>
@@ -431,16 +434,11 @@ shell):</p>
 <ul class="simple">
 <li><p>Open your .bashrc/.kshrc file and do the following:</p></li>
 <li><p>To your PATH, add : <em>&lt;full-path-to-METplus</em>&gt;/ush</p></li>
-<li><p>Optional: add a JLOGFILE environment variable and set it to the
-directory where you want the logs to reside</p></li>
 <li><p>Close your .bashrc file and run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code>, or <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.kshrc</span></code> if using ksh</p></li>
 <li><p>For example:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add METplus to $PATH</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>~/METplus/ush:<span class="nv">$PATH</span>
-
-<span class="c1"># Optional JLOGFILE</span>
-<span class="nb">export</span> <span class="nv">JLOGFILE</span><span class="o">=</span>~/
 </pre></div>
 </div>
 </div>
@@ -737,23 +735,28 @@ Copy and paste the following into an empty text file and name it ‘my_user_conf
 <span class="o">-</span> <span class="n">Example</span>
 <span class="o">-</span> <span class="n">ExtractTiles</span>
 <span class="o">-</span> <span class="n">GempakToCF</span>
+<span class="o">-</span> <span class="n">GenVxMask</span>
+<span class="o">-</span> <span class="n">GridDiag</span>
 <span class="o">-</span> <span class="n">GridStat</span>
+<span class="o">-</span> <span class="n">MakePlots</span>
 <span class="o">-</span> <span class="n">MODE</span>
 <span class="o">-</span> <span class="n">MTD</span>
-<span class="o">-</span> <span class="n">MakePlots</span>
 <span class="o">-</span> <span class="n">PB2NC</span>
 <span class="o">-</span> <span class="n">PCPCombine</span>
+<span class="o">-</span> <span class="n">PlotDataPlane</span>
+<span class="o">-</span> <span class="n">Point2Grid</span>
 <span class="o">-</span> <span class="n">PointStat</span>
 <span class="o">-</span> <span class="n">PyEmbedIngest</span>
 <span class="o">-</span> <span class="n">RegridDataPlane</span>
 <span class="o">-</span> <span class="n">SeriesAnalysis</span>
-<span class="o">-</span> <span class="n">SeriesByInit</span>
-<span class="o">-</span> <span class="n">SeriesByLead</span>
 <span class="o">-</span> <span class="n">StatAnalysis</span>
+<span class="o">-</span> <span class="n">TCGen</span>
 <span class="o">-</span> <span class="n">TCMPRPlotter</span>
 <span class="o">-</span> <span class="n">TCPairs</span>
+<span class="o">-</span> <span class="n">TCRMW</span>
 <span class="o">-</span> <span class="n">TCStat</span>
 <span class="o">-</span> <span class="n">Usage</span>
+<span class="o">-</span> <span class="n">UserScript</span>
 </pre></div>
 </div>
 <p><strong>Example 2: Using a use-case configuration:</strong></p>
@@ -802,7 +805,7 @@ Copy and paste the following into an empty text file and name it ‘my_user_conf
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

@@ -446,8 +446,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Filtering input STAT lines by the contents of each column
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
-<span class="nv">desc</span>  <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">DESC</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 <span class="nv">fcst_lead</span> <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">FCST_LEAD</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
 <span class="nv">obs_lead</span>  <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">OBS_LEAD</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
@@ -477,7 +477,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">fcst_lev</span> <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">FCST_LEVEL</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
 <span class="nv">obs_lev</span>  <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">OBS_LEVEL</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
 
-<span class="nv">obtype</span> <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 <span class="nv">vx_mask</span> <span class="o">=</span> <span class="o">[</span><span class="si">${</span><span class="nv">VX_MASK</span><span class="si">}</span><span class="o">]</span><span class="p">;</span>
 
@@ -661,7 +661,7 @@ and will contain the following file:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

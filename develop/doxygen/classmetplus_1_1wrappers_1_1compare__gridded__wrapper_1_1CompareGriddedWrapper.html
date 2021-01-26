@@ -66,7 +66,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper Class Reference</div>  </div>
@@ -103,21 +102,6 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a9c29733e82f074fb62f10064b0d2979e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#a9c29733e82f074fb62f10064b0d2979e">check_probabilistic_settings</a> (self)</td></tr>
 <tr class="memdesc:a9c29733e82f074fb62f10064b0d2979e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If dataset is probabilistic, check if *_PROB_IN_GRIB_PDS or INPUT_DATATYPE are set.  <a href="#a9c29733e82f074fb62f10064b0d2979e">More...</a><br /></td></tr>
 <tr class="separator:a9c29733e82f074fb62f10064b0d2979e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a848b637203224fdf9adb2ab488b98421"><td class="memItemLeft" align="right" valign="top"><a id="a848b637203224fdf9adb2ab488b98421"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#a848b637203224fdf9adb2ab488b98421">set_climo_env_vars</a> (self)</td></tr>
-<tr class="memdesc:a848b637203224fdf9adb2ab488b98421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all climatology environment variables from CLIMO_&lt;item&gt;_FILE c_dict values if they are not set to None. <br /></td></tr>
-<tr class="separator:a848b637203224fdf9adb2ab488b98421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fb97ed00c41177f3d10bd56de49b6a4"><td class="memItemLeft" align="right" valign="top"><a id="a1fb97ed00c41177f3d10bd56de49b6a4"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#a1fb97ed00c41177f3d10bd56de49b6a4">read_climo_wrapper_specific</a> (self, met_tool, c_dict)</td></tr>
-<tr class="memdesc:a1fb97ed00c41177f3d10bd56de49b6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read climatology directory and template values for specific MET tool specified and set the values in c_dict. <br /></td></tr>
-<tr class="separator:a1fb97ed00c41177f3d10bd56de49b6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17dc3948108a3cdc713c3a85705c500"><td class="memItemLeft" align="right" valign="top"><a id="aa17dc3948108a3cdc713c3a85705c500"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#aa17dc3948108a3cdc713c3a85705c500">handle_climo</a> (self, time_info)</td></tr>
-<tr class="memdesc:aa17dc3948108a3cdc713c3a85705c500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitute time information into all climatology template values. <br /></td></tr>
-<tr class="separator:aa17dc3948108a3cdc713c3a85705c500"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3fb794ae914ed83f03dade221dc002b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#aa3fb794ae914ed83f03dade221dc002b">handle_climo_file_item</a> (self, time_info, climo_item)</td></tr>
-<tr class="memdesc:aa3fb794ae914ed83f03dade221dc002b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a single climatology value by substituting time information, prepending input directory if provided, and preprocessing file if necessary.  <a href="#aa3fb794ae914ed83f03dade221dc002b">More...</a><br /></td></tr>
-<tr class="separator:aa3fb794ae914ed83f03dade221dc002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacffefae53870db336b8e7ae5f91c879"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmetplus_1_1wrappers_1_1compare__gridded__wrapper_1_1CompareGriddedWrapper.html#aacffefae53870db336b8e7ae5f91c879">run_at_time</a> (self, input_dict)</td></tr>
 <tr class="memdesc:aacffefae53870db336b8e7ae5f91c879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the MET application for a given run time.  <a href="#aacffefae53870db336b8e7ae5f91c879">More...</a><br /></td></tr>
 <tr class="separator:aacffefae53870db336b8e7ae5f91c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,12 +138,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a847f1503ae9f55af96cb70c17ed5bc78"><td class="memItemLeft" align="right" valign="top"><a id="a847f1503ae9f55af96cb70c17ed5bc78"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>outdir</b></td></tr>
 <tr class="separator:a847f1503ae9f55af96cb70c17ed5bc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa93292c3a69c601e01222c83a0aad4df"><td class="memItemLeft" align="right" valign="top"><a id="aa93292c3a69c601e01222c83a0aad4df"></a>
-list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['MEAN', 'STDEV']</td></tr>
-<tr class="separator:aa93292c3a69c601e01222c83a0aad4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9c29733e82f074fb62f10064b0d2979e"></a>
@@ -181,7 +159,7 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
 <p>If dataset is probabilistic, check if *_PROB_IN_GRIB_PDS or INPUT_DATATYPE are set. </p>
 <p>If not enough information is set, report an error and set isOK to False </p>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00100">100</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00117">117</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
 </div>
 </div>
@@ -219,7 +197,7 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00363">363</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00334">334</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
 </div>
 </div>
@@ -242,50 +220,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
 <p>Builds the command to run the MET application  string. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns a MET command with arguments that you can run </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00390">390</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00361">361</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tcmpr__plotter__wrapper_8py_source.html#l00386">metplus.wrappers.tcmpr_plotter_wrapper.TCMPRPlotterWrapper.build()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00454">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.process_data()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00838">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_add_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00897">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_derive_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00642">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_subtract_method()</a>, and <a class="el" href="pcp__combine__wrapper_8py_source.html#l00756">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_sum_method()</a>.</p>
-
-</div>
-</div>
-<a id="aa3fb794ae914ed83f03dade221dc002b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3fb794ae914ed83f03dade221dc002b">&#9670;&nbsp;</a></span>handle_climo_file_item()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.handle_climo_file_item </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>time_info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>climo_item</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handle a single climatology value by substituting time information, prepending input directory if provided, and preprocessing file if necessary. </p>
-<p>All information is read from c_dict. CLIMO_&lt;item&gt;_FILE in c_dict is set. </p>
-
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00146">146</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00141">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.handle_climo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tcmpr__plotter__wrapper_8py_source.html#l00386">metplus.wrappers.tcmpr_plotter_wrapper.TCMPRPlotterWrapper.build()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00465">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.process_data()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00302">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00684">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00274">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00178">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00282">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00838">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_add_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00897">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_derive_method()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00642">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_subtract_method()</a>, and <a class="el" href="pcp__combine__wrapper_8py_source.html#l00756">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.setup_sum_method()</a>.</p>
 
 </div>
 </div>
@@ -344,9 +281,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">331</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00302">302</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00165">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.run_at_time_all_fields()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00276">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_all_fields()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00228">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_one_field()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00247">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_all_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00390">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.run_at_time_all_fields()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00199">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_one_field()</a>.</p>
 
 </div>
 </div>
@@ -384,9 +321,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00163">163</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00134">134</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__analysis__wrapper_8py_source.html#l00171">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_all_times()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, and <a class="el" href="tc__gen__wrapper_8py_source.html#l00252">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_all_times()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tc__pairs__wrapper_8py_source.html#l00178">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, and <a class="el" href="tc__gen__wrapper_8py_source.html#l00261">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_all_times()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +361,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00276">276</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00247">247</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00193">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_once()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="compare__gridded__wrapper_8py_source.html#l00164">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_once()</a>.</p>
 
 </div>
 </div>
@@ -464,9 +401,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00193">193</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00164">164</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runtime__freq__wrapper_8py_source.html#l00090">metplus.wrappers.runtime_freq_wrapper.RuntimeFreqWrapper.run_all_times()</a>, <a class="el" href="reformat__gridded__wrapper_8py_source.html#l00046">metplus.wrappers.reformat_gridded_wrapper.ReformatGriddedWrapper.run_at_time()</a>, <a class="el" href="gempak__to__cf__wrapper_8py_source.html#l00072">metplus.wrappers.gempak_to_cf_wrapper.GempakToCFWrapper.run_at_time()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00113">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00155">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00163">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time()</a>, <a class="el" href="runtime__freq__wrapper_8py_source.html#l00175">metplus.wrappers.runtime_freq_wrapper.RuntimeFreqWrapper.run_at_time()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00238">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00263">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time()</a>, and <a class="el" href="tcrmw__wrapper_8py_source.html#l00287">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runtime__freq__wrapper_8py_source.html#l00100">metplus.wrappers.runtime_freq_wrapper.RuntimeFreqWrapper.run_all_times_custom()</a>, <a class="el" href="reformat__gridded__wrapper_8py_source.html#l00046">metplus.wrappers.reformat_gridded_wrapper.ReformatGriddedWrapper.run_at_time()</a>, <a class="el" href="gempak__to__cf__wrapper_8py_source.html#l00072">metplus.wrappers.gempak_to_cf_wrapper.GempakToCFWrapper.run_at_time()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00113">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00134">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00155">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time()</a>, <a class="el" href="runtime__freq__wrapper_8py_source.html#l00196">metplus.wrappers.runtime_freq_wrapper.RuntimeFreqWrapper.run_at_time()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00238">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00261">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00272">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time()</a>, and <a class="el" href="series__analysis__wrapper_8py_source.html#l00279">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_once_per_lead()</a>.</p>
 
 </div>
 </div>
@@ -511,9 +448,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00228">228</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00199">199</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00193">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_once()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, and <a class="el" href="compare__gridded__wrapper_8py_source.html#l00164">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.run_at_time_once()</a>.</p>
 
 </div>
 </div>
@@ -551,9 +488,9 @@ list&#160;</td><td class="memItemRight" valign="bottom"><b>climo_types</b> = ['M
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00089">89</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compare__gridded__wrapper_8py_source.html#l00095">95</a> of file <a class="el" href="compare__gridded__wrapper_8py_source.html">compare_gridded_wrapper.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="series__by__init__wrapper_8py_source.html#l00329">metplus.wrappers.series_by_init_wrapper.SeriesByInitWrapper.build_and_run_series_request()</a>, <a class="el" href="make__plots__wrapper_8py_source.html#l00092">metplus.wrappers.make_plots_wrapper.MakePlotsWrapper.create_c_dict()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00331">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00368">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00193">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00276">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00174">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="py__embed__ingest__wrapper_8py_source.html#l00125">metplus.wrappers.py_embed_ingest_wrapper.PyEmbedIngestWrapper.run_at_time()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00161">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.run_at_time()</a>, <a class="el" href="series__analysis__wrapper_8py_source.html#l00193">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00233">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_at_time_loop_string()</a>, <a class="el" href="user__script__wrapper_8py_source.html#l00056">metplus.wrappers.user_script_wrapper.UserScriptWrapper.run_at_time_once()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00156">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00281">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00308">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00412">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_at_time_once()</a>, and <a class="el" href="stat__analysis__wrapper_8py_source.html#l01674">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.run_stat_analysis_job()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="series__analysis__wrapper_8py_source.html#l00655">metplus.wrappers.series_analysis_wrapper.SeriesAnalysisWrapper.build_and_run_series_request()</a>, <a class="el" href="make__plots__wrapper_8py_source.html#l00092">metplus.wrappers.make_plots_wrapper.MakePlotsWrapper.create_c_dict()</a>, <a class="el" href="pcp__combine__wrapper_8py_source.html#l00401">metplus.wrappers.pcp_combine_wrapper.PCPCombineWrapper.get_accumulation()</a>, <a class="el" href="compare__gridded__wrapper_8py_source.html#l00302">metplus.wrappers.compare_gridded_wrapper.CompareGriddedWrapper.process_fields()</a>, <a class="el" href="ensemble__stat__wrapper_8py_source.html#l00684">metplus.wrappers.ensemble_stat_wrapper.EnsembleStatWrapper.process_fields()</a>, <a class="el" href="mode__wrapper_8py_source.html#l00190">metplus.wrappers.mode_wrapper.MODEWrapper.process_fields_one_thresh()</a>, <a class="el" href="mtd__wrapper_8py_source.html#l00274">metplus.wrappers.mtd_wrapper.MTDWrapper.process_fields_one_thresh()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00178">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_all_times()</a>, <a class="el" href="py__embed__ingest__wrapper_8py_source.html#l00125">metplus.wrappers.py_embed_ingest_wrapper.PyEmbedIngestWrapper.run_at_time()</a>, <a class="el" href="tc__stat__wrapper_8py_source.html#l00174">metplus.wrappers.tc_stat_wrapper.TCStatWrapper.run_at_time()</a>, <a class="el" href="gen__vx__mask__wrapper_8py_source.html#l00158">metplus.wrappers.gen_vx_mask_wrapper.GenVxMaskWrapper.run_at_time_all()</a>, <a class="el" href="tc__pairs__wrapper_8py_source.html#l00238">metplus.wrappers.tc_pairs_wrapper.TCPairsWrapper.run_at_time_loop_string()</a>, <a class="el" href="user__script__wrapper_8py_source.html#l00056">metplus.wrappers.user_script_wrapper.UserScriptWrapper.run_at_time_once()</a>, <a class="el" href="grid__diag__wrapper_8py_source.html#l00123">metplus.wrappers.grid_diag_wrapper.GridDiagWrapper.run_at_time_once()</a>, <a class="el" href="plot__data__plane__wrapper_8py_source.html#l00140">metplus.wrappers.plot_data_plane_wrapper.PlotDataPlaneWrapper.run_at_time_once()</a>, <a class="el" href="point2grid__wrapper_8py_source.html#l00176">metplus.wrappers.point2grid_wrapper.Point2GridWrapper.run_at_time_once()</a>, <a class="el" href="pb2nc__wrapper_8py_source.html#l00258">metplus.wrappers.pb2nc_wrapper.PB2NCWrapper.run_at_time_once()</a>, <a class="el" href="tcrmw__wrapper_8py_source.html#l00282">metplus.wrappers.tcrmw_wrapper.TCRMWWrapper.run_at_time_once()</a>, <a class="el" href="tc__gen__wrapper_8py_source.html#l00291">metplus.wrappers.tc_gen_wrapper.TCGenWrapper.run_at_time_once()</a>, <a class="el" href="regrid__data__plane__wrapper_8py_source.html#l00412">metplus.wrappers.regrid_data_plane_wrapper.RegridDataPlaneWrapper.run_at_time_once()</a>, and <a class="el" href="stat__analysis__wrapper_8py_source.html#l01674">metplus.wrappers.stat_analysis_wrapper.StatAnalysisWrapper.run_stat_analysis_job()</a>.</p>
 
 </div>
 </div>

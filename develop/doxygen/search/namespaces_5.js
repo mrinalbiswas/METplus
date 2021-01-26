@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tcmprplotterwrapper',['TCMPRPlotterWrapper',['../namespaceTCMPRPlotterWrapper.html',1,'']]],
-  ['tcstatwrapper',['TCStatWrapper',['../namespaceTCStatWrapper.html',1,'']]]
+  ['ush',['ush',['../namespaceush.html',1,'']]]
 ];

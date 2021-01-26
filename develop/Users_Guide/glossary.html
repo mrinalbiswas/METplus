@@ -532,11 +532,11 @@
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-CONVERT">CONVERT</dt><dd><p>Path to the ImageMagickconvert executable.</p>
+<dt id="term-CONVERT">CONVERT</dt><dd><p>Path to the ImageMagick convert executable.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  PB2NC, PointStat, SeriesByInit, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  PlotDataPlane</div>
 <div class="line"><em>Family:</em>  [exe]</div>
-<div class="line"><em>Default:</em>  /path/to</div>
+<div class="line"><em>Default:</em>  convert</div>
 </div>
 </dd>
 <dt id="term-CONVERT_EXE">CONVERT_EXE</dt><dd><div class="admonition warning">
@@ -884,6 +884,62 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-ENSEMBLE_STAT_CENSOR_THRESH">ENSEMBLE_STAT_CENSOR_THRESH</dt><dd><p>Specify the value for ‘censor_thresh’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CENSOR_VAL">ENSEMBLE_STAT_CENSOR_VAL</dt><dd><p>Specify the value for ‘censor_val’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CI_ALPHA">ENSEMBLE_STAT_CI_ALPHA</dt><dd><p>Specify the value for ‘ci_alpha’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CLIMO_CDF_BINS">ENSEMBLE_STAT_CLIMO_CDF_BINS</dt><dd><p>Specify the value for ‘climo_cdf.cdf_bins’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CLIMO_CDF_CENTER_BINS">ENSEMBLE_STAT_CLIMO_CDF_CENTER_BINS</dt><dd><p>Specify the value for ‘climo_cdf.center_bins’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CLIMO_CDF_WRITE_BINS">ENSEMBLE_STAT_CLIMO_CDF_WRITE_BINS</dt><dd><p>Specify the value for ‘climo_cdf.write_bins’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CLIMO_MEAN_DAY_INTERVAL">ENSEMBLE_STAT_CLIMO_MEAN_DAY_INTERVAL</dt><dd><p>Specify the value for ‘climo_mean.day_interval’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_CLIMO_MEAN_HOUR_INTERVAL">ENSEMBLE_STAT_CLIMO_MEAN_HOUR_INTERVAL</dt><dd><p>Specify the value for ‘climo_mean.hour_interval’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_CLIMO_MEAN_INPUT_DIR">ENSEMBLE_STAT_CLIMO_MEAN_INPUT_DIR</dt><dd><p>Directory containing the climatology mean file used by EnsembleStat. This variable is optional because you can specify the full path to a climatology file using <a class="reference internal" href="#term-ENSEMBLE_STAT_CLIMO_MEAN_INPUT_TEMPLATE"><span class="xref std std-term">ENSEMBLE_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span></a>.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em> EnsembleStat</div>
@@ -933,6 +989,41 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 </div>
 </div></blockquote>
 </dd>
+<dt id="term-ENSEMBLE_STAT_DESC">ENSEMBLE_STAT_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_DUPLICATE_FLAG">ENSEMBLE_STAT_DUPLICATE_FLAG</dt><dd><p>Specify the value for ‘duplicate_flag’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENS_OBS_THRESH">ENSEMBLE_STAT_ENS_OBS_THRESH</dt><dd><p>Sets the ens.obs_thresh value in the ensemble_stat MET config file.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  NONE</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENS_PHIST_BIN_SIZE">ENSEMBLE_STAT_ENS_PHIST_BIN_SIZE</dt><dd><p>Specify the value for ‘ens_phist_bin_size’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENS_SSVAR_BIN_SIZE">ENSEMBLE_STAT_ENS_SSVAR_BIN_SIZE</dt><dd><p>Specify the value for ‘ens_ssvar_bin_size’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_ENS_THRESH">ENSEMBLE_STAT_ENS_THRESH</dt><dd><p>Threshold for the ratio of the number of valid ensemble fields to the total number of expected ensemble members. This value is passed into the ensemble_stat config file to make sure the percentage of files that are valid meets the expectation.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  EnsembleStat</div>
@@ -947,9 +1038,149 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em>  NONE</div>
 </div>
 </dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_FREQUENCY">ENSEMBLE_STAT_ENSEMBLE_FLAG_FREQUENCY</dt><dd><p>Specify the value for ‘ensemble_flag.frequency’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_LATLON">ENSEMBLE_STAT_ENSEMBLE_FLAG_LATLON</dt><dd><p>Specify the value for ‘ensemble_flag.latlon’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_MAX">ENSEMBLE_STAT_ENSEMBLE_FLAG_MAX</dt><dd><p>Specify the value for ‘ensemble_flag.max’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_MEAN">ENSEMBLE_STAT_ENSEMBLE_FLAG_MEAN</dt><dd><p>Specify the value for ‘ensemble_flag.mean’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_MIN">ENSEMBLE_STAT_ENSEMBLE_FLAG_MIN</dt><dd><p>Specify the value for ‘ensemble_flag.min’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_MINUS">ENSEMBLE_STAT_ENSEMBLE_FLAG_MINUS</dt><dd><p>Specify the value for ‘ensemble_flag.minus’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_NEP">ENSEMBLE_STAT_ENSEMBLE_FLAG_NEP</dt><dd><p>Specify the value for ‘ensemble_flag.nep’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_NMEP">ENSEMBLE_STAT_ENSEMBLE_FLAG_NMEP</dt><dd><p>Specify the value for ‘ensemble_flag.nmep’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_PLUS">ENSEMBLE_STAT_ENSEMBLE_FLAG_PLUS</dt><dd><p>Specify the value for ‘ensemble_flag.plus’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_RANGE">ENSEMBLE_STAT_ENSEMBLE_FLAG_RANGE</dt><dd><p>Specify the value for ‘ensemble_flag.range’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_RANK">ENSEMBLE_STAT_ENSEMBLE_FLAG_RANK</dt><dd><p>Specify the value for ‘ensemble_flag.rank’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_STDEV">ENSEMBLE_STAT_ENSEMBLE_FLAG_STDEV</dt><dd><p>Specify the value for ‘ensemble_flag.stdev’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_VLD_COUNT">ENSEMBLE_STAT_ENSEMBLE_FLAG_VLD_COUNT</dt><dd><p>Specify the value for ‘ensemble_flag.vld_count’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_ENSEMBLE_FLAG_WEIGHT">ENSEMBLE_STAT_ENSEMBLE_FLAG_WEIGHT</dt><dd><p>Specify the value for ‘ensemble_flag.weight’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_GRID_VX">ENSEMBLE_STAT_GRID_VX</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-ENSEMBLE_STAT_REGRID_TO_GRID"><span class="xref std std-term">ENSEMBLE_STAT_REGRID_TO_GRID</span></a>.</p>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_INTERP_FIELD">ENSEMBLE_STAT_INTERP_FIELD</dt><dd><p>Specify the value for ‘interp.field’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_INTERP_METHOD">ENSEMBLE_STAT_INTERP_METHOD</dt><dd><p>Specify the value for ‘interp.type.method’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_INTERP_SHAPE">ENSEMBLE_STAT_INTERP_SHAPE</dt><dd><p>Specify the value for ‘interp.shape’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_INTERP_VLD_THRESH">ENSEMBLE_STAT_INTERP_VLD_THRESH</dt><dd><p>Specify the value for ‘interp.vld_thresh’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_INTERP_WIDTH">ENSEMBLE_STAT_INTERP_WIDTH</dt><dd><p>Specify the value for ‘interp.type.width’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_MASK_GRID">ENSEMBLE_STAT_MASK_GRID</dt><dd><p>Specify the value for ‘mask.grid’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-ENSEMBLE_STAT_MET_OBS_ERR_TABLE">ENSEMBLE_STAT_MET_OBS_ERR_TABLE</dt><dd><div class="line-block">
@@ -970,6 +1201,76 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
+<dt id="term-ENSEMBLE_STAT_NBRHD_PROB_SHAPE">ENSEMBLE_STAT_NBRHD_PROB_SHAPE</dt><dd><p>Specify the value for ‘nbrhd_prob.shape’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NBRHD_PROB_VLD_THRESH">ENSEMBLE_STAT_NBRHD_PROB_VLD_THRESH</dt><dd><p>Specify the value for ‘nbrhd_prob.vld_thresh’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NBRHD_PROB_WIDTH">ENSEMBLE_STAT_NBRHD_PROB_WIDTH</dt><dd><p>Specify the value for ‘nbrhd_prob.width’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_GAUSSIAN_DX">ENSEMBLE_STAT_NMEP_SMOOTH_GAUSSIAN_DX</dt><dd><p>Specify the value for ‘nmep_smooth.gaussian_dx’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_GAUSSIAN_RADIUS">ENSEMBLE_STAT_NMEP_SMOOTH_GAUSSIAN_RADIUS</dt><dd><p>Specify the value for ‘nmep_smooth.gaussian_radius’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_METHOD">ENSEMBLE_STAT_NMEP_SMOOTH_METHOD</dt><dd><p>Specify the value for ‘nmep_smooth.type.method’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_SHAPE">ENSEMBLE_STAT_NMEP_SMOOTH_SHAPE</dt><dd><p>Specify the value for ‘nmep_smooth.shape’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_VLD_THRESH">ENSEMBLE_STAT_NMEP_SMOOTH_VLD_THRESH</dt><dd><p>Specify the value for ‘nmep_smooth.vld_thresh’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_NMEP_SMOOTH_WIDTH">ENSEMBLE_STAT_NMEP_SMOOTH_WIDTH</dt><dd><p>Specify the value for ‘nmep_smooth.type.width’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OBS_ERROR_FLAG">ENSEMBLE_STAT_OBS_ERROR_FLAG</dt><dd><p>Specify the value for ‘obs_error.flag’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_OUT_DIR">ENSEMBLE_STAT_OUT_DIR</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-ENSEMBLE_STAT_OUTPUT_DIR"><span class="xref std std-term">ENSEMBLE_STAT_OUTPUT_DIR</span></a> instead.</p>
@@ -979,6 +1280,55 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line-block">
 <div class="line"><em>Used by:</em>  EnsembleStat</div>
 <div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_ECNT">ENSEMBLE_STAT_OUTPUT_FLAG_ECNT</dt><dd><p>Specify the value for ‘output_flag.ecnt’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_ORANK">ENSEMBLE_STAT_OUTPUT_FLAG_ORANK</dt><dd><p>Specify the value for ‘output_flag.orank’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_PHIST">ENSEMBLE_STAT_OUTPUT_FLAG_PHIST</dt><dd><p>Specify the value for ‘output_flag.phist’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_RELP">ENSEMBLE_STAT_OUTPUT_FLAG_RELP</dt><dd><p>Specify the value for ‘output_flag.relp’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_RHIST">ENSEMBLE_STAT_OUTPUT_FLAG_RHIST</dt><dd><p>Specify the value for ‘output_flag.rhist’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_RPS">ENSEMBLE_STAT_OUTPUT_FLAG_RPS</dt><dd><p>Specify the value for ‘output_flag.rps’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_OUTPUT_FLAG_SSVAR">ENSEMBLE_STAT_OUTPUT_FLAG_SSVAR</dt><dd><p>Specify the value for ‘output_flag.ssvar’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
@@ -996,6 +1346,20 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-ENSEMBLE_STAT_REGRID_METHOD">ENSEMBLE_STAT_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_REGRID_SHAPE">ENSEMBLE_STAT_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_REGRID_TO_GRID">ENSEMBLE_STAT_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET EnsembleStat config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  EnsembleStat</div>
@@ -1003,11 +1367,39 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 <div class="line"><em>Default:</em> NONE</div>
 </div>
 </dd>
+<dt id="term-ENSEMBLE_STAT_REGRID_VLD_THRESH">ENSEMBLE_STAT_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_REGRID_WIDTH">ENSEMBLE_STAT_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_SKIP_CONST">ENSEMBLE_STAT_SKIP_CONST</dt><dd><p>Specify the value for ‘skip_const’ in the MET configuration file for EnsembleStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-ENSEMBLE_STAT_SKIP_IF_OUTPUT_EXISTS">ENSEMBLE_STAT_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  EnsembleStat</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  False</div>
+</div>
+</dd>
+<dt id="term-ENSEMBLE_STAT_VERIFICATION_MASK_TEMPLATE">ENSEMBLE_STAT_VERIFICATION_MASK_TEMPLATE</dt><dd><p>Template used to specify the verification mask filename for the MET tool ensemble_stat. Now supports a list of filenames.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  EnsembleStat</div>
+<div class="line"><em>Family:</em>  [filename_templates]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-EVENT_EQUALIZATION">EVENT_EQUALIZATION</dt><dd><div class="admonition warning">
@@ -1054,14 +1446,14 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 </dd>
 <dt id="term-EXTRACT_TILES_DLAT">EXTRACT_TILES_DLAT</dt><dd><p>The latitude value, in degrees. Set to the value that defines the resolution of the data (in decimal degrees).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  0.5</div>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_DLON">EXTRACT_TILES_DLON</dt><dd><p>The longitude value, in degrees. Set to the value that defines the resolution of the data (in decimal degrees).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  0.5</div>
 </div>
@@ -1078,7 +1470,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 </dd>
 <dt id="term-EXTRACT_TILES_FILTERED_OUTPUT_TEMPLATE">EXTRACT_TILES_FILTERED_OUTPUT_TEMPLATE</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_STAT_INPUT_TEMPLATE"><span class="xref std std-term">EXTRACT_TILES_STAT_INPUT_TEMPLATE</span></a> instead.</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE"><span class="xref std std-term">EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_GRID_INPUT_DIR">EXTRACT_TILES_GRID_INPUT_DIR</dt><dd><div class="admonition warning">
@@ -1088,35 +1480,35 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 </dd>
 <dt id="term-EXTRACT_TILES_LAT_ADJ">EXTRACT_TILES_LAT_ADJ</dt><dd><p>Specify a latitude adjustment, in degrees to be used in the analysis. In the ExtractTiles wrapper, this corresponds to the 2m portion of the 2n x 2m subregion tile.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_LON_ADJ">EXTRACT_TILES_LON_ADJ</dt><dd><p>Specify a longitude adjustment, in degrees to be used in the analysis. In the ExtractTiles wrapper, this corresponds to the 2n portion of the 2n x 2m subregion tile.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_NLAT">EXTRACT_TILES_NLAT</dt><dd><p>The number of latitude points, set to a whole number. This defines the number of latitude points to incorporate into the subregion (density).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_NLON">EXTRACT_TILES_NLON</dt><dd><p>The number of longitude points, set to a whole number. This defines the number of longitude points to incorporate into the subregion (density).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_OUTPUT_DIR">EXTRACT_TILES_OUTPUT_DIR</dt><dd><p>Set the output directory for the METplus extract_tiles utility.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByInit, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [dir]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -1128,7 +1520,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
 </dd>
 <dt id="term-EXTRACT_TILES_PAIRS_INPUT_DIR">EXTRACT_TILES_PAIRS_INPUT_DIR</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_STAT_INPUT_DIR"><span class="xref std std-term">EXTRACT_TILES_STAT_INPUT_DIR</span></a> instead.</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_TC_STAT_INPUT_DIR"><span class="xref std std-term">EXTRACT_TILES_TC_STAT_INPUT_DIR</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-EXTRACT_TILES_SKIP_IF_OUTPUT_EXISTS">EXTRACT_TILES_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>Specify whether to overwrite the track data or not.
@@ -1139,14 +1531,24 @@ Acceptable values: yes/no</p>
 <div class="line"><em>Default:</em>  no</div>
 </div>
 </dd>
-<dt id="term-EXTRACT_TILES_STAT_INPUT_DIR">EXTRACT_TILES_STAT_INPUT_DIR</dt><dd><p>Directory containing TCStat output to be read by ExtractTiles.</p>
+<dt id="term-EXTRACT_TILES_STAT_INPUT_DIR">EXTRACT_TILES_STAT_INPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_TC_STAT_INPUT_DIR"><span class="xref std std-term">EXTRACT_TILES_TC_STAT_INPUT_DIR</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-EXTRACT_TILES_STAT_INPUT_TEMPLATE">EXTRACT_TILES_STAT_INPUT_TEMPLATE</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE"><span class="xref std std-term">EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-EXTRACT_TILES_TC_STAT_INPUT_DIR">EXTRACT_TILES_TC_STAT_INPUT_DIR</dt><dd><p>Directory containing TCStat output to be read by ExtractTiles.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [dir]</div>
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
-<dt id="term-EXTRACT_TILES_STAT_INPUT_TEMPLATE">EXTRACT_TILES_STAT_INPUT_TEMPLATE</dt><dd><p>Template used to specify the dump row output tcst file generated by TCStat
+<dt id="term-EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE">EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE</dt><dd><p>Template used to specify the dump row output tcst file generated by TCStat
 to filter input data to be used in ExtractTiles.
 Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
 <div class="line-block">
@@ -1268,21 +1670,21 @@ Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
 </dd>
 <dt id="term-FCST_EXTRACT_TILES_INPUT_TEMPLATE">FCST_EXTRACT_TILES_INPUT_TEMPLATE</dt><dd><p>Filename template used to identify forecast input file to ExtractTiles.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [filename_templates]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-FCST_EXTRACT_TILES_OUTPUT_TEMPLATE">FCST_EXTRACT_TILES_OUTPUT_TEMPLATE</dt><dd><p>Filename template used to identify the forecast output file generated by ExtractTiles.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em> ExtractTiles</div>
 <div class="line"><em>Family:</em> [filename_templates]</div>
 <div class="line"><em>Default:</em> Varies</div>
 </div>
 </dd>
 <dt id="term-FCST_EXTRACT_TILES_PREFIX">FCST_EXTRACT_TILES_PREFIX</dt><dd><p>Prefix for forecast tile files. Used to create filename of intermediate files that are created while performing a series analysis.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em> [regex_pattern]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -2053,6 +2455,11 @@ Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_EXTRACT_TILES_PREFIX"><span class="xref std std-term">FCST_EXTRACT_TILES_PREFIX</span></a> instead.</p>
 </div>
 </dd>
+<dt id="term-FCST_SERIES_ANALYSIS_TILE_INPUT_DIR">FCST_SERIES_ANALYSIS_TILE_INPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_SERIES_ANALYSIS_INPUT_DIR"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_DIR</span></a> instead.</p>
+</div>
+</dd>
 <dt id="term-FCST_THRESH">FCST_THRESH</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_THRESH_LIST"><span class="xref std std-term">FCST_THRESH_LIST</span></a> instead.</p>
@@ -2192,46 +2599,34 @@ Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-FHR_BEG">FHR_BEG</dt><dd><p>Specify the first forecast lead time to use in the analysis. Use in combination with <a class="reference internal" href="#term-FHR_END"><span class="xref std std-term">FHR_END</span></a> and <a class="reference internal" href="#term-FHR_INC"><span class="xref std std-term">FHR_INC</span></a>.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_BEG">FHR_BEG</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ"><span class="xref std std-term">LEAD_SEQ</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-FHR_END">FHR_END</dt><dd><p>Specify the last forecast lead time to use in the analysis. Use in combination with <a class="reference internal" href="#term-FHR_BEG"><span class="xref std std-term">FHR_BEG</span></a> and <a class="reference internal" href="#term-FHR_INC"><span class="xref std std-term">FHR_INC</span></a>.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_END">FHR_END</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ"><span class="xref std std-term">LEAD_SEQ</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-FHR_GROUP_BEG">FHR_GROUP_BEG</dt><dd><p>Define which forecast lead time should be first in a group of forecast leads to use in the analysis. Use in combination with <a class="reference internal" href="#term-FHR_GROUP_END"><span class="xref std std-term">FHR_GROUP_END</span></a> and <a class="reference internal" href="#term-FHR_INC"><span class="xref std std-term">FHR_INC</span></a>. Example: FHR_GROUP_BEG = 24FHR_GROUP_END = 42FHR_INC = 6 List of forecast leads processed: [24, 30, 36, 42]</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_GROUP_BEG">FHR_GROUP_BEG</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ_-n"><span class="xref std std-term">LEAD_SEQ_&lt;n&gt;</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-FHR_GROUP_END">FHR_GROUP_END</dt><dd><p>Define which forecast lead time should be the last in a group of forecast leads to use in the analysis. Use in combination with <a class="reference internal" href="#term-FHR_GROUP_BEG"><span class="xref std std-term">FHR_GROUP_BEG</span></a> and <a class="reference internal" href="#term-FHR_INC"><span class="xref std std-term">FHR_INC</span></a>. Example: FHR_GROUP_BEG = 24FHR_GROUP_END = 42FHR_INC = 6 List of forecast leads processed: [24, 30, 36, 42]</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_GROUP_END">FHR_GROUP_END</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ_-n"><span class="xref std std-term">LEAD_SEQ_&lt;n&gt;</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-FHR_GROUP_LABELS">FHR_GROUP_LABELS</dt><dd><p>Label strings to use for the forecast groups.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_GROUP_LABELS">FHR_GROUP_LABELS</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ_-n-_LABEL"><span class="xref std std-term">LEAD_SEQ_&lt;n&gt;_LABEL</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-FHR_INC">FHR_INC</dt><dd><p>Stride to use for incrementing forecast lead times used in the analysis. Use in combination with <a class="reference internal" href="#term-FHR_BEG"><span class="xref std std-term">FHR_BEG</span></a> and <a class="reference internal" href="#term-FHR_END"><span class="xref std std-term">FHR_END</span></a> or <a class="reference internal" href="#term-FHR_GROUP_BEG"><span class="xref std std-term">FHR_GROUP_BEG</span></a> and <a class="reference internal" href="#term-FHR_GROUP_END"><span class="xref std std-term">FHR_GROUP_END</span></a>.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-FHR_INC">FHR_INC</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ"><span class="xref std std-term">LEAD_SEQ</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-FILE_WINDOW_BEGIN">FILE_WINDOW_BEGIN</dt><dd><p>Used to control the lower bound of the window around the valid time to determine if a file should be used
@@ -2462,7 +2857,7 @@ specify the full path to the input files using <a class="reference internal" hre
 </div>
 </div></blockquote>
 </dd>
-<dt id="term-GRID_DIAG_DESCRIPTION">GRID_DIAG_DESCRIPTION</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for grid_diag.</p>
+<dt id="term-GRID_DIAG_DESC">GRID_DIAG_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for grid_diag.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  GridDiag</div>
 <div class="line"><em>Family:</em>  [config]</div>
@@ -2539,11 +2934,7 @@ specify the full path to the input files using <a class="reference internal" hre
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-GRID_DIAG_RUNTIME_FREQ">GRID_DIAG_RUNTIME_FREQ</dt><dd><p>Frequency to run Grid-Diag. Depending on which option is selected, some filename template tags will translate to *. Valid options are:</p>
-<p>RUN_ONCE: Run the command one time. * is substituted for init/valid/lead
-RUN_ONCE_PER_INIT_OR_VALID: Run the command once for each init or valid time depending on the value of LOOP_BY. If LOOP_BY = INIT, * is substituted for valid and lead. If LOOP_BY = VALID, * is substituted for init and lead.
-RUN_ONCE_PER_LEAD: Run the command once for each forecast lead time. * is substituted for valid and init
-RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and forecast lead combination). All filename templates are substituted with values.</p>
+<dt id="term-GRID_DIAG_RUNTIME_FREQ">GRID_DIAG_RUNTIME_FREQ</dt><dd><p>Frequency to run Grid-Diag. See <a class="reference internal" href="systemconfiguration.html#runtime-freq"><span class="std std-ref">Runtime Frequency</span></a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  GridDiag</div>
 <div class="line"><em>Family:</em>  [config]</div>
@@ -2613,6 +3004,13 @@ RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and for
 </div>
 </div></blockquote>
 </dd>
+<dt id="term-GRID_STAT_DESC">GRID_STAT_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for grid_stat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-GRID_STAT_NEIGHBORHOOD_COV_THRESH">GRID_STAT_NEIGHBORHOOD_COV_THRESH</dt><dd><p>Sets the neighborhood cov_thresh list used by GridStat. See <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  GridStat</div>
@@ -2667,11 +3065,39 @@ RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and for
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-GRID_STAT_REGRID_METHOD">GRID_STAT_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for GridStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-GRID_STAT_REGRID_SHAPE">GRID_STAT_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for GridStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-GRID_STAT_REGRID_TO_GRID">GRID_STAT_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET GridStat config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  GridStat</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
+</div>
+</dd>
+<dt id="term-GRID_STAT_REGRID_VLD_THRESH">GRID_STAT_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for GridStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-GRID_STAT_REGRID_WIDTH">GRID_STAT_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for GridStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  GridStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-GRID_STAT_SKIP_IF_OUTPUT_EXISTS">GRID_STAT_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
@@ -2753,7 +3179,7 @@ RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and for
 </dd>
 <dt id="term-INIT_SEQ">INIT_SEQ</dt><dd><p>Specify a list of initialization hours that are used to build a sequence of forecast lead times to include in the analysis. Used only when looping by valid time (LOOP_BY = VALID). Comma separated list format, e.g.:0, 6, 12 See <a class="reference internal" href="systemconfiguration.html#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  EnsembleStat, GridStat, MODE, MTD, PB2NC, PCPCombine, PointStat, RegridDataPlane, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  EnsembleStat, GridStat, MODE, MTD, PB2NC, PCPCombine, PointStat, RegridDataPlane, SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -2830,35 +3256,35 @@ RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and for
 </dd>
 <dt id="term-LEAD_SEQ">LEAD_SEQ</dt><dd><p>Specify the sequence of forecast lead times to include in the analysis. Comma separated list format, e.g.:0, 6, 12. See <a class="reference internal" href="systemconfiguration.html#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information. Units are assumed to be hours unless specified with Y, m, d, H, M, or S.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  EnsembleStat, GridStat, MODE, MTD, PB2NC, PCPCombine, PointStat, RegridDataPlane, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  All</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-LEAD_SEQ_-n">LEAD_SEQ_&lt;n&gt;</dt><dd><p>Required when SERIES_BY_LEAD_GROUP_FCSTS=True. Not necessary otherwise. Specify the sequence of forecast lead times to include in the analysis. Comma separated list format, e.g.:0, 6, 12. &lt;n&gt; corresponds to the bin in which the user wishes to aggregate series by lead results.</p>
+<dt id="term-LEAD_SEQ_-n">LEAD_SEQ_&lt;n&gt;</dt><dd><p>Specify the sequence of forecast lead times to include in the analysis. Comma separated list format, e.g.:0, 6, 12. &lt;n&gt; corresponds to the bin in which the user wishes to aggregate series by lead results.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-LEAD_SEQ_-n-_LABEL">LEAD_SEQ_&lt;n&gt;_LABEL</dt><dd><p>Required when SERIES_BY_LEAD_GROUP_FCSTS=True. Specify the label of the corresponding bin of series by lead results.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
 <dt id="term-LEAD_SEQ_MAX">LEAD_SEQ_MAX</dt><dd><p>Maximum forecast lead to be processed. Used primarily with <a class="reference internal" href="#term-INIT_SEQ"><span class="xref std std-term">INIT_SEQ</span></a> but also affects <a class="reference internal" href="#term-LEAD_SEQ"><span class="xref std std-term">LEAD_SEQ</span></a>. See <a class="reference internal" href="systemconfiguration.html#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information. Units are assumed to be hours unless specified with Y, m, d, H, M, or S.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  EnsembleStat, GridStat, MODE, MTD, PB2NC, PCPCombine, PointStat, RegridDataPlane, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  All</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-LEAD_SEQ_MIN">LEAD_SEQ_MIN</dt><dd><p>Minimum forecast lead to be processed. Used primarily with INIT_SEQ but also affects LEAD_SEQ. See <a class="reference internal" href="systemconfiguration.html#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information. Units are assumed to be hours unless specified with Y, m, d, H, M, or S.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  EnsembleStat, GridStat, MODE, MTD, PB2NC, PCPCombine, PointStat, RegridDataPlane, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  All</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -3180,11 +3606,9 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 <div class="line"><em>Default:</em>  None</div>
 </div>
 </dd>
-<dt id="term-MET_BASE">MET_BASE</dt><dd><p>The base directory where your MET installation resides.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  CyclonePlotter, ExtractTiles, PB2NC, PointStat, SeriesByInit, SeriesByLead, TCMPRPlotter, TCPairs</div>
-<div class="line"><em>Family:</em>  [dir]</div>
-<div class="line"><em>Default:</em></div>
+<dt id="term-MET_BASE">MET_BASE</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Do not set.</p>
 </div>
 </dd>
 <dt id="term-MET_BIN">MET_BIN</dt><dd><div class="admonition warning">
@@ -3269,6 +3693,13 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 <div class="line"><em>Default:</em> None</div>
 </div>
 </div></blockquote>
+</dd>
+<dt id="term-MODE_DESC">MODE_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for MODE.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> MODE</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
 </dd>
 <dt id="term-MODE_FCST_CONV_RADIUS">MODE_FCST_CONV_RADIUS</dt><dd><p>Comma separated list of convolution radius values used by mode for forecast fields.</p>
 <div class="line-block">
@@ -3372,11 +3803,39 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 <div class="line"><em>Default:</em>  False</div>
 </div>
 </dd>
+<dt id="term-MODE_REGRID_METHOD">MODE_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for MODE.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MODE</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-MODE_REGRID_SHAPE">MODE_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for MODE.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MODE</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-MODE_REGRID_TO_GRID">MODE_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET MODE config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  MODE</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
+</div>
+</dd>
+<dt id="term-MODE_REGRID_VLD_THRESH">MODE_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for MODE.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MODE</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-MODE_REGRID_WIDTH">MODE_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for MODE.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MODE</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-MODE_SKIP_IF_OUTPUT_EXISTS">MODE_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
@@ -3532,6 +3991,13 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 </div>
 </div></blockquote>
 </dd>
+<dt id="term-MTD_DESC">MTD_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for MTD.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> MTD</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-MTD_FCST_CONV_RADIUS">MTD_FCST_CONV_RADIUS</dt><dd><p>Comma separated list of convolution radius values used by mode-TD for forecast files.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em> MTD</div>
@@ -3593,11 +4059,39 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-MTD_REGRID_METHOD">MTD_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for MTD.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MTD</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-MTD_REGRID_SHAPE">MTD_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for MTD.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MTD</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-MTD_REGRID_TO_GRID">MTD_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET MTD config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  MTD</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
+</div>
+</dd>
+<dt id="term-MTD_REGRID_VLD_THRESH">MTD_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for MTD.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MTD</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-MTD_REGRID_WIDTH">MTD_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for MTD.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  MTD</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-MTD_SINGLE_DATA_SRC">MTD_SINGLE_DATA_SRC</dt><dd><p>Used only if MTD_SINGLE_RUN is set to True. Valid options are ‘FCST’ or ‘OBS’.</p>
@@ -3633,7 +4127,7 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 </dd>
 <dt id="term-NCDUMP">NCDUMP</dt><dd><p>Path to thencdump executable.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  PB2NC, PointStat, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  PB2NC, PointStat</div>
 <div class="line"><em>Family:</em>  [exe]</div>
 <div class="line"><em>Default:</em>  /path/to</div>
 </div>
@@ -3790,21 +4284,21 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 </dd>
 <dt id="term-OBS_EXTRACT_TILES_INPUT_TEMPLATE">OBS_EXTRACT_TILES_INPUT_TEMPLATE</dt><dd><p>Filename template used to identify observation input file to ExtractTiles.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em>  [filename_templates]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-OBS_EXTRACT_TILES_OUTPUT_TEMPLATE">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</dt><dd><p>Filename template used to identify the observation output file generated by ExtractTiles.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em> ExtractTiles</div>
 <div class="line"><em>Family:</em> [filename_templates]</div>
 <div class="line"><em>Default:</em> Varies</div>
 </div>
 </dd>
 <dt id="term-OBS_EXTRACT_TILES_PREFIX">OBS_EXTRACT_TILES_PREFIX</dt><dd><p>Prefix for observation tile files. Used to create filename of intermediate files that are created while performing a series analysis.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  ExtractTiles</div>
 <div class="line"><em>Family:</em> [regex_pattern]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -4529,6 +5023,11 @@ If not set, the verbosity level is controlled by <a class="reference internal" h
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-OBS_EXTRACT_TILES_PREFIX"><span class="xref std std-term">OBS_EXTRACT_TILES_PREFIX</span></a> instead.</p>
 </div>
 </dd>
+<dt id="term-OBS_SERIES_ANALYSIS_TILE_INPUT_DIR">OBS_SERIES_ANALYSIS_TILE_INPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-OBS_SERIES_ANALYSIS_INPUT_DIR"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_DIR</span></a> instead.</p>
+</div>
+</dd>
 <dt id="term-OBS_THRESH_LIST">OBS_THRESH_LIST</dt><dd><p>Specify the values of the OBS_THRESH column in the MET .stat file to use. This is optional in the METplus configuration file for running with <a class="reference internal" href="#term-LOOP_ORDER"><span class="xref std std-term">LOOP_ORDER</span></a> = times.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  StatAnalysis</div>
@@ -5191,6 +5690,13 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 </div>
 </div></blockquote>
 </dd>
+<dt id="term-POINT_STAT_DESC">POINT_STAT_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for PointStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> PointStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-POINT_STAT_GRID">POINT_STAT_GRID</dt><dd><p>Specify the grid to use with the MET point_stat tool.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  PointStat</div>
@@ -5268,11 +5774,39 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-POINT_STAT_REGRID_METHOD">POINT_STAT_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for PointStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  PointStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-POINT_STAT_REGRID_SHAPE">POINT_STAT_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for PointStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  PointStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-POINT_STAT_REGRID_TO_GRID">POINT_STAT_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET PointStat config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  PointStat</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
+</div>
+</dd>
+<dt id="term-POINT_STAT_REGRID_VLD_THRESH">POINT_STAT_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for PointStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  PointStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-POINT_STAT_REGRID_WIDTH">POINT_STAT_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for PointStat.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  PointStat</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-POINT_STAT_SKIP_IF_OUTPUT_EXISTS">POINT_STAT_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
@@ -5471,16 +6005,14 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-POINT_STAT_REGRID_TO_GRID"><span class="xref std std-term">POINT_STAT_REGRID_TO_GRID</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-RM">RM</dt><dd><p>Specify the path to the Linuxrm executable.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  PB2NC, PointStat, SeriesByLead</div>
-<div class="line"><em>Family:</em>  [exe]</div>
-<div class="line"><em>Default:</em>  /path/to</div>
+<dt id="term-RM">RM</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Do not use.</p>
 </div>
 </dd>
 <dt id="term-RM_EXE">RM_EXE</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-RM"><span class="xref std std-term">RM</span></a>.</p>
+<p><strong>DEPRECATED:</strong> Do not use.</p>
 </div>
 </dd>
 <dt id="term-RP_DIFF">RP_DIFF</dt><dd><div class="admonition warning">
@@ -5522,9 +6054,16 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 </dd>
 <dt id="term-SERIES_ANALYSIS_BACKGROUND_MAP">SERIES_ANALYSIS_BACKGROUND_MAP</dt><dd><p>Control whether or not a background map shows up for series analysis plots. Set to ‘yes’ if background map desired.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  no</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_BLOCK_SIZE">SERIES_ANALYSIS_BLOCK_SIZE</dt><dd><p>Specify the value for ‘block_size’ in the MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_BY_INIT_CONFIG_FILE">SERIES_ANALYSIS_BY_INIT_CONFIG_FILE</dt><dd><div class="admonition warning">
@@ -5535,6 +6074,13 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 <dt id="term-SERIES_ANALYSIS_BY_LEAD_CONFIG_FILE">SERIES_ANALYSIS_BY_LEAD_CONFIG_FILE</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_CONFIG_FILE"><span class="xref std std-term">SERIES_ANALYSIS_CONFIG_FILE</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_CAT_THRESH">SERIES_ANALYSIS_CAT_THRESH</dt><dd><p>Specify the value for ‘cat_thresh’ in the MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</dt><dd><p>Directory containing the climatology mean file used by SeriesAnalysis. This variable is optional because you can specify the full path to a climatology file using <a class="reference internal" href="#term-SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</span></a>.</p>
@@ -5567,7 +6113,14 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 </dd>
 <dt id="term-SERIES_ANALYSIS_CONFIG_FILE">SERIES_ANALYSIS_CONFIG_FILE</dt><dd><p>Specify the absolute path for the configuration file to use with the MET series_analysis tool by initialization time.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead, SeriesAnalysis</div>
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_CTS_LIST">SERIES_ANALYSIS_CTS_LIST</dt><dd><p>Specify a list of contingency table statistics to be computed by the MET series_analysis tool. Sets the ‘cts’ value in the output_stats dictionary in the MET SeriesAnalysis config file</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -5581,42 +6134,47 @@ See also <a class="reference internal" href="#term-PLOT_DATA_PLANE_OUTPUT_DIR"><
 </div>
 </div></blockquote>
 </dd>
+<dt id="term-SERIES_ANALYSIS_DESC">SERIES_ANALYSIS_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-SERIES_ANALYSIS_FILTER_OPTS">SERIES_ANALYSIS_FILTER_OPTS</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-TC_STAT_JOB_ARGS"><span class="xref std std-term">TC_STAT_JOB_ARGS</span></a> instead.</p>
 </div>
-<p>Filtering options to be applied during series analysis. Filter options are performed by invoking the MET tc_stat tool within the METplus wrapper. Refer to the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for the syntax to use for performing filtering via the MET tc_stat tool.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
-</div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_FILTERED_OUTPUT">SERIES_ANALYSIS_FILTERED_OUTPUT</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_FILTERED_OUTPUT_DIR"><span class="xref std std-term">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</span></a> instead.</p>
+<p><strong>DEPRECATED:</strong> No longer used.</p>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_FILTERED_OUTPUT_DIR">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</dt><dd><p>Specifies the directory where filtered files will be written from the MET SeriesAnalysis tool.</p>
+<dt id="term-SERIES_ANALYSIS_FILTERED_OUTPUT_DIR">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> No longer used.</p>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_GENERATE_ANIMATIONS">SERIES_ANALYSIS_GENERATE_ANIMATIONS</dt><dd><p>If set to True, create GIF animated images images.
+Previously, animated images were always generated.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<div class="line"><em>Default:</em>  True</div>
 </div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_GENERATE_PLOTS">SERIES_ANALYSIS_GENERATE_PLOTS</dt><dd><p>If set to True, run plot_data_plane and convert to generate images.
 Previously, plots were always generated.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  True</div>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_GROUP_FCSTS">SERIES_ANALYSIS_GROUP_FCSTS</dt><dd><p>Set to True to aggregate the series by lead results into bins of time.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead</div>
-<div class="line"><em>Family:</em>  [config]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-SERIES_ANALYSIS_GROUP_FCSTS">SERIES_ANALYSIS_GROUP_FCSTS</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-LEAD_SEQ_-n"><span class="xref std std-term">LEAD_SEQ_&lt;n&gt;</span></a> and <a class="reference internal" href="#term-SERIES_ANALYSIS_RUNTIME_FREQ"><span class="xref std std-term">SERIES_ANALYSIS_RUNTIME_FREQ</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_INPUT_DIR">SERIES_ANALYSIS_INPUT_DIR</dt><dd><div class="admonition warning">
@@ -5633,7 +6191,7 @@ Previously, plots were always generated.</p>
 </dd>
 <dt id="term-SERIES_ANALYSIS_OUTPUT_DIR">SERIES_ANALYSIS_OUTPUT_DIR</dt><dd><p>Specify the directory where files will be written from the MET series analysis tool.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit, SeriesAnalysis</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [dir]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -5645,11 +6203,53 @@ Previously, plots were always generated.</p>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
+<dt id="term-SERIES_ANALYSIS_REGRID_METHOD">SERIES_ANALYSIS_REGRID_METHOD</dt><dd><p>Specify the value for ‘method’ in the regrid dictionary in MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_REGRID_SHAPE">SERIES_ANALYSIS_REGRID_SHAPE</dt><dd><p>Specify the value for ‘shape’ in the regrid dictionary in MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-SERIES_ANALYSIS_REGRID_TO_GRID">SERIES_ANALYSIS_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET SeriesAnalysis config file. See the <a class="reference external" href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">MET User’s Guide</a> for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit, SeriesAnalysis</div>
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_REGRID_VLD_THRESH">SERIES_ANALYSIS_REGRID_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the regrid dictionary in MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_REGRID_WIDTH">SERIES_ANALYSIS_REGRID_WIDTH</dt><dd><p>Specify the value for ‘width’ in the regrid dictionary in MET configuration file for SeriesAnalysis.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_RUN_ONCE_PER_STORM_ID">SERIES_ANALYSIS_RUN_ONCE_PER_STORM_ID</dt><dd><p>If True, run SeriesAnalysis once for each storm ID found in the .tcst (TCStat output) file specified with <a class="reference internal" href="#term-SERIES_ANALYSIS_TC_STAT_INPUT_DIR"><span class="xref std std-term">SERIES_ANALYSIS_TC_STAT_INPUT_DIR</span></a> and <a class="reference internal" href="#term-SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE"><span class="xref std std-term">SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_RUNTIME_FREQ">SERIES_ANALYSIS_RUNTIME_FREQ</dt><dd><p>Frequency to run SeriesAnalysis. See <a class="reference internal" href="systemconfiguration.html#runtime-freq"><span class="std std-ref">Runtime Frequency</span></a> for more information.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  None</div>
 </div>
 </dd>
 <dt id="term-SERIES_ANALYSIS_SKIP_IF_OUTPUT_EXISTS">SERIES_ANALYSIS_SKIP_IF_OUTPUT_EXISTS</dt><dd><p>If True, do not run app if output file already exists. Set to False to overwrite files.</p>
@@ -5659,46 +6259,59 @@ Previously, plots were always generated.</p>
 <div class="line"><em>Default:</em>  False</div>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_STAT_INPUT_DIR">SERIES_ANALYSIS_STAT_INPUT_DIR</dt><dd><p>Directory containing TCStat output to be read by SeriesByInit.</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit</div>
-<div class="line"><em>Family:</em>  [dir]</div>
-<div class="line"><em>Default:</em></div>
+<dt id="term-SERIES_ANALYSIS_STAT_INPUT_DIR">SERIES_ANALYSIS_STAT_INPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_TC_STAT_INPUT_DIR"><span class="xref std std-term">SERIES_ANALYSIS_TC_STAT_INPUT_DIR</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_STAT_INPUT_TEMPLATE">SERIES_ANALYSIS_STAT_INPUT_TEMPLATE</dt><dd><p>Template used to specify the dump row output tcst file generated by TCStat
-to filter input data to be used in SeriesByInit.
-Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
-<div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit</div>
-<div class="line"><em>Family:</em>  [filename_templates]</div>
-<div class="line"><em>Default:</em>  Varies</div>
+<dt id="term-SERIES_ANALYSIS_STAT_INPUT_TEMPLATE">SERIES_ANALYSIS_STAT_INPUT_TEMPLATE</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE"><span class="xref std std-term">SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE</span></a> instead.</p>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_STAT_LIST">SERIES_ANALYSIS_STAT_LIST</dt><dd><p>Specify a list of statistics to be computed by the MET series_analysis tool.</p>
+<dt id="term-SERIES_ANALYSIS_STAT_LIST">SERIES_ANALYSIS_STAT_LIST</dt><dd><p>Specify a list of statistics to be computed by the MET series_analysis tool. Sets the ‘cnt’ value in the output_stats dictionary in the MET SeriesAnalysis config file</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead, SeriesAnalysis</div>
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_TILE_INPUT_DIR">SERIES_ANALYSIS_TILE_INPUT_DIR</dt><dd><p>Specify the directory to read input to SeriesAnalysis. It is recommended to set this to {EXTRACT_TILES_OUTPUT_DIR}.</p>
+<dt id="term-SERIES_ANALYSIS_TC_STAT_INPUT_DIR">SERIES_ANALYSIS_TC_STAT_INPUT_DIR</dt><dd><p>Directory containing TCStat output to be read by SeriesAnalysis.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em></div>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE">SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE</dt><dd><p>Template used to specify the dump row output tcst file generated by TCStat
+to filter input data to be used in SeriesAnalysis.
+Example: {init?fmt=%Y%m%d_%H}/filter_{init?fmt=%Y%m%d_%H}.tcst</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [filename_templates]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-SERIES_ANALYSIS_VAR_LIST">SERIES_ANALYSIS_VAR_LIST</dt><dd><p>Specify a comma separated list of variables to be used in the analysis.</p>
+<dt id="term-SERIES_ANALYSIS_TILE_INPUT_DIR">SERIES_ANALYSIS_TILE_INPUT_DIR</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_SERIES_ANALYSIS_INPUT_DIR"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_DIR</span></a> and  <a class="reference internal" href="#term-OBS_SERIES_ANALYSIS_INPUT_DIR"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_DIR</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_VAR_LIST">SERIES_ANALYSIS_VAR_LIST</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_VAR-n-_NAME"><span class="xref std std-term">FCST_VAR&lt;n&gt;_NAME</span></a> and <a class="reference internal" href="#term-OBS_VAR-n-_NAME"><span class="xref std std-term">OBS_VAR&lt;n&gt;_NAME</span></a> instead.</p>
+</div>
+</dd>
+<dt id="term-SERIES_ANALYSIS_VLD_THRESH">SERIES_ANALYSIS_VLD_THRESH</dt><dd><p>Specify the value for ‘vld_thresh’ in the MET configuration file for SeriesAnalysis.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  PB2NC, SeriesByInit, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
 <dt id="term-SERIES_BY_INIT_FILTERED_OUTPUT_DIR">SERIES_BY_INIT_FILTERED_OUTPUT_DIR</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_FILTERED_OUTPUT_DIR"><span class="xref std std-term">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</span></a> instead.</p>
+<p><strong>DEPRECATED:</strong> No longer used.</p>
 </div>
 </dd>
 <dt id="term-SERIES_BY_INIT_OUTPUT_DIR">SERIES_BY_INIT_OUTPUT_DIR</dt><dd><div class="admonition warning">
@@ -5925,6 +6538,13 @@ Skip even hours: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22</p>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </div></blockquote>
+</dd>
+<dt id="term-TC_GEN_DESC">TC_GEN_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for TCGen.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> TCGen</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
 </dd>
 <dt id="term-TC_GEN_DLAND_FILE">TC_GEN_DLAND_FILE</dt><dd><p>Specify the value of dland_file in the MET configuration file.</p>
 <div class="line-block">
@@ -6205,6 +6825,13 @@ Any quotation marks that are found inside another set of quotation marks must be
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-TC_PAIRS_DESC">TC_PAIRS_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for TCPairs.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> TCPairs</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-TC_PAIRS_DIR">TC_PAIRS_DIR</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-TC_PAIRS_OUTPUT_DIR"><span class="xref std std-term">TC_PAIRS_OUTPUT_DIR</span></a>.</p>
@@ -6382,6 +7009,13 @@ Any quotation marks that are found inside another set of quotation marks must be
 <dt id="term-TC_RMW_DELTA_RANGE_KM">TC_RMW_DELTA_RANGE_KM</dt><dd><p>Specify the value for ‘delta_range_km’ in the MET configuration file for TCRMW.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  TCRMW</div>
+<div class="line"><em>Family:</em>  [config]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-TC_RMW_DESC">TC_RMW_DESC</dt><dd><p>Specify the value for ‘desc’ in the MET configuration file for TCRMW.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> TCRMW</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -6614,7 +7248,7 @@ Any quotation marks that are found inside another set of quotation marks must be
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-TC_STAT_DESC">TC_STAT_DESC</dt><dd><p>Specify the DESC option for use with the MET tc_stat tool.</p>
+<dt id="term-TC_STAT_DESC">TC_STAT_DESC</dt><dd><p>Specify the desc option for use with the MET tc_stat tool.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  TCStat</div>
 <div class="line"><em>Family:</em>  [config]</div>
@@ -7114,7 +7748,7 @@ Any quotation marks that are found inside another set of quotation marks must be
 </dd>
 <dt id="term-TMP_DIR">TMP_DIR</dt><dd><p>Specify the path to a temporary directory where the user has write permissions.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  ExtractTiles, PB2NC, PointStat, SeriesByInit, SeriesByLead, TCStat</div>
+<div class="line"><em>Used by:</em>  PB2NC, PointStat, TCStat</div>
 <div class="line"><em>Family:</em>  [dir]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
@@ -7172,11 +7806,7 @@ more information.</p>
 <div class="line"><em>Default:</em>  None</div>
 </div>
 </dd>
-<dt id="term-USER_SCRIPT_RUNTIME_FREQ">USER_SCRIPT_RUNTIME_FREQ</dt><dd><p>Frequency to run the user-defined script. Depending on which option is selected, some filename template tags will translate to *. Valid options are:</p>
-<p>RUN_ONCE: Run the command one time. * is substituted for init/valid/lead
-RUN_ONCE_PER_INIT_OR_VALID: Run the command once for each init or valid time depending on the value of LOOP_BY. If LOOP_BY = INIT, * is substituted for valid and lead. If LOOP_BY = VALID, * is substituted for init and lead.
-RUN_ONCE_PER_LEAD: Run the command once for each forecast lead time. * is substituted for valid and init
-RUN_ONCE_FOR_EACH: Run the command once for every runtime (init or valid and forecast lead combination). All filename templates are substituted with values.</p>
+<dt id="term-USER_SCRIPT_RUNTIME_FREQ">USER_SCRIPT_RUNTIME_FREQ</dt><dd><p>Frequency to run the user-defined script. See <a class="reference internal" href="systemconfiguration.html#runtime-freq"><span class="std std-ref">Runtime Frequency</span></a> for more information.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  UserScript</div>
 <div class="line"><em>Family:</em>  [config]</div>
@@ -7255,7 +7885,7 @@ information and how to format.</p>
 </dd>
 <dt id="term-VAR_LIST">VAR_LIST</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-SERIES_ANALYSIS_VAR_LIST"><span class="xref std std-term">SERIES_ANALYSIS_VAR_LIST</span></a>.</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-FCST_VAR-n-_NAME"><span class="xref std std-term">FCST_VAR&lt;n&gt;_NAME</span></a> and <a class="reference internal" href="#term-OBS_VAR-n-_NAME"><span class="xref std std-term">OBS_VAR&lt;n&gt;_NAME</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-VERIF_CASE">VERIF_CASE</dt><dd><div class="admonition warning">
@@ -7336,7 +7966,7 @@ information and how to format.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

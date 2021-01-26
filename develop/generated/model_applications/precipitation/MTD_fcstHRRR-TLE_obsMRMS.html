@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.6.1. MTD: 6hr QPF Use Case &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.7.1. MTD: 6hr QPF Use Case &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.6.2. MTD: Build Revision Series to Evaluate Forecast Consistency" href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html"/>
-        <link rel="prev" title="5.2.5.8. Multi_Tool: Feature Relative by Lead using Multiple User-Defined Fields" href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.html"/> 
+        <link rel="next" title="5.2.7.2. MTD: Build Revision Series to Evaluate Forecast Consistency" href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html"/>
+        <link rel="prev" title="5.2.6.9. Multi_Tool: Feature Relative by Lead using Multiple User-Defined Fields" href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.6.1. </span>MTD: 6hr QPF Use Case</li>
+      <li><span class="section-number">5.2.7.1. </span>MTD: 6hr QPF Use Case</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="mtd-6hr-qpf-use-case">
-<span id="sphx-glr-generated-model-applications-precipitation-mtd-fcsthrrr-tle-obsmrms-py"></span><h1><span class="section-number">5.2.6.1. </span>MTD: 6hr QPF Use Case<a class="headerlink" href="#mtd-6hr-qpf-use-case" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-precipitation-mtd-fcsthrrr-tle-obsmrms-py"></span><h1><span class="section-number">5.2.7.1. </span>MTD: 6hr QPF Use Case<a class="headerlink" href="#mtd-6hr-qpf-use-case" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/precipitation/MTD_fcstHRRR-TLE
 _obsMRMS.conf</p>
 <div class="section" id="scientific-objective">
@@ -384,19 +385,19 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    // Output model name to be written
    //
 
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
    //
    // Output description to be written
    //
 
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
    //
    // Output observation <span class="nb">type</span> to be written
    //
 
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -404,14 +405,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    //  Verification grid
    //  May be <span class="nb">set</span> separately in each <span class="s2">&quot;field&quot;</span> entry
    //
-
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-   <span class="nv">shape</span>     <span class="o">=</span> SQUARE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -711,10 +705,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html" class="btn btn-neutral float-right" title="5.2.6.2. MTD: Build Revision Series to Evaluate Forecast Consistency" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html" class="btn btn-neutral float-right" title="5.2.7.2. MTD: Build Revision Series to Evaluate Forecast Consistency" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.html" class="btn btn-neutral" title="5.2.5.8. Multi_Tool: Feature Relative by Lead using Multiple User-Defined Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics.html" class="btn btn-neutral" title="5.2.6.9. Multi_Tool: Feature Relative by Lead using Multiple User-Defined Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -724,7 +718,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

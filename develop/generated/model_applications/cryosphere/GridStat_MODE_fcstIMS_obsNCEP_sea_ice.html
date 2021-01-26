@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.3.1. Grid-Stat and MODE: Sea Ice Validation &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.4.1. Grid-Stat and MODE: Sea Ice Validation &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.4.1. StatAnalysis: JEDI" href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html"/>
-        <link rel="prev" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" href="../convection_allowing_models/EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html"/> 
+        <link rel="next" title="5.2.5.1. StatAnalysis: JEDI" href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html"/>
+        <link rel="prev" title="5.2.3.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" href="../convection_allowing_models/EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.3.1. </span>Grid-Stat and MODE: Sea Ice Validation</li>
+      <li><span class="section-number">5.2.4.1. </span>Grid-Stat and MODE: Sea Ice Validation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="grid-stat-and-mode-sea-ice-validation">
-<span id="sphx-glr-generated-model-applications-cryosphere-gridstat-mode-fcstims-obsncep-sea-ice-py"></span><h1><span class="section-number">5.2.3.1. </span>Grid-Stat and MODE: Sea Ice Validation<a class="headerlink" href="#grid-stat-and-mode-sea-ice-validation" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-cryosphere-gridstat-mode-fcstims-obsncep-sea-ice-py"></span><h1><span class="section-number">5.2.4.1. </span>Grid-Stat and MODE: Sea Ice Validation<a class="headerlink" href="#grid-stat-and-mode-sea-ice-validation" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/cryosphere/GridStat_MODE_fcstIMS
 _obsNCEP_sea_ice.conf</p>
 <div class="section" id="scientific-objective">
@@ -380,7 +381,7 @@ any configuration files passed to METplus by the command line with the -c option
 
 <span class="o">[</span>dir<span class="o">]</span>
 <span class="c1"># location of configuration files used by MET applications</span>
-<span class="nv">CONFIG_DIR</span><span class="o">={</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/cryosphere
+<span class="nv">CONFIG_DIR</span><span class="o">={</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice
 
 <span class="c1"># input and output data directories for each application in PROCESS_LIST</span>
 <span class="nv">OBS_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/cryosphere/sea_ice/NCEP_data
@@ -428,31 +429,25 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Output model name to be written
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Output description to be written
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Output observation <span class="nb">type</span> to be written
 //
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Verification grid
 //
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -664,30 +659,24 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Output model name to be written
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Output description to be written
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Output observation <span class="nb">type</span> to be written
 //
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Verification grid
 //
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -1028,10 +1017,10 @@ Using the output for 20190201 as an example:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html" class="btn btn-neutral float-right" title="5.2.4.1. StatAnalysis: JEDI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../data_assimilation/StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface.html" class="btn btn-neutral float-right" title="5.2.5.1. StatAnalysis: JEDI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../convection_allowing_models/EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" class="btn btn-neutral" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../convection_allowing_models/EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" class="btn btn-neutral" title="5.2.3.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1041,7 +1030,7 @@ Using the output for 20190201 as an example:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

@@ -315,7 +315,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/ExtractTiles/Extract
 <span class="nv">EXTRACT_TILES_SKIP_IF_OUTPUT_EXISTS</span> <span class="o">=</span> yes
 
 <span class="c1"># template of input filter tcst file created by TC-Stat</span>
-<span class="nv">EXTRACT_TILES_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/filter_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>.tcst
+<span class="nv">EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/filter_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>.tcst
 
 <span class="c1"># templates for forecast and observation input data</span>
 <span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.grb2
@@ -323,10 +323,10 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/ExtractTiles/Extract
 
 <span class="c1"># templates for output data</span>
 <span class="nv">FCST_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/FCST_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.nc
-<span class="nv">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/ANLY_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.nc
+<span class="nv">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/OBS_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.nc
 
 <span class="c1"># directory containing input filter tcst file created by TC-Stat</span>
-<span class="nv">EXTRACT_TILES_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/extract_tiles
+<span class="nv">EXTRACT_TILES_TC_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/extract_tiles
 
 <span class="c1"># directory containing gridded input data (forecast and observation)</span>
 <span class="nv">FCST_EXTRACT_TILES_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/new/reduced_model_data
@@ -553,7 +553,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

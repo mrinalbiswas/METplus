@@ -305,6 +305,8 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/EnsembleStat/Ensembl
 <span class="c1"># Name to identify observation data in output</span>
 <span class="nv">OBTYPE</span> <span class="o">=</span> OBS
 
+<span class="c1">#ENSEMBLE_STAT_DESC =</span>
+
 <span class="c1"># The MET ensemble_stat logging level</span>
 <span class="c1"># 0 quiet to 5 loud, Verbosity setting for MET ensemble_stat output, 2 is default.</span>
 <span class="c1"># This takes precendence over the general LOG_MET_VERBOSITY set in metplus_logging.conf</span>
@@ -333,6 +335,29 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/EnsembleStat/Ensembl
 <span class="nv">ENSEMBLE_STAT_OUTPUT_PREFIX</span> <span class="o">=</span> PYTHON
 
 <span class="nv">ENSEMBLE_STAT_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/EnsembleStatConfig_wrapped
+
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_ECNT</span> <span class="o">=</span> BOTH
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_RPS</span> <span class="o">=</span> NONE
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_RHIST</span> <span class="o">=</span> BOTH
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_PHIST</span> <span class="o">=</span> BOTH
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_ORANK</span> <span class="o">=</span> BOTH
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_SSVAR</span> <span class="o">=</span> BOTH
+<span class="nv">ENSEMBLE_STAT_OUTPUT_FLAG_RELP</span> <span class="o">=</span> BOTH
+
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_LATLON</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_MEAN</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_STDEV</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_MINUS</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_PLUS</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_MIN</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_MAX</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_RANGE</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_VLD_COUNT</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_FREQUENCY</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_NEP</span> <span class="o">=</span> FALSE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_NMEP</span> <span class="o">=</span> FALSE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_RANK</span> <span class="o">=</span> TRUE
+<span class="nv">ENSEMBLE_STAT_ENSEMBLE_FLAG_WEIGHT</span> <span class="o">=</span> FALSE
 
 <span class="c1"># ENSEMBLE_STAT_MET_OBS_ERR_TABLE is not required.</span>
 <span class="c1"># If the variable is not defined, or the value is not set</span>
@@ -399,6 +424,13 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/EnsembleStat/Ensembl
 
 <span class="nv">OBS_ENSEMBLE_STAT_GRID_INPUT_TEMPLATE</span> <span class="o">=</span> obs.txt
 
+<span class="nv">ENSEMBLE_STAT_VERIFICATION_MASK_TEMPLATE</span> <span class="o">=</span>
+    MET_BASE/poly/HMT_masks/huc4_1605_poly.nc,
+    MET_BASE/poly/HMT_masks/huc4_1803_poly.nc,
+    MET_BASE/poly/HMT_masks/huc4_1804_poly.nc,
+    MET_BASE/poly/HMT_masks/huc4_1805_poly.nc,
+    MET_BASE/poly/HMT_masks/huc4_1806_poly.nc
+
 <span class="c1"># Template to look for climatology input to EnsembleStat relative to ENSEMBLE_STAT_CLIMO_MEAN_INPUT_DIR</span>
 <span class="c1"># Not used in this example</span>
 <span class="nv">ENSEMBLE_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span> <span class="o">=</span>
@@ -427,39 +459,33 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Output model name to be written
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Output description to be written
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Output observation <span class="nb">type</span> to be written
 //
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Verification grid
 //
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;field&quot;</span> entry
 //
-<span class="nv">censor_thresh</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-<span class="nv">censor_val</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_CENSOR_THRESH</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">METPLUS_CENSOR_VAL</span><span class="si">}</span>
 <span class="nv">cat_thresh</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 <span class="nv">nc_var_str</span>    <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 
@@ -470,8 +496,9 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 
    <span class="si">${</span><span class="nv">ENS_FILE_TYPE</span><span class="si">}</span>
 
-   <span class="nv">ens_thresh</span> <span class="o">=</span> <span class="si">${</span><span class="nv">ENS_THRESH</span><span class="si">}</span><span class="p">;</span>
-   <span class="si">${</span><span class="nv">ENS_VLD_THRESH</span><span class="si">}</span>
+   <span class="si">${</span><span class="nv">METPLUS_ENS_THRESH</span><span class="si">}</span>
+   <span class="si">${</span><span class="nv">METPLUS_ENS_VLD_THRESH</span><span class="si">}</span>
+   <span class="si">${</span><span class="nv">METPLUS_ENS_OBS_THRESH</span><span class="si">}</span>
 
    <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">ENS_FIELD</span><span class="si">}</span>  <span class="o">]</span><span class="p">;</span>
 <span class="o">}</span>
@@ -481,27 +508,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Neighborhood ensemble probabilities
 //
-<span class="nv">nbrhd_prob</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="o">[</span> <span class="m">5</span> <span class="o">]</span><span class="p">;</span>
-   <span class="nv">shape</span>      <span class="o">=</span> CIRCLE<span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.0<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_NBRHD_PROB_DICT</span><span class="si">}</span>
 
 //
 // NMEP smoothing methods
 //
-<span class="nv">nmep_smooth</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">vld_thresh</span>      <span class="o">=</span> <span class="m">0</span>.0<span class="p">;</span>
-   <span class="nv">shape</span>           <span class="o">=</span> CIRCLE<span class="p">;</span>
-   <span class="nv">gaussian_dx</span>     <span class="o">=</span> <span class="m">81</span>.27<span class="p">;</span>
-   <span class="nv">gaussian_radius</span> <span class="o">=</span> <span class="m">120</span><span class="p">;</span>
-   <span class="nb">type</span> <span class="o">=</span> <span class="o">[</span>
-      <span class="o">{</span>
-         <span class="nv">method</span> <span class="o">=</span> GAUSSIAN<span class="p">;</span>
-         <span class="nv">width</span>  <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-      <span class="o">}</span>
-   <span class="o">]</span><span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_NMEP_SMOOTH_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -530,14 +542,14 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
 
-<span class="nv">message_type</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;ADPSFC&quot;</span> <span class="o">]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MESSAGE_TYPE</span><span class="si">}</span>
 <span class="nv">sid_exc</span>        <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 <span class="nv">obs_thresh</span>     <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
 <span class="nv">obs_quality</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-<span class="nv">duplicate_flag</span> <span class="o">=</span> NONE<span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DUPLICATE_FLAG</span><span class="si">}</span>
 <span class="nv">obs_summary</span>    <span class="o">=</span> NONE<span class="p">;</span>
 <span class="nv">obs_perc_value</span> <span class="o">=</span> <span class="m">50</span><span class="p">;</span>
-<span class="nv">skip_const</span>     <span class="o">=</span> FALSE<span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_SKIP_CONST</span><span class="si">}</span>
 
 //
 // Observation error options
@@ -545,7 +557,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
 <span class="nv">obs_error</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">flag</span>             <span class="o">=</span> FALSE<span class="p">;</span>
+   <span class="si">${</span><span class="nv">METPLUS_OBS_ERROR_FLAG</span><span class="si">}</span>
    <span class="nv">dist_type</span>        <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">dist_parm</span>        <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">inst_bias_scale</span>  <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
@@ -568,8 +580,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // Ensemble bin sizes
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
-<span class="nv">ens_ssvar_bin_size</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
-<span class="nv">ens_phist_bin_size</span> <span class="o">=</span> <span class="m">0</span>.05<span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_ENS_SSVAR_BIN_SIZE</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">METPLUS_ENS_PHIST_BIN_SIZE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -589,8 +601,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    <span class="o">}</span>
 
    <span class="nv">time_interp_method</span> <span class="o">=</span> DW_MEAN<span class="p">;</span>
-   <span class="nv">day_interval</span>       <span class="o">=</span> <span class="m">31</span><span class="p">;</span>
-   <span class="nv">hour_interval</span>      <span class="o">=</span> <span class="m">6</span><span class="p">;</span>
+   <span class="si">${</span><span class="nv">METPLUS_CLIMO_MEAN_DAY_INTERVAL</span><span class="si">}</span>
+   <span class="si">${</span><span class="nv">METPLUS_CLIMO_MEAN_HOUR_INTERVAL</span><span class="si">}</span>
 <span class="o">}</span>
 
 <span class="nv">climo_stdev</span> <span class="o">=</span> climo_mean<span class="p">;</span>
@@ -601,12 +613,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
 //
-<span class="nv">climo_cdf</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">cdf_bins</span>    <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">center_bins</span> <span class="o">=</span> FALSE<span class="p">;</span>
-   <span class="nv">write_bins</span>  <span class="o">=</span> TRUE<span class="p">;</span>
-<span class="o">}</span>
-
+<span class="si">${</span><span class="nv">METPLUS_CLIMO_CDF_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -624,12 +631,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // Verification masking regions
 //
 <span class="nv">mask</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">grid</span>  <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;FULL&quot;</span> <span class="o">]</span><span class="p">;</span>
-   <span class="nv">poly</span>  <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;MET_BASE/poly/HMT_masks/huc4_1605_poly.nc&quot;</span>,
-             <span class="s2">&quot;MET_BASE/poly/HMT_masks/huc4_1803_poly.nc&quot;</span>,
-             <span class="s2">&quot;MET_BASE/poly/HMT_masks/huc4_1804_poly.nc&quot;</span>,
-             <span class="s2">&quot;MET_BASE/poly/HMT_masks/huc4_1805_poly.nc&quot;</span>,
-             <span class="s2">&quot;MET_BASE/poly/HMT_masks/huc4_1806_poly.nc&quot;</span> <span class="o">]</span><span class="p">;</span>
+   <span class="si">${</span><span class="nv">METPLUS_MASK_GRID</span><span class="si">}</span>
+   <span class="nv">poly</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">VERIF_MASK</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
    <span class="nv">sid</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">llpnt</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 <span class="o">}</span>
@@ -639,61 +642,28 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Confidence interval settings
 //
-<span class="nv">ci_alpha</span>  <span class="o">=</span> <span class="o">[</span> <span class="m">0</span>.05 <span class="o">]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_CI_ALPHA</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Interpolation methods
 //
-<span class="nv">interp</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">field</span>      <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
-   <span class="nv">shape</span>  <span class="o">=</span> SQUARE<span class="p">;</span>
-
-   <span class="nb">type</span> <span class="o">=</span> <span class="o">[</span>
-      <span class="o">{</span>
-         <span class="nv">method</span> <span class="o">=</span> NEAREST<span class="p">;</span>
-         <span class="nv">width</span>  <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-      <span class="o">}</span>
-   <span class="o">]</span><span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_INTERP_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Statistical output types
 //
-<span class="nv">output_flag</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">ecnt</span>  <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">rhist</span> <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">phist</span> <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">orank</span> <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">ssvar</span> <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">relp</span>  <span class="o">=</span> BOTH<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_OUTPUT_FLAG_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Ensemble product output types
 //
-<span class="nv">ensemble_flag</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">latlon</span>    <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">mean</span>      <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">stdev</span>     <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">minus</span>     <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">plus</span>      <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">min</span>       <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">max</span>       <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">range</span>     <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">vld_count</span> <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">frequency</span> <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">nep</span>       <span class="o">=</span> FALSE<span class="p">;</span>
-   <span class="nv">nmep</span>      <span class="o">=</span> FALSE<span class="p">;</span>
-   <span class="nv">rank</span>      <span class="o">=</span> TRUE<span class="p">;</span>
-   <span class="nv">weight</span>    <span class="o">=</span> FALSE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_ENSEMBLE_FLAG_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -708,7 +678,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 ////////////////////////////////////////////////////////////////////////////////
 
 <span class="nv">grid_weight_flag</span> <span class="o">=</span> NONE<span class="p">;</span>
-<span class="nv">output_prefix</span>    <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OUTPUT_PREFIX</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OUTPUT_PREFIX</span><span class="si">}</span>
 //version          <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -817,7 +787,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

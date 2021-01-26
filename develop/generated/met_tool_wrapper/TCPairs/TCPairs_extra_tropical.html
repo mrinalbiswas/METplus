@@ -340,6 +340,8 @@ with the -c option, i.e. -c /path/to/TCPairs_extra_tropical.conf</p>
 <span class="c1"># If no models are listed, then process all models in the input file(s).</span>
 <span class="nv">MODEL</span> <span class="o">=</span>
 
+<span class="c1">#TC_PAIRS_DESC =</span>
+
 <span class="c1"># List of storm ids of interest (space or comma separated) e.g.: AL112012, AL122012</span>
 <span class="c1"># If no storm ids are listed, then process all storm ids in the input file(s).</span>
 <span class="nv">TC_PAIRS_STORM_ID</span> <span class="o">=</span>
@@ -426,12 +428,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Models
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Description
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Storm identifiers
@@ -643,7 +645,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

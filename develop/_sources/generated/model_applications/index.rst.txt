@@ -16,6 +16,40 @@ Model Applications
 
 
 
+.. _sphx_glr_generated_model_applications_air_quality_and_comp:
+
+Air Quality and Composition
+---------------------------
+Data related to all areas of atmospheric composition, including ozone, smoke, dust, AOD and PM2.5
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="model_applications/air_quality_and_comp/EnsembleStat_fcstICAP_obsMODIS_aod.conf">
+
+.. only:: html
+
+ .. figure:: /generated/model_applications/air_quality_and_comp/images/thumb/sphx_glr_EnsembleStat_fcstICAP_obsMODIS_aod_thumb.png
+     :alt: EnsembleStat: Using Python Embedding for Aerosol Optical Depth
+
+     :ref:`sphx_glr_generated_model_applications_air_quality_and_comp_EnsembleStat_fcstICAP_obsMODIS_aod.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/model_applications/air_quality_and_comp/EnsembleStat_fcstICAP_obsMODIS_aod
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_generated_model_applications_climate:
 
 Climate
@@ -413,6 +447,27 @@ Lower resolution model configuration (>4km) usually producing forecasts out to 7
    :hidden:
 
    /generated/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="model_applications/medium_range/ UserScript_fcstGEFS _Difficulty_Index.conf">
+
+.. only:: html
+
+ .. figure:: /generated/model_applications/medium_range/images/thumb/sphx_glr_UserScript_fcstGEFS_Difficulty_Index_thumb.png
+     :alt: UserScript: Calculate the Difficulty Index
+
+     :ref:`sphx_glr_generated_model_applications_medium_range_UserScript_fcstGEFS_Difficulty_Index.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/model_applications/medium_range/UserScript_fcstGEFS_Difficulty_Index
 
 .. raw:: html
 

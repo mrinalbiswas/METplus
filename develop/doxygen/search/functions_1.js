@@ -9,6 +9,5 @@ var searchData=
   ['add_5foption',['add_option',['../classconfdoc_1_1docbase.html#a1190fb4f874f2b2ac43d1499f0b7621b',1,'confdoc.docbase.add_option()'],['../classconfdoc_1_1override.html#a32fc1e88b51183a7293f7e51838753ec',1,'confdoc.override.add_option()']]],
   ['add_5fother_5flists_5fto_5fc_5fdict',['add_other_lists_to_c_dict',['../classmetplus_1_1wrappers_1_1stat__analysis__wrapper_1_1StatAnalysisWrapper.html#ab3aa550a50c4ce6e8de815527f110965',1,'metplus::wrappers::stat_analysis_wrapper::StatAnalysisWrapper']]],
   ['add_5fsection',['add_section',['../classconfdoc_1_1docbase.html#aef242d6291a074ba67f1143dfcdb2afc',1,'confdoc.docbase.add_section()'],['../classconfdoc_1_1override.html#a2fa3ea3920d20b7c26528844c8e57151',1,'confdoc.override.add_section()']]],
-  ['add_5fto_5fdict',['add_to_dict',['../namespacemetplus_1_1util_1_1string__template__substitution.html#a6f744b36edb54fddcece168ce15dd6b3',1,'metplus::util::string_template_substitution']]],
-  ['apply_5fseries_5ffilters',['apply_series_filters',['../classmetplus_1_1wrappers_1_1series__by__lead__wrapper_1_1SeriesByLeadWrapper.html#ab17628683858d7e4679772db80b1ff0b',1,'metplus::wrappers::series_by_lead_wrapper::SeriesByLeadWrapper']]]
+  ['add_5fto_5fdict',['add_to_dict',['../namespacemetplus_1_1util_1_1string__template__substitution.html#a6f744b36edb54fddcece168ce15dd6b3',1,'metplus::util::string_template_substitution']]]
 ];

@@ -47,7 +47,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../index.html"/>
         <link rel="up" title="Release Guide" href="index.html"/>
-        <link rel="next" title="5. METploypy Release" href="metplotpy.html"/>
+        <link rel="next" title="5. METplotpy Release" href="metplotpy.html"/>
         <link rel="prev" title="3. METdatadb Release" href="metdatadb.html"/> 
 
   
@@ -136,11 +136,18 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#development-release-e-g-vx-y-betan-or-vx-y-rcn">4.3. Development release (e.g. vX.Y-betaN or vX.Y-rcN)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id5">4.3.1. Clone the Project Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-version-number-for-release">4.3.2. Update Version Number for Release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-the-documentation-on-the-web">4.3.3. Update the Documentation on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#review-release-notes">4.3.4. Review Release Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-release-branch">4.3.5. Create Release Branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-readme">4.3.6. Update README</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#push-release-branch-to-github">4.3.7. Push Release Branch to GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-release-on-github">4.3.8. Create Release on GitHub</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="metplotpy.html">5. METploypy Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metplotpy.html">5. METplotpy Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metviewer.html">6. METviewer Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metexpress.html">7. METexpress Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
@@ -285,6 +292,72 @@
 <pre class="literal-block">cd METcalcpy</pre>
 </div>
 </div>
+<div class="section" id="update-version-number-for-release">
+<h3><span class="section-number">4.3.2. </span>Update Version Number for Release<a class="headerlink" href="#update-version-number-for-release" title="Permalink to this headline">¶</a></h3>
+<p>Create the version number</p>
+<ul class="simple">
+<li><p>In the METcalcpy/docs/version file, assign the version to the ‘__version__’ keyword</p></li>
+<li><p>We are naming releases with X.Y.Z format even if Z is 0.</p></li>
+<li><p>In the develop branch, the version should match the upcoming release like X.Y.Z-betaN</p></li>
+</ul>
+</div>
+<div class="section" id="update-the-documentation-on-the-web">
+<h3><span class="section-number">4.3.3. </span>Update the Documentation on the Web<a class="headerlink" href="#update-the-documentation-on-the-web" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Coming soon…instructions to create documentation for the web</p></li>
+</ul>
+</div>
+<div class="section" id="review-release-notes">
+<h3><span class="section-number">4.3.4. </span>Review Release Notes<a class="headerlink" href="#review-release-notes" title="Permalink to this headline">¶</a></h3>
+<p>The release notes should have been updated for each development release, so
+there may not be any new notes to add. Review the release-notes.rst file
+located in the User’s Guide directory to ensure all of the text is accurate.
+If anything noteworthy has been changed since the release candidate (rc)
+was created, be sure to include that as well.</p>
+</div>
+<div class="section" id="create-release-branch">
+<h3><span class="section-number">4.3.5. </span>Create Release Branch<a class="headerlink" href="#create-release-branch" title="Permalink to this headline">¶</a></h3>
+<p>Create a branch from the develop branch that corresponds to the release and
+push the branch to GitHub. For release X.Y-betaN, run the following commands
+(for bash, use setenv for first command if using csh):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>release_branch=main_vX.Y-betaN
+
+cd METplus
+git checkout develop
+git pull
+git checkout -b $release_branch
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-readme">
+<h3><span class="section-number">4.3.6. </span>Update README<a class="headerlink" href="#update-readme" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Change ‘METcalcpy_develop’ to replace develop with the release branch name,
+i.e. ‘METcalcpy_main_v1.0’</p></li>
+<li><p>Change ‘branch=develop’ to replace develop with the release branch name,
+i.e. ‘branch=main_v4.0’</p></li>
+</ul>
+</div>
+<div class="section" id="push-release-branch-to-github">
+<h3><span class="section-number">4.3.7. </span>Push Release Branch to GitHub<a class="headerlink" href="#push-release-branch-to-github" title="Permalink to this headline">¶</a></h3>
+<p>Push the release branch to GitHub:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>release_branch=main_vX.Y
+
+git push origin $release_branch
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-release-on-github">
+<h3><span class="section-number">4.3.8. </span>Create Release on GitHub<a class="headerlink" href="#create-release-on-github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
+<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
+<li><p>Set branch value to main_vX.Y</p></li>
+<li><p>Choose release name (i.e. METcalcpy-X.Y.Z, METcalcpy-X.Y.Z-betaN or METcalcpy-X.Y.Z)</p></li>
+<li><p>Add release notes from User’s Guide to notes section</p></li>
+<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -298,7 +371,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="metplotpy.html" class="btn btn-neutral float-right" title="5. METploypy Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="metplotpy.html" class="btn btn-neutral float-right" title="5. METplotpy Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="metdatadb.html" class="btn btn-neutral" title="3. METdatadb Release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -311,7 +384,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

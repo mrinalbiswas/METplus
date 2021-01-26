@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.2.5. Point2Grid: Calculate Practically Perfect Probabilities &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.3.5. Point2Grid: Calculate Practically Perfect Probabilities &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html"/>
-        <link rel="prev" title="5.2.2.4. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html"/> 
+        <link rel="next" title="5.2.3.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html"/>
+        <link rel="prev" title="5.2.3.4. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.2.5. </span>Point2Grid: Calculate Practically Perfect Probabilities</li>
+      <li><span class="section-number">5.2.3.5. </span>Point2Grid: Calculate Practically Perfect Probabilities</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="point2grid-calculate-practically-perfect-probabilities">
-<span id="sphx-glr-generated-model-applications-convection-allowing-models-point2grid-obslsr-obsonly-practicallyperfect-py"></span><h1><span class="section-number">5.2.2.5. </span>Point2Grid: Calculate Practically Perfect Probabilities<a class="headerlink" href="#point2grid-calculate-practically-perfect-probabilities" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-convection-allowing-models-point2grid-obslsr-obsonly-practicallyperfect-py"></span><h1><span class="section-number">5.2.3.5. </span>Point2Grid: Calculate Practically Perfect Probabilities<a class="headerlink" href="#point2grid-calculate-practically-perfect-probabilities" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/
 convection_allowing_models/
 Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.conf</p>
@@ -402,17 +403,19 @@ with the -c option, i.e. -c parm/use_cases/model_applications/convection_allowin
 <span class="o">[</span>dir<span class="o">]</span>
 
 <span class="c1"># Input/Output directories can be left empty if the corresponding template contains the full path to the files</span>
-<span class="nv">ASCII2NC_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect/ 
-<span class="nv">POINT2GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect/ 
-<span class="nv">POINT2GRID_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect/ 
+<span class="nv">ASCII2NC_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect
+<span class="nv">POINT2GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect
+<span class="nv">POINT2GRID_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect
 <span class="nv">OBS_REGRID_DATA_PLANE_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>POINT2GRID_OUTPUT_DIR<span class="o">}</span>
 <span class="nv">OBS_REGRID_DATA_PLANE_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>POINT2GRID_OUTPUT_DIR<span class="o">}</span>
+
+<span class="nv">CONFIG_DIR</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/convection_allowing_models/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect
 
 <span class="c1"># End of [dir] section and start of [filename_templates] section</span>
 <span class="o">[</span>filename_templates<span class="o">]</span>
 
 <span class="c1"># Template to look for input to ASCII2NC input storm reports </span>
-<span class="nv">ASCII2NC_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="s2">&quot;{PARM_BASE}/use_cases/model_applications/convection_allowing_models/read_ascii_storm.py {INPUT_BASE}/model_applications/convection_allowing_models/practically_perfect/200205_rpts_filtered.csv&quot;</span>
+<span class="nv">ASCII2NC_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="s2">&quot;{CONFIG_DIR}/read_ascii_storm.py {ASCII2NC_INPUT_DIR}/200205_rpts_filtered.csv&quot;</span>
 <span class="nv">ASCII2NC_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/convection_allowing_models/practically_perfect/StormReps.<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d%H<span class="o">}</span>.nc
 
 <span class="c1"># Templates to use for input to Point2Grid from the output of ASCII2NC and output from Point2Grid</span>
@@ -485,17 +488,117 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/Point2Grid/Point2Grid.py
 parm/use_cases/met_tool_wrapper/RegridDataPlane/RegridDataPlane.py</p>
 </div>
+<div class="section" id="python-embedding">
+<h2>Python Embedding<a class="headerlink" href="#python-embedding" title="Permalink to this headline">¶</a></h2>
+<p>This use case uses a Python embedding script to read input data</p>
+<p>parm/use_cases/model_applications/convection_allowing_models/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect/read_ascii_storm.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">ntpath</span>
+
+<span class="c1">########################################################################</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python Script:</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+   <span class="c1">##</span>
+   <span class="c1">##  input file specified on the command line</span>
+   <span class="c1">##  load the data into the numpy array</span>
+   <span class="c1">##</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="c1"># Read the input file as the first argument</span>
+    <span class="n">input_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input File:</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">input_file</span><span class="p">))</span>
+
+        <span class="c1"># Read and format the input 11-column observations:</span>
+        <span class="c1">#   (1)  string:  Message_Type</span>
+        <span class="c1">#   (2)  string:  Station_ID</span>
+        <span class="c1">#   (3)  string:  Valid_Time(YYYYMMDD_HHMMSS)</span>
+        <span class="c1">#   (4)  numeric: Lat(Deg North)</span>
+        <span class="c1">#   (5)  numeric: Lon(Deg East)</span>
+        <span class="c1">#   (6)  numeric: Elevation(msl)</span>
+        <span class="c1">#   (7)  string:  Var_Name(or GRIB_Code)</span>
+        <span class="c1">#   (8)  numeric: Level</span>
+        <span class="c1">#   (9)  numeric: Height(msl or agl)</span>
+        <span class="c1">#   (10) string:  QC_String</span>
+        <span class="c1">#   (11) numeric: Observation_Value</span>
+
+        <span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Message_Type&quot;</span><span class="p">,</span><span class="s2">&quot;Station_ID&quot;</span><span class="p">,</span><span class="s2">&quot;Valid_Time&quot;</span><span class="p">,</span><span class="s2">&quot;Lat&quot;</span><span class="p">,</span><span class="s2">&quot;Lon&quot;</span><span class="p">,</span><span class="s2">&quot;Elevation&quot;</span><span class="p">,</span><span class="s2">&quot;Var_Name&quot;</span><span class="p">,</span><span class="s2">&quot;Level&quot;</span><span class="p">,</span><span class="s2">&quot;Height&quot;</span><span class="p">,</span><span class="s2">&quot;QC_String&quot;</span><span class="p">,</span><span class="s2">&quot;Observation_Value&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Create a blank dataframe based on the 11 column standard</span>
+        <span class="n">point_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Read in the Storm report, 8 columns not matching the 11 column standard</span>
+        <span class="n">temp_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Fscale&#39;</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="p">,</span> <span class="s1">&#39;County&#39;</span><span class="p">,</span><span class="s1">&#39;Stat&#39;</span><span class="p">,</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lon&#39;</span><span class="p">,</span> <span class="s1">&#39;Comment&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span> <span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1">#Strip out any rows in the middle that are actually header rows</span>
+        <span class="c1">#Allows for concatenating storm reports together</span>
+        <span class="n">temp_data</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Time&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;Time&quot;</span><span class="p">]</span>
+         
+        <span class="c1">#Change some columns to floats and ints</span>
+        <span class="n">temp_data</span><span class="p">[[</span><span class="s2">&quot;Lat&quot;</span><span class="p">,</span><span class="s2">&quot;Lon&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[[</span><span class="s2">&quot;Lat&quot;</span><span class="p">,</span><span class="s2">&quot;Lon&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">)</span>
+
+        <span class="c1">#Assign approprite columns to point_frame leaving missing as empty strings </span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Lat&quot;</span><span class="p">]</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Lon&quot;</span><span class="p">]</span>
+        <span class="c1">#point_frame[&quot;Station_ID&quot;] = temp_data[&quot;County&quot;] </span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Station_ID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Var_Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Fscale&quot;</span> 
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Message_Type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;StormReport&quot;</span>
+
+        <span class="c1">#Assign 0.0 values to numeric point_frame columns that we don&#39;t have in the csv file </span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Elevation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Height&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="c1">#Change Comments into a &quot;QC&quot; string Tornado=1, Hail=2, Wind=3, Other=4</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;QC_String&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Comment&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;TORNADO&#39;</span><span class="p">)</span>
+        <span class="n">point_frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span><span class="s2">&quot;QC_String&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> 
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Comment&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;HAIL&#39;</span><span class="p">)</span>
+        <span class="n">point_frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span><span class="s2">&quot;QC_String&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span> 
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Comment&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;WIND&#39;</span><span class="p">)</span>
+        <span class="n">point_frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span><span class="s2">&quot;QC_String&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span> 
+
+        <span class="c1">#Time is HHMM in the csv file so we need to use a piece of the filename and </span>
+        <span class="c1">#this value to create a valid date string</span>
+        <span class="n">file_without_path</span> <span class="o">=</span> <span class="n">ntpath</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+        <span class="n">year_month_day</span> <span class="o">=</span> <span class="s2">&quot;20&quot;</span><span class="o">+</span><span class="n">file_without_path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Valid_Time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">year_month_day</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">temp_data</span><span class="p">[</span><span class="s2">&quot;Time&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;00&quot;</span>
+
+        <span class="c1">#Currently we are only interested in the fact that we have a report at that locaton</span>
+        <span class="c1">#and not its actual value so all values are 1.0</span>
+        <span class="n">point_frame</span><span class="p">[</span><span class="s2">&quot;Observation_Value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+        <span class="c1">#Ascii2nc wants the final values in a list</span>
+        <span class="n">point_data</span> <span class="o">=</span> <span class="n">point_frame</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Length:</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">point_data</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Type:</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">point_data</span><span class="p">)))</span>
+    <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t find the input file&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: read_ascii_storm.py -&gt; Must specify exactly one input file.&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">########################################################################</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="running-metplus">
 <h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.conf then a user-specific system configuration file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/convection_allowing_models/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.conf -c /path/to/user_system.conf
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">master_metplus</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">parm</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">model_applications</span><span class="o">/</span><span class="n">convection_allowing_models</span><span class="o">/</span><span class="n">Point2Grid_obsLSR_ObsOnly_PracticallyPerfect</span><span class="o">.</span><span class="n">conf</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">user_system</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 </li>
 <li><p>Modifying the configurations in parm/metplus_config, then passing in EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.conf:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/convection_allowing_models/Point2Grid_obsLSR_ObsOnly_PracticallyPerfect.conf
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">master_metplus</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">METplus</span><span class="o">/</span><span class="n">parm</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">model_applications</span><span class="o">/</span><span class="n">convection_allowing_models</span><span class="o">/</span><span class="n">Point2Grid_obsLSR_ObsOnly_PracticallyPerfect</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 </li>
@@ -507,10 +610,10 @@ parm/use_cases/met_tool_wrapper/RegridDataPlane/RegridDataPlane.py</p>
 <li><p><strong>MET_INSTALL_DIR</strong> - Path to location where MET is installed locally</p></li>
 </ul>
 <p>Example User Configuration File:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>dir<span class="o">]</span>
-<span class="nv">INPUT_BASE</span> <span class="o">=</span> /path/to/sample/input/data
-<span class="nv">OUTPUT_BASE</span> <span class="o">=</span> /path/to/output/dir
-<span class="nv">MET_INSTALL_DIR</span> <span class="o">=</span> /path/to/met-X.Y
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">dir</span><span class="p">]</span>
+<span class="n">INPUT_BASE</span> <span class="o">=</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sample</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">data</span>
+<span class="n">OUTPUT_BASE</span> <span class="o">=</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="nb">dir</span>
+<span class="n">MET_INSTALL_DIR</span> <span class="o">=</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">met</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span>
 </pre></div>
 </div>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
@@ -518,7 +621,7 @@ parm/use_cases/met_tool_wrapper/RegridDataPlane/RegridDataPlane.py</p>
 <div class="section" id="expected-output">
 <h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span><span class="p">:</span> <span class="n">METplus</span> <span class="n">has</span> <span class="n">successfully</span> <span class="n">finished</span> <span class="n">running</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Refer to the value set for <strong>OUTPUT_BASE</strong> to find where the output data was generated.
@@ -572,10 +675,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" class="btn btn-neutral float-right" title="5.2.2.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="EnsembleStat_fcstHRRR_fcstOnly_SurrogateSevere.html" class="btn btn-neutral float-right" title="5.2.3.6. Surrogate Severe Calculation: PCPCombine, EnsembleStat, and RegridDataPlane" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" class="btn btn-neutral" title="5.2.2.4. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstHRRR_obsPracPerfect_SurrogateSevereProb.html" class="btn btn-neutral" title="5.2.3.4. Grid-Stat: Surrogate Severe and Practically Perfect Probabilistic Evaluation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -585,7 +688,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

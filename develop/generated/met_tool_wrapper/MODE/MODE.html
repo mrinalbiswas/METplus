@@ -346,6 +346,8 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/MODE/MODE.conf</p>
 <span class="c1"># Name to identify observation data in output</span>
 <span class="nv">OBTYPE</span> <span class="o">=</span> WRF
 
+<span class="c1">#MODE_DESC =</span>
+
 <span class="c1"># turn on quilting</span>
 <span class="nv">MODE_QUILT</span> <span class="o">=</span> True
 
@@ -454,29 +456,24 @@ These variables are referenced in the MET configuration file.</p>
 //
 // Output model name to be written
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Output description to be written
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Output observation <span class="nb">type</span> to be written
 //
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Verification grid
 //
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -812,7 +809,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

@@ -438,7 +438,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/TCStat/TCStat.conf</
 <h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>///////////////////////////////////////////////////////////////////////////////
 //
 // Default TCStat configuration file
 //
@@ -464,7 +464,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Stratify by the DESC column.
 //
-<span class="si">${</span><span class="nv">DESC</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Stratify by the STORM_ID column.
@@ -671,7 +671,7 @@ and will contain the following files:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

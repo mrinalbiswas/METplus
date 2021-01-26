@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ush',['ush',['../namespaceush.html',1,'']]]
+  ['validate_5fconfig',['validate_config',['../namespacevalidate__config.html',1,'']]]
 ];

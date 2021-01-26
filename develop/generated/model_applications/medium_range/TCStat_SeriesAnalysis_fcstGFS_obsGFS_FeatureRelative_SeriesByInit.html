@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.5.6. Multi_Tool: Feature Relative by Init &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.6.6. Multi_Tool: Feature Relative by Init &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.5.7. Point-Stat: Standard Verification for CONUS Surface" href="PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.html"/>
-        <link rel="prev" title="5.2.5.5. Grid-Stat: Standard Verification of Surface Fields" href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html"/> 
+        <link rel="next" title="5.2.6.7. UserScript: Calculate the Difficulty Index" href="UserScript_fcstGEFS_Difficulty_Index.html"/>
+        <link rel="prev" title="5.2.6.5. Grid-Stat: Standard Verification of Surface Fields" href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.5.6. </span>Multi_Tool: Feature Relative by Init</li>
+      <li><span class="section-number">5.2.6.6. </span>Multi_Tool: Feature Relative by Init</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="multi-tool-feature-relative-by-init">
-<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbyinit-py"></span><h1><span class="section-number">5.2.5.6. </span>Multi_Tool: Feature Relative by Init<a class="headerlink" href="#multi-tool-feature-relative-by-init" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbyinit-py"></span><h1><span class="section-number">5.2.6.6. </span>Multi_Tool: Feature Relative by Init<a class="headerlink" href="#multi-tool-feature-relative-by-init" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS
 _obsGFS_FeatureRelative
 _SeriesByInit.conf</p>
@@ -309,10 +310,11 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># interest.</span>
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> processes
 <span class="c1"># Configuration files</span>
-<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/medium_range/TCPairsETCConfig
+<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/met_config/TCPairsConfig_wrapped
 
-<span class="nv">SERIES_ANALYSIS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/medium_range/SeriesAnalysisConfig
-<span class="nv">PROCESS_LIST</span> <span class="o">=</span> TCPairs, TCStat, ExtractTiles, TCStat<span class="o">(</span>for_series_analysis<span class="o">)</span>, SeriesByInit
+<span class="nv">SERIES_ANALYSIS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/met_config/SeriesAnalysisConfig_wrapped
+
+<span class="nv">PROCESS_LIST</span> <span class="o">=</span> TCPairs, TCStat, ExtractTiles, TCStat<span class="o">(</span>for_series_analysis<span class="o">)</span>, SeriesAnalysis
 
 <span class="c1"># The init time begin and end times, increment</span>
 <span class="nv">LOOP_BY</span> <span class="o">=</span> INIT
@@ -482,9 +484,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># Set to no if you want to override existing files</span>
 <span class="nv">EXTRACT_TILES_SKIP_IF_OUTPUT_EXISTS</span> <span class="o">=</span> yes
 
-<span class="nv">FCST_EXTRACT_TILES_PREFIX</span> <span class="o">=</span> FCST_TILE_F
-<span class="nv">OBS_EXTRACT_TILES_PREFIX</span> <span class="o">=</span> ANLY_TILE_F
-
 <span class="c1"># Constants used in creating the tile grid, used by extract tiles</span>
 <span class="nv">EXTRACT_TILES_NLAT</span> <span class="o">=</span> <span class="m">60</span>
 <span class="nv">EXTRACT_TILES_NLON</span> <span class="o">=</span> <span class="m">60</span>
@@ -519,6 +518,10 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">BOTH_VAR1_NAME</span> <span class="o">=</span> TMP
 <span class="nv">BOTH_VAR1_LEVELS</span> <span class="o">=</span> Z2
 
+<span class="nv">SERIES_ANALYSIS_RUNTIME_FREQ</span> <span class="o">=</span> RUN_ONCE_PER_INIT_OR_VALID
+
+<span class="nv">SERIES_ANALYSIS_RUN_ONCE_PER_STORM_ID</span> <span class="o">=</span> True
+
 <span class="c1"># PLOTTING Relevant to series analysis plots.</span>
 <span class="c1"># By default, background map is turned off. Set</span>
 <span class="c1"># to no to turn of plotting of background map.</span>
@@ -526,17 +529,30 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 
 <span class="c1"># set the regrid dictionary item to_grid in the SeriesAnalysis MET config file</span>
 <span class="nv">SERIES_ANALYSIS_REGRID_TO_GRID</span> <span class="o">=</span> FCST
+<span class="nv">SERIES_ANALYSIS_REGRID_METHOD</span> <span class="o">=</span> FORCE
+<span class="c1">#SERIES_ANALYSIS_REGRID_WIDTH =</span>
+<span class="c1">#SERIES_ANALYSIS_REGRID_VLD_THRESH =</span>
+<span class="c1">#SERIES_ANALYSIS_REGRID_SHAPE =</span>
 
 <span class="c1">## NOTE: &quot;TOTAL&quot; is a REQUIRED cnt statistic used by the series analysis scripts</span>
 <span class="nv">SERIES_ANALYSIS_STAT_LIST</span> <span class="o">=</span> TOTAL, FBAR, OBAR, ME
+
+<span class="nv">SERIES_ANALYSIS_BLOCK_SIZE</span> <span class="o">=</span> <span class="m">4000</span>
+
+<span class="c1"># set to True to add the -paired flag to the SeriesAnalysis command</span>
+<span class="nv">SERIES_ANALYSIS_IS_PAIRED</span> <span class="o">=</span> True
 
 <span class="c1"># If True/yes, run plot_data_plane on output from Series-Analysis to generate</span>
 <span class="c1"># images for each stat item listed in SERIES_ANALYSIS_STAT_LIST</span>
 <span class="nv">SERIES_ANALYSIS_GENERATE_PLOTS</span> <span class="o">=</span> yes
 
+<span class="c1"># If True/yes, run convert on output from Series-Analysis to generate</span>
+<span class="c1"># a gif using images in groups of name/level/stat</span>
+<span class="nv">SERIES_ANALYSIS_GENERATE_ANIMATIONS</span> <span class="o">=</span> no
+
 <span class="c1"># Title to use when plotting output from Series-Analysis</span>
 <span class="c1"># Only used if SERIES_ANALYSIS_GENERATE_PLOTS is True/yes</span>
-<span class="nv">PLOT_DATA_PLANE_TITLE</span> <span class="o">=</span> <span class="o">{</span>MODEL<span class="o">}</span> Init <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span> Storm <span class="o">{</span>storm_id<span class="o">}</span> <span class="o">{</span>num_leads<span class="o">}</span> Forecasts <span class="o">({</span>fcst_beg<span class="o">}</span> to <span class="o">{</span>fcst_end<span class="o">})</span> <span class="o">{</span>stat<span class="o">}</span> <span class="k">for</span> <span class="o">{</span>fcst_name<span class="o">}</span>, <span class="o">{</span>fcst_level<span class="o">}</span>
+<span class="nv">PLOT_DATA_PLANE_TITLE</span> <span class="o">=</span> <span class="o">{</span>MODEL<span class="o">}</span> Init <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span> Storm <span class="o">{</span>storm_id<span class="o">}</span> <span class="o">{</span>num_leads<span class="o">}</span> Forecasts <span class="o">(</span>F<span class="o">{</span>fcst_beg<span class="o">}</span> to F<span class="o">{</span>fcst_end<span class="o">})</span> <span class="o">{</span>stat<span class="o">}</span> <span class="k">for</span> <span class="o">{</span>fcst_name<span class="o">}</span>, <span class="o">{</span>fcst_level<span class="o">}</span>
 
 
 <span class="c1">#</span>
@@ -550,15 +566,27 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 
 <span class="nv">TC_STAT_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/filter_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>.tcst
 
-<span class="nv">EXTRACT_TILES_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
+<span class="nv">EXTRACT_TILES_TC_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
 
-<span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.grb2
+<span class="nv">FCST_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>.grb2
 <span class="nv">OBS_EXTRACT_TILES_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.grb2
 
-<span class="nv">FCST_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/<span class="o">{</span>FCST_EXTRACT_TILES_PREFIX<span class="o">}{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%HHH<span class="o">}</span>.nc
-<span class="nv">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/<span class="o">{</span>OBS_EXTRACT_TILES_PREFIX<span class="o">}{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%H<span class="o">}</span>00_000.nc
+<span class="nv">FCST_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/FCST_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>.nc
+<span class="nv">OBS_EXTRACT_TILES_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/OBS_TILE_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>_gfs_4_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%H<span class="o">}</span>00_<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>.nc
 
-<span class="nv">SERIES_ANALYSIS_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
+<span class="nv">FCST_SERIES_ANALYSIS_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>FCST_EXTRACT_TILES_OUTPUT_TEMPLATE<span class="o">}</span>
+<span class="nv">OBS_SERIES_ANALYSIS_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>OBS_EXTRACT_TILES_OUTPUT_TEMPLATE<span class="o">}</span>
+
+<span class="nv">SERIES_ANALYSIS_TC_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_TEMPLATE<span class="o">}</span>
+
+<span class="c1"># Template to look for climatology mean input to SeriesAnalysis relative to SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span>
+<span class="c1"># Not used in this example</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</span> <span class="o">=</span>
+
+<span class="c1"># Template to look for climatology standard deviation input to SeriesAnalysis relative to SERIES_ANALYSIS_CLIMO_STDEV_INPUT_DIR</span>
+<span class="c1"># Not used in this example</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_TEMPLATE</span> <span class="o">=</span>
+
 <span class="nv">SERIES_ANALYSIS_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d_%H<span class="o">}</span>/<span class="o">{</span>storm_id<span class="o">}</span>/series_<span class="o">{</span>fcst_name<span class="o">}</span>_<span class="o">{</span>fcst_level<span class="o">}</span>.nc
 <span class="c1">#</span>
 <span class="c1">#  DIRECTORIES</span>
@@ -572,16 +600,25 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">TC_STAT_LOOKIN_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_PAIRS_OUTPUT_DIR<span class="o">}</span>
 <span class="nv">TC_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
 
-<span class="nv">EXTRACT_TILES_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_DIR<span class="o">}</span>
+<span class="nv">EXTRACT_TILES_TC_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>TC_STAT_OUTPUT_DIR<span class="o">}</span>
 
 <span class="nv">FCST_EXTRACT_TILES_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
 <span class="nv">OBS_EXTRACT_TILES_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/medium_range/reduced_model_data
 <span class="nv">EXTRACT_TILES_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/extract_tiles
 
+<span class="nv">FCST_SERIES_ANALYSIS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
+<span class="nv">OBS_SERIES_ANALYSIS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
+<span class="nv">SERIES_ANALYSIS_TC_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>SERIES_ANALYSIS_OUTPUT_DIR<span class="o">}</span>
+
+<span class="c1"># directory containing climatology mean input to SeriesAnalysis</span>
+<span class="c1"># Not used in this example</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span> <span class="o">=</span>
+
+<span class="c1"># directory containing climatology standard deviation input to SeriesAnalysis</span>
+<span class="c1"># Not used in this example</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_DIR</span> <span class="o">=</span>
+
 <span class="nv">SERIES_ANALYSIS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/series_analysis_init
-<span class="nv">SERIES_ANALYSIS_TILE_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>EXTRACT_TILES_OUTPUT_DIR<span class="o">}</span>
-<span class="nv">SERIES_ANALYSIS_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>SERIES_ANALYSIS_OUTPUT_DIR<span class="o">}</span>
-<span class="nv">SERIES_ANALYSIS_FILTERED_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/series_init_filtered
 </pre></div>
 </div>
 </div>
@@ -603,12 +640,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Models
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Description
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Storm identifiers
@@ -689,6 +726,10 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">oper_technique</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;CARQ&quot;</span> <span class="o">]</span><span class="p">;</span>
 <span class="nv">oper_baseline</span>  <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 
+//
+// Specify the datasets to be searched <span class="k">for</span> analysis tracks <span class="o">(</span>NONE, ADECK, BDECK,
+// or BOTH<span class="o">)</span>.
+//
 <span class="nv">anly_track</span> <span class="o">=</span> BDECK<span class="p">;</span>
 
 //
@@ -722,203 +763,6 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
 //
-// Default TCStat configuration file
-//
-////////////////////////////////////////////////////////////////////////////////
-
-//
-// The parameters listed below are used to filter the TC-STAT data down to the
-// desired subset of lines over which statistics are to be computed.  Only
-// those lines which meet ALL of the criteria specified will be retained.
-//
-// The settings that are common to all <span class="nb">jobs</span> may be specified once at the top
-// level.  If no selection is listed <span class="k">for</span> a parameter, that parameter will not
-// be used <span class="k">for</span> filtering.  If multiple selections are listed <span class="k">for</span> a parameter,
-// the analyses will be performed on their union.
-//
-
-//
-// Stratify by the AMODEL or BMODEL columns.
-//
-<span class="nv">amodel</span> <span class="o">=</span> <span class="si">${</span><span class="nv">AMODEL</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">bmodel</span> <span class="o">=</span> <span class="si">${</span><span class="nv">BMODEL</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the DESC column.
-//
-<span class="nv">desc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">DESC</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the STORM_ID column.
-//
-<span class="nv">storm_id</span> <span class="o">=</span> <span class="si">${</span><span class="nv">STORM_ID</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the BASIN column.
-// May add using the <span class="s2">&quot;-basin&quot;</span> job <span class="nb">command</span> option.
-//
-<span class="nv">basin</span> <span class="o">=</span> <span class="si">${</span><span class="nv">BASIN</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the CYCLONE column.
-// May add using the <span class="s2">&quot;-cyclone&quot;</span> job <span class="nb">command</span> option.
-//
-<span class="nv">cyclone</span> <span class="o">=</span> <span class="si">${</span><span class="nv">CYCLONE</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the STORM_NAME column.
-// May add using the <span class="s2">&quot;-storm_name&quot;</span> job <span class="nb">command</span> option.
-//
-<span class="nv">storm_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">STORM_NAME</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the INIT times.
-// Model initialization <span class="nb">time</span> windows to include or exclude
-// May modify using the <span class="s2">&quot;-init_beg&quot;</span>, <span class="s2">&quot;-init_end&quot;</span>, <span class="s2">&quot;-init_inc&quot;</span>,
-// and <span class="s2">&quot;-init_exc&quot;</span> job <span class="nb">command</span> options.
-//
-<span class="nv">init_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">INIT_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">init_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">INIT_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">init_inc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_INCLUDE</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_exc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_EXCLUDE</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the VALID times.
-//
-<span class="nv">valid_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">VALID_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">valid_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">VALID_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">valid_inc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_INCLUDE</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_exc</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_EXCLUDE</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the initialization and valid hours and lead time.
-//
-<span class="nv">init_hour</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_HOUR</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_hour</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_HOUR</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">lead</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LEAD</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Select tracks which contain all required lead times.
-//
-<span class="nv">lead_req</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LEAD_REQ</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the INIT_MASK and VALID_MASK columns.
-//
-<span class="nv">init_mask</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_MASK</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">valid_mask</span> <span class="o">=</span> <span class="si">${</span><span class="nv">VALID_MASK</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the LINE_TYPE column.
-//
-<span class="nv">line_type</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-
-//
-// Stratify by checking the watch/warning status <span class="k">for</span> each track point
-// common to both the ADECK and BDECK tracks.  If the watch/warning status
-// of any of the track points appears in the list, retain the entire track.
-//
-<span class="nv">track_watch_warn</span> <span class="o">=</span> <span class="si">${</span><span class="nv">TRACK_WATCH_WARN</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by applying thresholds to numeric data columns.
-//
-<span class="nv">column_thresh_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_THRESH_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">column_thresh_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_THRESH_VAL</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by performing string matching on non-numeric data columns.
-//
-<span class="nv">column_str_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_STR_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">column_str_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">COLUMN_STR_VAL</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Similar to the column_thresh options above
-//
-<span class="nv">init_thresh_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_THRESH_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_thresh_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_THRESH_VAL</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Similar to the column_str options above
-//
-<span class="nv">init_str_name</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_STR_NAME</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">init_str_val</span> <span class="o">=</span> <span class="si">${</span><span class="nv">INIT_STR_VAL</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Stratify by the ADECK and BDECK distances to land.
-//
-<span class="nv">water_only</span> <span class="o">=</span> <span class="si">${</span><span class="nv">WATER_ONLY</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Specify whether only those track points <span class="k">for</span> which rapid intensification
-// or weakening of the maximum wind speed occurred in the previous <span class="nb">time</span>
-// step should be retained.
-//
-<span class="nv">rirw</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">track</span>  <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">adeck</span> <span class="o">=</span> <span class="o">{</span>
-      <span class="nb">time</span>   <span class="o">=</span> <span class="s2">&quot;24&quot;</span><span class="p">;</span>
-      <span class="nv">exact</span>  <span class="o">=</span> TRUE<span class="p">;</span>
-      <span class="nv">thresh</span> <span class="o">=</span> &gt;<span class="o">=</span><span class="m">30</span>.0<span class="p">;</span>
-   <span class="o">}</span>
-   <span class="nv">bdeck</span> <span class="o">=</span> adeck<span class="p">;</span>
-<span class="o">}</span>
-
-//
-// Specify whether only those track points occurring near landfall should be
-// retained, and define the landfall retention window in HH<span class="o">[</span>MMSS<span class="o">]</span> format
-// around the landfall time.
-//
-<span class="nv">landfall</span> <span class="o">=</span> <span class="si">${</span><span class="nv">LANDFALL</span><span class="si">}</span><span class="p">;</span>
-<span class="nv">landfall_beg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LANDFALL_BEG</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">landfall_end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LANDFALL_END</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-
-
-//
-// Specify whether only those track points common to both the ADECK and BDECK
-// tracks should be retained.  May modify using the <span class="s2">&quot;-match_points&quot;</span> job <span class="nb">command</span>
-// option.
-//
-<span class="nv">match_points</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MATCH_POINTS</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Specify whether only those cases common to all models in the dataset should
-// be retained.
-//
-<span class="nv">event_equal</span> <span class="o">=</span> FALSE<span class="p">;</span>
-
-//
-// Specify lead <span class="nb">times</span> that must be present <span class="k">for</span> a track to be included in the
-// event equalization logic.
-//
-<span class="nv">event_equal_lead</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-
-//
-// Apply polyline masking logic to the location of the ADECK track at the
-// initialization time.
-//
-<span class="nv">out_init_mask</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-
-//
-// Apply polyline masking logic to the location of the ADECK track at the
-// valid time.
-//
-<span class="nv">out_valid_mask</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-
-//
-// Array of TCStat analysis <span class="nb">jobs</span> to be performed on the filtered data
-//
-<span class="nb">jobs</span> <span class="o">=</span> <span class="si">${</span><span class="nv">JOBS</span><span class="si">}</span><span class="p">;</span>
-
-//
-// Indicate a version number <span class="k">for</span> the contents of this configuration file.
-// The value should generally not be modified.
-//
-//version <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
-//
 // Series-Analysis configuration file.
 //
 // For additional information, see the MET_BASE/config/README file.
@@ -928,53 +772,48 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Output model name to be written
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;WRF&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Output description to be written
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Output observation <span class="nb">type</span> to be written
 //
-<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;ANALYS&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_OBTYPE</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //
 // Verification grid
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;field&quot;</span> entry
 //
-<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">to_grid</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">REGRID_TO_GRID</span><span class="si">}</span><span class="p">;</span>
-   <span class="nv">method</span>     <span class="o">=</span> FORCE<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
-   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
-   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-<span class="o">}</span>
+<span class="si">${</span><span class="nv">METPLUS_REGRID_DICT</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 <span class="nv">censor_thresh</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 <span class="nv">censor_val</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-<span class="nv">cat_thresh</span>  <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
-<span class="nv">cnt_thresh</span>  <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
-<span class="nv">cnt_logic</span>   <span class="o">=</span> UNION<span class="p">;</span>
+//cat_thresh    <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">CAT_THRESH</span><span class="si">}</span>
+<span class="nv">cnt_thresh</span>    <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
+<span class="nv">cnt_logic</span>     <span class="o">=</span> UNION<span class="p">;</span>
 
 //
 // Forecast and observation fields to be verified
 //
 <span class="nv">fcst</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="si">${</span><span class="nv">FCST_FILE_TYPE</span><span class="si">}</span>
 
-   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="nv">name</span>  <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
-        <span class="nv">level</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LEVEL</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span>
-      <span class="o">}</span>
-   <span class="o">]</span><span class="p">;</span>
-
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">FCST_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
 <span class="o">}</span>
-<span class="nv">obs</span> <span class="o">=</span> fcst<span class="p">;</span>
+<span class="nv">obs</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="si">${</span><span class="nv">OBS_FILE_TYPE</span><span class="si">}</span>
+
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">OBS_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -983,7 +822,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 <span class="nv">climo_mean</span> <span class="o">=</span> <span class="o">{</span>
 
-   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">CLIMO_MEAN_FILE</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
    <span class="nv">field</span>     <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 
    <span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
@@ -1000,7 +839,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 
 <span class="nv">climo_stdev</span> <span class="o">=</span> climo_mean<span class="p">;</span>
 <span class="nv">climo_stdev</span> <span class="o">=</span> <span class="o">{</span>
-   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">CLIMO_STDEV_FILE</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
 <span class="o">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1032,12 +871,14 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // Number of grid points to be processed concurrently.  Set smaller to use
 // less memory but increase the number of passes through the data.
 //
-<span class="nv">block_size</span> <span class="o">=</span> <span class="m">4000</span><span class="p">;</span>
+//block_size <span class="o">=</span> <span class="m">1024</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">BLOCK_SIZE</span><span class="si">}</span>
 
 //
 // Ratio of valid matched pairs to compute statistics <span class="k">for</span> a grid point
 //
-<span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
+//vld_thresh <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
+<span class="si">${</span><span class="nv">VLD_THRESH</span><span class="si">}</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -1047,10 +888,11 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">output_stats</span> <span class="o">=</span> <span class="o">{</span>
    <span class="nv">fho</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">ctc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-   <span class="nv">cts</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+//   <span class="nv">cts</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="si">${</span><span class="nv">CTS_LIST</span><span class="si">}</span>
    <span class="nv">mctc</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">mcts</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
-   <span class="nv">cnt</span>    <span class="o">=</span> <span class="si">${</span><span class="nv">STAT_LIST</span><span class="si">}</span><span class="p">;</span>
+   <span class="si">${</span><span class="nv">METPLUS_STAT_LIST</span><span class="si">}</span>
    <span class="nv">sl1l2</span>  <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">sal1l2</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
    <span class="nv">pct</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
@@ -1063,7 +905,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 
 <span class="nv">rank_corr_flag</span> <span class="o">=</span> FALSE<span class="p">;</span>
 <span class="nv">tmp_dir</span>        <span class="o">=</span> <span class="s2">&quot;/tmp&quot;</span><span class="p">;</span>
-//version        <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
+//version        <span class="o">=</span> <span class="s2">&quot;V10.0&quot;</span><span class="p">;</span>
 
 ////////////////////////////////////////////////////////////////////////////////
 </pre></div>
@@ -1097,27 +939,17 @@ parm/use_cases/met_tool_wrapper/SeriesByInit/SeriesByInit.py</p>
 <div><p>and for the [exe] section, you will need to define the location of
 NON-MET executables.  If the executable is in the user’s path, METplus will find it from
 the name. If the executable is not in the path, specify the full
-path to the executable here (i.e. RM = /bin/rm)  The following executables are required
+path to the executable here (i.e. CONVERT = /usr/bin/convert)  The following executables are required
 for performing series analysis use cases:</p>
 <p>If the executables are in the path:</p>
 </div></blockquote>
 <ul class="simple">
-<li><p><strong>RM = rm</strong></p></li>
-<li><p><strong>CUT = cut</strong></p></li>
-<li><p><strong>TR = tr</strong></p></li>
-<li><p><strong>NCAP2 = ncap2</strong></p></li>
 <li><p><strong>CONVERT = convert</strong></p></li>
-<li><p><strong>NCDUMP = ncdump</strong></p></li>
 </ul>
 <p><strong>NOTE:</strong> All of these executable items must be located under the [exe] section.</p>
 <p>If the executables are not in the path, they need to be defined:</p>
 <ul class="simple">
-<li><p><strong>RM = /path/to/rm</strong></p></li>
-<li><p><strong>CUT = /path/to/cut</strong></p></li>
-<li><p><strong>TR = /path/to/tr</strong></p></li>
-<li><p><strong>NCAP2 = /path/to/ncap2</strong></p></li>
 <li><p><strong>CONVERT = /path/to/convert</strong></p></li>
-<li><p><strong>NCDUMP= /path/to/ncdump</strong></p></li>
 </ul>
 <p><strong>NOTE:</strong> All of these executable items must be located under the [exe] section.
 Example User Configuration File:</p>
@@ -1127,12 +959,7 @@ Example User Configuration File:</p>
 <span class="nv">MET_INSTALL_DIR</span> <span class="o">=</span> /path/to/met-X.Y
 
 <span class="o">[</span>exe<span class="o">]</span>
-<span class="nv">RM</span> <span class="o">=</span> /path/to/rm
-<span class="nv">CUT</span> <span class="o">=</span> /path/to/cut
-<span class="nv">TR</span> <span class="o">=</span> /path/to/tr
-<span class="nv">NCAP2</span> <span class="o">=</span> /path/to/ncap2
 <span class="nv">CONVERT</span> <span class="o">=</span> /path/to/convert
-<span class="nv">NCDUMP</span> <span class="o">=</span> /path/to/ncdump
 </pre></div>
 </div>
 <p><strong>NOTE:</strong> The INPUT_BASE, OUTPUT_BASE, and MET_INSTALL_DIR must be located under the [dir] section, while the RM, CUT, TR, NCAP2, CONVERT, and NCDUMP must be located under the [exe] section.</p>
@@ -1172,7 +999,7 @@ and will contain the following subdirectories:</p>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=TCStatToolUseCase&amp;check_keywords=yes&amp;area=default">TCStatToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SeriesByInitUseCase&amp;check_keywords=yes&amp;area=default">SeriesByInitUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>,  <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SeriesAnalysisUseCase&amp;check_keywords=yes&amp;area=default">SeriesAnalysisUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=TCPairsToolUseCase&amp;check_keywords=yes&amp;area=default">TCPairsToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=FeatureRelativeUseCase&amp;check_keywords=yes&amp;area=default">FeatureRelativeUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SBUOrgUseCase&amp;check_keywords=yes&amp;area=default">SBUOrgUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
+<p><a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=TCStatToolUseCase&amp;check_keywords=yes&amp;area=default">TCStatToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SeriesByInitUseCase&amp;check_keywords=yes&amp;area=default">SeriesByInitUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SeriesAnalysisUseCase&amp;check_keywords=yes&amp;area=default">SeriesAnalysisUseCase</a>,`GRIB2FileUseCase &lt;<a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">https://dtcenter.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default</a>&gt;`_, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=TCPairsToolUseCase&amp;check_keywords=yes&amp;area=default">TCPairsToolUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=FeatureRelativeUseCase&amp;check_keywords=yes&amp;area=default">FeatureRelativeUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=SBUOrgUseCase&amp;check_keywords=yes&amp;area=default">SBUOrgUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a>, <a class="reference external" href="https://dtcenter.github.io/METplus/search.html?q=RuntimeFreqUseCase&amp;check_keywords=yes&amp;area=default">RuntimeFreqUseCase</a></p>
 </div>
 
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbyinit-py">
@@ -1197,10 +1024,10 @@ and will contain the following subdirectories:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.html" class="btn btn-neutral float-right" title="5.2.5.7. Point-Stat: Standard Verification for CONUS Surface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="UserScript_fcstGEFS_Difficulty_Index.html" class="btn btn-neutral float-right" title="5.2.6.7. UserScript: Calculate the Difficulty Index" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" class="btn btn-neutral" title="5.2.5.5. Grid-Stat: Standard Verification of Surface Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" class="btn btn-neutral" title="5.2.6.5. Grid-Stat: Standard Verification of Surface Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1210,7 +1037,7 @@ and will contain the following subdirectories:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

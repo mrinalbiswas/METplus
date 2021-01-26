@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.9.1. Cyclone Plotter: From TC-Pairs Output &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>5.2.10.1. Cyclone Plotter: From TC-Pairs Output &mdash; METplus 4.0.0-beta3-dev documentation</title>
   
 
   
@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../../../index.html"/>
         <link rel="up" title="5.2. Model Applications" href="../index.html"/>
-        <link rel="next" title="5.2.9.2. TCRMW: Hurricane Gonzalo" href="TCRMW_fcstGFS_fcstOnly_gonzalo.html"/>
-        <link rel="prev" title="5.2.8.2. Grid-Stat: Analysis validation" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html"/> 
+        <link rel="next" title="5.2.10.2. TCRMW: Hurricane Gonzalo" href="TCRMW_fcstGFS_fcstOnly_gonzalo.html"/>
+        <link rel="prev" title="5.2.9.2. Grid-Stat: Analysis validation" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -127,15 +127,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../Users_Guide/usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.1. Climate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.2. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.3. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.4. Data Assimilation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.5. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.6. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.7. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.8. Space Weather</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.9. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#air-quality-and-composition">5.2.1. Air Quality and Composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#climate">5.2.2. Climate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.3. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.4. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#data-assimilation">5.2.5. Data Assimilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.6. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.7. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.8. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.9. Space Weather</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.10. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.9.1. </span>Cyclone Plotter: From TC-Pairs Output</li>
+      <li><span class="section-number">5.2.10.1. </span>Cyclone Plotter: From TC-Pairs Output</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,7 +221,7 @@
             
   
 <div class="sphx-glr-example-title section" id="cyclone-plotter-from-tc-pairs-output">
-<span id="sphx-glr-generated-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-extratc-py"></span><h1><span class="section-number">5.2.9.1. </span>Cyclone Plotter: From TC-Pairs Output<a class="headerlink" href="#cyclone-plotter-from-tc-pairs-output" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-generated-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-extratc-py"></span><h1><span class="section-number">5.2.10.1. </span>Cyclone Plotter: From TC-Pairs Output<a class="headerlink" href="#cyclone-plotter-from-tc-pairs-output" title="Permalink to this headline">¶</a></h1>
 <p>model_applications/tc_and_extra_tc/Plotter_fcstGFS
 _obsGFS_ExtraTC.conf</p>
 <div class="section" id="scientific-objective">
@@ -277,6 +278,8 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 <span class="nv">TC_PAIRS_BDECK_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/b<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>*.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
 <span class="nv">TC_PAIRS_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>date?fmt<span class="o">=</span>%Y%m<span class="o">}</span>/<span class="o">{</span>basin?fmt<span class="o">=</span>%s<span class="o">}</span>q<span class="o">{</span>date?fmt<span class="o">=</span>%Y%m%d%H<span class="o">}</span>.gfso.<span class="o">{</span>cyclone?fmt<span class="o">=</span>%s<span class="o">}</span>
 
+<span class="nv">CONFIG_DIR</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_ExtraTC
+
 <span class="o">[</span>config<span class="o">]</span>
 <span class="c1"># ================================================</span>
 <span class="c1">##</span>
@@ -298,7 +301,8 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 <span class="c1"># Generate the tc-pairs data of interest</span>
 <span class="c1">#</span>
 <span class="c1"># Configuration files</span>
-<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/tc_and_extra_tc/TCPairsETCConfig
+<span class="nv">TC_PAIRS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/TCPairsETCConfig
+
 <span class="nv">INIT_TIME_FMT</span> <span class="o">=</span> %Y%m%d
 <span class="nv">INIT_BEG</span> <span class="o">=</span> <span class="m">20150301</span>
 <span class="nv">INIT_END</span> <span class="o">=</span> <span class="m">20150330</span>
@@ -357,12 +361,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 
 <span class="nv">TC_PAIRS_MISSING_VAL_TO_REPLACE</span> <span class="o">=</span> -99
 <span class="nv">TC_PAIRS_MISSING_VAL</span> <span class="o">=</span> -9999
-
-<span class="c1"># OVERWRITE OPTIONS</span>
-<span class="c1"># Don&#39;t overwrite output files if they already exist.</span>
-<span class="c1"># Set to no if you do NOT want to override existing files</span>
-<span class="c1"># Set to yes if you do want to override existing files</span>
-<span class="nv">EXTRACT_TILES_OVERWRITE_TRACK</span> <span class="o">=</span> no
 
 <span class="c1"># SKIP OPTIONS</span>
 <span class="c1"># Skip processing files if the output already exists.</span>
@@ -423,12 +421,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 //
 // Models
 //
-<span class="nv">model</span> <span class="o">=</span> <span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_MODEL</span><span class="si">}</span>
 
 //
 // Description
 //
-<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">;</span>
+<span class="si">${</span><span class="nv">METPLUS_DESC</span><span class="si">}</span>
 
 //
 // Storm identifiers
@@ -625,10 +623,10 @@ a text file containing data corresponding to the plotted storm tracks:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="TCRMW_fcstGFS_fcstOnly_gonzalo.html" class="btn btn-neutral float-right" title="5.2.9.2. TCRMW: Hurricane Gonzalo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="TCRMW_fcstGFS_fcstOnly_gonzalo.html" class="btn btn-neutral float-right" title="5.2.10.2. TCRMW: Hurricane Gonzalo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral" title="5.2.8.2. Grid-Stat: Analysis validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral" title="5.2.9.2. Grid-Stat: Analysis validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -638,7 +636,7 @@ a text file containing data corresponding to the plotted storm tracks:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Dec 30, 2020, 9:24:11 PM.
+      Last updated on Jan 26, 2021, 4:38:35 PM.
 
     </p>
   </div>

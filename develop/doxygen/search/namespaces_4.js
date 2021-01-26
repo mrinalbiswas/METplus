@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['seriesbyinitwrapper',['SeriesByInitWrapper',['../namespaceSeriesByInitWrapper.html',1,'']]],
-  ['seriesbyleadwrapper',['SeriesByLeadWrapper',['../namespaceSeriesByLeadWrapper.html',1,'']]]
+  ['tcmprplotterwrapper',['TCMPRPlotterWrapper',['../namespaceTCMPRPlotterWrapper.html',1,'']]],
+  ['tcstatwrapper',['TCStatWrapper',['../namespaceTCStatWrapper.html',1,'']]]
 ];
