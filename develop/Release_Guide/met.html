@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. MET Release &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>2. MET Release &mdash; METplus 4.0.0-beta3 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../index.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3 documentation" href="../index.html"/>
         <link rel="up" title="Release Guide" href="index.html"/>
         <link rel="next" title="3. METdatadb Release" href="metdatadb.html"/>
         <link rel="prev" title="1. METplus Release" href="metplus.html"/> 
@@ -302,18 +302,18 @@ notes, i.e. for 3.0-beta1, remove all 2.Y notes and start the 3.0 section.</p></
 <h3><span class="section-number">2.2.7. </span>Create Release on GitHub<a class="headerlink" href="#create-release-on-github" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
-<li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. MET-X.Y.Z, MET-X.Y.Z-betaN or MET-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+<li><p>Set the tag based on the version, starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN, or vX.Y.Z</p></li>
+<li><p>Set the branch value to ‘develop’ for a development release or ‘main_vX.Y’ for an official release</p></li>
+<li><p>Choose a release name (i.e. MET-X.Y.Z, MET-X.Y.Z-betaN, or MET-X.Y.Z)</p></li>
+<li><p>Add a link to the release notes from the MET User’s Guide</p></li>
+<li><p>Attach a PDF of the MET User’s Guide, if available</p></li>
 </ul>
 </div>
 <div class="section" id="build-release-tarfile">
 <h3><span class="section-number">2.2.8. </span>Build Release Tarfile<a class="headerlink" href="#build-release-tarfile" title="Permalink to this headline">¶</a></h3>
 <p>The MET software is distributed as a tarfile, but not the one created by GitHub. On a project machine (e.g. kiowa), clone the MET repository and run a script to build the tarfile for the newly tagged release.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">MET</span>
-<span class="n">met</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">met_checkout_and_build</span><span class="o">.</span><span class="n">sh</span> <span class="n">tag</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+<span class="n">MET</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">met_checkout_and_build</span><span class="o">.</span><span class="n">sh</span> <span class="n">tag</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 </pre></div>
 </div>
 <p>Edit the vX.Y.Z release on GitHub by uploading the resulting tar file (met-X.Y.Z.YYYYMMDD.tar.gz) as a release asset.</p>
@@ -415,6 +415,7 @@ beyond), do the following:</p>
 <ul>
 <li><p>In <em>met/docs/conf.py</em>, update the <em>version</em>, <em>release_year</em>, and
 <em>release_date</em> variables for the documentation.</p></li>
+<li><p>In <em>met/docs/version</em>, update the version string.</p></li>
 </ul>
 </li>
 </ul>
@@ -440,18 +441,18 @@ notes, i.e. for 3.0-beta1, remove all 2.Y notes and start the 3.0 section.</p></
 <h3><span class="section-number">2.3.7. </span>Create Release on GitHub<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
-<li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. MET-X.Y.Z, MET-X.Y.Z-betaN or MET-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+<li><p>Set the tag based on the version, starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN, or vX.Y.Z</p></li>
+<li><p>Set the branch value to ‘develop’ for a development release or ‘main_vX.Y’ for an official release</p></li>
+<li><p>Choose a release name (i.e. MET-X.Y.Z, MET-X.Y.Z-betaN, or MET-X.Y.Z)</p></li>
+<li><p>Add a link to the release notes from the MET User’s Guide</p></li>
+<li><p>Attach a PDF of the MET User’s Guide, if available</p></li>
 </ul>
 </div>
 <div class="section" id="id9">
 <h3><span class="section-number">2.3.8. </span>Build Release Tarfile<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>The MET software is distributed as a tarfile, but not the one created by GitHub. On a project machine (e.g. kiowa), clone the MET repository and run a script to build the tarfile for the newly tagged release.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">MET</span>
-<span class="n">met</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">met_checkout_and_build</span><span class="o">.</span><span class="n">sh</span> <span class="n">tag</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+<span class="n">MET</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">met_checkout_and_build</span><span class="o">.</span><span class="n">sh</span> <span class="n">tag</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 </pre></div>
 </div>
 <p>Edit the vX.Y.Z release on GitHub by uploading the resulting tar file (met-X.Y.Z.YYYYMMDD.tar.gz) as a release asset.</p>
@@ -527,7 +528,7 @@ notes, i.e. for 3.0-beta1, remove all 2.Y notes and start the 3.0 section.</p></
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Jan 26, 2021, 4:38:35 PM.
+      Last updated on Jan 27, 2021, 11:06:03 AM.
 
     </p>
   </div>

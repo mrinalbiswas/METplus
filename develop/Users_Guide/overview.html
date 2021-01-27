@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Overview &mdash; METplus 4.0.0-beta3-dev documentation</title>
+  <title>1. Overview &mdash; METplus 4.0.0-beta3 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0.0-beta3-dev documentation" href="../index.html"/>
+    <link rel="top" title="METplus 4.0.0-beta3 documentation" href="../index.html"/>
         <link rel="up" title="User’s Guide" href="index.html"/>
         <link rel="next" title="2. Software Installation/Getting Started" href="installation.html"/>
         <link rel="prev" title="User’s Guide" href="index.html"/> 
@@ -292,12 +292,23 @@ describes the bugfix, enhancement, or new feature:
 <p><strong>New in v4.0</strong></p>
 <p>Bugfixes:</p>
 <ul class="simple">
+<li><p>Fix bug causing GridStat fatal error (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/740">#740</a>)</p></li>
 <li><p>Add support for comparing inputs using a mix of python embedding and non-embedding (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/684">#684</a>)</p></li>
-<li><p>Fixed quick search links (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/687">#687</a>)</p></li>
+<li><p>Fix quick search links (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/687">#687</a>)</p></li>
 <li><p>Align the user guide with get_relativedelta() in time_util.py (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/579">#579</a>)</p></li>
 </ul>
 <p>Enhancements:</p>
 <ul class="simple">
+<li><p>Enhance Python embedding logic to allow multiple level values (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/719">#719</a>)</p></li>
+<li><p>Enhance Python embedding logic to allow multiple fcst and obs variable levels (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/708">#708</a>)</p></li>
+<li><p>Add support for a UserScript wrapper (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/723">#723</a>)</p></li>
+<li><p>Add support for a group of files covering multiple run times for a single analysis in GridDiag (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/733">#733</a>)</p></li>
+<li><p>Enhance ascii2nc python embedding script for TC dropsonde data (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/734">#734</a>, <a class="reference external" href="https://github.com/dtcenter/METplus/issues/731">#731</a>)</p></li>
+<li><p>Support additional configuration variables in EnsembleStat (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/748">#748</a>)</p></li>
+<li><p>Create use case subdirectories (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/751">#751</a>)</p></li>
+<li><p>Handle model, obtype, desc, and regrid dictionary the same in all wrappers (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/755">#755</a>)</p></li>
+<li><p>Ensure backwards compatibility for MET config environment variables (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/760">#760</a>)</p></li>
+<li><p>Combine configuration file sections into single config section (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/777">#777</a>)</p></li>
 <li><p>Add support for skipping existing output files for all wrappers  (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/711">#711</a>)</p></li>
 <li><p>Add support for multiple instance of the same tool in the process list  (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/670">#670</a>)</p></li>
 <li><p>Add GFDL build support in build_components (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/614">#614</a>)</p></li>
@@ -321,18 +332,30 @@ describes the bugfix, enhancement, or new feature:
 </ul>
 <p>New Use Cases:</p>
 <ul class="simple">
+<li><p>Air Quality and Comp: EnsembleStat_fcstICAP_obsMODIS_aod</p></li>
+<li><p>Medium Range: UserScript_fcstGEFS_Difficulty_Index</p></li>
+<li><p>Convection Allowing Models: MODE_fcstFV3_obsGOES_BrightnessTemp</p></li>
 <li><p>Data Assimilation: StatAnalysis_fcstHAFS_obsPrepBufr_JEDI_IODA_interface</p></li>
 <li><p>Medium Range: SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_PyEmbed_Multiple_Diagnostics</p></li>
 <li><p>Precipitation: EnsembleStat_fcstWOFS_obsWOFS</p></li>
 </ul>
 <p>Internal:</p>
 <ul class="simple">
-<li><p>Improved workflow formatting in Contributers Guide (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/688">#688</a>)</p></li>
+<li><p>Append semi-colon to end of _OPTIONS variables if not found (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/707">#707</a>)</p></li>
+<li><p>Ensure all wrappers follow the same conventions (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/76">#76</a>)</p></li>
+<li><p>Refactor SeriesBy and ExtractTiles wrappers (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/310">#310</a>)</p></li>
+<li><p>Refactor SeriesByLead wrapper (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/671">#671</a>, <a class="reference external" href="https://github.com/dtcenter/METplus/issues/76">#76</a>)</p></li>
+<li><p>Add the pull request approval process steps to the Contributor’s Guide (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/429">#429</a>)</p></li>
+<li><p>Remove jlogger and postmsg (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/470">#470</a>)</p></li>
+<li><p>Add unit tests for set_met_config_X functions in CommandBuilder (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/682">#682</a>)</p></li>
+<li><p>Define a common set of GitHub labels that apply to all of the METplus component repos (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/690">#690</a>)</p></li>
+<li><p>Transition from using Travis CI to GitHub Actions (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/721">#721</a>)</p></li>
+<li><p>Improve workflow formatting in Contributers Guide (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/688">#688</a>)</p></li>
 <li><p>Change INPUT_BASE to optional (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/679">#679</a>)</p></li>
-<li><p>Refactored TCStat and ExtractTiles wrappers to conform to current standards</p></li>
-<li><p>Automated release date (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/665">#665</a>)</p></li>
-<li><p>Added documentation for input verification datasets (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/662">#662</a>)</p></li>
-<li><p>Added timing tests for Travis/Docker (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/649">#649</a>)</p></li>
+<li><p>Refactor TCStat and ExtractTiles wrappers to conform to current standards</p></li>
+<li><p>Automate release date (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/665">#665</a>)</p></li>
+<li><p>Add documentation for input verification datasets (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/662">#662</a>)</p></li>
+<li><p>Add timing tests for Travis/Docker (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/649">#649</a>)</p></li>
 <li><p>Set up encrypted credentials in Travis to push to DockerHub (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/634">#634</a>)</p></li>
 <li><p>Add to User’s Guide: using environment variables in METplus configuration files (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/594">#594</a>)</p></li>
 <li><p>Cleanup version info (<a class="reference external" href="https://github.com/dtcenter/METplus/issues/651">#651</a>)</p></li>
@@ -416,7 +439,7 @@ on contributing code to METplus Wrappers, please contact
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Jan 26, 2021, 4:38:35 PM.
+      Last updated on Jan 27, 2021, 11:06:03 AM.
 
     </p>
   </div>
