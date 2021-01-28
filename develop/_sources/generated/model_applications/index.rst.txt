@@ -856,13 +856,13 @@ Any field that is associated with Tropical Cyclone and Extra-tropical Cyclones
 
   .. container:: sphx-glr-download sphx-glr-download-python
 
-    :download:`Download all examples in Python source code: model_applications_python.zip <//d1/personal/jpresto/METplus/git/release-4.0.0-beta3/METplus/docs/generated/model_applications/model_applications_python.zip>`
+    :download:`Download all examples in Python source code: model_applications_python.zip <//d1/personal/jpresto/METplus/git/METplus/docs/generated/model_applications/model_applications_python.zip>`
 
 
 
   .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    :download:`Download all examples in Jupyter notebooks: model_applications_jupyter.zip <//d1/personal/jpresto/METplus/git/release-4.0.0-beta3/METplus/docs/generated/model_applications/model_applications_jupyter.zip>`
+    :download:`Download all examples in Jupyter notebooks: model_applications_jupyter.zip <//d1/personal/jpresto/METplus/git/METplus/docs/generated/model_applications/model_applications_jupyter.zip>`
 
 
 .. only:: html

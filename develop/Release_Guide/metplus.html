@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. METplus Release &mdash; METplus 4.0.0-beta3 documentation</title>
+  <title>1. METplus Release &mdash; METplus 4.0.0-rc1-dev documentation</title>
   
 
   
@@ -45,7 +45,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="METplus 4.0.0-beta3 documentation" href="../index.html"/>
+    <link rel="top" title="METplus 4.0.0-rc1-dev documentation" href="../index.html"/>
         <link rel="up" title="Release Guide" href="index.html"/>
         <link rel="next" title="2. MET Release" href="met.html"/>
         <link rel="prev" title="Release Guide" href="index.html"/> 
@@ -147,15 +147,15 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#development-release-e-g-vx-y-z-betan-or-vx-y-z-rcn">1.3. Development release (e.g. vX.Y.Z-betaN or vX.Y.Z-rcN)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">1.3.1. Clone the Project Repository</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">1.3.2. Checkout the Develop Branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">1.3.3. Update Version Number for Release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">1.3.4. Update Release Notes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">1.3.5. Update the Documentation on the Web</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">1.3.6. Create Release Branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">1.3.7. Push Release Branch to GitHub</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">1.3.8. Create Release on GitHub</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">1.3.9. Update Version on Develop Branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.3.1. Clone the Project Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">1.3.2. Checkout the Develop Branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">1.3.3. Update Version Number for Release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">1.3.4. Update Release Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">1.3.5. Update the Documentation on the Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">1.3.6. Create Release Branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">1.3.7. Push Release Branch to GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">1.3.8. Create Release on GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">1.3.9. Update Version on Develop Branch</a></li>
 </ul>
 </li>
 </ul>
@@ -346,16 +346,18 @@ git push origin $release_branch
 <div class="section" id="create-release-on-github">
 <h3><span class="section-number">1.1.9. </span>Create Release on GitHub<a class="headerlink" href="#create-release-on-github" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
+<li><p>Go to Releases on GitHub and click ‘Draft a new release’.</p></li>
+<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN or v.X.Y.Z</p></li>
 <li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. METplus-X.Y.Z, METplus-X.Y.Z-betaN or METplus-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+<li><p>Choose release name (i.e. METplus-X.Y.Z-betaN, METplus-X.Y.Z-rcN or METplus-X.Y.Z)</p></li>
+<li><p>Add release notes from User’s Guide to notes section.</p></li>
+<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Add link to dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data and add a note to
-instruct users to use sub-directory corresponding to this release, i.e. v4.0.0)</p></li>
+<li><p>Add link to <a class="reference external" href="https://dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data">METplus_Data</a>
+and add a note to instruct users to use sub-directory corresponding to this
+release, i.e. v4.0.0)</p></li>
+<li><p>Click on “Publish release”.</p></li>
 </ul>
 </div>
 <div class="section" id="change-default-branch-on-github">
@@ -451,9 +453,10 @@ release. Open the following URL in a browser:</p>
 <ul class="simple">
 <li><p>Click on the Projects tab and select the project (under Repository) that
 corresponds to the release you are creating.</p></li>
-<li><p>Update the release-notes.rst file found in the User’s Guide directory</p></li>
+<li><p>Update the release-notes.rst file found in the User’s Guide directory.</p></li>
 <li><p>If you are creating a beta1 release, remove the previous version’s release
 notes, i.e. for 3.0-beta1, remove all 2.Y notes and start the 3.0 section.</p></li>
+<li><p>Commit changes and push to GitHub.</p></li>
 </ul>
 </div>
 <div class="section" id="id6">
@@ -473,33 +476,35 @@ i.e. vX.Y.Z</p></li>
 <div class="section" id="id8">
 <h3><span class="section-number">1.2.6. </span>Create Release on GitHub<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
+<li><p>Go to Releases on GitHub and click ‘Draft a new release’.</p></li>
+<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN or v.X.Y.Z</p></li>
 <li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. METplus-X.Y.Z, METplus-X.Y.Z-betaN or METplus-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+<li><p>Choose release name (i.e. METplus-X.Y.Z-betaN, METplus-X.Y.Z-rcN or METplus-X.Y.Z)</p></li>
+<li><p>Add release notes from User’s Guide to notes section.</p></li>
+<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Add link to dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data and add a note to
-instruct users to use sub-directory corresponding to this release, i.e. v4.0.0)</p></li>
+<li><p>Add link to <a class="reference external" href="https://dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data">METplus_Data</a>
+and add a note to instruct users to use sub-directory corresponding to this
+release, i.e. v4.0.0)</p></li>
+<li><p>Click on “Publish release”.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="development-release-e-g-vx-y-z-betan-or-vx-y-z-rcn">
 <h2><span class="section-number">1.3. </span>Development release (e.g. vX.Y.Z-betaN or vX.Y.Z-rcN)<a class="headerlink" href="#development-release-e-g-vx-y-z-betan-or-vx-y-z-rcn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id9">
-<h3><span class="section-number">1.3.1. </span>Clone the Project Repository<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id10">
-<h4><span class="section-number">1.3.1.1. </span>Create a fresh working directory<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<h3><span class="section-number">1.3.1. </span>Clone the Project Repository<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h4><span class="section-number">1.3.1.1. </span>Create a fresh working directory<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p>Create and work in a new directory to ensure a fresh environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 <span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h4><span class="section-number">1.3.1.2. </span>Clone the project repository<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h4><span class="section-number">1.3.1.2. </span>Clone the project repository<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p>Run the clone command to obtain the repository.</p>
 <p>Using SSH:</p>
 <pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METplus</pre>
@@ -509,38 +514,39 @@ instruct users to use sub-directory corresponding to this release, i.e. v4.0.0)<
 <pre class="literal-block">cd METplus</pre>
 </div>
 </div>
-<div class="section" id="id12">
-<h3><span class="section-number">1.3.2. </span>Checkout the Develop Branch<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3><span class="section-number">1.3.2. </span>Checkout the Develop Branch<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>Checkout the develop branch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">develop</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id13">
-<h3><span class="section-number">1.3.3. </span>Update Version Number for Release<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3><span class="section-number">1.3.3. </span>Update Version Number for Release<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <p>Remove <strong>-dev</strong> from the version number:</p>
 <ul class="simple">
-<li><p>As of METplus v4.0.0-beta2, we are naming releases with X.Y.Z format even if Z is 0.</p></li>
+<li><p>As of METplus v4.0.0-beta2, we are naming releases with X.Y.Z format even if Z is 0. ( As of METplus v3.0, the file containing the version number is located at docs/version (in earlier releases, the file was located at doc/version)</p></li>
+<li><p>In the develop branch, the version should match the upcoming release with -dev added to the end like X.Y.Z-betaN-dev, i.e. 4.0.0-beta1-dev</p></li>
+<li><p>Remove <strong>-dev</strong> from the version number so that it matches the release you are creating.</p></li>
+<li><p>Commit changes and push to GitHub.</p></li>
 </ul>
-<p>( As of METplus v3.0, the file containing the version number is located at docs/version (in earlier releases, the file was located at doc/version)
-* In the develop branch, the version should match the upcoming release with -dev added to the end like X.Y.Z-betaN-dev, i.e. 4.0.0-beta1-dev
-* Remove <strong>-dev</strong> from the version number so that it matches the release you are creating.</p>
 </div>
-<div class="section" id="id14">
-<h3><span class="section-number">1.3.4. </span>Update Release Notes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h3><span class="section-number">1.3.4. </span>Update Release Notes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <p>You can refer to the GitHub Issues page to see what has changed for this
 release. Open the following URL in a browser:</p>
 <pre class="literal-block"><a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METplus/issues</pre>
 <ul class="simple">
 <li><p>Click on the Projects tab and select the project (under Repository) that
 corresponds to the release you are creating.</p></li>
-<li><p>Update the release-notes.rst file found in the User’s Guide directory</p></li>
+<li><p>Update the release-notes.rst file found in the User’s Guide directory.</p></li>
 <li><p>If you are creating a beta1 release, remove the previous version’s release
 notes, i.e. for 3.0-beta1, remove all 2.Y notes and start the 3.0 section.</p></li>
+<li><p>Commit changes and push to GitHub.</p></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3><span class="section-number">1.3.5. </span>Update the Documentation on the Web<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3><span class="section-number">1.3.5. </span>Update the Documentation on the Web<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Refer to the Contributor’s Guide for instructions on <a class="reference external" href="https://dtcenter.github.io/METplus/develop/Contributors_Guide/add_use_case.html#build-the-documentation">how to build the
 documentation</a>.</p></li>
@@ -552,8 +558,8 @@ docs directory and running ./build_docs.py</p></li>
 <li><p>Commit changes and push to GitHub.</p></li>
 </ul>
 </div>
-<div class="section" id="id17">
-<h3><span class="section-number">1.3.6. </span>Create Release Branch<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3><span class="section-number">1.3.6. </span>Create Release Branch<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>Create a branch from the develop branch that corresponds to the release and
 push the branch to GitHub. For release X.Y-betaN, run the following commands
 (for bash, use setenv for first command if using csh):</p>
@@ -566,8 +572,8 @@ git checkout -b $release_branch
 </pre></div>
 </div>
 </div>
-<div class="section" id="id18">
-<h3><span class="section-number">1.3.7. </span>Push Release Branch to GitHub<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h3><span class="section-number">1.3.7. </span>Push Release Branch to GitHub<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>Push the release branch to GitHub:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>release_branch=main_vX.Y
 
@@ -575,23 +581,25 @@ git push origin $release_branch
 </pre></div>
 </div>
 </div>
-<div class="section" id="id19">
-<h3><span class="section-number">1.3.8. </span>Create Release on GitHub<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h3><span class="section-number">1.3.8. </span>Create Release on GitHub<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Go to Releases on GitHub and click ‘Draft a new release’</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z, vX.Y.Z-betaN or v.X.Y.Z</p></li>
+<li><p>Go to Releases on GitHub and click ‘Draft a new release’.</p></li>
+<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN or v.X.Y.Z</p></li>
 <li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. METplus-X.Y.Z, METplus-X.Y.Z-betaN or METplus-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF</p></li>
+<li><p>Choose release name (i.e. METplus-X.Y.Z-betaN, METplus-X.Y.Z-rcN or METplus-X.Y.Z)</p></li>
+<li><p>Add release notes from User’s Guide to notes section.</p></li>
+<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Add link to dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data and add a note to
-instruct users to use sub-directory corresponding to this release, i.e. v4.0.0)</p></li>
+<li><p>Add link to <a class="reference external" href="https://dtcenter.ucar.edu/dfiles/code/METplus/METplus_Data">METplus_Data</a>
+and add a note to instruct users to use sub-directory corresponding to this
+release, i.e. v4.0.0)</p></li>
+<li><p>Click on “Publish release”.</p></li>
 </ul>
 </div>
-<div class="section" id="id20">
-<h3><span class="section-number">1.3.9. </span>Update Version on Develop Branch<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3><span class="section-number">1.3.9. </span>Update Version on Develop Branch<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>Change docs/version value to the next release after this one with -dev added
 to the end. Releases will loosely following these names, but are subject to
 change:</p>
@@ -650,7 +658,7 @@ change:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Jan 27, 2021, 12:41:52 PM.
+      Last updated on Jan 27, 2021, 4:11:49 PM.
 
     </p>
   </div>
