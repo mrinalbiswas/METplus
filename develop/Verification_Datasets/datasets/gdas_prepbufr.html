@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2. GDAS Prepbufr Data &mdash; METplus 4.0.0-rc1-dev documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://dtcenter.github.io/METplus/latest/Verification_Datasets/datasets/gdas_prepbufr.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="METplus 4.0.0-rc1-dev documentation" href="../../index.html"/>
+        <link rel="up" title="2. Datasets" href="../datasets.html"/>
+        <link rel="next" title="2.3. GOES ABI L1b Radiances" href="goes_level_1b.html"/>
+        <link rel="prev" title="2.1. AERONET" href="aeronet.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Users_Guide/index.html">User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Release_Guide/index.html">Release Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Verification Datasets Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../datasets.html">2. Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aeronet.html">2.1. AERONET</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2. GDAS Prepbufr Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goes_level_1b.html">2.3. GOES ABI L1b Radiances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goes_level_2_aerosol.html">2.4. GOES ABI L2 Aerosol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpm_imerg.html">2.5. GPM IMERG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="madis.html">2.6. MADIS Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metar_isu.html">2.7. METAR Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mping.html">2.8. mPING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mrms_composite_reflectivity.html">2.9. MRMS Composite Reflectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nexrad_level_2.html">2.10. NEXRAD Level 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nexrad_level_3.html">2.11. NEXRAD Level 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opera_eumetnet.html">2.12. OPERA EUMETNET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gdas_ice.html">2.13. GDAS: Ice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ims_ice.html">2.14. IMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viirs.html">2.15. VIIRS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quicksearch.html">3. Quick Search for Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template.html"><em>Insert Dataset Name Here</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Verification Datasets Guide</a> &raquo;</li>
+        
+          <li><a href="../datasets.html"><span class="section-number">2. </span>Datasets</a> &raquo;</li>
+        
+      <li><span class="section-number">2.2. </span>GDAS Prepbufr Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Verification_Datasets/datasets/gdas_prepbufr.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gdas-prepbufr-data">
+<span id="vx-data-gdas-prepbufr"></span><h1><span class="section-number">2.2. </span>GDAS Prepbufr Data<a class="headerlink" href="#gdas-prepbufr-data" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt>Description</dt><dd><p>Global Data Assimilation System (GDAS) prepbufr files contain a variety of upper-air and surface weather observations from around the globe, including radiosonde, profiler and US radar derived winds, land and marine surface reports, aircraft reports, and more.</p>
+<p>NOAA/NCEI:
+<a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-data-assimilation-system-gdas">https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-data-assimilation-system-gdas</a></p>
+<p>Note: GDAS prepbufr data is also available via other sources (e.g., NOMADS, NOAA HPSS, and NCAR/Research Data Archive); however, NOAA/NCEI does not require an account and provides a long archive period.</p>
+</dd>
+<dt>Recommended use</dt><dd><p>GDAS prepbufr data are commonly used for verification of standard meteorological variables, such as temperatures, dew point temperature, wind speed, visibility, and precipitation, and precipitation type.</p>
+</dd>
+<dt>File format</dt><dd><p>BUFR</p>
+</dd>
+<dt>Location of data</dt><dd><p><a class="reference external" href="https://www.ncei.noaa.gov/has/HAS.FileAppRouter?datasetname=GDAS_DyBuf&amp;subqueryby=STATION&amp;applname=&amp;outdest=FILE">https://www.ncei.noaa.gov/has/HAS.FileAppRouter?datasetname=GDAS_DyBuf&amp;subqueryby=STATION&amp;applname=&amp;outdest=FILE</a></p>
+</dd>
+<dt>Access restrictions</dt><dd><p>None</p>
+</dd>
+<dt>Spatial resolution, grid, or coverage</dt><dd><p>Point observations with locations spanning the globe</p>
+</dd>
+<dt>Temporal resolution</dt><dd><p>Files are provided daily (but contain data from 4/day model runs)</p>
+</dd>
+<dt>Starting and/or ending dates</dt><dd><p>13 Feb. 2012 - Present</p>
+</dd>
+<dt>Data latency</dt><dd><p>~1 week</p>
+<p>For a near-realtime archive (but shorter retention period, see: <a class="reference external" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod">https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod</a>)</p>
+</dd>
+<dt>Variables available</dt><dd><p>Temperature, sea surface temperature, wind, geopotential height, visibility, and moisture</p>
+</dd>
+<dt>METplus Use Cases</dt><dd><p>Link to
+<a class="reference external" href="https://dtcenter.github.io/METplus/develop/search.html?q=VxData%26%26UseCase&amp;check_keywords=yes&amp;area=default">METplus Use Cases</a>
+for this dataset.</p>
+</dd>
+<dt>Keywords</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Current Dataset:</strong> VxDataGDASPREP</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Data Labels:</strong> DataTypePoint, DataLevelSurface, DataLevelUpperAir, DataProviderNOAA, DataApplicationConvectionAllowingModels, DataApplicationMediumRange</p>
+</div>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="goes_level_1b.html" class="btn btn-neutral float-right" title="2.3. GOES ABI L1b Radiances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aeronet.html" class="btn btn-neutral" title="2.1. AERONET" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Jan 29, 2021, 3:58:12 PM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/pop_ver.js"></script>
+    
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

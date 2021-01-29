@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.13. GDAS: Ice &mdash; METplus 4.0.0-rc1-dev documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://dtcenter.github.io/METplus/latest/Verification_Datasets/datasets/gdas_ice.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="METplus 4.0.0-rc1-dev documentation" href="../../index.html"/>
+        <link rel="up" title="2. Datasets" href="../datasets.html"/>
+        <link rel="next" title="2.14. IMS" href="ims_ice.html"/>
+        <link rel="prev" title="2.12. OPERA EUMETNET" href="opera_eumetnet.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>develop</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Users_Guide/index.html">User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Release_Guide/index.html">Release Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Verification Datasets Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../datasets.html">2. Datasets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aeronet.html">2.1. AERONET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gdas_prepbufr.html">2.2. GDAS Prepbufr Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goes_level_1b.html">2.3. GOES ABI L1b Radiances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goes_level_2_aerosol.html">2.4. GOES ABI L2 Aerosol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpm_imerg.html">2.5. GPM IMERG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="madis.html">2.6. MADIS Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metar_isu.html">2.7. METAR Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mping.html">2.8. mPING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mrms_composite_reflectivity.html">2.9. MRMS Composite Reflectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nexrad_level_2.html">2.10. NEXRAD Level 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nexrad_level_3.html">2.11. NEXRAD Level 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opera_eumetnet.html">2.12. OPERA EUMETNET</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.13. GDAS: Ice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ims_ice.html">2.14. IMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viirs.html">2.15. VIIRS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quicksearch.html">3. Quick Search for Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template.html"><em>Insert Dataset Name Here</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Verification Datasets Guide</a> &raquo;</li>
+        
+          <li><a href="../datasets.html"><span class="section-number">2. </span>Datasets</a> &raquo;</li>
+        
+      <li><span class="section-number">2.13. </span>GDAS: Ice</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Verification_Datasets/datasets/gdas_ice.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gdas-ice">
+<span id="vx-data-gdas-ice"></span><h1><span class="section-number">2.13. </span>GDAS: Ice<a class="headerlink" href="#gdas-ice" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>Description</dt><dd><p>“The Global Data Assimilation System (GDAS) is the system used by the National Center for Environmental Prediction (NCEP) Global Forecast System (GFS) model to place observations into a gridded model space for the purpose of starting, or initializing, weather forecasts with observed data.” from NOAA NCEI</p>
+</dd>
+<dt>Sample image</dt><dd><p>Categorical freezing rain.</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="../../_images/gdas_frzr.png"><img alt="../../_images/gdas_frzr.png" src="../../_images/gdas_frzr.png" style="width: 600px;" /></a>
+<p>Recommended use
+“Place observations into a gridded model space for the purpose of starting, or initializing, weather forecasts with observed data” from NOAA NCEI</p>
+<p>File format
+* Grib2</p>
+<dl>
+<dt>Location of data</dt><dd><p>NCDC/NCEI: <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-data-assimilation-system-gdas">https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-data-assimilation-system-gdas</a></p>
+<p>Ice data is in the first two rows in the “Product Types” table.</p>
+</dd>
+<dt>Access restrictions</dt><dd><p>None</p>
+</dd>
+</dl>
+<p>Spatial resolution, grid, or coverage</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Coverage:</dt><dd><ul class="simple">
+<li><p>Latitude: 90.000000 to -90.000000</p></li>
+<li><p>Longitude: 0.000000 to 359.750000</p></li>
+</ul>
+</dd>
+<dt>Resolution:</dt><dd><ul class="simple">
+<li><p>1° by 1°</p></li>
+<li><p>0.5° by 0.5°</p></li>
+<li><p>0.25° by 0.25°</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>Temporal resolution</dt><dd><ul class="simple">
+<li><p>Model cycle: 4/day: 00, 06, 12, 18UTC</p></li>
+<li><p>Output Timestep: Anl, +00, +03, +06, +09 hours</p></li>
+</ul>
+</dd>
+<dt>Starting and/or ending dates</dt><dd><ul class="simple">
+<li><p>Historical Dataset: 21Apr2019 – 11May2020</p></li>
+<li><p>Present Dataset: 05Jun2020 – Present</p></li>
+</ul>
+</dd>
+<dt>Data latency</dt><dd><p>Present data set appears to be a 6-7 day latency (no documented latency)</p>
+</dd>
+<dt>Variables available</dt><dd><blockquote>
+<div><p>Here is a list of relevant variables. There are more in the grib2 files.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Cloud mixing ratio, CMWR</p></li>
+<li><p>Ice water mixing ratio, IWMR</p></li>
+<li><p>Rain water mixing ratio, RWMR</p></li>
+<li><p>Snow Mixing Ratio, SNMR</p></li>
+<li><p>Graupel, GRLE</p></li>
+<li><p>Ice concentration [ice=1, no ice=0], CI</p></li>
+<li><p>Ice Growth Rate, ICEG</p></li>
+<li><p>Percent frozen precipitation, CPOFP</p></li>
+<li><p>Precipitation Rate, PRATE</p></li>
+<li><p>Categorical Snow, CSNOW</p></li>
+<li><p>Categorical Ice Pellets, CICEP</p></li>
+<li><p>Categorical Freezing Rain, CFRZR</p></li>
+<li><p>Categorical Rain, CRAIN</p></li>
+<li><p>Snow depth, SNOD</p></li>
+<li><p>Water equiv. of accum. snow depth, SDWE</p></li>
+</ul>
+</dd>
+<dt>METplus Use Cases</dt><dd><p>Link to <a class="reference external" href="https://dtcenter.github.io/METplus/develop/search.html?q=VxDataGDAS%26%26UseCase&amp;check_keywords=yes&amp;area=default">METplus Use Cases</a> for this dataset.</p>
+</dd>
+<dt>Keywords</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Current Dataset:</strong> VxDataGDAS</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Data Labels:</strong> DataTypeGridded, DataLevelSurface, DataProviderNOAA, DataApplicationPrecipitation, DataApplicationMarineAndCryo</p>
+</div>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ims_ice.html" class="btn btn-neutral float-right" title="2.14. IMS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="opera_eumetnet.html" class="btn btn-neutral" title="2.12. OPERA EUMETNET" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
+      Last updated on Jan 29, 2021, 4:02:36 PM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/pop_ver.js"></script>
+    
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
