@@ -1436,13 +1436,13 @@ UserScript
 
   .. container:: sphx-glr-download sphx-glr-download-python
 
-    :download:`Download all examples in Python source code: met_tool_wrapper_python.zip <//d1/personal/johnhg/METplus/docs/generated/met_tool_wrapper/met_tool_wrapper_python.zip>`
+    :download:`Download all examples in Python source code: met_tool_wrapper_python.zip <//d1/personal/jpresto/METplus/git/METplus/docs/generated/met_tool_wrapper/met_tool_wrapper_python.zip>`
 
 
 
   .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    :download:`Download all examples in Jupyter notebooks: met_tool_wrapper_jupyter.zip <//d1/personal/johnhg/METplus/docs/generated/met_tool_wrapper/met_tool_wrapper_jupyter.zip>`
+    :download:`Download all examples in Jupyter notebooks: met_tool_wrapper_jupyter.zip <//d1/personal/jpresto/METplus/git/METplus/docs/generated/met_tool_wrapper/met_tool_wrapper_jupyter.zip>`
 
 
 .. only:: html
