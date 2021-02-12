@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="METplus 4.0.0-rc1-dev documentation" href="../index.html"/>
         <link rel="up" title="Release Guide" href="index.html"/>
-        <link rel="next" title="Verification Datasets Guide" href="../Verification_Datasets/index.html"/>
-        <link rel="prev" title="6. METviewer Release" href="metviewer.html"/> 
+        <link rel="next" title="7.1. METexpress Official Release" href="metexpress_official.html"/>
+        <link rel="prev" title="6.3. METviewer Development Release" href="metviewer_development.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -129,18 +129,9 @@
 <li class="toctree-l2"><a class="reference internal" href="metplotpy.html">5. METplotpy Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metviewer.html">6. METviewer Release</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7. METexpress Release</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#official-release-e-g-vx-y">7.1. Official release (e.g. vX.Y)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#clone-the-project-repository">7.1.1. Clone the Project Repository</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#bugfix-release-e-g-vx-y-z">7.2. Bugfix release (e.g. vX.Y.Z)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">7.2.1. Clone the Project Repository</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#development-release-e-g-vx-y-betan-or-vx-y-rcn">7.3. Development release (e.g. vX.Y-betaN or vX.Y-rcN)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">7.3.1. Clone the Project Repository</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="metexpress_official.html">7.1. METexpress Official Release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metexpress_bugfix.html">7.2. METexpress Bugfix Release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metexpress_development.html">7.3. METexpress Development Release</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
@@ -214,77 +205,12 @@
             
   <div class="section" id="metexpress-release">
 <h1><span class="section-number">7. </span>METexpress Release<a class="headerlink" href="#metexpress-release" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="official-release-e-g-vx-y">
-<h2><span class="section-number">7.1. </span>Official release (e.g. vX.Y)<a class="headerlink" href="#official-release-e-g-vx-y" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="clone-the-project-repository">
-<h3><span class="section-number">7.1.1. </span>Clone the Project Repository<a class="headerlink" href="#clone-the-project-repository" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="metexpress_official.html">7.1. METexpress Official Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metexpress_bugfix.html">7.2. METexpress Bugfix Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metexpress_development.html">7.3. METexpress Development Release</a></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METexpress</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METexpress</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METexpress</pre>
-</div>
-</div>
-<div class="section" id="bugfix-release-e-g-vx-y-z">
-<h2><span class="section-number">7.2. </span>Bugfix release (e.g. vX.Y.Z)<a class="headerlink" href="#bugfix-release-e-g-vx-y-z" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">7.2.1. </span>Clone the Project Repository<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METexpress</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METexpress</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METexpress</pre>
-</div>
-</div>
-<div class="section" id="development-release-e-g-vx-y-betan-or-vx-y-rcn">
-<h2><span class="section-number">7.3. </span>Development release (e.g. vX.Y-betaN or vX.Y-rcN)<a class="headerlink" href="#development-release-e-g-vx-y-betan-or-vx-y-rcn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3><span class="section-number">7.3.1. </span>Clone the Project Repository<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METexpress</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METexpress</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METexpress</pre>
-</div>
 </div>
 </div>
 
@@ -298,10 +224,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Verification_Datasets/index.html" class="btn btn-neutral float-right" title="Verification Datasets Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="metexpress_official.html" class="btn btn-neutral float-right" title="7.1. METexpress Official Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="metviewer.html" class="btn btn-neutral" title="6. METviewer Release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="metviewer_development.html" class="btn btn-neutral" title="6.3. METviewer Development Release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -311,7 +237,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Feb 7, 2021, 9:41:33 AM.
+      Last updated on Feb 11, 2021, 5:54:52 PM.
 
     </p>
   </div>

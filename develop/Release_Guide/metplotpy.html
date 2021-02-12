@@ -47,8 +47,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="METplus 4.0.0-rc1-dev documentation" href="../index.html"/>
         <link rel="up" title="Release Guide" href="index.html"/>
-        <link rel="next" title="6. METviewer Release" href="metviewer.html"/>
-        <link rel="prev" title="4. METcalcpy Release" href="metcalcpy.html"/> 
+        <link rel="next" title="5.1. METplotpy Official Release" href="metplotpy_official.html"/>
+        <link rel="prev" title="4.3. METcalcpy Development Release" href="metcalcpy_development.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -127,31 +127,9 @@
 <li class="toctree-l2"><a class="reference internal" href="metdatadb.html">3. METdatadb Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metcalcpy.html">4. METcalcpy Release</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5. METplotpy Release</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#official-release-e-g-vx-y">5.1. Official release (e.g. vX.Y)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#clone-the-project-repository">5.1.1. Clone the Project Repository</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-version-number-for-release">5.1.2. Update Version Number for Release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-the-documentation-on-the-web">5.1.3. Update the Documentation on the Web</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#review-release-notes">5.1.4. Review Release Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#bugfix-release-e-g-vx-y-z">5.2. Bugfix release (e.g. vX.Y.Z)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">5.2.1. Clone the Project Repository</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">5.2.2. Update Version Number for Release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">5.2.3. Update the Documentation on the Web</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">5.2.4. Review Release Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#development-release-e-g-vx-y-betan-or-vx-y-rcn">5.3. Development release (e.g. vX.Y-betaN or vX.Y-rcN)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id5">5.3.1. Clone the Project Repository</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">5.3.2. Update Version Number for Release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">5.3.3. Update the Documentation on the Web</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">5.3.4. Review Release Notes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-release-branch">5.3.5. Create Release Branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-readme">5.3.6. Update README</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#push-release-branch-to-github">5.3.7. Push Release Branch to GitHub</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-release-on-github">5.3.8. Create Release on GitHub</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="metplotpy_official.html">5.1. METplotpy Official Release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metplotpy_bugfix.html">5.2. METplotpy Bugfix Release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metplotpy_development.html">5.3. METplotpy Development Release</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="metviewer.html">6. METviewer Release</a></li>
@@ -227,225 +205,12 @@
             
   <div class="section" id="metplotpy-release">
 <h1><span class="section-number">5. </span>METplotpy Release<a class="headerlink" href="#metplotpy-release" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="official-release-e-g-vx-y">
-<h2><span class="section-number">5.1. </span>Official release (e.g. vX.Y)<a class="headerlink" href="#official-release-e-g-vx-y" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="clone-the-project-repository">
-<h3><span class="section-number">5.1.1. </span>Clone the Project Repository<a class="headerlink" href="#clone-the-project-repository" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="metplotpy_official.html">5.1. METplotpy Official Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metplotpy_bugfix.html">5.2. METplotpy Bugfix Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metplotpy_development.html">5.3. METplotpy Development Release</a></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METplotpy</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METplotpy</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METplotpy</pre>
-</div>
-<div class="section" id="update-version-number-for-release">
-<h3><span class="section-number">5.1.2. </span>Update Version Number for Release<a class="headerlink" href="#update-version-number-for-release" title="Permalink to this headline">¶</a></h3>
-<p>Create the version number</p>
-<ul class="simple">
-<li><p>In the METplotpy/docs/version file, assign the version to the ‘__version__’ keyword</p></li>
-<li><p>We are naming releases with X.Y.Z format even if Z is 0.</p></li>
-<li><p>In the develop branch, the version should match the upcoming release like X.Y.Z-betaN</p></li>
-</ul>
-</div>
-<div class="section" id="update-the-documentation-on-the-web">
-<h3><span class="section-number">5.1.3. </span>Update the Documentation on the Web<a class="headerlink" href="#update-the-documentation-on-the-web" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Regenerate the User’s Guide and push the release to the gh-pages branch.</p></li>
-<li><p>For example, on kiowa:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">METplotpy</span>
-<span class="n">cd</span> <span class="n">METplotpy</span><span class="o">/</span><span class="n">metplotpy</span><span class="o">/</span><span class="n">docs</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">bash</span>
-<span class="n">conda</span> <span class="n">deactivate</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">met_test</span><span class="o">/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">sphinx_env</span>
-<span class="n">make</span> <span class="n">html</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Store resulting html output files in the correct sub-directory on the gh-pages branch.</p></li>
-</ul>
-</div>
-<div class="section" id="review-release-notes">
-<h3><span class="section-number">5.1.4. </span>Review Release Notes<a class="headerlink" href="#review-release-notes" title="Permalink to this headline">¶</a></h3>
-<p>The release notes should have been updated for each development release, so
-there may not be any new notes to add. Review the release-notes.rst file
-located in the User’s Guide directory to ensure all of the text is accurate.
-If anything noteworthy has been changed since the release candidate (rc)
-was created, be sure to include that as well.</p>
-</div>
-</div>
-<div class="section" id="bugfix-release-e-g-vx-y-z">
-<h2><span class="section-number">5.2. </span>Bugfix release (e.g. vX.Y.Z)<a class="headerlink" href="#bugfix-release-e-g-vx-y-z" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">5.2.1. </span>Clone the Project Repository<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METplotpy</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METplotpy</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METplotpy</pre>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">5.2.2. </span>Update Version Number for Release<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Create the version number</p>
-<ul class="simple">
-<li><p>In the METplotpy/docs/version file, assign the version to the ‘__version__’ keyword</p></li>
-<li><p>We are naming releases with X.Y.Z format even if Z is 0.</p></li>
-<li><p>In the develop branch, the version should match the upcoming release like X.Y.Z-betaN</p></li>
-</ul>
-</div>
-<div class="section" id="id3">
-<h3><span class="section-number">5.2.3. </span>Update the Documentation on the Web<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Regenerate the User’s Guide and push the release to the gh-pages branch.</p></li>
-<li><p>For example, on kiowa:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">METplotpy</span>
-<span class="n">cd</span> <span class="n">METplotpy</span><span class="o">/</span><span class="n">metplotpy</span><span class="o">/</span><span class="n">docs</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">bash</span>
-<span class="n">conda</span> <span class="n">deactivate</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">met_test</span><span class="o">/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">sphinx_env</span>
-<span class="n">make</span> <span class="n">html</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Store resulting html output files in the correct sub-directory on the gh-pages branch.</p></li>
-</ul>
-</div>
-<div class="section" id="id4">
-<h3><span class="section-number">5.2.4. </span>Review Release Notes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>The release notes should have been updated for each development release, so
-there may not be any new notes to add. Review the release-notes.rst file
-located in the User’s Guide directory to ensure all of the text is accurate.
-If anything noteworthy has been changed since the release candidate (rc)
-was created, be sure to include that as well.</p>
-</div>
-</div>
-<div class="section" id="development-release-e-g-vx-y-betan-or-vx-y-rcn">
-<h2><span class="section-number">5.3. </span>Development release (e.g. vX.Y-betaN or vX.Y-rcN)<a class="headerlink" href="#development-release-e-g-vx-y-betan-or-vx-y-rcn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
-<h3><span class="section-number">5.3.1. </span>Clone the Project Repository<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create and work in a new directory to ensure a fresh environment:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">cd</span> <span class="n">release</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Run the clone command to obtain the repository.</p></li>
-</ul>
-<p>Using SSH:</p>
-<pre class="literal-block">git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dtcenter/METplotpy</pre>
-<p>Using HTTP:</p>
-<pre class="literal-block">git clone <a class="reference external" href="https://github.com/dtcenter/">https://github.com/dtcenter/</a>METplotpy</pre>
-<ul class="simple">
-<li><p>Enter the project repository directory:</p></li>
-</ul>
-<pre class="literal-block">cd METplotpy</pre>
-</div>
-<div class="section" id="id6">
-<h3><span class="section-number">5.3.2. </span>Update Version Number for Release<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<p>Create the version number</p>
-<ul class="simple">
-<li><p>In the METplotpy/docs/version file, assign the version to the ‘__version__’ keyword</p></li>
-<li><p>We are naming releases with X.Y.Z format even if Z is 0.</p></li>
-<li><p>In the develop branch, the version should match the upcoming release like X.Y.Z-betaN</p></li>
-</ul>
-</div>
-<div class="section" id="id7">
-<h3><span class="section-number">5.3.3. </span>Update the Documentation on the Web<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Regenerate the User’s Guide and push the release to the gh-pages branch.</p></li>
-<li><p>For example, on kiowa:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dtcenter</span><span class="o">/</span><span class="n">METplotpy</span>
-<span class="n">cd</span> <span class="n">METplotpy</span><span class="o">/</span><span class="n">metplotpy</span><span class="o">/</span><span class="n">docs</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">vX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
-<span class="n">bash</span>
-<span class="n">conda</span> <span class="n">deactivate</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">met_test</span><span class="o">/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">sphinx_env</span>
-<span class="n">make</span> <span class="n">html</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Store resulting html output files in the correct sub-directory on the gh-pages branch.</p></li>
-</ul>
-</div>
-<div class="section" id="id8">
-<h3><span class="section-number">5.3.4. </span>Review Release Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<p>The release notes should have been updated for each development release, so
-there may not be any new notes to add. Review the release-notes.rst file
-located in the User’s Guide directory to ensure all of the text is accurate.
-If anything noteworthy has been changed since the release candidate (rc)
-was created, be sure to include that as well.</p>
-</div>
-<div class="section" id="create-release-branch">
-<h3><span class="section-number">5.3.5. </span>Create Release Branch<a class="headerlink" href="#create-release-branch" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Create a branch from the develop branch for the new official release and push it to GitHub.</p></li>
-</ul>
-<pre class="literal-block">cd METplotpy
-git checkout develop
-git pull
-git checkout -b main_vX.Y
-git push -u origin main_vX.Y</pre>
-</div>
-<div class="section" id="update-readme">
-<h3><span class="section-number">5.3.6. </span>Update README<a class="headerlink" href="#update-readme" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Change ‘METplotpy_develop’ to replace develop with the release branch name,
-i.e. ‘METplotpy_main_v1.0’</p></li>
-<li><p>Change ‘branch=develop’ to replace develop with the release branch name,
-i.e. ‘branch=main_v4.0’</p></li>
-</ul>
-</div>
-<div class="section" id="push-release-branch-to-github">
-<h3><span class="section-number">5.3.7. </span>Push Release Branch to GitHub<a class="headerlink" href="#push-release-branch-to-github" title="Permalink to this headline">¶</a></h3>
-<p>Push the release branch to GitHub:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>release_branch=main_vX.Y
-
-git push origin $release_branch
-</pre></div>
-</div>
-</div>
-<div class="section" id="create-release-on-github">
-<h3><span class="section-number">5.3.8. </span>Create Release on GitHub<a class="headerlink" href="#create-release-on-github" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Go to Releases on GitHub and click ‘Draft a new release’.</p></li>
-<li><p>Set tag based on version starting with ‘v’, i.e. vX.Y.Z-betaN, vX.Y.Z-rcN or v.X.Y.Z</p></li>
-<li><p>Set branch value to main_vX.Y</p></li>
-<li><p>Choose release name (i.e. METplotpy-X.Y.Z-betaN, METplotpy-X.Y.Z-rcN or METplotpy-X.Y.Z)</p></li>
-<li><p>Add release notes from User’s Guide to notes section.</p></li>
-<li><p>(Skip unless PDF of User’s Guide is ready) Attach User’s Guide PDF.</p></li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -459,10 +224,10 @@ git push origin $release_branch
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="metviewer.html" class="btn btn-neutral float-right" title="6. METviewer Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="metplotpy_official.html" class="btn btn-neutral float-right" title="5.1. METplotpy Official Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="metcalcpy.html" class="btn btn-neutral" title="4. METcalcpy Release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="metcalcpy_development.html" class="btn btn-neutral" title="4.3. METcalcpy Development Release" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -472,7 +237,7 @@ git push origin $release_branch
   <div role="contentinfo">
     <p>
         &copy; Copyright 2020, UCAR/NCAR, NOAA, CSU/CIRA, and CU/CIRES.
-      Last updated on Feb 7, 2021, 9:41:33 AM.
+      Last updated on Feb 11, 2021, 5:54:52 PM.
 
     </p>
   </div>
