@@ -300,9 +300,7 @@
   {
     "category": "short_range",
     "index_list": "14",
-    "disabled": true,
-    "disabled_reason": "need new RRFS data with new line types",
-    "run": false
+    "run": true
   },
   {
     "category": "short_range",
